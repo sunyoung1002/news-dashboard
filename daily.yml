@@ -1,0 +1,118 @@
+name: update-data
+
+on:
+  # [2026-09-01] GitHub 자체 schedule cron이 며칠째 계속 지연/누락돼서(8/21~8/27
+  # 관찰 기록 참고 - 삭제된 예전 주석에 남아있음) 못 믿기로 하고, cron-job.org가
+  # workflow_dispatch를 정해진 시각(06:01/07:12/07:47/12:01/18:01 KST)에 직접
+  # 호출하는 방식으로 완전히 옮겼다. 그래서 schedule 트리거는 더 없다 - 아래
+  # 스텝들의 건너뛰기 조건도 workflow_dispatch 입력만 본다.
+  workflow_dispatch:
+    inputs:
+      skip_news:
+        description: '[뉴스] 체크 시 뉴스 수집+AI 분석을 통째로 건너뛰기(네이버 수집 자체를 안 함). skip_ai(수집은 하되 Gemini만 건너뛰기)와 다름. cron-job.org 같은 외부 트리거가 07:12/07:47 "법안만 재확인" 실행을 보낼 때 이 값을 true로 준다.'
+        required: false
+        type: boolean
+        default: false
+      skip_ai:
+        description: '[뉴스] 체크 시 뉴스 AI 분석(Gemini) 건너뛰기 (개발/UI 테스트용 - 빠르고 무료, 분류 없이 원본만 수집). 법안+의원 수집(skip_bills)과는 별개로 동작. 평소엔 체크 해제 상태로 실행하세요.'
+        required: false
+        type: boolean
+        default: false
+      skip_bills:
+        description: '[법안+의원] 체크 시 계류 법안 + 의원 정보 수집 건너뛰기 (개발/UI 테스트용 - 법안은 하루 한 번이면 충분해서 반복 테스트할 땐 API 호출 절약). 뉴스 수집(skip_ai)·의원별 뉴스(skip_member_news)와는 별개로 동작. 평소엔 체크 해제 상태로 실행하세요.'
+        required: false
+        type: boolean
+        default: false
+      skip_member_news:
+        description: '[의원별 뉴스] 체크 시 의원별 뉴스 수집(네이버+Gemini) 건너뛰기 (개발/UI 테스트용 - API 호출 절약). member_list.csv는 예전 것을 그대로 쓰므로 skip_bills를 체크해도 이 스텝은 돌 수 있음. 평소엔 체크 해제 상태로 실행하세요.'
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 저장소 체크아웃
+        uses: actions/checkout@v4
+
+      - name: 파이썬 환경 설정
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: 필수 라이브러리 설치
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: 뉴스 수집 + AI 분석 (네이버 API + Gemini)
+        # 07:12 / 07:47(법안 전용 재수집)은 cron-job.org가 skip_news=true로 호출한다.
+        if: github.event.inputs.skip_news != 'true'
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+          SKIP_AI_ANALYSIS: ${{ github.event.inputs.skip_ai }}
+        run: |
+          python main.py
+
+      - name: 법안 + 의원 정보 수집 (국회 열린국회정보 Open API)
+        if: github.event.inputs.skip_bills != 'true'
+        env:
+          ASSEMBLY_API_KEY: ${{ secrets.ASSEMBLY_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python collect_bills.py
+
+      - name: 의원별 뉴스 수집 (네이버 API + Gemini)
+        # member_list.csv는 저장소에 커밋된 파일이라 위 스텝을 건너뛰어도(skip_bills)
+        # 예전 것이 그대로 있으므로, 이 스텝은 skip_member_news로 따로 켜고 끈다.
+        if: github.event.inputs.skip_member_news != 'true'
+        env:
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python collect_member_news.py
+
+      - name: 정적 대시보드(docs/) 생성
+        run: |
+          python generate_html.py
+
+      - name: 결과 CSV + 정적 대시보드 깃허브에 커밋 및 푸시
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          # 파일마다 존재 여부를 확인하고 add 한다. 한 번에 나열해서 add 하면 그 중
+          # 하나라도 없을 때(예: member_list.csv 생성이 실패한 실행) "did not match
+          # any files"로 스크립트 전체가 죽어, 뉴스/법안까지 커밋되지 않은 적이 있었다.
+          for f in news_list.csv bill_list.csv member_list.csv member_news.csv cluster_warnings.csv docs/index.html docs/news.json docs/bills.json docs/members.json docs/warnings.json; do
+            [ -f "$f" ] && git add "$f"
+          done
+          if ! git diff --quiet || ! git diff --staged --quiet; then
+            git commit -m "Update news data"
+            # 이 스크립트가 실행되는 동안 다른 커밋(예: 코드 수정)이 먼저 푸시되어
+            # main이 앞서 있으면 그냥 push하면 거부되므로, 먼저 최신 내용을 받아온 뒤 푸시한다.
+            # news_list.csv/bill_list.csv/docs/*는 매번 스크립트가 통째로 새로
+            # 만들어내는 자동 생성 파일이라, 충돌이 나면 "지금 막 새로 만든 것"이 항상
+            # 정답이다 - rebase 대신 merge를 쓰고, 이 파일들 충돌은 우리 쪽(ours)으로 해결한다.
+            git fetch origin main
+            if ! git merge origin/main --no-edit; then
+              conflicted=$(git diff --name-only --diff-filter=U)
+              echo "::warning::자동 생성 파일에서 병합 충돌 발생 - 이번 실행 결과로 덮어써서 해결함: $conflicted"
+              # 목록을 다시 적지 않고 실제로 충돌난 파일만 처리한다. 파일 목록을 손으로
+              # 적어두면(docs/news.json 처럼) 아직 원격에 없는 파일에 checkout --ours 가
+              # 걸려 죽는다.
+              git checkout --ours -- $conflicted
+              git add $conflicted
+              git commit --no-edit
+            fi
+            if ! git push; then
+              echo "::error::git push 실패 - 이번 실행 결과가 원격에 반영되지 않았습니다. 로그를 확인하세요."
+              exit 1
+            fi
+          fi
