@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>월간 입법 진행현황</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">LEGISLATION MONTHLY BRIEF</p>
+      <h1>월간 입법 진행현황</h1>
+      <p class="subtitle">법제처·국회 공식 데이터를 기준으로 전월 대비 변동을 확인합니다.</p>
+    </div>
+    <div class="header-actions">
+      <span class="updated" id="updatedAt">기준일 —</span>
+      <button class="primary" id="downloadReport">Word 보고서 다운로드</button>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="hero-row">
+      <div>
+        <span class="section-kicker">MONTHLY OVERVIEW</span>
+        <h2><span id="selectedMonthLabel">2026년 9월</span> 주요 변동</h2>
+      </div>
+      <div class="month-control">
+        <label for="monthSelect">조회 월</label>
+        <select id="monthSelect"></select>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="월간 요약">
+      <article class="stat-card accent-blue">
+        <span>추적 법안</span><strong id="statTotal">0</strong><small>선택 월 전체</small>
+      </article>
+      <article class="stat-card accent-orange">
+        <span>이번 달 변동</span><strong id="statChanged">0</strong><small>단계 변경·신규 접수</small>
+      </article>
+      <article class="stat-card accent-purple">
+        <span>위원회 심사</span><strong id="statCommittee">0</strong><small>소관위·법사위</small>
+      </article>
+      <article class="stat-card accent-green">
+        <span>의결·공포</span><strong id="statCompleted">0</strong><small>본회의·정부 이송·공포</small>
+      </article>
+    </section>
+
+    <section class="content-grid">
+      <aside class="filters">
+        <div class="filter-title">
+          <h3>조회 조건</h3>
+          <button class="text-button" id="resetFilters">초기화</button>
+        </div>
+
+        <label class="field">
+          <span>법안 검색</span>
+          <input id="searchInput" type="search" placeholder="법안명·의안번호·소관부처">
+        </label>
+
+        <label class="field">
+          <span>소관기관</span>
+          <select id="agencyFilter"><option value="">전체 기관</option></select>
+        </label>
+
+        <div class="field">
+          <span>진행단계</span>
+          <div class="chip-list" id="stageFilters"></div>
+        </div>
+
+        <div class="field">
+          <span>변동 여부</span>
+          <label class="check"><input id="changedOnly" type="checkbox"> 이번 달 변동만 보기</label>
+        </div>
+
+        <div class="source-note">
+          <strong>공식 데이터 기준</strong>
+          <p>국회 열린국회정보 및 법제처 국가법령정보 공동활용 API 연계를 전제로 한 화면입니다.</p>
+        </div>
+      </aside>
+
+      <section class="results">
+        <div class="result-head">
+          <div>
+            <span class="section-kicker">BILL TRACKER</span>
+            <h3>법안별 진행현황</h3>
+          </div>
+          <div class="result-tools">
+            <span id="resultCount">0건</span>
+            <select id="sortSelect" aria-label="정렬">
+              <option value="changed">최근 변동순</option>
+              <option value="title">법안명순</option>
+              <option value="stage">진행단계순</option>
+            </select>
+          </div>
+        </div>
+        <div id="billList" class="bill-list"></div>
+      </section>
+    </section>
+  </main>
+
+  <template id="billCardTemplate">
+    <article class="bill-card">
+      <div class="bill-topline">
+        <div class="badges"></div>
+        <time class="changed-date"></time>
+      </div>
+      <h4 class="bill-title"></h4>
+      <p class="bill-meta"></p>
+      <div class="progress-track"></div>
+      <div class="change-box">
+        <span>이번 달 변동</span>
+        <strong class="change-text"></strong>
+      </div>
+      <p class="summary"></p>
+      <div class="card-footer">
+        <span class="previous-stage"></span>
+        <a class="source-link" target="_blank" rel="noreferrer">공식 원문 보기 ↗</a>
+      </div>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
