@@ -1,4 +1,6 @@
 const STAGES = ["접수", "소관위", "법사위", "본회의", "공포·시행"];
+const REPORT_SUMMARY_MAX_POINTS = 3;
+const REPORT_SUMMARY_MAX_CHARS = 180;
 
 const state = {
   data: [],
@@ -117,15 +119,161 @@ function renderCards(items) {
 
 function downloadWordReport() {
   const items = filteredItems();
-  const rows = items.map((item, index) => `
-    <tr><td>${index + 1}</td><td>${escapeHtml(item.title)}</td><td>${escapeHtml(item.billNo)}</td><td>${escapeHtml(item.agency)}</td><td>${escapeHtml(item.previousStage)} → ${escapeHtml(item.stage)}</td><td>${escapeHtml(item.change)}</td><td>${escapeHtml(item.summary)}</td></tr>`).join("");
-  const content = `<!doctype html><html><head><meta charset="utf-8"><style>body{font-family:'Malgun Gothic';font-size:10pt}h1{text-align:center}table{border-collapse:collapse;width:100%}th,td{border:1px solid #555;padding:6px;vertical-align:top}th{background:#eaf2ff}</style></head><body><h1>${formatMonth(state.month)} 입법 진행현황 보고서</h1><p>총 ${items.length}건</p><table><thead><tr><th>번호</th><th>법안명</th><th>의안번호</th><th>소관기관</th><th>진행상태</th><th>월간 변동</th><th>주요내용 요약</th></tr></thead><tbody>${rows}</tbody></table></body></html>`;
+  if (!items.length) {
+    window.alert("현재 조회 조건에 해당하는 법안이 없습니다.");
+    return;
+  }
+
+  const rows = items.map((item, index) => {
+    const summary = summarizeForReport(item);
+    return `
+      <tr>
+        <td class="number">${index + 1}</td>
+        <td>
+          <strong>${escapeHtml(item.title)}</strong>
+          <span class="sub">${escapeHtml(item.billNo)}</span>
+          <span class="sub">${escapeHtml(item.proposer)}</span>
+        </td>
+        <td>
+          ${escapeHtml(item.agency)}
+          <span class="sub">${escapeHtml(item.committee)}</span>
+        </td>
+        <td>
+          <strong>${escapeHtml(item.previousStage)} → ${escapeHtml(item.stage)}</strong>
+          <span class="sub">${escapeHtml(item.change)}</span>
+          <span class="sub">기준일 ${escapeHtml(item.changedDate)}</span>
+        </td>
+        <td class="summary-cell">
+          ${escapeHtml(summary)}
+          ${item.sourceUrl ? `<span class="source"><a href="${escapeHtml(item.sourceUrl)}">공식 원문 보기</a></span>` : ""}
+        </td>
+      </tr>`;
+  }).join("");
+
+  const filters = [
+    state.agency && `소관기관: ${state.agency}`,
+    state.stage && `진행단계: ${state.stage}`,
+    state.query && `검색어: ${state.query}`,
+    state.changedOnly && "이번 달 변동만"
+  ].filter(Boolean).join(" / ") || "전체 조회";
+  const generatedAt = new Intl.DateTimeFormat("ko-KR", {
+    year: "numeric", month: "2-digit", day: "2-digit"
+  }).format(new Date());
+  const content = `<!doctype html>
+    <html xmlns:o="urn:schemas-microsoft-com:office:office"
+          xmlns:w="urn:schemas-microsoft-com:office:word"
+          xmlns="http://www.w3.org/TR/REC-html40">
+    <head>
+      <meta charset="utf-8">
+      <title>${formatMonth(state.month)} 입법 진행현황 보고서</title>
+      <style>
+        @page WordSection1 {
+          size: 841.9pt 595.3pt;
+          mso-page-orientation: landscape;
+          margin: 28.35pt 28.35pt 28.35pt 28.35pt;
+        }
+        div.WordSection1 { page: WordSection1; }
+        body { font-family: 'Malgun Gothic', sans-serif; font-size: 8.5pt; color: #172033; }
+        h1 { margin: 0 0 8pt; text-align: center; font-size: 18pt; }
+        .meta { margin: 0 0 10pt; text-align: center; color: #4b5563; font-size: 9pt; }
+        table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+        thead { display: table-header-group; }
+        tr { page-break-inside: avoid; }
+        th, td { border: 0.75pt solid #64748b; padding: 5pt; vertical-align: top; line-height: 1.45; word-break: keep-all; overflow-wrap: break-word; }
+        th { background: #dbeafe; text-align: center; font-weight: bold; }
+        .number { text-align: center; }
+        .sub, .source { display: block; margin-top: 3pt; color: #475569; font-size: 8pt; }
+        .summary-cell { line-height: 1.5; white-space: pre-line; }
+        a { color: #1d4ed8; text-decoration: underline; }
+        .note { margin-top: 7pt; color: #64748b; font-size: 7.5pt; }
+      </style>
+    </head>
+    <body><div class="WordSection1">
+      <h1>${formatMonth(state.month)} 입법 진행현황 보고서</h1>
+      <p class="meta">조회조건: ${escapeHtml(filters)} · 총 ${items.length.toLocaleString()}건 · 작성일 ${escapeHtml(generatedAt)}</p>
+      <table>
+        <colgroup>
+          <col style="width:4%"><col style="width:22%"><col style="width:13%"><col style="width:16%"><col style="width:45%">
+        </colgroup>
+        <thead><tr><th>번호</th><th>법안 정보</th><th>소관 기관</th><th>진행 현황</th><th>주요내용 요약</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+      <p class="note">※ 주요내용은 원문에서 현행 내용·문제점·개정 목적을 중심으로 최대 3개 항목·180자 이내로 정리했습니다. 정확한 내용은 공식 원문을 확인해 주세요.</p>
+    </div></body></html>`;
   const blob = new Blob(["\ufeff", content], { type: "application/msword" });
   const anchor = document.createElement("a");
   anchor.href = URL.createObjectURL(blob);
   anchor.download = `${state.month}_입법진행현황.doc`;
   anchor.click();
   URL.revokeObjectURL(anchor.href);
+}
+
+function summarizeForReport(item) {
+  let text = String(item.summary || "")
+    .replace(/창닫기|의안 상세정보|인쇄/g, " ")
+    .replace(/\[\s*\d+\s*\]/g, " ")
+    .replace(/제안이유\s*및\s*주요내용|제안이유|주요내용/g, " ");
+
+  [item.title, item.proposer, item.billNo].filter(Boolean).forEach(value => {
+    text = text.split(String(value)).join(" ");
+  });
+  text = text.replace(/의안번호\s*\d+/g, " ").replace(/\s+/g, " ").trim();
+
+  if (!text || text.includes("확인 중입니다")) {
+    return "공식 제안이유 및 주요내용을 확인 중입니다.";
+  }
+
+  let sentences = splitReportSentences(text)
+    .map(sentence => sentence.trim())
+    .filter(sentence => sentence.length >= 8);
+
+  // 수집 원문이 글자 수 제한 때문에 문장 중간에서 잘린 짧은 꼬리는 제외합니다.
+  if (sentences.length > 1) {
+    const last = sentences[sentences.length - 1];
+    if (!/[.!?]$/.test(last) && last.length < 45) sentences.pop();
+  }
+
+  // 마침표 없이 이어진 긴 원문도 보고서에서 읽기 좋게 의미 단위로 나눕니다.
+  if (sentences.length < 2 && text.length > 90) {
+    sentences = text.split(/(?=그런데|그러나|또한|특히|한편|이에|따라서)/)
+      .map(sentence => sentence.trim())
+      .filter(sentence => sentence.length >= 8);
+  }
+
+  const candidates = sentences.map((sentence, index) => ({ sentence, index }));
+  const selected = [];
+  const add = entry => {
+    if (entry && !selected.some(current => current.index === entry.index)) selected.push(entry);
+  };
+  add(candidates[0]);
+  add(candidates.find(entry => /문제|지적|우려|어려|부담|피해|한계|불합리/.test(entry.sentence)));
+  add([...candidates].reverse().find(entry => /이에|따라서|개정|신설|도입|하도록|하려는|하고자|강화|완화|개선/.test(entry.sentence)));
+  candidates.forEach(add);
+
+  const points = selected.slice(0, REPORT_SUMMARY_MAX_POINTS)
+    .sort((a, b) => a.index - b.index)
+    .map(entry => compactReportPoint(entry.sentence, 54));
+  let summary = points.map(point => `• ${point}`).join("\n");
+  if (summary.length > REPORT_SUMMARY_MAX_CHARS) {
+    summary = `${summary.slice(0, REPORT_SUMMARY_MAX_CHARS - 1).replace(/[\s,.;:]+$/, "")}…`;
+  }
+  return summary;
+}
+
+function compactReportPoint(sentence, maxLength) {
+  const cleaned = sentence.replace(/\s+/g, " ").replace(/^[,.;:\s]+|[,;:\s]+$/g, "").trim();
+  if (cleaned.length <= maxLength) return /[.!?]$/.test(cleaned) ? cleaned : `${cleaned}.`;
+  return `${cleaned.slice(0, maxLength - 1).replace(/[\s,.;:]+$/, "")}…`;
+}
+
+function splitReportSentences(text) {
+  const parts = text.split(/([.!?]+)\s+/);
+  const sentences = [];
+  for (let index = 0; index < parts.length; index += 2) {
+    const sentence = `${parts[index] || ""}${parts[index + 1] || ""}`.trim();
+    if (sentence) sentences.push(sentence);
+  }
+  return sentences.length ? sentences : [text];
 }
 
 function formatMonth(value) {
