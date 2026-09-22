@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>월간 입법 진행현황</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20260922-2">
 </head>
 <body>
   <header class="topbar">
@@ -44,6 +44,18 @@
       <article class="stat-card accent-green">
         <span>의결·공포</span><strong id="statCompleted">0</strong><small>본회의·정부 이송·공포</small>
       </article>
+    </section>
+
+    <section class="compare-tray" id="compareTray" aria-live="polite">
+      <div>
+        <strong>법안 비교</strong>
+        <span id="compareStatus">각 법안 카드에서 비교할 법안을 2~4개 선택해 주세요.</span>
+        <div class="selected-bills" id="selectedBills"></div>
+      </div>
+      <div class="compare-tray-actions">
+        <button class="secondary-button" id="clearCompare" type="button">선택 초기화</button>
+        <button class="compare-button" id="openCompare" type="button" disabled>선택 법안 비교</button>
+      </div>
     </section>
 
     <section class="content-grid">
@@ -115,11 +127,27 @@
       <p class="summary"></p>
       <div class="card-footer">
         <span class="previous-stage"></span>
-        <a class="source-link" target="_blank" rel="noreferrer">공식 원문 보기 ↗</a>
+        <div class="card-actions">
+          <button class="card-action similar-button" type="button">유사 법안 추천</button>
+          <button class="card-action compare-toggle" type="button">비교 선택</button>
+          <a class="source-link" target="_blank" rel="noreferrer">공식 원문 보기 ↗</a>
+        </div>
       </div>
     </article>
   </template>
 
-  <script src="app.js"></script>
+  <dialog class="compare-dialog" id="compareDialog" aria-labelledby="compareTitle">
+    <div class="dialog-head">
+      <div>
+        <span class="section-kicker">BILL COMPARISON</span>
+        <h2 id="compareTitle">선택 법안 비교</h2>
+      </div>
+      <button class="dialog-close" id="closeCompare" type="button" aria-label="비교창 닫기">×</button>
+    </div>
+    <div class="common-keywords" id="commonKeywords"></div>
+    <div class="compare-table-wrap" id="compareContent"></div>
+  </dialog>
+
+  <script src="app.js?v=20260922-2"></script>
 </body>
 </html>

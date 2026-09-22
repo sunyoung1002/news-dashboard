@@ -38,6 +38,19 @@ CATEGORY_AGENCY = {
     "표시광고법": "공정거래위원회",
     "소비자기본법": "공정거래위원회",
     "상생협력법": "중소벤처기업부",
+    "자본시장법": "금융위원회",
+    "건설산업기본법": "국토교통부",
+    "행정조사기본법": "국무조정실",
+    "상법": "법무부",
+    "중대재해처벌법": "고용노동부",
+    "민사소송법": "법무부",
+    "조세특례제한법": "기획재정부",
+    "집단소송": "법무부",
+    "산업안전보건법": "고용노동부",
+    "지속가능성·책임경영": "기후에너지환경부",
+    "고용": "고용노동부",
+    "탄소중립": "기후에너지환경부",
+    "상속세·증여세": "기획재정부",
 }
 
 
@@ -67,14 +80,19 @@ def assembly_rows(payload, service_id):
     return []
 
 
-def load_keywords():
+def load_tracking_rules():
     if not KEYWORDS_FILE.exists():
         raise RuntimeError("bill_keywords.yaml 파일이 없습니다.")
     loaded = yaml.safe_load(KEYWORDS_FILE.read_text(encoding="utf-8")) or {}
     mapping = loaded.get("keywords", loaded)
     if not isinstance(mapping, dict) or not mapping:
         raise RuntimeError("bill_keywords.yaml의 keywords 항목이 비어 있습니다.")
-    return {str(key): str(value) for key, value in mapping.items()}
+    numbers = loaded.get("bill_numbers", [])
+    if not isinstance(numbers, list):
+        raise RuntimeError("bill_keywords.yaml의 bill_numbers 항목은 목록이어야 합니다.")
+    keywords = {str(key): str(value) for key, value in mapping.items()}
+    bill_numbers = {re.sub(r"\D", "", str(value)) for value in numbers}
+    return keywords, {value for value in bill_numbers if value}
 
 
 def matched_category(title, keywords):
@@ -84,7 +102,7 @@ def matched_category(title, keywords):
     return ""
 
 
-def fetch_pending_bills(keywords):
+def fetch_pending_bills(keywords, tracked_bill_numbers):
     if not ASSEMBLY_KEY:
         raise RuntimeError("GitHub Secret ASSEMBLY_API_KEY가 설정되지 않았습니다.")
     matched = {}
@@ -100,8 +118,10 @@ def fetch_pending_bills(keywords):
             title = str(row.get("BILL_NAME") or "").strip()
             category = matched_category(title, keywords)
             bill_id = str(row.get("BILL_ID") or "").strip()
-            if bill_id and category:
-                row["_CATEGORY"] = category
+            bill_no = re.sub(r"\D", "", str(row.get("BILL_NO") or ""))
+            is_directly_tracked = bill_no in tracked_bill_numbers
+            if bill_id and (category or is_directly_tracked):
+                row["_CATEGORY"] = category or "직접선택"
                 matched[bill_id] = row
         if len(rows) < 100:
             break
@@ -267,12 +287,14 @@ def main():
     now = datetime.now(KST)
     month = now.strftime("%Y-%m")
     today = now.strftime("%Y-%m-%d")
-    keywords = load_keywords()
+    keywords, tracked_bill_numbers = load_tracking_rules()
     previous = load_previous()
     old_items = previous.get("items", [])
     old_index = latest_by_key(old_items)
 
-    pending_rows = fetch_pending_bills(keywords)
+    pending_rows = fetch_pending_bills(keywords, tracked_bill_numbers)
+    if not pending_rows:
+        raise RuntimeError("국회 API가 계류 법안을 0건 반환했습니다. 기존 데이터를 보호하기 위해 저장을 중단합니다.")
     items = []
     for index, row in enumerate(pending_rows, 1):
         key = str(row.get("BILL_ID") or "")

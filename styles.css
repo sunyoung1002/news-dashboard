@@ -58,6 +58,18 @@ select:focus, input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgb
 .accent-purple::after { background: var(--purple); }
 .accent-green::after { background: var(--green); }
 
+.compare-tray { margin: 0 0 24px; padding: 18px 20px; border: 1px solid #9fc3ff; border-radius: var(--radius); background: #eef5ff; display: flex; align-items: center; justify-content: space-between; gap: 20px; box-shadow: 0 8px 24px rgba(31,111,235,.08); }
+.compare-tray[hidden] { display: none; }
+.compare-tray strong { color: var(--navy); margin-right: 9px; }
+.compare-tray span { color: var(--muted); font-size: 13px; }
+.selected-bills { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.selected-pill { padding: 5px 8px; border-radius: 999px; background: white; border: 1px solid #c8dcff; color: var(--navy-2) !important; font-size: 11px !important; }
+.compare-tray-actions, .card-actions { display: flex; align-items: center; gap: 8px; }
+.compare-button, .secondary-button, .card-action { border-radius: 9px; padding: 9px 12px; font-weight: 800; }
+.compare-button { border: 0; background: var(--blue); color: white; }
+.compare-button:disabled { cursor: not-allowed; opacity: .45; }
+.secondary-button, .card-action { border: 1px solid var(--line); background: white; color: var(--navy-2); }
+
 .content-grid { display: grid; grid-template-columns: 280px 1fr; gap: 22px; align-items: start; }
 .filters { position: sticky; top: 16px; padding: 20px; border: 1px solid var(--line); border-radius: var(--radius); background: white; box-shadow: 0 8px 24px rgba(31,41,51,.05); }
 .text-button { border: 0; padding: 0; color: var(--blue); background: transparent; font-weight: 700; }
@@ -78,6 +90,7 @@ select:focus, input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgb
 .bill-list { display: grid; gap: 14px; }
 .bill-card { padding: 20px; border: 1px solid var(--line); border-radius: var(--radius); background: white; box-shadow: 0 8px 24px rgba(31,41,51,.05); }
 .bill-card:hover { transform: translateY(-1px); box-shadow: 0 12px 30px rgba(31,41,51,.09); transition: .18s ease; }
+.bill-card.comparison-selected { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(31,111,235,.11); }
 .badges { display: flex; flex-wrap: wrap; gap: 7px; }
 .badge { padding: 5px 8px; border-radius: 7px; font-size: 11px; font-weight: 800; background: #edf2f7; color: var(--navy-2); }
 .badge.stage { background: var(--blue-soft); color: var(--blue); }
@@ -97,7 +110,25 @@ select:focus, input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgb
 .summary { color: #3e4c59; line-height: 1.7; font-size: 14px; }
 .card-footer { padding-top: 13px; border-top: 1px solid #eef2f6; color: var(--muted); font-size: 12px; }
 .source-link { color: var(--blue); font-weight: 800; text-decoration: none; }
+.card-action { padding: 6px 9px; font-size: 11px; }
+.compare-toggle[aria-pressed="true"] { border-color: var(--blue); background: var(--blue-soft); color: var(--blue); }
 .empty { padding: 70px 20px; border: 1px dashed var(--line); border-radius: var(--radius); background: white; color: var(--muted); text-align: center; }
+
+.compare-dialog { width: min(1380px, calc(100vw - 36px)); max-height: calc(100vh - 36px); padding: 0; border: 0; border-radius: 18px; color: var(--text); box-shadow: 0 24px 80px rgba(15,34,57,.35); }
+.compare-dialog::backdrop { background: rgba(15,34,57,.6); backdrop-filter: blur(3px); }
+.dialog-head { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; border-bottom: 1px solid var(--line); background: white; }
+.dialog-head h2 { margin: 0; color: var(--navy); }
+.dialog-close { width: 38px; height: 38px; border: 0; border-radius: 50%; background: #edf2f7; color: var(--navy); font-size: 25px; line-height: 1; }
+.common-keywords { padding: 14px 24px; background: #f5f9ff; color: var(--muted); font-size: 13px; }
+.common-keywords strong { margin-right: 9px; color: var(--navy); }
+.common-keywords span, .keyword { display: inline-block; margin: 3px 4px 3px 0; padding: 4px 7px; border-radius: 999px; background: #e4efff; color: #225ea8; font-size: 11px; font-weight: 700; }
+.compare-table-wrap { padding: 0 24px 24px; overflow: auto; }
+.compare-table { width: 100%; min-width: 860px; border-collapse: collapse; table-layout: fixed; }
+.compare-table th, .compare-table td { padding: 12px; border: 1px solid var(--line); vertical-align: top; line-height: 1.55; font-size: 13px; overflow-wrap: anywhere; }
+.compare-table thead th { position: sticky; top: 79px; background: #dceaff; color: var(--navy); z-index: 1; }
+.compare-table thead th:first-child, .compare-table tbody th { width: 116px; background: #f3f6fa; color: var(--navy-2); text-align: left; }
+.compare-table th span, .table-sub { color: var(--muted); font-size: 11px; font-weight: 500; }
+.compare-table a { color: var(--blue); font-weight: 800; }
 
 @media (max-width: 900px) {
   .topbar { align-items: flex-start; flex-direction: column; }
@@ -105,6 +136,9 @@ select:focus, input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgb
   .stats { grid-template-columns: repeat(2, 1fr); }
   .content-grid { grid-template-columns: 1fr; }
   .filters { position: static; }
+  .compare-tray { align-items: flex-start; flex-direction: column; }
+  .card-footer { align-items: flex-start; flex-direction: column; }
+  .card-actions { flex-wrap: wrap; }
 }
 
 @media (max-width: 560px) {
@@ -115,4 +149,6 @@ select:focus, input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgb
   .progress-track { grid-template-columns: 1fr; }
   .step { padding: 7px 0 7px 14px; text-align: left; }
   .step::before { inset: 0 auto 0 0; width: 6px; height: auto; }
+  .compare-tray-actions { width: 100%; }
+  .compare-tray-actions button { flex: 1; }
 }

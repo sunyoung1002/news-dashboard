@@ -1,6 +1,13 @@
 const STAGES = ["접수", "소관위", "법사위", "본회의", "공포·시행"];
 const REPORT_SUMMARY_MAX_POINTS = 3;
 const REPORT_SUMMARY_MAX_CHARS = 180;
+const REQUIRED_AGENCIES = [
+  "공정거래위원회",
+  "중소벤처기업부",
+  "기후에너지환경부",
+  "고용노동부",
+  "국토교통부"
+];
 
 const state = {
   data: [],
@@ -9,7 +16,8 @@ const state = {
   agency: "",
   query: "",
   changedOnly: false,
-  sort: "changed"
+  sort: "changed",
+  compareIds: new Set()
 };
 
 const $ = (selector) => document.querySelector(selector);
@@ -20,6 +28,7 @@ async function loadData() {
   const payload = await response.json();
   state.data = payload.items;
   $("#updatedAt").textContent = `기준일 ${payload.updatedAt}`;
+  ensureComparisonUi();
   buildControls();
   bindEvents();
   render();
@@ -30,7 +39,7 @@ function buildControls() {
   $("#monthSelect").innerHTML = months.map(month => `<option value="${month}">${formatMonth(month)}</option>`).join("");
   state.month = months[0];
 
-  const agencies = [...new Set(state.data.map(item => item.agency))].sort();
+  const agencies = [...new Set([...REQUIRED_AGENCIES, ...state.data.map(item => item.agency).filter(Boolean)])].sort((a, b) => a.localeCompare(b, "ko"));
   $("#agencyFilter").insertAdjacentHTML("beforeend", agencies.map(agency => `<option value="${agency}">${agency}</option>`).join(""));
 
   $("#stageFilters").innerHTML = [`<button class="chip active" data-stage="">전체</button>`]
@@ -57,6 +66,13 @@ function bindEvents() {
     render();
   });
   $("#downloadReport").addEventListener("click", downloadWordReport);
+  $("#billList").addEventListener("click", handleBillAction);
+  $("#clearCompare").addEventListener("click", clearComparison);
+  $("#openCompare").addEventListener("click", openComparison);
+  $("#closeCompare").addEventListener("click", () => $("#compareDialog").close());
+  $("#compareDialog").addEventListener("click", event => {
+    if (event.target === $("#compareDialog")) $("#compareDialog").close();
+  });
 }
 
 function filteredItems() {
@@ -84,6 +100,7 @@ function render() {
   $("#statCompleted").textContent = monthItems.filter(item => ["본회의", "공포·시행"].includes(item.stage)).length.toLocaleString();
   $("#resultCount").textContent = `${list.length.toLocaleString()}건`;
   renderCards(list);
+  renderCompareTray();
 }
 
 function renderCards(items) {
@@ -96,6 +113,10 @@ function renderCards(items) {
   const template = $("#billCardTemplate");
   items.forEach(item => {
     const card = template.content.cloneNode(true);
+    const id = itemKey(item);
+    const article = card.querySelector(".bill-card");
+    article.dataset.billId = id;
+    article.classList.toggle("comparison-selected", state.compareIds.has(id));
     card.querySelector(".badges").innerHTML = `
       <span class="badge stage">${escapeHtml(item.stage)}</span>
       <span class="badge">${escapeHtml(item.agency)}</span>
@@ -113,8 +134,219 @@ function renderCards(items) {
     card.querySelector(".previous-stage").textContent = `전월: ${item.previousStage}`;
     const link = card.querySelector(".source-link");
     link.href = item.sourceUrl;
+    ensureCardComparisonActions(card);
+    const compareButton = card.querySelector(".compare-toggle");
+    compareButton.textContent = state.compareIds.has(id) ? "선택 해제" : "비교 선택";
+    compareButton.setAttribute("aria-pressed", String(state.compareIds.has(id)));
     list.appendChild(card);
   });
+}
+
+function ensureComparisonUi() {
+  if (!$("#compareTray")) {
+    const stats = $(".stats");
+    stats.insertAdjacentHTML("afterend", `
+      <section class="compare-tray" id="compareTray" aria-live="polite">
+        <div>
+          <strong>법안 비교</strong>
+          <span id="compareStatus">각 법안 카드에서 비교할 법안을 2~4개 선택해 주세요.</span>
+          <div class="selected-bills" id="selectedBills"></div>
+        </div>
+        <div class="compare-tray-actions">
+          <button class="secondary-button" id="clearCompare" type="button">선택 초기화</button>
+          <button class="compare-button" id="openCompare" type="button" disabled>선택 법안 비교</button>
+        </div>
+      </section>`);
+  }
+
+  if (!$("#compareDialog")) {
+    document.body.insertAdjacentHTML("beforeend", `
+      <dialog class="compare-dialog" id="compareDialog" aria-labelledby="compareTitle">
+        <div class="dialog-head">
+          <div><span class="section-kicker">BILL COMPARISON</span><h2 id="compareTitle">선택 법안 비교</h2></div>
+          <button class="dialog-close" id="closeCompare" type="button" aria-label="비교창 닫기">×</button>
+        </div>
+        <div class="common-keywords" id="commonKeywords"></div>
+        <div class="compare-table-wrap" id="compareContent"></div>
+      </dialog>`);
+  }
+  ensureComparisonStyles();
+}
+
+function ensureCardComparisonActions(card) {
+  if (card.querySelector(".compare-toggle")) return;
+  const footer = card.querySelector(".card-footer");
+  if (!footer) return;
+  const sourceLink = footer.querySelector(".source-link");
+  const actions = document.createElement("div");
+  actions.className = "card-actions";
+  actions.innerHTML = `
+    <button class="card-action similar-button" type="button">유사 법안 추천</button>
+    <button class="card-action compare-toggle" type="button">비교 선택</button>`;
+  if (sourceLink) actions.appendChild(sourceLink);
+  footer.appendChild(actions);
+}
+
+function ensureComparisonStyles() {
+  if ($("#comparisonFallbackStyles")) return;
+  const style = document.createElement("style");
+  style.id = "comparisonFallbackStyles";
+  style.textContent = `
+    .compare-tray{margin:0 0 24px;padding:18px 20px;border:1px solid #9fc3ff;border-radius:16px;background:#eef5ff;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .compare-tray[hidden]{display:none}.selected-bills,.compare-tray-actions,.card-actions{display:flex;align-items:center;flex-wrap:wrap;gap:8px}.selected-bills{margin-top:10px}
+    .selected-pill{padding:5px 8px;border-radius:999px;background:#fff;border:1px solid #c8dcff;font-size:11px}.compare-button,.secondary-button,.card-action{border-radius:9px;padding:8px 11px;font-weight:800}
+    .compare-button{border:0;background:#1f6feb;color:#fff}.compare-button:disabled{opacity:.45}.secondary-button,.card-action{border:1px solid #d9e2ec;background:#fff;color:#243b53}.card-action{font-size:11px}
+    .bill-card.comparison-selected{border-color:#1f6feb;box-shadow:0 0 0 3px rgba(31,111,235,.11)}.compare-toggle[aria-pressed=true]{border-color:#1f6feb;background:#eaf2ff;color:#1f6feb}
+    .compare-dialog{width:min(1380px,calc(100vw - 36px));max-height:calc(100vh - 36px);padding:0;border:0;border-radius:18px}.compare-dialog::backdrop{background:rgba(15,34,57,.6)}
+    .dialog-head{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;border-bottom:1px solid #d9e2ec}.dialog-close{width:38px;height:38px;border:0;border-radius:50%;font-size:25px}
+    .common-keywords,.compare-table-wrap{padding:14px 24px}.compare-table-wrap{overflow:auto}.compare-table{width:100%;min-width:860px;border-collapse:collapse}.compare-table th,.compare-table td{padding:12px;border:1px solid #d9e2ec;vertical-align:top;font-size:13px}
+    .common-keywords span,.keyword{display:inline-block;margin:3px;padding:4px 7px;border-radius:999px;background:#e4efff;color:#225ea8;font-size:11px}
+    @media(max-width:900px){.compare-tray{align-items:flex-start;flex-direction:column}.card-footer{align-items:flex-start;flex-direction:column}}
+  `;
+  document.head.appendChild(style);
+}
+
+function handleBillAction(event) {
+  const card = event.target.closest(".bill-card");
+  if (!card) return;
+  const item = state.data.find(row => itemKey(row) === card.dataset.billId);
+  if (!item) return;
+
+  if (event.target.closest(".compare-toggle")) {
+    toggleComparison(item);
+  } else if (event.target.closest(".similar-button")) {
+    selectSimilarBills(item);
+  }
+}
+
+function toggleComparison(item) {
+  const id = itemKey(item);
+  if (state.compareIds.has(id)) {
+    state.compareIds.delete(id);
+  } else {
+    if (state.compareIds.size >= 4) {
+      window.alert("법안은 한 번에 최대 4개까지 비교할 수 있습니다.");
+      return;
+    }
+    state.compareIds.add(id);
+  }
+  renderCards(filteredItems());
+  renderCompareTray();
+}
+
+function selectSimilarBills(baseItem) {
+  const candidates = state.data
+    .filter(item => item.month === state.month && itemKey(item) !== itemKey(baseItem))
+    .map(item => ({ item, score: billSimilarity(baseItem, item) }))
+    .sort((a, b) => b.score - a.score || a.item.title.localeCompare(b.item.title, "ko"))
+    .slice(0, 3)
+    .filter(entry => entry.score > 0);
+
+  state.compareIds = new Set([itemKey(baseItem), ...candidates.map(entry => itemKey(entry.item))]);
+  renderCards(filteredItems());
+  renderCompareTray();
+  if (state.compareIds.size >= 2) openComparison();
+  else window.alert("비교할 만한 유사 법안을 찾지 못했습니다.");
+}
+
+function renderCompareTray() {
+  const tray = $("#compareTray");
+  const items = selectedComparisonItems();
+  tray.hidden = false;
+  $("#compareStatus").textContent = items.length === 0
+    ? "각 법안 카드에서 직접 선택하거나 유사 법안을 추천받을 수 있습니다."
+    : items.length < 2
+    ? "1개 선택됨 · 비교하려면 1개 이상 더 선택하세요."
+    : `${items.length}개 선택됨 · 최대 4개까지 비교할 수 있습니다.`;
+  $("#selectedBills").innerHTML = items.map(item =>
+    `<span class="selected-pill">${escapeHtml(shortTitle(item.title, 28))}</span>`
+  ).join("");
+  $("#openCompare").disabled = items.length < 2;
+}
+
+function clearComparison() {
+  state.compareIds.clear();
+  renderCards(filteredItems());
+  renderCompareTray();
+}
+
+function openComparison() {
+  const items = selectedComparisonItems();
+  if (items.length < 2) return;
+
+  const common = commonBillKeywords(items);
+  $("#commonKeywords").innerHTML = `<strong>공통 핵심어</strong> ${common.length ? common.map(word => `<span>${escapeHtml(word)}</span>`).join("") : "뚜렷한 공통 핵심어가 없습니다."}`;
+  const rows = [
+    ["법안명", item => `<strong>${escapeHtml(item.title)}</strong>`],
+    ["의안번호", item => escapeHtml(item.billNo)],
+    ["대표발의자", item => escapeHtml(item.proposer)],
+    ["소관", item => `${escapeHtml(item.agency)}<br><span class="table-sub">${escapeHtml(item.committee)}</span>`],
+    ["진행단계", item => `${escapeHtml(item.previousStage)} → <strong>${escapeHtml(item.stage)}</strong>`],
+    ["최근 변동", item => `${escapeHtml(item.change)}<br><span class="table-sub">${escapeHtml(item.changedDate)}</span>`],
+    ["핵심 내용", item => escapeHtml(summarizeForReport(item)).replace(/\n/g, "<br>")],
+    ["이 법안의 특징", item => distinctiveKeywords(item, items).map(word => `<span class="keyword">${escapeHtml(word)}</span>`).join("") || "-"],
+    ["원문", item => item.sourceUrl ? `<a href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noreferrer">공식 원문 보기 ↗</a>` : "-"]
+  ];
+  $("#compareContent").innerHTML = `
+    <table class="compare-table">
+      <thead><tr><th>비교항목</th>${items.map((item, index) => `<th>법안 ${index + 1}<br><span>${escapeHtml(shortTitle(item.title, 24))}</span></th>`).join("")}</tr></thead>
+      <tbody>${rows.map(([label, renderCell]) => `<tr><th>${label}</th>${items.map(item => `<td>${renderCell(item)}</td>`).join("")}</tr>`).join("")}</tbody>
+    </table>`;
+  $("#compareDialog").showModal();
+}
+
+function selectedComparisonItems() {
+  return [...state.compareIds]
+    .map(id => state.data.find(item => itemKey(item) === id))
+    .filter(Boolean);
+}
+
+function itemKey(item) {
+  return String(item.billId || item.billNo || item.title);
+}
+
+function shortTitle(value, maxLength) {
+  const text = String(value || "");
+  return text.length > maxLength ? `${text.slice(0, maxLength - 1)}…` : text;
+}
+
+function billTokens(item) {
+  const stopWords = new Set([
+    "일부개정법률안", "법률안", "법률", "관한", "현행법", "현행법은", "하려는", "하도록",
+    "그리고", "그러나", "그런데", "대하여", "위하여", "관련", "경우", "내용", "제안이유",
+    "주요내용", "의안", "상세정보", "인쇄", "창닫기", "있음", "있는", "있어", "따라",
+    "등을", "등의", "대한", "통해", "하고", "하며", "현재", "최근"
+  ]);
+  const source = `${item.title || ""} ${item.summary || ""}`
+    .replace(/창닫기|의안 상세정보|인쇄|제안이유\s*및\s*주요내용|제안이유|주요내용/g, " ")
+    .replace(/\[\s*\d+\s*\]/g, " ");
+  const matches = source.match(/[가-힣A-Za-z0-9]{2,}/g) || [];
+  return new Set(matches.map(word => word.toLowerCase()).filter(word =>
+    !stopWords.has(word) && word.length >= 2 && !/^\d+(인)?$/.test(word)
+  ));
+}
+
+function billSimilarity(left, right) {
+  const a = billTokens(left);
+  const b = billTokens(right);
+  const intersection = [...a].filter(word => b.has(word)).length;
+  const union = new Set([...a, ...b]).size || 1;
+  let score = intersection / union;
+  if (left.agency === right.agency) score += 0.12;
+  if (left.committee === right.committee) score += 0.08;
+  return score;
+}
+
+function commonBillKeywords(items) {
+  if (!items.length) return [];
+  const sets = items.map(billTokens);
+  return [...sets[0]].filter(word => sets.every(set => set.has(word))).slice(0, 8);
+}
+
+function distinctiveKeywords(item, allItems) {
+  const own = billTokens(item);
+  const others = allItems.filter(other => itemKey(other) !== itemKey(item)).map(billTokens);
+  return [...own].filter(word => others.every(set => !set.has(word))).slice(0, 8);
 }
 
 function downloadWordReport() {
