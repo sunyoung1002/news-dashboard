@@ -59,16 +59,20 @@ select:focus, input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgb
 .accent-green::after { background: var(--green); }
 
 .compare-tray { margin: 0 0 24px; padding: 18px 20px; border: 1px solid #9fc3ff; border-radius: var(--radius); background: #eef5ff; display: flex; align-items: center; justify-content: space-between; gap: 20px; box-shadow: 0 8px 24px rgba(31,111,235,.08); }
+.collection-tray { margin: -8px 0 24px; padding: 18px 20px; border: 1px solid #9ed8bd; border-radius: var(--radius); background: #effaf5; display: flex; align-items: center; justify-content: space-between; gap: 20px; box-shadow: 0 8px 24px rgba(19,138,91,.07); }
 .compare-tray[hidden] { display: none; }
-.compare-tray strong { color: var(--navy); margin-right: 9px; }
-.compare-tray span { color: var(--muted); font-size: 13px; }
+.compare-tray strong, .collection-tray strong { color: var(--navy); margin-right: 9px; }
+.compare-tray span, .collection-tray span { color: var(--muted); font-size: 13px; }
 .selected-bills { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
 .selected-pill { padding: 5px 8px; border-radius: 999px; background: white; border: 1px solid #c8dcff; color: var(--navy-2) !important; font-size: 11px !important; }
+.collection-pill { border-color: #b8e3ce; }
+.selected-pill button { margin-left: 5px; padding: 0; border: 0; background: transparent; color: #64748b; font-weight: 900; }
 .compare-tray-actions, .card-actions { display: flex; align-items: center; gap: 8px; }
 .compare-button, .secondary-button, .card-action { border-radius: 9px; padding: 9px 12px; font-weight: 800; }
 .compare-button { border: 0; background: var(--blue); color: white; }
 .compare-button:disabled { cursor: not-allowed; opacity: .45; }
 .secondary-button, .card-action { border: 1px solid var(--line); background: white; color: var(--navy-2); }
+.secondary-button:disabled { cursor: not-allowed; opacity: .45; }
 
 .content-grid { display: grid; grid-template-columns: 280px 1fr; gap: 22px; align-items: start; }
 .filters { position: sticky; top: 16px; padding: 20px; border: 1px solid var(--line); border-radius: var(--radius); background: white; box-shadow: 0 8px 24px rgba(31,41,51,.05); }
@@ -91,12 +95,15 @@ select:focus, input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgb
 .bill-card { padding: 20px; border: 1px solid var(--line); border-radius: var(--radius); background: white; box-shadow: 0 8px 24px rgba(31,41,51,.05); }
 .bill-card:hover { transform: translateY(-1px); box-shadow: 0 12px 30px rgba(31,41,51,.09); transition: .18s ease; }
 .bill-card.comparison-selected { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(31,111,235,.11); }
+.bill-card.collection-selected { border-left: 5px solid var(--green); }
 .badges { display: flex; flex-wrap: wrap; gap: 7px; }
 .badge { padding: 5px 8px; border-radius: 7px; font-size: 11px; font-weight: 800; background: #edf2f7; color: var(--navy-2); }
 .badge.stage { background: var(--blue-soft); color: var(--blue); }
 .badge.changed { background: #fff1df; color: #a85a0b; }
 .changed-date { color: var(--muted); font-size: 12px; }
-.bill-title { margin: 13px 0 7px; color: var(--navy); font-size: 19px; line-height: 1.45; }
+.bill-heading-row { display: flex; align-items: flex-start; gap: 10px; }
+.bill-select-checkbox { width: 19px; height: 19px; margin-top: 17px; accent-color: var(--green); flex: 0 0 auto; }
+.bill-title { flex: 1; margin: 13px 0 7px; color: var(--navy); font-size: 19px; line-height: 1.45; }
 .bill-meta { margin: 0; color: var(--muted); font-size: 13px; }
 .progress-track { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; margin: 18px 0; }
 .step { position: relative; padding-top: 15px; color: #9fb3c8; text-align: center; font-size: 11px; }
@@ -118,6 +125,7 @@ select:focus, input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgb
 .compare-dialog::backdrop { background: rgba(15,34,57,.6); backdrop-filter: blur(3px); }
 .dialog-head { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; border-bottom: 1px solid var(--line); background: white; }
 .dialog-head h2 { margin: 0; color: var(--navy); }
+.dialog-actions { display: flex; align-items: center; gap: 10px; }
 .dialog-close { width: 38px; height: 38px; border: 0; border-radius: 50%; background: #edf2f7; color: var(--navy); font-size: 25px; line-height: 1; }
 .common-keywords { padding: 14px 24px; background: #f5f9ff; color: var(--muted); font-size: 13px; }
 .common-keywords strong { margin-right: 9px; color: var(--navy); }
@@ -136,7 +144,7 @@ select:focus, input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgb
   .stats { grid-template-columns: repeat(2, 1fr); }
   .content-grid { grid-template-columns: 1fr; }
   .filters { position: static; }
-  .compare-tray { align-items: flex-start; flex-direction: column; }
+  .compare-tray, .collection-tray { align-items: flex-start; flex-direction: column; }
   .card-footer { align-items: flex-start; flex-direction: column; }
   .card-actions { flex-wrap: wrap; }
 }
@@ -149,6 +157,6 @@ select:focus, input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgb
   .progress-track { grid-template-columns: 1fr; }
   .step { padding: 7px 0 7px 14px; text-align: left; }
   .step::before { inset: 0 auto 0 0; width: 6px; height: auto; }
-  .compare-tray-actions { width: 100%; }
+  .compare-tray-actions { width: 100%; flex-wrap: wrap; }
   .compare-tray-actions button { flex: 1; }
 }
