@@ -625,8 +625,14 @@ function createWordDownload(content, filename) {
   const anchor = document.createElement("a");
   anchor.href = URL.createObjectURL(blob);
   anchor.download = filename;
+  anchor.style.display = "none";
+  document.body.appendChild(anchor);
   anchor.click();
-  URL.revokeObjectURL(anchor.href);
+  const objectUrl = anchor.href;
+  window.setTimeout(() => {
+    URL.revokeObjectURL(objectUrl);
+    anchor.remove();
+  }, 1500);
 }
 
 function summarizeForReport(item) {
