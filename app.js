@@ -17,7 +17,9 @@ const state = {
   query: "",
   changedOnly: false,
   sort: "changed",
-  compareIds: new Set()
+  compareIds: new Set(),
+  selectedIds: new Set(),
+  selectedOnly: false
 };
 
 const $ = (selector) => document.querySelector(selector);
@@ -60,15 +62,22 @@ function bindEvents() {
     render();
   });
   $("#resetFilters").addEventListener("click", () => {
-    state.stage = ""; state.agency = ""; state.query = ""; state.changedOnly = false; state.sort = "changed";
+    state.stage = ""; state.agency = ""; state.query = ""; state.changedOnly = false; state.sort = "changed"; state.selectedOnly = false;
     $("#agencyFilter").value = ""; $("#searchInput").value = ""; $("#changedOnly").checked = false; $("#sortSelect").value = "changed";
     document.querySelectorAll("#stageFilters .chip").forEach(chip => chip.classList.toggle("active", chip.dataset.stage === ""));
     render();
   });
   $("#downloadReport").addEventListener("click", downloadWordReport);
   $("#billList").addEventListener("click", handleBillAction);
+  $("#billList").addEventListener("change", handleBillSelectionChange);
   $("#clearCompare").addEventListener("click", clearComparison);
   $("#openCompare").addEventListener("click", openComparison);
+  $("#clearCollection").addEventListener("click", clearCollection);
+  $("#toggleSelectedOnly").addEventListener("click", toggleSelectedOnly);
+  $("#downloadSelected").addEventListener("click", downloadSelectedWordReport);
+  $("#selectedBills").addEventListener("click", handleComparePillRemove);
+  $("#collectedBills").addEventListener("click", handleCollectionPillRemove);
+  $("#downloadComparison").addEventListener("click", downloadComparisonWordReport);
   $("#closeCompare").addEventListener("click", () => $("#compareDialog").close());
   $("#compareDialog").addEventListener("click", event => {
     if (event.target === $("#compareDialog")) $("#compareDialog").close();
@@ -79,7 +88,8 @@ function filteredItems() {
   const stageIndex = stage => STAGES.indexOf(stage);
   const result = state.data.filter(item => {
     const haystack = `${item.title} ${item.billNo} ${item.agency} ${item.committee} ${item.summary}`.toLowerCase();
-    return item.month === state.month && (!state.agency || item.agency === state.agency) &&
+    return item.month === state.month && (!state.selectedOnly || state.selectedIds.has(itemKey(item))) &&
+      (!state.agency || item.agency === state.agency) &&
       (!state.stage || item.stage === state.stage) && (!state.query || haystack.includes(state.query)) &&
       (!state.changedOnly || item.changed);
   });
@@ -101,6 +111,7 @@ function render() {
   $("#resultCount").textContent = `${list.length.toLocaleString()}건`;
   renderCards(list);
   renderCompareTray();
+  renderCollectionTray();
 }
 
 function renderCards(items) {
@@ -117,12 +128,17 @@ function renderCards(items) {
     const article = card.querySelector(".bill-card");
     article.dataset.billId = id;
     article.classList.toggle("comparison-selected", state.compareIds.has(id));
+    article.classList.toggle("collection-selected", state.selectedIds.has(id));
     card.querySelector(".badges").innerHTML = `
       <span class="badge stage">${escapeHtml(item.stage)}</span>
       <span class="badge">${escapeHtml(item.agency)}</span>
       ${item.changed ? '<span class="badge changed">이번 달 변동</span>' : ''}`;
     card.querySelector(".changed-date").textContent = item.changedDate;
     card.querySelector(".bill-title").textContent = item.title;
+    ensureCardSelectionCheckbox(card);
+    const selectionCheckbox = card.querySelector(".bill-select-checkbox");
+    selectionCheckbox.checked = state.selectedIds.has(id);
+    selectionCheckbox.dataset.billId = id;
     card.querySelector(".bill-meta").textContent = `${item.billNo} · ${item.committee} · ${item.proposer}`;
     card.querySelector(".progress-track").innerHTML = STAGES.map((stage, index) => {
       const current = STAGES.indexOf(item.stage);
@@ -159,16 +175,49 @@ function ensureComparisonUi() {
       </section>`);
   }
 
+  if (!$("#collectionTray")) {
+    $("#compareTray").insertAdjacentHTML("afterend", `
+      <section class="collection-tray" id="collectionTray" aria-live="polite">
+        <div>
+          <strong>선택 법안 보관함</strong>
+          <span id="collectionStatus">법안 제목 앞 체크박스로 원하는 법안을 담아 주세요.</span>
+          <div class="selected-bills" id="collectedBills"></div>
+        </div>
+        <div class="compare-tray-actions">
+          <button class="secondary-button" id="toggleSelectedOnly" type="button" disabled>선택 항목만 보기</button>
+          <button class="secondary-button" id="clearCollection" type="button" disabled>보관함 비우기</button>
+          <button class="compare-button" id="downloadSelected" type="button" disabled>선택 법안 Word</button>
+        </div>
+      </section>`);
+  }
+
   if (!$("#compareDialog")) {
     document.body.insertAdjacentHTML("beforeend", `
       <dialog class="compare-dialog" id="compareDialog" aria-labelledby="compareTitle">
         <div class="dialog-head">
           <div><span class="section-kicker">BILL COMPARISON</span><h2 id="compareTitle">선택 법안 비교</h2></div>
-          <button class="dialog-close" id="closeCompare" type="button" aria-label="비교창 닫기">×</button>
+          <div class="dialog-actions">
+            <button class="compare-button" id="downloadComparison" type="button">비교표 Word</button>
+            <button class="dialog-close" id="closeCompare" type="button" aria-label="비교창 닫기">×</button>
+          </div>
         </div>
         <div class="common-keywords" id="commonKeywords"></div>
         <div class="compare-table-wrap" id="compareContent"></div>
       </dialog>`);
+  }
+  if (!$("#downloadComparison")) {
+    const head = $("#compareDialog .dialog-head");
+    const closeButton = $("#closeCompare");
+    const actions = document.createElement("div");
+    actions.className = "dialog-actions";
+    const downloadButton = document.createElement("button");
+    downloadButton.className = "compare-button";
+    downloadButton.id = "downloadComparison";
+    downloadButton.type = "button";
+    downloadButton.textContent = "비교표 Word";
+    actions.appendChild(downloadButton);
+    if (closeButton) actions.appendChild(closeButton);
+    head.appendChild(actions);
   }
   ensureComparisonStyles();
 }
@@ -187,21 +236,36 @@ function ensureCardComparisonActions(card) {
   footer.appendChild(actions);
 }
 
+function ensureCardSelectionCheckbox(card) {
+  if (card.querySelector(".bill-select-checkbox")) return;
+  const title = card.querySelector(".bill-title");
+  if (!title) return;
+  const heading = document.createElement("div");
+  heading.className = "bill-heading-row";
+  const checkbox = document.createElement("input");
+  checkbox.className = "bill-select-checkbox";
+  checkbox.type = "checkbox";
+  checkbox.setAttribute("aria-label", "이 법안을 보관함에 선택");
+  title.parentNode.insertBefore(heading, title);
+  heading.appendChild(checkbox);
+  heading.appendChild(title);
+}
+
 function ensureComparisonStyles() {
   if ($("#comparisonFallbackStyles")) return;
   const style = document.createElement("style");
   style.id = "comparisonFallbackStyles";
   style.textContent = `
-    .compare-tray{margin:0 0 24px;padding:18px 20px;border:1px solid #9fc3ff;border-radius:16px;background:#eef5ff;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .compare-tray,.collection-tray{margin:0 0 16px;padding:18px 20px;border:1px solid #9fc3ff;border-radius:16px;background:#eef5ff;display:flex;align-items:center;justify-content:space-between;gap:20px}.collection-tray{margin-bottom:24px;border-color:#9ed8bd;background:#effaf5}
     .compare-tray[hidden]{display:none}.selected-bills,.compare-tray-actions,.card-actions{display:flex;align-items:center;flex-wrap:wrap;gap:8px}.selected-bills{margin-top:10px}
     .selected-pill{padding:5px 8px;border-radius:999px;background:#fff;border:1px solid #c8dcff;font-size:11px}.compare-button,.secondary-button,.card-action{border-radius:9px;padding:8px 11px;font-weight:800}
     .compare-button{border:0;background:#1f6feb;color:#fff}.compare-button:disabled{opacity:.45}.secondary-button,.card-action{border:1px solid #d9e2ec;background:#fff;color:#243b53}.card-action{font-size:11px}
-    .bill-card.comparison-selected{border-color:#1f6feb;box-shadow:0 0 0 3px rgba(31,111,235,.11)}.compare-toggle[aria-pressed=true]{border-color:#1f6feb;background:#eaf2ff;color:#1f6feb}
+    .bill-heading-row{display:flex;align-items:flex-start;gap:10px}.bill-select-checkbox{width:19px;height:19px;margin-top:17px;accent-color:#138a5b;flex:0 0 auto}.bill-heading-row .bill-title{flex:1}.bill-card.comparison-selected{border-color:#1f6feb;box-shadow:0 0 0 3px rgba(31,111,235,.11)}.compare-toggle[aria-pressed=true]{border-color:#1f6feb;background:#eaf2ff;color:#1f6feb}
     .compare-dialog{width:min(1380px,calc(100vw - 36px));max-height:calc(100vh - 36px);padding:0;border:0;border-radius:18px}.compare-dialog::backdrop{background:rgba(15,34,57,.6)}
-    .dialog-head{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;border-bottom:1px solid #d9e2ec}.dialog-close{width:38px;height:38px;border:0;border-radius:50%;font-size:25px}
+    .dialog-head,.dialog-actions{display:flex;align-items:center;justify-content:space-between;gap:10px}.dialog-head{padding:20px 24px;border-bottom:1px solid #d9e2ec}.dialog-close{width:38px;height:38px;border:0;border-radius:50%;font-size:25px}
     .common-keywords,.compare-table-wrap{padding:14px 24px}.compare-table-wrap{overflow:auto}.compare-table{width:100%;min-width:860px;border-collapse:collapse}.compare-table th,.compare-table td{padding:12px;border:1px solid #d9e2ec;vertical-align:top;font-size:13px}
     .common-keywords span,.keyword{display:inline-block;margin:3px;padding:4px 7px;border-radius:999px;background:#e4efff;color:#225ea8;font-size:11px}
-    @media(max-width:900px){.compare-tray{align-items:flex-start;flex-direction:column}.card-footer{align-items:flex-start;flex-direction:column}}
+    @media(max-width:900px){.compare-tray,.collection-tray{align-items:flex-start;flex-direction:column}.card-footer{align-items:flex-start;flex-direction:column}}
   `;
   document.head.appendChild(style);
 }
@@ -217,6 +281,17 @@ function handleBillAction(event) {
   } else if (event.target.closest(".similar-button")) {
     selectSimilarBills(item);
   }
+}
+
+function handleBillSelectionChange(event) {
+  const checkbox = event.target.closest(".bill-select-checkbox");
+  if (!checkbox) return;
+  const id = checkbox.dataset.billId;
+  if (checkbox.checked) state.selectedIds.add(id);
+  else state.selectedIds.delete(id);
+  const card = checkbox.closest(".bill-card");
+  if (card) card.classList.toggle("collection-selected", checkbox.checked);
+  renderCollectionTray();
 }
 
 function toggleComparison(item) {
@@ -259,9 +334,56 @@ function renderCompareTray() {
     ? "1개 선택됨 · 비교하려면 1개 이상 더 선택하세요."
     : `${items.length}개 선택됨 · 최대 4개까지 비교할 수 있습니다.`;
   $("#selectedBills").innerHTML = items.map(item =>
-    `<span class="selected-pill">${escapeHtml(shortTitle(item.title, 28))}</span>`
+    `<span class="selected-pill">${escapeHtml(shortTitle(item.title, 28))}<button type="button" data-remove-compare="${escapeHtml(itemKey(item))}" aria-label="비교 선택 해제">×</button></span>`
   ).join("");
   $("#openCompare").disabled = items.length < 2;
+}
+
+function renderCollectionTray() {
+  const items = selectedCollectionItems();
+  $("#collectionStatus").textContent = items.length
+    ? `${items.length.toLocaleString()}개 법안이 보관되어 있습니다. 선택 항목만 모아 보거나 Word로 출력할 수 있습니다.`
+    : "법안 제목 앞 체크박스로 원하는 법안을 담아 주세요.";
+  $("#collectedBills").innerHTML = items.map(item =>
+    `<span class="selected-pill collection-pill">${escapeHtml(shortTitle(item.title, 34))}<button type="button" data-remove-collection="${escapeHtml(itemKey(item))}" aria-label="보관함에서 제거">×</button></span>`
+  ).join("");
+  $("#toggleSelectedOnly").disabled = items.length === 0;
+  $("#toggleSelectedOnly").textContent = state.selectedOnly ? "전체 법안 보기" : "선택 항목만 보기";
+  $("#clearCollection").disabled = items.length === 0;
+  $("#downloadSelected").disabled = items.length === 0;
+}
+
+function selectedCollectionItems() {
+  return [...state.selectedIds]
+    .map(id => state.data.find(item => itemKey(item) === id))
+    .filter(Boolean);
+}
+
+function clearCollection() {
+  state.selectedIds.clear();
+  state.selectedOnly = false;
+  render();
+}
+
+function toggleSelectedOnly() {
+  if (!state.selectedIds.size) return;
+  state.selectedOnly = !state.selectedOnly;
+  render();
+}
+
+function handleCollectionPillRemove(event) {
+  const button = event.target.closest("button[data-remove-collection]");
+  if (!button) return;
+  state.selectedIds.delete(button.dataset.removeCollection);
+  if (!state.selectedIds.size) state.selectedOnly = false;
+  render();
+}
+
+function handleComparePillRemove(event) {
+  const button = event.target.closest("button[data-remove-compare]");
+  if (!button) return;
+  state.compareIds.delete(button.dataset.removeCompare);
+  render();
 }
 
 function clearComparison() {
@@ -350,9 +472,26 @@ function distinctiveKeywords(item, allItems) {
 }
 
 function downloadWordReport() {
-  const items = filteredItems();
+  downloadItemsWordReport(
+    filteredItems(),
+    `${formatMonth(state.month)} 입법 진행현황 보고서`,
+    `${state.month}_입법진행현황.doc`
+  );
+}
+
+function downloadSelectedWordReport() {
+  const items = selectedCollectionItems();
+  downloadItemsWordReport(
+    items,
+    `${formatMonth(state.month)} 선택 법안 보고서`,
+    `${state.month}_선택법안보고서.doc`,
+    `보관함에서 선택한 법안 ${items.length.toLocaleString()}건`
+  );
+}
+
+function downloadItemsWordReport(items, reportTitle, filename, customFilterLabel = "") {
   if (!items.length) {
-    window.alert("현재 조회 조건에 해당하는 법안이 없습니다.");
+    window.alert("Word 보고서로 출력할 법안이 없습니다.");
     return;
   }
 
@@ -382,11 +521,12 @@ function downloadWordReport() {
       </tr>`;
   }).join("");
 
-  const filters = [
+  const filters = customFilterLabel || [
     state.agency && `소관기관: ${state.agency}`,
     state.stage && `진행단계: ${state.stage}`,
     state.query && `검색어: ${state.query}`,
-    state.changedOnly && "이번 달 변동만"
+    state.changedOnly && "이번 달 변동만",
+    state.selectedOnly && "선택 항목만"
   ].filter(Boolean).join(" / ") || "전체 조회";
   const generatedAt = new Intl.DateTimeFormat("ko-KR", {
     year: "numeric", month: "2-digit", day: "2-digit"
@@ -397,7 +537,7 @@ function downloadWordReport() {
           xmlns="http://www.w3.org/TR/REC-html40">
     <head>
       <meta charset="utf-8">
-      <title>${formatMonth(state.month)} 입법 진행현황 보고서</title>
+      <title>${escapeHtml(reportTitle)}</title>
       <style>
         @page WordSection1 {
           size: 841.9pt 595.3pt;
@@ -421,7 +561,7 @@ function downloadWordReport() {
       </style>
     </head>
     <body><div class="WordSection1">
-      <h1>${formatMonth(state.month)} 입법 진행현황 보고서</h1>
+      <h1>${escapeHtml(reportTitle)}</h1>
       <p class="meta">조회조건: ${escapeHtml(filters)} · 총 ${items.length.toLocaleString()}건 · 작성일 ${escapeHtml(generatedAt)}</p>
       <table>
         <colgroup>
@@ -432,10 +572,59 @@ function downloadWordReport() {
       </table>
       <p class="note">※ 주요내용은 원문에서 현행 내용·문제점·개정 목적을 중심으로 최대 3개 항목·180자 이내로 정리했습니다. 정확한 내용은 공식 원문을 확인해 주세요.</p>
     </div></body></html>`;
+  createWordDownload(content, filename);
+}
+
+function downloadComparisonWordReport() {
+  const items = selectedComparisonItems();
+  if (items.length < 2) {
+    window.alert("비교표를 출력하려면 법안을 2개 이상 선택해 주세요.");
+    return;
+  }
+  const common = commonBillKeywords(items);
+  const comparisonRows = [
+    ["법안명", item => `<strong>${escapeHtml(item.title)}</strong>`],
+    ["의안번호", item => escapeHtml(item.billNo)],
+    ["대표발의자", item => escapeHtml(item.proposer)],
+    ["소관기관·위원회", item => `${escapeHtml(item.agency)}<br>${escapeHtml(item.committee)}`],
+    ["진행단계", item => `${escapeHtml(item.previousStage)} → <strong>${escapeHtml(item.stage)}</strong>`],
+    ["최근 변동", item => `${escapeHtml(item.change)}<br>${escapeHtml(item.changedDate)}`],
+    ["핵심 내용", item => escapeHtml(summarizeForReport(item)).replace(/\n/g, "<br>")],
+    ["차별화 핵심어", item => distinctiveKeywords(item, items).map(escapeHtml).join(", ") || "-"] ,
+    ["공식 원문", item => item.sourceUrl ? `<a href="${escapeHtml(item.sourceUrl)}">원문 보기</a>` : "-"]
+  ];
+  const rows = comparisonRows.map(([label, renderCell]) =>
+    `<tr><th>${label}</th>${items.map(item => `<td>${renderCell(item)}</td>`).join("")}</tr>`
+  ).join("");
+  const generatedAt = new Intl.DateTimeFormat("ko-KR", { year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
+  const content = `<!doctype html>
+    <html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">
+    <head><meta charset="utf-8"><style>
+      @page WordSection1 { size: 841.9pt 595.3pt; mso-page-orientation: landscape; margin: 28.35pt; }
+      div.WordSection1 { page: WordSection1; }
+      body { font-family:'Malgun Gothic',sans-serif; font-size:9pt; color:#172033; }
+      h1 { text-align:center; font-size:18pt; margin:0 0 8pt; }
+      .meta { text-align:center; color:#475569; margin:0 0 8pt; }
+      .common { padding:7pt; margin-bottom:8pt; background:#eff6ff; border:0.75pt solid #bfdbfe; }
+      table { width:100%; border-collapse:collapse; table-layout:fixed; }
+      th,td { border:0.75pt solid #64748b; padding:5pt; vertical-align:top; line-height:1.45; word-break:keep-all; }
+      thead th { background:#dbeafe; text-align:center; }
+      tbody th { width:11%; background:#f1f5f9; text-align:left; }
+      a { color:#1d4ed8; }
+    </style></head><body><div class="WordSection1">
+      <h1>${formatMonth(state.month)} 유사·선택 법안 비교 보고서</h1>
+      <p class="meta">비교 법안 ${items.length}건 · 작성일 ${escapeHtml(generatedAt)}</p>
+      <div class="common"><strong>공통 핵심어:</strong> ${common.length ? common.map(escapeHtml).join(", ") : "뚜렷한 공통 핵심어 없음"}</div>
+      <table><thead><tr><th>비교항목</th>${items.map((item, index) => `<th>법안 ${index + 1}<br>${escapeHtml(shortTitle(item.title, 30))}</th>`).join("")}</tr></thead><tbody>${rows}</tbody></table>
+    </div></body></html>`;
+  createWordDownload(content, `${state.month}_법안비교보고서.doc`);
+}
+
+function createWordDownload(content, filename) {
   const blob = new Blob(["\ufeff", content], { type: "application/msword" });
   const anchor = document.createElement("a");
   anchor.href = URL.createObjectURL(blob);
-  anchor.download = `${state.month}_입법진행현황.doc`;
+  anchor.download = filename;
   anchor.click();
   URL.revokeObjectURL(anchor.href);
 }
