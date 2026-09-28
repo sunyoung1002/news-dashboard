@@ -1,6 +1,8 @@
 const STAGES = ["접수", "소관위", "법사위", "본회의", "공포·시행"];
 const REPORT_SUMMARY_MAX_POINTS = 3;
 const REPORT_SUMMARY_MAX_CHARS = 180;
+const COMPARISON_SUMMARY_MAX_POINTS = 2;
+const COMPARISON_SUMMARY_MAX_CHARS = 190;
 const REQUIRED_AGENCIES = [
   "공정거래위원회",
   "중소벤처기업부",
@@ -405,7 +407,7 @@ function openComparison() {
     ["소관", item => `${escapeHtml(item.agency)}<br><span class="table-sub">${escapeHtml(item.committee)}</span>`],
     ["진행단계", item => `${escapeHtml(item.previousStage)} → <strong>${escapeHtml(item.stage)}</strong>`],
     ["최근 변동", item => `${escapeHtml(item.change)}<br><span class="table-sub">${escapeHtml(item.changedDate)}</span>`],
-    ["핵심 내용", item => escapeHtml(summarizeForReport(item)).replace(/\n/g, "<br>")],
+    ["주요 내용 요약", item => escapeHtml(summarizeForComparison(item)).replace(/\n/g, "<br>")],
     ["이 법안의 특징", item => distinctiveKeywords(item, items).map(word => `<span class="keyword">${escapeHtml(word)}</span>`).join("") || "-"],
     ["원문", item => item.sourceUrl ? `<a href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noreferrer">공식 원문 보기 ↗</a>` : "-"]
   ];
@@ -589,7 +591,7 @@ function downloadComparisonWordReport() {
     ["소관기관·위원회", item => `${escapeHtml(item.agency)}<br>${escapeHtml(item.committee)}`],
     ["진행단계", item => `${escapeHtml(item.previousStage)} → <strong>${escapeHtml(item.stage)}</strong>`],
     ["최근 변동", item => `${escapeHtml(item.change)}<br>${escapeHtml(item.changedDate)}`],
-    ["핵심 내용", item => escapeHtml(summarizeForReport(item)).replace(/\n/g, "<br>")],
+    ["주요 내용 요약", item => escapeHtml(summarizeForComparison(item)).replace(/\n/g, "<br>")],
     ["차별화 핵심어", item => distinctiveKeywords(item, items).map(escapeHtml).join(", ") || "-"] ,
     ["공식 원문", item => item.sourceUrl ? `<a href="${escapeHtml(item.sourceUrl)}">원문 보기</a>` : "-"]
   ];
@@ -633,6 +635,57 @@ function createWordDownload(content, filename) {
     URL.revokeObjectURL(objectUrl);
     anchor.remove();
   }, 1500);
+}
+
+function summarizeForComparison(item) {
+  let text = String(item.summary || "")
+    .replace(/창닫기|의안 상세정보|인쇄/g, " ")
+    .replace(/\[\s*\d+\s*\]/g, " ")
+    .replace(/제안이유\s*및\s*주요내용|제안이유|주요내용/g, " ");
+
+  [item.title, item.proposer, item.billNo].filter(Boolean).forEach(value => {
+    text = text.split(String(value)).join(" ");
+  });
+  text = text
+    .replace(/의안번호\s*\d+/g, " ")
+    .replace(/\.{3,}|…+/g, ".")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  if (!text || text.includes("확인 중입니다")) {
+    return "공식 제안이유 및 주요내용을 확인 중입니다.";
+  }
+
+  const sentences = splitReportSentences(text)
+    .map(sentence => sentence.replace(/\s+/g, " ").trim())
+    .filter(sentence => sentence.length >= 12 && /[.!?]$/.test(sentence));
+  if (!sentences.length) return "공식 원문에서 완결된 주요 문장을 확인해 주세요.";
+
+  const candidates = sentences.map((sentence, index) => ({ sentence, index }));
+  const score = entry => {
+    if (/^이에|^따라서|개정|신설|도입|하려는|하고자|강화|완화|개선/.test(entry.sentence)) return 3;
+    if (/문제|지적|우려|어려|부담|피해|한계|불합리|그러나|그런데/.test(entry.sentence)) return 2;
+    return 1;
+  };
+  const prioritized = [...candidates].sort((a, b) =>
+    score(b) - score(a) || a.sentence.length - b.sentence.length || a.index - b.index
+  );
+  const selected = [];
+  let totalLength = 0;
+
+  prioritized.forEach(entry => {
+    if (selected.length >= COMPARISON_SUMMARY_MAX_POINTS) return;
+    const addedLength = entry.sentence.length + (selected.length ? 3 : 0);
+    if (!selected.length || totalLength + addedLength <= COMPARISON_SUMMARY_MAX_CHARS) {
+      selected.push(entry);
+      totalLength += addedLength;
+    }
+  });
+
+  return selected
+    .sort((a, b) => a.index - b.index)
+    .map(entry => `• ${entry.sentence}`)
+    .join("\n");
 }
 
 function summarizeForReport(item) {
