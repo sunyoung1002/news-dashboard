@@ -498,7 +498,7 @@ function downloadItemsWordReport(items, reportTitle, filename, customFilterLabel
   }
 
   const rows = items.map((item, index) => {
-    const summary = summarizeForReport(item);
+    const summary = summarizeForComparison(item);
     return `
       <tr>
         <td class="number">${index + 1}</td>
@@ -572,7 +572,7 @@ function downloadItemsWordReport(items, reportTitle, filename, customFilterLabel
         <thead><tr><th>번호</th><th>법안 정보</th><th>소관 기관</th><th>진행 현황</th><th>주요내용 요약</th></tr></thead>
         <tbody>${rows}</tbody>
       </table>
-      <p class="note">※ 주요내용은 원문에서 현행 내용·문제점·개정 목적을 중심으로 최대 3개 항목·180자 이내로 정리했습니다. 정확한 내용은 공식 원문을 확인해 주세요.</p>
+      <p class="note">※ 주요내용은 원문에서 개정 취지·문제점을 중심으로 약 5~6줄 분량의 완결된 문장으로 정리했습니다. 정확한 내용은 공식 원문을 확인해 주세요.</p>
     </div></body></html>`;
   createWordDownload(content, filename);
 }
