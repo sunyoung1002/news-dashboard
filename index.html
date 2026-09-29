@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>월간 입법 진행현황</title>
-  <link rel="stylesheet" href="styles.css?v=20260929-5">
+  <link rel="stylesheet" href="styles.css?v=20260929-6">
 </head>
 <body>
   <header class="topbar">
@@ -144,6 +144,23 @@
     </section>
   </main>
 
+  <dialog class="favorite-category-dialog" id="favoriteCategoryDialog" aria-labelledby="favoriteCategoryTitle">
+    <div class="favorite-detail-head">
+      <div>
+        <span class="section-kicker">FAVORITE CATEGORY</span>
+        <h2 id="favoriteCategoryTitle">관심 분야</h2>
+        <p class="favorite-category-count" id="favoriteCategoryCount"></p>
+      </div>
+      <div class="dialog-actions">
+        <button class="favorite-word-button" id="downloadFavoriteCategoryDialog" type="button">Word 출력</button>
+        <button class="dialog-close" id="closeFavoriteCategory" type="button" aria-label="분야별 법안 목록 닫기">×</button>
+      </div>
+    </div>
+    <div class="favorite-category-body">
+      <ul class="favorite-category-list" id="favoriteCategoryItems"></ul>
+    </div>
+  </dialog>
+
   <dialog class="favorite-detail-dialog" id="favoriteDetailDialog" aria-labelledby="favoriteDetailTitle">
     <div class="favorite-detail-head">
       <div><span class="section-kicker">BILL DETAIL</span><h2 id="favoriteDetailTitle">법안 상세</h2></div>
@@ -156,7 +173,7 @@
       <div class="favorite-detail-summary" id="favoriteDetailSummary"></div>
       <div class="favorite-detail-actions">
         <a class="source-link" id="favoriteDetailSource" target="_blank" rel="noreferrer">공식 원문 보기 ↗</a>
-        <button class="favorite-word-button" id="downloadFavoriteDetail" type="button">이 법안 Word 출력</button>
+        <button class="favorite-word-button" id="downloadFavoriteDetail" type="button">Word 출력</button>
       </div>
     </div>
   </dialog>
@@ -205,6 +222,6 @@
     <div class="compare-table-wrap" id="compareContent"></div>
   </dialog>
 
-  <script src="app.js?v=20260929-5"></script>
+  <script src="app.js?v=20260929-6"></script>
 </body>
 </html>

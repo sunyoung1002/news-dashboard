@@ -97,6 +97,13 @@ function bindEvents() {
   $("#clearFavorites").addEventListener("click", clearFavorites);
   $("#downloadFavorites").addEventListener("click", downloadFavoriteWordReport);
   $("#favoriteAgencyGroups").addEventListener("click", handleFavoritePanelAction);
+  $("#downloadFavoriteCategoryDialog").addEventListener("click", event => downloadFavoriteCategoryWordReport(event.currentTarget.dataset.categoryId));
+  $("#closeFavoriteCategory").addEventListener("click", () => $("#favoriteCategoryDialog").close());
+  $("#favoriteCategoryDialog").addEventListener("click", event => {
+    if (event.target === $("#favoriteCategoryDialog")) $("#favoriteCategoryDialog").close();
+    const detailButton = event.target.closest("button[data-view-favorite-id]");
+    if (detailButton) openFavoriteDetail(detailButton.dataset.viewFavoriteId);
+  });
   $("#downloadFavoriteDetail").addEventListener("click", event => downloadFavoriteItemWordReport(event.currentTarget.dataset.billId));
   $("#closeFavoriteDetail").addEventListener("click", () => $("#favoriteDetailDialog").close());
   $("#favoriteDetailDialog").addEventListener("click", event => {
@@ -220,6 +227,13 @@ function ensureComparisonUi() {
       <dialog class="favorite-detail-dialog" id="favoriteDetailDialog" aria-labelledby="favoriteDetailTitle">
         <div class="favorite-detail-head"><div><span class="section-kicker">BILL DETAIL</span><h2 id="favoriteDetailTitle">법안 상세</h2></div><button class="dialog-close" id="closeFavoriteDetail" type="button" aria-label="법안 상세 닫기">×</button></div>
         <div class="favorite-detail-body"><p class="favorite-detail-meta" id="favoriteDetailMeta"></p><div class="favorite-detail-stage" id="favoriteDetailStage"></div><h3>주요내용</h3><div class="favorite-detail-summary" id="favoriteDetailSummary"></div><div class="favorite-detail-actions"><a class="source-link" id="favoriteDetailSource" target="_blank" rel="noreferrer">공식 원문 보기 ↗</a><button class="favorite-word-button" id="downloadFavoriteDetail" type="button">이 법안 Word 출력</button></div></div>
+      </dialog>`);
+  }
+  if (!$("#favoriteCategoryDialog")) {
+    document.body.insertAdjacentHTML("beforeend", `
+      <dialog class="favorite-category-dialog" id="favoriteCategoryDialog" aria-labelledby="favoriteCategoryTitle">
+        <div class="favorite-detail-head"><div><span class="section-kicker">FAVORITE CATEGORY</span><h2 id="favoriteCategoryTitle">관심 분야</h2><p class="favorite-category-count" id="favoriteCategoryCount"></p></div><div class="dialog-actions"><button class="favorite-word-button" id="downloadFavoriteCategoryDialog" type="button">Word 출력</button><button class="dialog-close" id="closeFavoriteCategory" type="button" aria-label="분야별 법안 목록 닫기">×</button></div></div>
+        <div class="favorite-category-body"><ul class="favorite-category-list" id="favoriteCategoryItems"></ul></div>
       </dialog>`);
   }
   if (!$("#compareTray")) {
@@ -506,10 +520,11 @@ function renderFavoritesPanel() {
   $("#favoriteAgencyGroups").innerHTML = groups.map(group => `
     <section class="favorite-agency-group favorite-topic-group">
       <div class="favorite-group-head">
-        <h4>${escapeHtml(group.label)} <span>${group.items.length.toLocaleString()}건</span></h4>
-        <button class="favorite-category-word" type="button" data-download-favorite-category="${escapeHtml(group.id)}">이 항목 Word 출력</button>
+        <button class="favorite-group-title" type="button" data-view-favorite-category="${escapeHtml(group.id)}">
+          <span>${escapeHtml(group.label)}</span><small>${group.items.length.toLocaleString()}건 · 전체보기 ›</small>
+        </button>
       </div>
-      <ul>${group.items.slice(0, 5).map(item => `
+      <ul>${group.items.slice(0, 3).map(item => `
         <li class="favorite-item">
           <button class="favorite-remove" type="button" data-remove-favorite="${escapeHtml(itemKey(item))}" aria-label="주요법안현황에서 제거">★</button>
           <div class="favorite-item-main">
@@ -517,10 +532,9 @@ function renderFavoritesPanel() {
             <span>${escapeHtml(item.agency || "기타")} · ${escapeHtml(item.billNo)} · ${escapeHtml(item.proposer)}</span>
           </div>
           <div class="favorite-item-actions">
-            <button class="favorite-item-word" type="button" data-download-favorite-id="${escapeHtml(itemKey(item))}">Word 출력</button>
             ${item.sourceUrl ? `<a href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noreferrer">원문 ↗</a>` : ""}
           </div>
-        </li>`).join("")}${group.items.length > 5 ? `<li class="favorite-more">총 ${group.items.length.toLocaleString()}건 중 최근 정렬 5건만 표시합니다.</li>` : ""}</ul>
+        </li>`).join("")}${group.items.length > 3 ? `<li class="favorite-more">분야명을 누르면 전체 ${group.items.length.toLocaleString()}건을 볼 수 있습니다.</li>` : ""}</ul>
     </section>`).join("");
 }
 
@@ -557,6 +571,22 @@ function openFavoriteDetail(itemId) {
   $("#favoriteDetailDialog").showModal();
 }
 
+function openFavoriteCategory(categoryId) {
+  const group = favoriteCategoryGroups().find(entry => entry.id === categoryId);
+  if (!group) return;
+  $("#favoriteCategoryTitle").textContent = group.label;
+  $("#favoriteCategoryCount").textContent = `즐겨찾기에 등록된 법안 ${group.items.length.toLocaleString()}건`;
+  $("#downloadFavoriteCategoryDialog").dataset.categoryId = categoryId;
+  $("#favoriteCategoryItems").innerHTML = group.items.map(item => `
+    <li class="favorite-category-item">
+      <button class="favorite-item-title" type="button" data-view-favorite-id="${escapeHtml(itemKey(item))}">${escapeHtml(item.title)}</button>
+      <span>${escapeHtml(item.agency || "기타")} · ${escapeHtml(item.billNo)} · ${escapeHtml(item.proposer)}</span>
+      <small>${escapeHtml(item.previousStage || "-")} → ${escapeHtml(item.stage || "-")} · ${escapeHtml(item.changedDate || "")}</small>
+      ${item.sourceUrl ? `<a href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noreferrer">공식 원문 보기 ↗</a>` : ""}
+    </li>`).join("");
+  $("#favoriteCategoryDialog").showModal();
+}
+
 function clearFavorites() {
   if (!state.favoriteIds.size) return;
   state.favoriteIds.clear();
@@ -566,19 +596,14 @@ function clearFavorites() {
 }
 
 function handleFavoritePanelAction(event) {
+  const categoryButton = event.target.closest("button[data-view-favorite-category]");
+  if (categoryButton) {
+    openFavoriteCategory(categoryButton.dataset.viewFavoriteCategory);
+    return;
+  }
   const detailButton = event.target.closest("button[data-view-favorite-id]");
   if (detailButton) {
     openFavoriteDetail(detailButton.dataset.viewFavoriteId);
-    return;
-  }
-  const itemDownloadButton = event.target.closest("button[data-download-favorite-id]");
-  if (itemDownloadButton) {
-    downloadFavoriteItemWordReport(itemDownloadButton.dataset.downloadFavoriteId);
-    return;
-  }
-  const downloadButton = event.target.closest("button[data-download-favorite-category]");
-  if (downloadButton) {
-    downloadFavoriteCategoryWordReport(downloadButton.dataset.downloadFavoriteCategory);
     return;
   }
   const button = event.target.closest("button[data-remove-favorite]");
