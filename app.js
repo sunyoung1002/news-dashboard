@@ -81,7 +81,11 @@ function bindEvents() {
   $("#clearCollection").addEventListener("click", clearCollection);
   $("#toggleSelectedOnly").addEventListener("click", toggleSelectedOnly);
   $("#downloadSelected").addEventListener("click", downloadSelectedWordReport);
-  $("#favoritesShortcut").addEventListener("click", () => $("#favoritesPanel").scrollIntoView({ behavior: "smooth", block: "start" }));
+  $("#favoritesShortcut").addEventListener("click", () => $("#favoritesDialog").showModal());
+  $("#closeFavorites").addEventListener("click", () => $("#favoritesDialog").close());
+  $("#favoritesDialog").addEventListener("click", event => {
+    if (event.target === $("#favoritesDialog")) $("#favoritesDialog").close();
+  });
   $("#toggleFavoriteOnly").addEventListener("click", toggleFavoriteOnly);
   $("#clearFavorites").addEventListener("click", clearFavorites);
   $("#downloadFavorites").addEventListener("click", downloadFavoriteWordReport);
@@ -182,19 +186,20 @@ function ensureComparisonUi() {
   if (!$("#favoritesShortcut")) {
     $("#downloadReport").insertAdjacentHTML("beforebegin", `<button class="favorite-shortcut" id="favoritesShortcut" type="button">★ 주요법안현황 <span id="favoriteHeaderCount">0</span></button>`);
   }
-  if (!$("#favoritesPanel")) {
-    $(".stats").insertAdjacentHTML("afterend", `
-      <section class="favorites-panel" id="favoritesPanel" aria-live="polite">
-        <div class="favorites-head">
-          <div><strong>★ 주요법안현황</strong><span id="favoritesStatus">별표를 눌러 필요한 법안을 모아 주세요.</span></div>
-          <div class="compare-tray-actions">
-            <button class="secondary-button" id="toggleFavoriteOnly" type="button" disabled>즐겨찾기만 보기</button>
-            <button class="secondary-button" id="clearFavorites" type="button" disabled>즐겨찾기 비우기</button>
-            <button class="favorite-word-button" id="downloadFavorites" type="button" disabled>주요법안 Word</button>
-          </div>
+  if (!$("#favoritesDialog")) {
+    document.body.insertAdjacentHTML("beforeend", `
+      <dialog class="favorites-dialog" id="favoritesDialog" aria-labelledby="favoritesTitle">
+        <div class="favorites-dialog-head">
+          <div><span class="section-kicker">FAVORITE BILLS</span><h2 id="favoritesTitle">★ 주요법안현황</h2><p id="favoritesStatus">별표를 눌러 필요한 법안을 모아 주세요.</p></div>
+          <button class="dialog-close" id="closeFavorites" type="button" aria-label="주요법안현황 닫기">×</button>
+        </div>
+        <div class="favorites-dialog-toolbar compare-tray-actions">
+          <button class="secondary-button" id="toggleFavoriteOnly" type="button" disabled>즐겨찾기만 보기</button>
+          <button class="secondary-button" id="clearFavorites" type="button" disabled>즐겨찾기 비우기</button>
+          <button class="favorite-word-button" id="downloadFavorites" type="button" disabled>주요법안 Word</button>
         </div>
         <div class="favorite-agency-groups" id="favoriteAgencyGroups"></div>
-      </section>`);
+      </dialog>`);
   }
   if (!$("#compareTray")) {
     const stats = $(".stats");
@@ -480,6 +485,7 @@ function toggleFavoriteOnly() {
   if (!state.favoriteIds.size) return;
   state.favoriteOnly = !state.favoriteOnly;
   render();
+  if ($("#favoritesDialog").open) $("#favoritesDialog").close();
 }
 
 function clearFavorites() {

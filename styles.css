@@ -60,10 +60,12 @@ select:focus, input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgb
 .accent-purple::after { background: var(--purple); }
 .accent-green::after { background: var(--green); }
 
-.favorites-panel { margin: 0 0 24px; padding: 18px 20px; border: 1px solid #e7c75f; border-radius: var(--radius); background: #fffaf0; box-shadow: 0 8px 24px rgba(170,122,0,.08); }
-.favorites-head { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-.favorites-head strong { margin-right: 9px; color: var(--navy); }
-.favorites-head > div > span { color: var(--muted); font-size: 13px; }
+.favorites-dialog { width: min(1180px, calc(100vw - 36px)); max-height: calc(100vh - 36px); padding: 0 22px 24px; border: 0; border-radius: 18px; color: var(--text); background: #fffaf0; box-shadow: 0 24px 80px rgba(15,34,57,.35); }
+.favorites-dialog::backdrop { background: rgba(15,34,57,.62); backdrop-filter: blur(3px); }
+.favorites-dialog-head { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 20px; margin: 0 -22px; padding: 20px 22px 16px; border-bottom: 1px solid #eadcae; background: #fffaf0; }
+.favorites-dialog-head h2 { margin: 0; color: var(--navy); }
+.favorites-dialog-head p { margin: 6px 0 0; color: var(--muted); font-size: 13px; }
+.favorites-dialog-toolbar { justify-content: flex-end; padding-top: 16px; }
 .favorite-word-button { border: 0; border-radius: 9px; padding: 9px 12px; background: #b77900; color: white; font-weight: 800; }
 .favorite-word-button:disabled { cursor: not-allowed; opacity: .42; }
 .favorite-agency-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 12px; margin-top: 15px; }
@@ -169,7 +171,7 @@ select:focus, input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgb
   .stats { grid-template-columns: repeat(2, 1fr); }
   .content-grid { grid-template-columns: 1fr; }
   .filters { position: static; }
-  .favorites-head, .compare-tray, .collection-tray { align-items: flex-start; flex-direction: column; }
+  .compare-tray, .collection-tray { align-items: flex-start; flex-direction: column; }
   .card-footer { align-items: flex-start; flex-direction: column; }
   .card-actions { flex-wrap: wrap; }
 }
@@ -185,4 +187,6 @@ select:focus, input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgb
   .compare-tray-actions { width: 100%; flex-wrap: wrap; }
   .compare-tray-actions button { flex: 1; }
   .favorite-agency-groups { grid-template-columns: 1fr; }
+  .favorites-dialog { width: calc(100vw - 20px); padding-inline: 14px; }
+  .favorites-dialog-head { margin-inline: -14px; padding-inline: 14px; }
 }
