@@ -91,15 +91,17 @@ function bindEvents() {
   $("#clearCollection").addEventListener("click", clearCollection);
   $("#toggleSelectedOnly").addEventListener("click", toggleSelectedOnly);
   $("#downloadSelected").addEventListener("click", downloadSelectedWordReport);
-  $("#favoritesShortcut").addEventListener("click", () => $("#favoritesDialog").showModal());
-  $("#closeFavorites").addEventListener("click", () => $("#favoritesDialog").close());
-  $("#favoritesDialog").addEventListener("click", event => {
-    if (event.target === $("#favoritesDialog")) $("#favoritesDialog").close();
-  });
+  $("#favoritesShortcut").addEventListener("click", showFavoritesPage);
+  $("#closeFavorites").addEventListener("click", showDashboardPage);
   $("#toggleFavoriteOnly").addEventListener("click", toggleFavoriteOnly);
   $("#clearFavorites").addEventListener("click", clearFavorites);
   $("#downloadFavorites").addEventListener("click", downloadFavoriteWordReport);
   $("#favoriteAgencyGroups").addEventListener("click", handleFavoritePanelAction);
+  $("#downloadFavoriteDetail").addEventListener("click", event => downloadFavoriteItemWordReport(event.currentTarget.dataset.billId));
+  $("#closeFavoriteDetail").addEventListener("click", () => $("#favoriteDetailDialog").close());
+  $("#favoriteDetailDialog").addEventListener("click", event => {
+    if (event.target === $("#favoriteDetailDialog")) $("#favoriteDetailDialog").close();
+  });
   $("#selectedBills").addEventListener("click", handleComparePillRemove);
   $("#collectedBills").addEventListener("click", handleCollectionPillRemove);
   $("#downloadComparison").addEventListener("click", downloadComparisonWordReport);
@@ -196,19 +198,28 @@ function ensureComparisonUi() {
   if (!$("#favoritesShortcut")) {
     $("#downloadReport").insertAdjacentHTML("beforebegin", `<button class="favorite-shortcut" id="favoritesShortcut" type="button">★ 주요법안현황 <span id="favoriteHeaderCount">0</span></button>`);
   }
-  if (!$("#favoritesDialog")) {
+  if (!$("#favoritesPage")) {
     document.body.insertAdjacentHTML("beforeend", `
-      <dialog class="favorites-dialog" id="favoritesDialog" aria-labelledby="favoritesTitle">
-        <div class="favorites-dialog-head">
+      <main class="favorites-page page-shell" id="favoritesPage" hidden>
+       <section class="favorites-page-card" aria-labelledby="favoritesTitle">
+        <div class="favorites-page-head">
           <div><span class="section-kicker">FAVORITE BILLS</span><h2 id="favoritesTitle">★ 주요법안현황</h2><p id="favoritesStatus">별표를 눌러 필요한 법안을 모아 주세요.</p></div>
-          <button class="dialog-close" id="closeFavorites" type="button" aria-label="주요법안현황 닫기">×</button>
+          <button class="secondary-button" id="closeFavorites" type="button">← 월간 현황으로 돌아가기</button>
         </div>
-        <div class="favorites-dialog-toolbar compare-tray-actions">
+        <div class="favorites-page-toolbar compare-tray-actions">
           <button class="secondary-button" id="toggleFavoriteOnly" type="button" disabled>즐겨찾기만 보기</button>
           <button class="secondary-button" id="clearFavorites" type="button" disabled>즐겨찾기 비우기</button>
           <button class="favorite-word-button" id="downloadFavorites" type="button" disabled>주요법안 Word</button>
         </div>
         <div class="favorite-agency-groups" id="favoriteAgencyGroups"></div>
+       </section>
+      </main>`);
+  }
+  if (!$("#favoriteDetailDialog")) {
+    document.body.insertAdjacentHTML("beforeend", `
+      <dialog class="favorite-detail-dialog" id="favoriteDetailDialog" aria-labelledby="favoriteDetailTitle">
+        <div class="favorite-detail-head"><div><span class="section-kicker">BILL DETAIL</span><h2 id="favoriteDetailTitle">법안 상세</h2></div><button class="dialog-close" id="closeFavoriteDetail" type="button" aria-label="법안 상세 닫기">×</button></div>
+        <div class="favorite-detail-body"><p class="favorite-detail-meta" id="favoriteDetailMeta"></p><div class="favorite-detail-stage" id="favoriteDetailStage"></div><h3>주요내용</h3><div class="favorite-detail-summary" id="favoriteDetailSummary"></div><div class="favorite-detail-actions"><a class="source-link" id="favoriteDetailSource" target="_blank" rel="noreferrer">공식 원문 보기 ↗</a><button class="favorite-word-button" id="downloadFavoriteDetail" type="button">이 법안 Word 출력</button></div></div>
       </dialog>`);
   }
   if (!$("#compareTray")) {
@@ -464,6 +475,10 @@ function favoriteCategoryForItem(item) {
 function favoriteCategoryGroups(items = favoriteItems()) {
   const grouped = new Map(FAVORITE_CATEGORIES.map(category => [category.id, { ...category, items: [] }]));
   items.forEach(item => grouped.get(favoriteCategoryForItem(item).id).items.push(item));
+  grouped.forEach(group => group.items.sort((a, b) =>
+    String(b.changedDate || "").localeCompare(String(a.changedDate || "")) ||
+    String(a.title || "").localeCompare(String(b.title || ""), "ko")
+  ));
   return [...grouped.values()].filter(group => group.items.length);
 }
 
@@ -494,18 +509,18 @@ function renderFavoritesPanel() {
         <h4>${escapeHtml(group.label)} <span>${group.items.length.toLocaleString()}건</span></h4>
         <button class="favorite-category-word" type="button" data-download-favorite-category="${escapeHtml(group.id)}">이 항목 Word 출력</button>
       </div>
-      <ul>${group.items.map(item => `
+      <ul>${group.items.slice(0, 5).map(item => `
         <li class="favorite-item">
           <button class="favorite-remove" type="button" data-remove-favorite="${escapeHtml(itemKey(item))}" aria-label="주요법안현황에서 제거">★</button>
           <div class="favorite-item-main">
-            <strong>${escapeHtml(item.title)}</strong>
+            <button class="favorite-item-title" type="button" data-view-favorite-id="${escapeHtml(itemKey(item))}">${escapeHtml(item.title)}</button>
             <span>${escapeHtml(item.agency || "기타")} · ${escapeHtml(item.billNo)} · ${escapeHtml(item.proposer)}</span>
           </div>
           <div class="favorite-item-actions">
             <button class="favorite-item-word" type="button" data-download-favorite-id="${escapeHtml(itemKey(item))}">Word 출력</button>
             ${item.sourceUrl ? `<a href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noreferrer">원문 ↗</a>` : ""}
           </div>
-        </li>`).join("")}</ul>
+        </li>`).join("")}${group.items.length > 5 ? `<li class="favorite-more">총 ${group.items.length.toLocaleString()}건 중 최근 정렬 5건만 표시합니다.</li>` : ""}</ul>
     </section>`).join("");
 }
 
@@ -513,7 +528,33 @@ function toggleFavoriteOnly() {
   if (!state.favoriteIds.size) return;
   state.favoriteOnly = !state.favoriteOnly;
   render();
-  if ($("#favoritesDialog").open) $("#favoritesDialog").close();
+  showDashboardPage();
+}
+
+function showFavoritesPage() {
+  $("#dashboardPage").hidden = true;
+  $("#favoritesPage").hidden = false;
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function showDashboardPage() {
+  $("#favoritesPage").hidden = true;
+  $("#dashboardPage").hidden = false;
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function openFavoriteDetail(itemId) {
+  const item = state.data.find(entry => itemKey(entry) === itemId);
+  if (!item) return;
+  $("#favoriteDetailTitle").textContent = item.title;
+  $("#favoriteDetailMeta").textContent = `${item.agency || "기타"} · ${item.committee || "위원회 확인 중"} · ${item.billNo || "의안번호 확인 중"} · ${item.proposer || "발의자 확인 중"}`;
+  $("#favoriteDetailStage").innerHTML = `<strong>${escapeHtml(item.previousStage || "-")} → ${escapeHtml(item.stage || "-")}</strong><span>${escapeHtml(item.change || "변동 내용 확인 중")} · ${escapeHtml(item.changedDate || "")}</span>`;
+  $("#favoriteDetailSummary").innerHTML = escapeHtml(item.summary || "공식 주요내용을 확인 중입니다.").replace(/\n/g, "<br>");
+  const source = $("#favoriteDetailSource");
+  source.href = item.sourceUrl || "#";
+  source.hidden = !item.sourceUrl;
+  $("#downloadFavoriteDetail").dataset.billId = itemId;
+  $("#favoriteDetailDialog").showModal();
 }
 
 function clearFavorites() {
@@ -525,6 +566,11 @@ function clearFavorites() {
 }
 
 function handleFavoritePanelAction(event) {
+  const detailButton = event.target.closest("button[data-view-favorite-id]");
+  if (detailButton) {
+    openFavoriteDetail(detailButton.dataset.viewFavoriteId);
+    return;
+  }
   const itemDownloadButton = event.target.closest("button[data-download-favorite-id]");
   if (itemDownloadButton) {
     downloadFavoriteItemWordReport(itemDownloadButton.dataset.downloadFavoriteId);
