@@ -4,6 +4,16 @@ const REPORT_SUMMARY_MAX_CHARS = 180;
 const COMPARISON_SUMMARY_MAX_POINTS = 2;
 const COMPARISON_SUMMARY_MAX_CHARS = 190;
 const FAVORITES_STORAGE_KEY = "newsDashboard.favoriteBillIds.v1";
+const FAVORITE_CATEGORIES = [
+  { id: "fair-trade", label: "공정거래법", keywords: ["독점규제및공정거래", "공정거래법"] },
+  { id: "capital-markets", label: "자본시장법", keywords: ["자본시장과금융투자업", "자본시장법", "금융투자업"] },
+  { id: "subcontracting", label: "하도급법", keywords: ["하도급거래공정화", "하도급법", "하도급거래"] },
+  { id: "commercial-litigation", label: "상법·집단소송·민사소송", keywords: ["상법", "집단소송", "민사소송법", "민사소송"] },
+  { id: "mutual-growth", label: "상생협력법", keywords: ["대중소기업상생협력", "상생협력법", "상생협력"] },
+  { id: "carbon-labor-youth", label: "탄소중립법·노동법·청년고용", keywords: ["탄소중립", "기후위기대응", "노동법", "노동", "근로기준법", "노동조합", "산업안전", "중대재해", "최저임금", "청년고용", "고용"] },
+  { id: "inheritance-gift-tax", label: "상속세·증여세법", keywords: ["상속세및증여세법", "상속세", "증여세"] },
+  { id: "other", label: "기타 주요법안", keywords: [] }
+];
 const REQUIRED_AGENCIES = [
   "공정거래위원회",
   "중소벤처기업부",
@@ -440,6 +450,23 @@ function favoriteItems() {
     });
 }
 
+function normalizeFavoriteCategoryText(value) {
+  return String(value || "").toLowerCase().replace(/[^가-힣a-z0-9]/g, "");
+}
+
+function favoriteCategoryForItem(item) {
+  const source = normalizeFavoriteCategoryText(`${item.title || ""} ${item.summary || ""}`);
+  return FAVORITE_CATEGORIES.find(category =>
+    category.id !== "other" && category.keywords.some(keyword => source.includes(normalizeFavoriteCategoryText(keyword)))
+  ) || FAVORITE_CATEGORIES.find(category => category.id === "other");
+}
+
+function favoriteCategoryGroups(items = favoriteItems()) {
+  const grouped = new Map(FAVORITE_CATEGORIES.map(category => [category.id, { ...category, items: [] }]));
+  items.forEach(item => grouped.get(favoriteCategoryForItem(item).id).items.push(item));
+  return [...grouped.values()].filter(group => group.items.length);
+}
+
 function toggleFavorite(item) {
   const id = itemKey(item);
   if (state.favoriteIds.has(id)) state.favoriteIds.delete(id);
@@ -451,30 +478,28 @@ function toggleFavorite(item) {
 
 function renderFavoritesPanel() {
   const items = favoriteItems();
-  const groups = new Map();
-  items.forEach(item => {
-    const agency = item.agency || "기타";
-    if (!groups.has(agency)) groups.set(agency, []);
-    groups.get(agency).push(item);
-  });
+  const groups = favoriteCategoryGroups(items);
 
   $("#favoriteHeaderCount").textContent = items.length.toLocaleString();
   $("#favoritesStatus").textContent = items.length
-    ? `${items.length.toLocaleString()}개 법안을 ${groups.size.toLocaleString()}개 기관별로 모았습니다.`
+    ? `${items.length.toLocaleString()}개 법안을 ${groups.length.toLocaleString()}개 관심 분야로 분류했습니다.`
     : "각 법안 제목 앞 별표를 눌러 필요한 법안을 모아 주세요.";
   $("#toggleFavoriteOnly").disabled = items.length === 0;
   $("#toggleFavoriteOnly").textContent = state.favoriteOnly ? "전체 법안 보기" : "즐겨찾기만 보기";
   $("#clearFavorites").disabled = items.length === 0;
   $("#downloadFavorites").disabled = items.length === 0;
-  $("#favoriteAgencyGroups").innerHTML = [...groups].map(([agency, agencyItems]) => `
-    <section class="favorite-agency-group">
-      <h4>${escapeHtml(agency)} <span>${agencyItems.length.toLocaleString()}건</span></h4>
-      <ul>${agencyItems.map(item => `
+  $("#favoriteAgencyGroups").innerHTML = groups.map(group => `
+    <section class="favorite-agency-group favorite-topic-group">
+      <div class="favorite-group-head">
+        <h4>${escapeHtml(group.label)} <span>${group.items.length.toLocaleString()}건</span></h4>
+        <button class="favorite-category-word" type="button" data-download-favorite-category="${escapeHtml(group.id)}">이 항목 Word 출력</button>
+      </div>
+      <ul>${group.items.map(item => `
         <li class="favorite-item">
           <button class="favorite-remove" type="button" data-remove-favorite="${escapeHtml(itemKey(item))}" aria-label="주요법안현황에서 제거">★</button>
           <div class="favorite-item-main">
             <strong>${escapeHtml(item.title)}</strong>
-            <span>${escapeHtml(item.billNo)} · ${escapeHtml(item.proposer)}</span>
+            <span>${escapeHtml(item.agency || "기타")} · ${escapeHtml(item.billNo)} · ${escapeHtml(item.proposer)}</span>
           </div>
           ${item.sourceUrl ? `<a href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noreferrer">원문 ↗</a>` : ""}
         </li>`).join("")}</ul>
@@ -497,6 +522,11 @@ function clearFavorites() {
 }
 
 function handleFavoritePanelAction(event) {
+  const downloadButton = event.target.closest("button[data-download-favorite-category]");
+  if (downloadButton) {
+    downloadFavoriteCategoryWordReport(downloadButton.dataset.downloadFavoriteCategory);
+    return;
+  }
   const button = event.target.closest("button[data-remove-favorite]");
   if (!button) return;
   state.favoriteIds.delete(button.dataset.removeFavorite);
@@ -642,6 +672,22 @@ function downloadFavoriteWordReport() {
     "주요법안현황",
     "주요법안현황.doc",
     `즐겨찾기에 등록한 법안 ${items.length.toLocaleString()}건 · 소관기관별 분류`,
+    true
+  );
+}
+
+function downloadFavoriteCategoryWordReport(categoryId) {
+  const group = favoriteCategoryGroups().find(entry => entry.id === categoryId);
+  if (!group || !group.items.length) {
+    window.alert("이 분야에 Word 보고서로 출력할 법안이 없습니다.");
+    return;
+  }
+  const safeFilename = group.label.replace(/[·/\\:*?"<>|]/g, "_");
+  downloadItemsWordReport(
+    group.items,
+    `${group.label} 주요법안현황`,
+    `${safeFilename}_주요법안현황.doc`,
+    `즐겨찾기 분야: ${group.label} · ${group.items.length.toLocaleString()}건`,
     true
   );
 }
