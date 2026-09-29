@@ -501,7 +501,10 @@ function renderFavoritesPanel() {
             <strong>${escapeHtml(item.title)}</strong>
             <span>${escapeHtml(item.agency || "기타")} · ${escapeHtml(item.billNo)} · ${escapeHtml(item.proposer)}</span>
           </div>
-          ${item.sourceUrl ? `<a href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noreferrer">원문 ↗</a>` : ""}
+          <div class="favorite-item-actions">
+            <button class="favorite-item-word" type="button" data-download-favorite-id="${escapeHtml(itemKey(item))}">Word 출력</button>
+            ${item.sourceUrl ? `<a href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noreferrer">원문 ↗</a>` : ""}
+          </div>
         </li>`).join("")}</ul>
     </section>`).join("");
 }
@@ -522,6 +525,11 @@ function clearFavorites() {
 }
 
 function handleFavoritePanelAction(event) {
+  const itemDownloadButton = event.target.closest("button[data-download-favorite-id]");
+  if (itemDownloadButton) {
+    downloadFavoriteItemWordReport(itemDownloadButton.dataset.downloadFavoriteId);
+    return;
+  }
   const downloadButton = event.target.closest("button[data-download-favorite-category]");
   if (downloadButton) {
     downloadFavoriteCategoryWordReport(downloadButton.dataset.downloadFavoriteCategory);
@@ -689,6 +697,23 @@ function downloadFavoriteCategoryWordReport(categoryId) {
     `${safeFilename}_주요법안현황.doc`,
     `즐겨찾기 분야: ${group.label} · ${group.items.length.toLocaleString()}건`,
     true
+  );
+}
+
+function downloadFavoriteItemWordReport(itemId) {
+  const item = state.data.find(entry => itemKey(entry) === itemId);
+  if (!item) {
+    window.alert("선택한 법안 정보를 찾지 못했습니다.");
+    return;
+  }
+  const safeFilename = String(item.title || "법안")
+    .replace(/[·/\\:*?"<>|]/g, "_")
+    .slice(0, 70);
+  downloadItemsWordReport(
+    [item],
+    `${item.title} 주요내용`,
+    `${safeFilename}_보고서.doc`,
+    `즐겨찾기 개별 법안 · ${item.billNo || "의안번호 확인 중"}`
   );
 }
 
