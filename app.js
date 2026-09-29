@@ -3,6 +3,7 @@ const REPORT_SUMMARY_MAX_POINTS = 3;
 const REPORT_SUMMARY_MAX_CHARS = 180;
 const COMPARISON_SUMMARY_MAX_POINTS = 2;
 const COMPARISON_SUMMARY_MAX_CHARS = 190;
+const FAVORITES_STORAGE_KEY = "newsDashboard.favoriteBillIds.v1";
 const REQUIRED_AGENCIES = [
   "공정거래위원회",
   "중소벤처기업부",
@@ -21,7 +22,9 @@ const state = {
   sort: "changed",
   compareIds: new Set(),
   selectedIds: new Set(),
-  selectedOnly: false
+  selectedOnly: false,
+  favoriteIds: new Set(),
+  favoriteOnly: false
 };
 
 const $ = (selector) => document.querySelector(selector);
@@ -31,6 +34,7 @@ async function loadData() {
   if (!response.ok) throw new Error("표시 데이터를 불러오지 못했습니다.");
   const payload = await response.json();
   state.data = payload.items;
+  loadFavoriteIds();
   $("#updatedAt").textContent = `기준일 ${payload.updatedAt}`;
   ensureComparisonUi();
   buildControls();
@@ -64,7 +68,7 @@ function bindEvents() {
     render();
   });
   $("#resetFilters").addEventListener("click", () => {
-    state.stage = ""; state.agency = ""; state.query = ""; state.changedOnly = false; state.sort = "changed"; state.selectedOnly = false;
+    state.stage = ""; state.agency = ""; state.query = ""; state.changedOnly = false; state.sort = "changed"; state.selectedOnly = false; state.favoriteOnly = false;
     $("#agencyFilter").value = ""; $("#searchInput").value = ""; $("#changedOnly").checked = false; $("#sortSelect").value = "changed";
     document.querySelectorAll("#stageFilters .chip").forEach(chip => chip.classList.toggle("active", chip.dataset.stage === ""));
     render();
@@ -77,6 +81,11 @@ function bindEvents() {
   $("#clearCollection").addEventListener("click", clearCollection);
   $("#toggleSelectedOnly").addEventListener("click", toggleSelectedOnly);
   $("#downloadSelected").addEventListener("click", downloadSelectedWordReport);
+  $("#favoritesShortcut").addEventListener("click", () => $("#favoritesPanel").scrollIntoView({ behavior: "smooth", block: "start" }));
+  $("#toggleFavoriteOnly").addEventListener("click", toggleFavoriteOnly);
+  $("#clearFavorites").addEventListener("click", clearFavorites);
+  $("#downloadFavorites").addEventListener("click", downloadFavoriteWordReport);
+  $("#favoriteAgencyGroups").addEventListener("click", handleFavoritePanelAction);
   $("#selectedBills").addEventListener("click", handleComparePillRemove);
   $("#collectedBills").addEventListener("click", handleCollectionPillRemove);
   $("#downloadComparison").addEventListener("click", downloadComparisonWordReport);
@@ -91,6 +100,7 @@ function filteredItems() {
   const result = state.data.filter(item => {
     const haystack = `${item.title} ${item.billNo} ${item.agency} ${item.committee} ${item.summary}`.toLowerCase();
     return item.month === state.month && (!state.selectedOnly || state.selectedIds.has(itemKey(item))) &&
+      (!state.favoriteOnly || state.favoriteIds.has(itemKey(item))) &&
       (!state.agency || item.agency === state.agency) &&
       (!state.stage || item.stage === state.stage) && (!state.query || haystack.includes(state.query)) &&
       (!state.changedOnly || item.changed);
@@ -114,6 +124,7 @@ function render() {
   renderCards(list);
   renderCompareTray();
   renderCollectionTray();
+  renderFavoritesPanel();
 }
 
 function renderCards(items) {
@@ -131,12 +142,19 @@ function renderCards(items) {
     article.dataset.billId = id;
     article.classList.toggle("comparison-selected", state.compareIds.has(id));
     article.classList.toggle("collection-selected", state.selectedIds.has(id));
+    article.classList.toggle("favorite-selected", state.favoriteIds.has(id));
     card.querySelector(".badges").innerHTML = `
       <span class="badge stage">${escapeHtml(item.stage)}</span>
       <span class="badge">${escapeHtml(item.agency)}</span>
       ${item.changed ? '<span class="badge changed">이번 달 변동</span>' : ''}`;
     card.querySelector(".changed-date").textContent = item.changedDate;
     card.querySelector(".bill-title").textContent = item.title;
+    ensureCardFavoriteButton(card);
+    const favoriteButton = card.querySelector(".favorite-toggle");
+    favoriteButton.dataset.billId = id;
+    favoriteButton.textContent = state.favoriteIds.has(id) ? "★" : "☆";
+    favoriteButton.setAttribute("aria-pressed", String(state.favoriteIds.has(id)));
+    favoriteButton.setAttribute("aria-label", state.favoriteIds.has(id) ? "주요법안현황에서 제거" : "주요법안현황에 추가");
     ensureCardSelectionCheckbox(card);
     const selectionCheckbox = card.querySelector(".bill-select-checkbox");
     selectionCheckbox.checked = state.selectedIds.has(id);
@@ -161,6 +179,23 @@ function renderCards(items) {
 }
 
 function ensureComparisonUi() {
+  if (!$("#favoritesShortcut")) {
+    $("#downloadReport").insertAdjacentHTML("beforebegin", `<button class="favorite-shortcut" id="favoritesShortcut" type="button">★ 주요법안현황 <span id="favoriteHeaderCount">0</span></button>`);
+  }
+  if (!$("#favoritesPanel")) {
+    $(".stats").insertAdjacentHTML("afterend", `
+      <section class="favorites-panel" id="favoritesPanel" aria-live="polite">
+        <div class="favorites-head">
+          <div><strong>★ 주요법안현황</strong><span id="favoritesStatus">별표를 눌러 필요한 법안을 모아 주세요.</span></div>
+          <div class="compare-tray-actions">
+            <button class="secondary-button" id="toggleFavoriteOnly" type="button" disabled>즐겨찾기만 보기</button>
+            <button class="secondary-button" id="clearFavorites" type="button" disabled>즐겨찾기 비우기</button>
+            <button class="favorite-word-button" id="downloadFavorites" type="button" disabled>주요법안 Word</button>
+          </div>
+        </div>
+        <div class="favorite-agency-groups" id="favoriteAgencyGroups"></div>
+      </section>`);
+  }
   if (!$("#compareTray")) {
     const stats = $(".stats");
     stats.insertAdjacentHTML("afterend", `
@@ -253,6 +288,16 @@ function ensureCardSelectionCheckbox(card) {
   heading.appendChild(title);
 }
 
+function ensureCardFavoriteButton(card) {
+  if (card.querySelector(".favorite-toggle")) return;
+  const heading = card.querySelector(".bill-heading-row");
+  if (!heading) return;
+  const button = document.createElement("button");
+  button.className = "favorite-toggle";
+  button.type = "button";
+  heading.insertBefore(button, heading.firstChild);
+}
+
 function ensureComparisonStyles() {
   if ($("#comparisonFallbackStyles")) return;
   const style = document.createElement("style");
@@ -262,7 +307,7 @@ function ensureComparisonStyles() {
     .compare-tray[hidden]{display:none}.selected-bills,.compare-tray-actions,.card-actions{display:flex;align-items:center;flex-wrap:wrap;gap:8px}.selected-bills{margin-top:10px}
     .selected-pill{padding:5px 8px;border-radius:999px;background:#fff;border:1px solid #c8dcff;font-size:11px}.compare-button,.secondary-button,.card-action{border-radius:9px;padding:8px 11px;font-weight:800}
     .compare-button{border:0;background:#1f6feb;color:#fff}.compare-button:disabled{opacity:.45}.secondary-button,.card-action{border:1px solid #d9e2ec;background:#fff;color:#243b53}.card-action{font-size:11px}
-    .bill-heading-row{display:flex;align-items:flex-start;gap:10px}.bill-select-checkbox{width:19px;height:19px;margin-top:17px;accent-color:#138a5b;flex:0 0 auto}.bill-heading-row .bill-title{flex:1}.bill-card.comparison-selected{border-color:#1f6feb;box-shadow:0 0 0 3px rgba(31,111,235,.11)}.compare-toggle[aria-pressed=true]{border-color:#1f6feb;background:#eaf2ff;color:#1f6feb}
+    .bill-heading-row{display:flex;align-items:flex-start;gap:10px}.favorite-toggle{width:30px;height:30px;margin-top:10px;border:0;background:transparent;color:#e6a700;font-size:25px;line-height:1}.bill-select-checkbox{width:19px;height:19px;margin-top:17px;accent-color:#138a5b;flex:0 0 auto}.bill-heading-row .bill-title{flex:1}.bill-card.comparison-selected{border-color:#1f6feb;box-shadow:0 0 0 3px rgba(31,111,235,.11)}.compare-toggle[aria-pressed=true]{border-color:#1f6feb;background:#eaf2ff;color:#1f6feb}
     .compare-dialog{width:min(1380px,calc(100vw - 36px));max-height:calc(100vh - 36px);padding:0;border:0;border-radius:18px}.compare-dialog::backdrop{background:rgba(15,34,57,.6)}
     .dialog-head,.dialog-actions{display:flex;align-items:center;justify-content:space-between;gap:10px}.dialog-head{padding:20px 24px;border-bottom:1px solid #d9e2ec}.dialog-close{width:38px;height:38px;border:0;border-radius:50%;font-size:25px}
     .common-keywords,.compare-table-wrap{padding:14px 24px}.compare-table-wrap{overflow:auto}.compare-table{width:100%;min-width:860px;border-collapse:collapse}.compare-table th,.compare-table td{padding:12px;border:1px solid #d9e2ec;vertical-align:top;font-size:13px}
@@ -282,6 +327,8 @@ function handleBillAction(event) {
     toggleComparison(item);
   } else if (event.target.closest(".similar-button")) {
     selectSimilarBills(item);
+  } else if (event.target.closest(".favorite-toggle")) {
+    toggleFavorite(item);
   }
 }
 
@@ -359,6 +406,97 @@ function selectedCollectionItems() {
   return [...state.selectedIds]
     .map(id => state.data.find(item => itemKey(item) === id))
     .filter(Boolean);
+}
+
+function loadFavoriteIds() {
+  try {
+    const saved = JSON.parse(window.localStorage.getItem(FAVORITES_STORAGE_KEY) || "[]");
+    state.favoriteIds = new Set(Array.isArray(saved) ? saved.map(String) : []);
+  } catch (error) {
+    state.favoriteIds = new Set();
+  }
+}
+
+function saveFavoriteIds() {
+  try {
+    window.localStorage.setItem(FAVORITES_STORAGE_KEY, JSON.stringify([...state.favoriteIds]));
+  } catch (error) {
+    // 저장 공간 사용이 제한된 브라우저에서도 현재 화면의 즐겨찾기는 계속 동작합니다.
+  }
+}
+
+function favoriteItems() {
+  return [...state.favoriteIds]
+    .map(id => state.data.find(item => itemKey(item) === id))
+    .filter(Boolean)
+    .sort((a, b) => {
+      const agencyOrder = String(a.agency || "기타").localeCompare(String(b.agency || "기타"), "ko");
+      return agencyOrder || String(a.title || "").localeCompare(String(b.title || ""), "ko");
+    });
+}
+
+function toggleFavorite(item) {
+  const id = itemKey(item);
+  if (state.favoriteIds.has(id)) state.favoriteIds.delete(id);
+  else state.favoriteIds.add(id);
+  if (!state.favoriteIds.size) state.favoriteOnly = false;
+  saveFavoriteIds();
+  render();
+}
+
+function renderFavoritesPanel() {
+  const items = favoriteItems();
+  const groups = new Map();
+  items.forEach(item => {
+    const agency = item.agency || "기타";
+    if (!groups.has(agency)) groups.set(agency, []);
+    groups.get(agency).push(item);
+  });
+
+  $("#favoriteHeaderCount").textContent = items.length.toLocaleString();
+  $("#favoritesStatus").textContent = items.length
+    ? `${items.length.toLocaleString()}개 법안을 ${groups.size.toLocaleString()}개 기관별로 모았습니다.`
+    : "각 법안 제목 앞 별표를 눌러 필요한 법안을 모아 주세요.";
+  $("#toggleFavoriteOnly").disabled = items.length === 0;
+  $("#toggleFavoriteOnly").textContent = state.favoriteOnly ? "전체 법안 보기" : "즐겨찾기만 보기";
+  $("#clearFavorites").disabled = items.length === 0;
+  $("#downloadFavorites").disabled = items.length === 0;
+  $("#favoriteAgencyGroups").innerHTML = [...groups].map(([agency, agencyItems]) => `
+    <section class="favorite-agency-group">
+      <h4>${escapeHtml(agency)} <span>${agencyItems.length.toLocaleString()}건</span></h4>
+      <ul>${agencyItems.map(item => `
+        <li class="favorite-item">
+          <button class="favorite-remove" type="button" data-remove-favorite="${escapeHtml(itemKey(item))}" aria-label="주요법안현황에서 제거">★</button>
+          <div class="favorite-item-main">
+            <strong>${escapeHtml(item.title)}</strong>
+            <span>${escapeHtml(item.billNo)} · ${escapeHtml(item.proposer)}</span>
+          </div>
+          ${item.sourceUrl ? `<a href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noreferrer">원문 ↗</a>` : ""}
+        </li>`).join("")}</ul>
+    </section>`).join("");
+}
+
+function toggleFavoriteOnly() {
+  if (!state.favoriteIds.size) return;
+  state.favoriteOnly = !state.favoriteOnly;
+  render();
+}
+
+function clearFavorites() {
+  if (!state.favoriteIds.size) return;
+  state.favoriteIds.clear();
+  state.favoriteOnly = false;
+  saveFavoriteIds();
+  render();
+}
+
+function handleFavoritePanelAction(event) {
+  const button = event.target.closest("button[data-remove-favorite]");
+  if (!button) return;
+  state.favoriteIds.delete(button.dataset.removeFavorite);
+  if (!state.favoriteIds.size) state.favoriteOnly = false;
+  saveFavoriteIds();
+  render();
 }
 
 function clearCollection() {
@@ -491,15 +629,36 @@ function downloadSelectedWordReport() {
   );
 }
 
-function downloadItemsWordReport(items, reportTitle, filename, customFilterLabel = "") {
+function downloadFavoriteWordReport() {
+  const items = favoriteItems();
+  downloadItemsWordReport(
+    items,
+    "주요법안현황",
+    "주요법안현황.doc",
+    `즐겨찾기에 등록한 법안 ${items.length.toLocaleString()}건 · 소관기관별 분류`,
+    true
+  );
+}
+
+function downloadItemsWordReport(items, reportTitle, filename, customFilterLabel = "", groupByAgency = false) {
   if (!items.length) {
     window.alert("Word 보고서로 출력할 법안이 없습니다.");
     return;
   }
 
-  const rows = items.map((item, index) => {
+  const reportItems = groupByAgency ? [...items].sort((a, b) => {
+    const agencyOrder = String(a.agency || "기타").localeCompare(String(b.agency || "기타"), "ko");
+    return agencyOrder || String(a.title || "").localeCompare(String(b.title || ""), "ko");
+  }) : items;
+  let previousAgency = "";
+  const rows = reportItems.map((item, index) => {
+    const agency = item.agency || "기타";
+    const agencyRow = groupByAgency && agency !== previousAgency
+      ? `<tr class="agency-group"><td colspan="5">${escapeHtml(agency)}</td></tr>`
+      : "";
+    previousAgency = agency;
     const summary = summarizeForComparison(item);
-    return `
+    return `${agencyRow}
       <tr>
         <td class="number">${index + 1}</td>
         <td>
@@ -528,7 +687,8 @@ function downloadItemsWordReport(items, reportTitle, filename, customFilterLabel
     state.stage && `진행단계: ${state.stage}`,
     state.query && `검색어: ${state.query}`,
     state.changedOnly && "이번 달 변동만",
-    state.selectedOnly && "선택 항목만"
+    state.selectedOnly && "선택 항목만",
+    state.favoriteOnly && "즐겨찾기만"
   ].filter(Boolean).join(" / ") || "전체 조회";
   const generatedAt = new Intl.DateTimeFormat("ko-KR", {
     year: "numeric", month: "2-digit", day: "2-digit"
@@ -558,6 +718,7 @@ function downloadItemsWordReport(items, reportTitle, filename, customFilterLabel
         .number { text-align: center; }
         .sub, .source { display: block; margin-top: 3pt; color: #475569; font-size: 8pt; }
         .summary-cell { line-height: 1.5; white-space: pre-line; }
+        .agency-group td { padding: 5pt 7pt; background: #eff6ff; color: #163f70; font-size: 10pt; font-weight: bold; }
         a { color: #1d4ed8; text-decoration: underline; }
         .note { margin-top: 7pt; color: #64748b; font-size: 7.5pt; }
       </style>

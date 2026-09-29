@@ -40,6 +40,8 @@ button { cursor: pointer; }
 .header-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 12px; }
 .updated { color: #d7e7f8; font-size: 13px; }
 .primary { border: 0; border-radius: 10px; padding: 13px 18px; background: white; color: var(--navy); font-weight: 800; box-shadow: 0 10px 30px rgba(0,0,0,.18); }
+.favorite-shortcut { border: 1px solid rgba(255,255,255,.55); border-radius: 10px; padding: 10px 14px; background: rgba(255,255,255,.12); color: white; font-weight: 800; }
+.favorite-shortcut span { display: inline-grid; min-width: 24px; height: 24px; margin-left: 5px; padding: 0 6px; place-items: center; border-radius: 999px; background: #f7c948; color: #4a3500; font-size: 12px; }
 
 .page-shell { max-width: 1420px; margin: 0 auto; padding: 34px max(3vw, 20px) 64px; }
 .hero-row, .result-head, .filter-title, .card-footer, .bill-topline, .result-tools { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
@@ -57,6 +59,26 @@ select:focus, input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgb
 .accent-orange::after { background: var(--orange); }
 .accent-purple::after { background: var(--purple); }
 .accent-green::after { background: var(--green); }
+
+.favorites-panel { margin: 0 0 24px; padding: 18px 20px; border: 1px solid #e7c75f; border-radius: var(--radius); background: #fffaf0; box-shadow: 0 8px 24px rgba(170,122,0,.08); }
+.favorites-head { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.favorites-head strong { margin-right: 9px; color: var(--navy); }
+.favorites-head > div > span { color: var(--muted); font-size: 13px; }
+.favorite-word-button { border: 0; border-radius: 9px; padding: 9px 12px; background: #b77900; color: white; font-weight: 800; }
+.favorite-word-button:disabled { cursor: not-allowed; opacity: .42; }
+.favorite-agency-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 12px; margin-top: 15px; }
+.favorite-agency-groups:empty { display: none; }
+.favorite-agency-group { overflow: hidden; border: 1px solid #eadcae; border-radius: 12px; background: white; }
+.favorite-agency-group h4 { display: flex; align-items: center; justify-content: space-between; margin: 0; padding: 11px 13px; background: #fff4c7; color: var(--navy); font-size: 14px; }
+.favorite-agency-group h4 span { color: #8a6500; font-size: 11px; }
+.favorite-agency-group ul { margin: 0; padding: 0; list-style: none; }
+.favorite-item { display: grid; grid-template-columns: 28px minmax(0, 1fr) auto; align-items: start; gap: 8px; padding: 11px 12px; border-top: 1px solid #f2ead1; }
+.favorite-item:first-child { border-top: 0; }
+.favorite-item-main { display: grid; gap: 4px; min-width: 0; }
+.favorite-item-main strong { color: var(--navy); font-size: 13px; line-height: 1.45; }
+.favorite-item-main span { color: var(--muted); font-size: 11px; }
+.favorite-item a { margin-top: 2px; color: var(--blue); font-size: 11px; font-weight: 800; text-decoration: none; white-space: nowrap; }
+.favorite-remove { border: 0; padding: 0; background: transparent; color: #e6a700; font-size: 21px; line-height: 1.1; }
 
 .compare-tray { margin: 0 0 24px; padding: 18px 20px; border: 1px solid #9fc3ff; border-radius: var(--radius); background: #eef5ff; display: flex; align-items: center; justify-content: space-between; gap: 20px; box-shadow: 0 8px 24px rgba(31,111,235,.08); }
 .collection-tray { margin: -8px 0 24px; padding: 18px 20px; border: 1px solid #9ed8bd; border-radius: var(--radius); background: #effaf5; display: flex; align-items: center; justify-content: space-between; gap: 20px; box-shadow: 0 8px 24px rgba(19,138,91,.07); }
@@ -96,12 +118,15 @@ select:focus, input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgb
 .bill-card:hover { transform: translateY(-1px); box-shadow: 0 12px 30px rgba(31,41,51,.09); transition: .18s ease; }
 .bill-card.comparison-selected { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(31,111,235,.11); }
 .bill-card.collection-selected { border-left: 5px solid var(--green); }
+.bill-card.favorite-selected { box-shadow: inset 4px 0 0 #f0b429, 0 8px 24px rgba(31,41,51,.05); }
 .badges { display: flex; flex-wrap: wrap; gap: 7px; }
 .badge { padding: 5px 8px; border-radius: 7px; font-size: 11px; font-weight: 800; background: #edf2f7; color: var(--navy-2); }
 .badge.stage { background: var(--blue-soft); color: var(--blue); }
 .badge.changed { background: #fff1df; color: #a85a0b; }
 .changed-date { color: var(--muted); font-size: 12px; }
 .bill-heading-row { display: flex; align-items: flex-start; gap: 10px; }
+.favorite-toggle { width: 28px; height: 32px; flex: 0 0 auto; margin-top: 10px; padding: 0; border: 0; background: transparent; color: #e6a700; font-size: 25px; line-height: 1; }
+.favorite-toggle:hover, .favorite-toggle:focus-visible { transform: scale(1.12); outline: 2px solid #f7c948; outline-offset: 2px; border-radius: 5px; }
 .bill-select-checkbox { width: 19px; height: 19px; margin-top: 17px; accent-color: var(--green); flex: 0 0 auto; }
 .bill-title { flex: 1; margin: 13px 0 7px; color: var(--navy); font-size: 19px; line-height: 1.45; }
 .bill-meta { margin: 0; color: var(--muted); font-size: 13px; }
@@ -144,7 +169,7 @@ select:focus, input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgb
   .stats { grid-template-columns: repeat(2, 1fr); }
   .content-grid { grid-template-columns: 1fr; }
   .filters { position: static; }
-  .compare-tray, .collection-tray { align-items: flex-start; flex-direction: column; }
+  .favorites-head, .compare-tray, .collection-tray { align-items: flex-start; flex-direction: column; }
   .card-footer { align-items: flex-start; flex-direction: column; }
   .card-actions { flex-wrap: wrap; }
 }
@@ -159,4 +184,5 @@ select:focus, input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgb
   .step::before { inset: 0 auto 0 0; width: 6px; height: auto; }
   .compare-tray-actions { width: 100%; flex-wrap: wrap; }
   .compare-tray-actions button { flex: 1; }
+  .favorite-agency-groups { grid-template-columns: 1fr; }
 }
