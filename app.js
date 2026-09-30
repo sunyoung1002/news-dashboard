@@ -635,10 +635,8 @@ function favoriteInsertPayload(item) {
 }
 
 async function insertSharedFavorite(item) {
-  const session = await ensureAnonymousFavoriteSession();
   await supabaseRequest(`/rest/v1/${SUPABASE_FAVORITES_TABLE}`, {
     method: "POST",
-    accessToken: session.access_token,
     headers: { Prefer: "return=minimal" },
     body: JSON.stringify(favoriteInsertPayload(item))
   });
@@ -783,10 +781,8 @@ async function migrateLegacyFavorites() {
   button.disabled = true;
   button.textContent = "공용 목록으로 이전 중…";
   try {
-    const session = await ensureAnonymousFavoriteSession();
     await supabaseRequest(`/rest/v1/${SUPABASE_FAVORITES_TABLE}`, {
       method: "POST",
-      accessToken: session.access_token,
       headers: { Prefer: "return=minimal" },
       body: JSON.stringify(items.map(favoriteInsertPayload))
     });
