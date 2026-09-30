@@ -4,6 +4,10 @@ const REPORT_SUMMARY_MAX_CHARS = 180;
 const COMPARISON_SUMMARY_MAX_POINTS = 2;
 const COMPARISON_SUMMARY_MAX_CHARS = 190;
 const FAVORITES_STORAGE_KEY = "newsDashboard.favoriteBillIds.v1";
+const SUPABASE_URL = "https://fhxqtkonopjkcaaofxno.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_c-NtjTczDsjC4mCizlTiNQ_R6_8LfnY";
+const SUPABASE_FAVORITES_TABLE = "shared_bill_favorites";
+const SUPABASE_SESSION_KEY = "newsDashboard.supabaseAnonymousSession.v1";
 const FAVORITE_CATEGORIES = [
   { id: "fair-trade", label: "공정거래법", keywords: ["독점규제및공정거래", "공정거래법"] },
   { id: "capital-markets", label: "자본시장법", keywords: ["자본시장과금융투자업", "자본시장법", "금융투자업"] },
@@ -34,7 +38,11 @@ const state = {
   selectedIds: new Set(),
   selectedOnly: false,
   favoriteIds: new Set(),
-  favoriteOnly: false
+  favoriteRows: new Map(),
+  legacyFavoriteIds: new Set(),
+  favoriteOnly: false,
+  sharedFavoritesAvailable: false,
+  favoritesConnectionError: ""
 };
 
 const $ = (selector) => document.querySelector(selector);
@@ -44,9 +52,9 @@ async function loadData() {
   if (!response.ok) throw new Error("표시 데이터를 불러오지 못했습니다.");
   const payload = await response.json();
   state.data = payload.items;
-  loadFavoriteIds();
   $("#updatedAt").textContent = `기준일 ${payload.updatedAt}`;
   ensureComparisonUi();
+  await loadFavoriteIds();
   buildControls();
   bindEvents();
   render();
@@ -94,7 +102,7 @@ function bindEvents() {
   $("#favoritesShortcut").addEventListener("click", showFavoritesPage);
   $("#closeFavorites").addEventListener("click", showDashboardPage);
   $("#toggleFavoriteOnly").addEventListener("click", toggleFavoriteOnly);
-  $("#clearFavorites").addEventListener("click", clearFavorites);
+  $("#migrateFavorites").addEventListener("click", migrateLegacyFavorites);
   $("#downloadFavorites").addEventListener("click", downloadFavoriteWordReport);
   $("#favoriteAgencyGroups").addEventListener("click", handleFavoritePanelAction);
   $("#downloadFavoriteCategoryDialog").addEventListener("click", event => downloadFavoriteCategoryWordReport(event.currentTarget.dataset.categoryId));
@@ -177,7 +185,7 @@ function renderCards(items) {
     favoriteButton.dataset.billId = id;
     favoriteButton.textContent = state.favoriteIds.has(id) ? "★" : "☆";
     favoriteButton.setAttribute("aria-pressed", String(state.favoriteIds.has(id)));
-    favoriteButton.setAttribute("aria-label", state.favoriteIds.has(id) ? "주요법안현황에서 제거" : "주요법안현황에 추가");
+    favoriteButton.setAttribute("aria-label", state.favoriteIds.has(id) ? "공용 주요법안현황에 등록됨" : "공용 주요법안현황에 추가");
     ensureCardSelectionCheckbox(card);
     const selectionCheckbox = card.querySelector(".bill-select-checkbox");
     selectionCheckbox.checked = state.selectedIds.has(id);
@@ -215,7 +223,7 @@ function ensureComparisonUi() {
         </div>
         <div class="favorites-page-toolbar compare-tray-actions">
           <button class="secondary-button" id="toggleFavoriteOnly" type="button" disabled>즐겨찾기만 보기</button>
-          <button class="secondary-button" id="clearFavorites" type="button" disabled>즐겨찾기 비우기</button>
+          <button class="secondary-button" id="migrateFavorites" type="button" hidden>내 기존 즐겨찾기 공용으로 이전</button>
           <button class="favorite-word-button" id="downloadFavorites" type="button" disabled>주요법안 Word</button>
         </div>
         <div class="favorite-agency-groups" id="favoriteAgencyGroups"></div>
@@ -448,26 +456,140 @@ function selectedCollectionItems() {
     .filter(Boolean);
 }
 
-function loadFavoriteIds() {
+function loadLegacyFavoriteIds() {
   try {
     const saved = JSON.parse(window.localStorage.getItem(FAVORITES_STORAGE_KEY) || "[]");
-    state.favoriteIds = new Set(Array.isArray(saved) ? saved.map(String) : []);
+    state.legacyFavoriteIds = new Set(Array.isArray(saved) ? saved.map(String) : []);
   } catch (error) {
-    state.favoriteIds = new Set();
+    state.legacyFavoriteIds = new Set();
   }
 }
 
-function saveFavoriteIds() {
+function supabaseHeaders(accessToken = "") {
+  const headers = {
+    apikey: SUPABASE_PUBLISHABLE_KEY,
+    "Content-Type": "application/json"
+  };
+  if (accessToken) headers.Authorization = `Bearer ${accessToken}`;
+  return headers;
+}
+
+async function supabaseRequest(path, options = {}) {
+  const { accessToken = "", headers: extraHeaders = {}, ...fetchOptions } = options;
+  const response = await fetch(`${SUPABASE_URL}${path}`, {
+    ...fetchOptions,
+    headers: { ...supabaseHeaders(accessToken), ...extraHeaders }
+  });
+  const text = await response.text();
+  let payload = null;
+  if (text) {
+    try { payload = JSON.parse(text); } catch (error) { payload = text; }
+  }
+  if (!response.ok) {
+    const message = payload?.message || payload?.msg || payload?.error_description || payload?.hint || `HTTP ${response.status}`;
+    const requestError = new Error(message);
+    requestError.status = response.status;
+    requestError.code = payload?.code || "";
+    throw requestError;
+  }
+  return payload;
+}
+
+function readSavedSupabaseSession() {
   try {
-    window.localStorage.setItem(FAVORITES_STORAGE_KEY, JSON.stringify([...state.favoriteIds]));
+    return JSON.parse(window.localStorage.getItem(SUPABASE_SESSION_KEY) || "null");
   } catch (error) {
-    // 저장 공간 사용이 제한된 브라우저에서도 현재 화면의 즐겨찾기는 계속 동작합니다.
+    return null;
+  }
+}
+
+function saveSupabaseSession(session) {
+  try {
+    window.localStorage.setItem(SUPABASE_SESSION_KEY, JSON.stringify(session));
+  } catch (error) {
+    // 브라우저 저장 공간이 제한되어도 현재 요청은 정상적으로 처리됩니다.
+  }
+}
+
+async function ensureAnonymousFavoriteSession() {
+  let session = readSavedSupabaseSession();
+  const expiresSoon = !session?.access_token || !session?.expires_at || session.expires_at * 1000 < Date.now() + 60000;
+  if (!expiresSoon) return session;
+
+  if (session?.refresh_token) {
+    try {
+      session = await supabaseRequest("/auth/v1/token?grant_type=refresh_token", {
+        method: "POST",
+        body: JSON.stringify({ refresh_token: session.refresh_token })
+      });
+      saveSupabaseSession(session);
+      return session;
+    } catch (error) {
+      // 만료된 세션을 갱신할 수 없으면 새 익명 세션으로 다시 시도합니다.
+    }
+  }
+
+  session = await supabaseRequest("/auth/v1/signup", {
+    method: "POST",
+    body: JSON.stringify({ data: {}, gotrue_meta_security: {} })
+  });
+  if (!session?.access_token) throw new Error("익명 로그인을 시작하지 못했습니다. Supabase에서 Anonymous Sign-Ins를 켜 주세요.");
+  saveSupabaseSession(session);
+  return session;
+}
+
+function favoriteRowToItem(row) {
+  const id = String(row.bill_id || "");
+  const current = state.data.find(item => itemKey(item) === id);
+  if (current) return current;
+  const changedDate = row.changed_date || "";
+  return {
+    billId: id,
+    billNo: row.bill_no || "",
+    title: row.title || "제목 확인 중",
+    agency: row.agency || "기타",
+    committee: row.committee || "",
+    proposer: row.proposer || "",
+    stage: row.stage || "접수",
+    previousStage: "-",
+    changed: false,
+    changedDate,
+    change: "공용 주요법안으로 등록",
+    summary: row.summary || "공식 주요내용을 확인 중입니다.",
+    sourceUrl: row.source_url || "",
+    month: changedDate.slice(0, 7) || state.month
+  };
+}
+
+async function refreshSharedFavorites() {
+  const rows = await supabaseRequest(`/rest/v1/${SUPABASE_FAVORITES_TABLE}?select=*&order=created_at.desc`);
+  state.favoriteIds = new Set();
+  state.favoriteRows = new Map();
+  (Array.isArray(rows) ? rows : []).forEach(row => {
+    const id = String(row.bill_id || "");
+    if (!id) return;
+    state.favoriteIds.add(id);
+    state.favoriteRows.set(id, favoriteRowToItem(row));
+  });
+  state.sharedFavoritesAvailable = true;
+  state.favoritesConnectionError = "";
+}
+
+async function loadFavoriteIds() {
+  loadLegacyFavoriteIds();
+  try {
+    await refreshSharedFavorites();
+  } catch (error) {
+    state.sharedFavoritesAvailable = false;
+    state.favoritesConnectionError = error.message || "공용 목록에 연결하지 못했습니다.";
+    state.favoriteIds = new Set(state.legacyFavoriteIds);
+    state.favoriteRows = new Map();
   }
 }
 
 function favoriteItems() {
   return [...state.favoriteIds]
-    .map(id => state.data.find(item => itemKey(item) === id))
+    .map(id => state.data.find(item => itemKey(item) === id) || state.favoriteRows.get(id))
     .filter(Boolean)
     .sort((a, b) => {
       const agencyOrder = String(a.agency || "기타").localeCompare(String(b.agency || "기타"), "ko");
@@ -496,13 +618,55 @@ function favoriteCategoryGroups(items = favoriteItems()) {
   return [...grouped.values()].filter(group => group.items.length);
 }
 
-function toggleFavorite(item) {
+function favoriteInsertPayload(item) {
+  return {
+    bill_id: itemKey(item),
+    bill_no: item.billNo || "",
+    title: item.title || "제목 확인 중",
+    agency: item.agency || "",
+    committee: item.committee || "",
+    proposer: item.proposer || "",
+    category: favoriteCategoryForItem(item).label,
+    stage: item.stage || "",
+    changed_date: item.changedDate || "",
+    summary: item.summary || "",
+    source_url: item.sourceUrl || ""
+  };
+}
+
+async function insertSharedFavorite(item) {
+  const session = await ensureAnonymousFavoriteSession();
+  await supabaseRequest(`/rest/v1/${SUPABASE_FAVORITES_TABLE}`, {
+    method: "POST",
+    accessToken: session.access_token,
+    headers: { Prefer: "return=minimal" },
+    body: JSON.stringify(favoriteInsertPayload(item))
+  });
+}
+
+async function toggleFavorite(item) {
   const id = itemKey(item);
-  if (state.favoriteIds.has(id)) state.favoriteIds.delete(id);
-  else state.favoriteIds.add(id);
-  if (!state.favoriteIds.size) state.favoriteOnly = false;
-  saveFavoriteIds();
-  render();
+  if (state.favoriteIds.has(id)) {
+    window.alert("이미 공용 주요법안현황에 등록된 법안입니다.");
+    return;
+  }
+  try {
+    await insertSharedFavorite(item);
+    await refreshSharedFavorites();
+    render();
+    window.alert("공용 주요법안현황에 등록했습니다. 이제 모든 방문자가 볼 수 있습니다.");
+  } catch (error) {
+    if (error.code === "23505" || error.status === 409) {
+      await refreshSharedFavorites().catch(() => {});
+      render();
+      window.alert("이미 다른 방문자가 등록한 법안입니다.");
+      return;
+    }
+    const anonymousHint = /anonymous|signup|signups|disabled/i.test(error.message || "")
+      ? "\nSupabase → Authentication → Providers에서 Anonymous Sign-Ins를 켜 주세요."
+      : "";
+    window.alert(`공용 목록에 등록하지 못했습니다.\n${error.message || "연결 상태를 확인해 주세요."}${anonymousHint}`);
+  }
 }
 
 function renderFavoritesPanel() {
@@ -510,12 +674,16 @@ function renderFavoritesPanel() {
   const groups = favoriteCategoryGroups(items);
 
   $("#favoriteHeaderCount").textContent = items.length.toLocaleString();
-  $("#favoritesStatus").textContent = items.length
-    ? `${items.length.toLocaleString()}개 법안을 ${groups.length.toLocaleString()}개 관심 분야로 분류했습니다.`
-    : "각 법안 제목 앞 별표를 눌러 필요한 법안을 모아 주세요.";
+  $("#favoritesStatus").textContent = state.sharedFavoritesAvailable
+    ? (items.length
+      ? `공용 주요법안 ${items.length.toLocaleString()}건을 ${groups.length.toLocaleString()}개 관심 분야로 분류했습니다. 모든 방문자에게 동일하게 표시됩니다.`
+      : "공용 주요법안이 아직 없습니다. 각 법안 제목 앞 별표를 눌러 등록해 주세요.")
+    : `공용 목록 연결 실패: ${state.favoritesConnectionError} (현재 브라우저의 기존 목록을 임시로 표시합니다.)`;
   $("#toggleFavoriteOnly").disabled = items.length === 0;
   $("#toggleFavoriteOnly").textContent = state.favoriteOnly ? "전체 법안 보기" : "즐겨찾기만 보기";
-  $("#clearFavorites").disabled = items.length === 0;
+  const migrationCount = [...state.legacyFavoriteIds].filter(id => !state.favoriteIds.has(id) && state.data.some(item => itemKey(item) === id)).length;
+  $("#migrateFavorites").hidden = !state.sharedFavoritesAvailable || migrationCount === 0;
+  $("#migrateFavorites").textContent = `내 기존 즐겨찾기 ${migrationCount.toLocaleString()}건 공용으로 이전`;
   $("#downloadFavorites").disabled = items.length === 0;
   $("#favoriteAgencyGroups").innerHTML = groups.map(group => `
     <section class="favorite-agency-group favorite-topic-group">
@@ -526,7 +694,7 @@ function renderFavoritesPanel() {
       </div>
       <ul>${group.items.slice(0, 3).map(item => `
         <li class="favorite-item">
-          <button class="favorite-remove" type="button" data-remove-favorite="${escapeHtml(itemKey(item))}" aria-label="주요법안현황에서 제거">★</button>
+          <span class="favorite-remove" aria-hidden="true">★</span>
           <div class="favorite-item-main">
             <button class="favorite-item-title" type="button" data-view-favorite-id="${escapeHtml(itemKey(item))}">${escapeHtml(item.title)}</button>
             <span>${escapeHtml(item.agency || "기타")} · ${escapeHtml(item.billNo)} · ${escapeHtml(item.proposer)}</span>
@@ -558,7 +726,7 @@ function showDashboardPage() {
 }
 
 function openFavoriteDetail(itemId) {
-  const item = state.data.find(entry => itemKey(entry) === itemId);
+  const item = state.data.find(entry => itemKey(entry) === itemId) || state.favoriteRows.get(itemId);
   if (!item) return;
   $("#favoriteDetailTitle").textContent = item.title;
   $("#favoriteDetailMeta").textContent = `${item.agency || "기타"} · ${item.committee || "위원회 확인 중"} · ${item.billNo || "의안번호 확인 중"} · ${item.proposer || "발의자 확인 중"}`;
@@ -587,14 +755,6 @@ function openFavoriteCategory(categoryId) {
   $("#favoriteCategoryDialog").showModal();
 }
 
-function clearFavorites() {
-  if (!state.favoriteIds.size) return;
-  state.favoriteIds.clear();
-  state.favoriteOnly = false;
-  saveFavoriteIds();
-  render();
-}
-
 function handleFavoritePanelAction(event) {
   const categoryButton = event.target.closest("button[data-view-favorite-category]");
   if (categoryButton) {
@@ -606,12 +766,44 @@ function handleFavoritePanelAction(event) {
     openFavoriteDetail(detailButton.dataset.viewFavoriteId);
     return;
   }
-  const button = event.target.closest("button[data-remove-favorite]");
-  if (!button) return;
-  state.favoriteIds.delete(button.dataset.removeFavorite);
-  if (!state.favoriteIds.size) state.favoriteOnly = false;
-  saveFavoriteIds();
-  render();
+}
+
+async function migrateLegacyFavorites() {
+  const items = [...state.legacyFavoriteIds]
+    .filter(id => !state.favoriteIds.has(id))
+    .map(id => state.data.find(item => itemKey(item) === id))
+    .filter(Boolean);
+  if (!items.length) {
+    window.alert("공용 목록으로 옮길 기존 즐겨찾기가 없습니다.");
+    return;
+  }
+  if (!window.confirm(`이 브라우저에 저장된 즐겨찾기 ${items.length.toLocaleString()}건을 모든 방문자가 보는 공용 목록에 등록할까요?`)) return;
+
+  const button = $("#migrateFavorites");
+  button.disabled = true;
+  button.textContent = "공용 목록으로 이전 중…";
+  try {
+    const session = await ensureAnonymousFavoriteSession();
+    await supabaseRequest(`/rest/v1/${SUPABASE_FAVORITES_TABLE}`, {
+      method: "POST",
+      accessToken: session.access_token,
+      headers: { Prefer: "return=minimal" },
+      body: JSON.stringify(items.map(favoriteInsertPayload))
+    });
+    await refreshSharedFavorites();
+    render();
+    window.alert(`${items.length.toLocaleString()}건을 공용 주요법안현황으로 옮겼습니다.`);
+  } catch (error) {
+    if (error.code === "23505" || error.status === 409) {
+      await refreshSharedFavorites().catch(() => {});
+      render();
+      window.alert("이전하는 동안 일부 법안이 먼저 등록되었습니다. 화면을 갱신했으니 남은 항목만 다시 이전해 주세요.");
+    } else {
+      button.disabled = false;
+      renderFavoritesPanel();
+      window.alert(`기존 즐겨찾기를 옮기지 못했습니다.\n${error.message || "연결 상태를 확인해 주세요."}`);
+    }
+  }
 }
 
 function clearCollection() {
@@ -772,7 +964,7 @@ function downloadFavoriteCategoryWordReport(categoryId) {
 }
 
 function downloadFavoriteItemWordReport(itemId) {
-  const item = state.data.find(entry => itemKey(entry) === itemId);
+  const item = state.data.find(entry => itemKey(entry) === itemId) || state.favoriteRows.get(itemId);
   if (!item) {
     window.alert("선택한 법안 정보를 찾지 못했습니다.");
     return;

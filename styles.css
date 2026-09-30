@@ -84,7 +84,7 @@ select:focus, input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgb
 .favorite-item-main span { color: var(--muted); font-size: 11px; }
 .favorite-item-actions { display: flex; align-items: center; gap: 7px; }
 .favorite-item a { color: var(--blue); font-size: 11px; font-weight: 800; text-decoration: none; white-space: nowrap; }
-.favorite-remove { border: 0; padding: 0; background: transparent; color: #e6a700; font-size: 21px; line-height: 1.1; }
+.favorite-remove { display: inline-block; border: 0; padding: 0; background: transparent; color: #e6a700; font-size: 21px; line-height: 1.1; }
 .favorite-more { padding: 10px 12px; border-top: 1px solid #f2ead1; color: var(--muted); text-align: center; font-size: 11px; }
 
 .favorite-detail-dialog { width: min(860px, calc(100vw - 36px)); max-height: calc(100vh - 36px); padding: 0; border: 0; border-radius: 18px; color: var(--text); box-shadow: 0 24px 80px rgba(15,34,57,.35); }
