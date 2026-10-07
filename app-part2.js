@@ -27,7 +27,7 @@ function briefSummary(item, maxLength = 90) {
   if (isMissingBillSummary(content)) {
     return "주요내용 데이터가 없습니다.";
   }
-  const sentence = content.match(/^.{10,}?[.!?](?=\s|$)/)?.[0] || content;
+  const sentence = summaryLeadSentence(content);
   if (sentence.length <= maxLength) return sentence;
   const cut = sentence.slice(0, maxLength - 1).replace(/\s+\S*$/, "").trim();
   return `${cut || sentence.slice(0, maxLength - 1)}…`;
@@ -35,9 +35,49 @@ function briefSummary(item, maxLength = 90) {
 
 function stripLeadingConnectives(value) {
   let text = String(value || "").trim();
-  const connective = /^(?:[•·\-–]\s*)?(?:이에\s*따라|이와\s*같이|이러한|그러나|그런데|따라서|이에|또한|아울러|한편|그리고|그러므로|그\s*결과|이처럼|이로써)(?=$|[\s,，:：])[,，:：\s]*/u;
+  const connective = /^(?:[•·\-–]\s*)?(?:이와\s*관련(?:해서|하여|해)|이와\s*같은|이와\s*같이|이에\s*따라|이러한|하지만|그래서|그러나|그런데|따라서|이에|또한|아울러|한편|그리고|그러므로|그\s*결과|이처럼|이로써)(?=$|[\s,，:：])[,，:：\s]*/u;
   while (connective.test(text)) text = text.replace(connective, "").trim();
   return text;
+}
+
+function summarySentences(content) {
+  return splitReportSentences(content)
+    .map(sentence => stripLeadingConnectives(sentence)
+      .replace(/^(?:이\s*)?(?:개정안|법안|법률안)은\s+/, ""))
+    .filter(Boolean);
+}
+
+function summaryLeadSentence(content) {
+  const sentences = summarySentences(content);
+  if (!sentences.length) return stripLeadingConnectives(content);
+  const originals = splitReportSentences(content);
+  const score = (sentence, index) => {
+    const original = String(originals[index] || "").trim();
+    const explicitProposal = /^(?:이에|따라서|그래서|이와\s*관련(?:해서|하여|해))(?=$|[\s,，])|^(?:이\s*)?(?:개정안|법안|법률안)은/.test(original);
+    const proposalEnding = /(?:신설|도입|확대|강화|완화|단축|개선|정비|마련|폐지|의무화|명확히|규정)(?:하도록|하고자|하려는|함|하였음|하는\s*것임)|(?:하도록|하고자|하려는)\s*(?:함|것임)?[.!?]?$/.test(sentence);
+    return (explicitProposal ? 6 : 0) + (proposalEnding ? 5 : 0) +
+      (/(?:개정안|법안|법률안)/.test(sentence) ? 2 : 0) -
+      (/^(?:현행법|현재|종전|최근|그동안)/.test(sentence) ? 6 : 0) -
+      (/(?:규정하고\s*있음|지적이\s*있음|문제가\s*있음)$/.test(sentence) ? 3 : 0) -
+      (/^(?:이를|이는|이로|그것|해당)/.test(sentence) ? 2 : 0) - index * 0.1;
+  };
+  const complete = sentences.map((sentence, index) => ({ sentence, index }))
+    .filter(entry => /[.!?]$/.test(entry.sentence) && entry.sentence.length >= 20);
+  const candidates = complete.length ? complete : [{ sentence: sentences[0], index: 0 }];
+  const best = candidates.reduce((best, entry) =>
+    score(entry.sentence, entry.index) > score(best.sentence, best.index) ? entry : best,
+    candidates[0]);
+  if (!/[.!?]$/.test(sentences[0]) && complete.length) return best.sentence;
+  return best.index > 0 && score(best.sentence, best.index) >= 5 &&
+    score(best.sentence, best.index) - score(sentences[0], 0) >= 4
+    ? best.sentence : sentences[0];
+}
+
+function summarySentencesWithLead(content) {
+  const sentences = summarySentences(content);
+  const lead = summaryLeadSentence(content);
+  const index = sentences.indexOf(lead);
+  return index < 0 ? sentences : [lead, ...sentences.filter((_, position) => position !== index)];
 }
 
 function cleanBillSummary(item, allowOtherMonths = true) {
@@ -72,10 +112,12 @@ function displayBillNo(item) {
 function summarizeForPopup(item) {
   const content = cleanBillSummary(item);
   if (isMissingBillSummary(content)) return "주요내용 데이터가 없습니다. 공식 원문에서 확인해 주세요.";
-  const complete = splitReportSentences(content)
-    .map(stripLeadingConnectives)
+  const complete = summarySentencesWithLead(content)
     .filter(sentence => sentence && /[.!?]$/.test(sentence));
-  if (!complete.length) return content.length > 360 ? `${content.slice(0, 360).trim()}…` : content;
+  if (!complete.length) {
+    const lead = summaryLeadSentence(content);
+    return lead.length > 360 ? `${lead.slice(0, 360).trim()}…` : lead;
+  }
   const selected = [];
   let length = 0;
   for (const sentence of complete) {

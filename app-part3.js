@@ -266,10 +266,13 @@ function summarizeForComparison(item) {
     return "주요내용 데이터가 없습니다.";
   }
 
-  const sentences = splitReportSentences(text)
-    .map(sentence => stripLeadingConnectives(sentence.replace(/\s+/g, " ")))
+  const sentences = summarySentencesWithLead(text)
+    .map(sentence => sentence.replace(/\s+/g, " ").trim())
     .filter(sentence => sentence.length >= 12 && /[.!?]$/.test(sentence));
-  if (!sentences.length) return `• ${text.slice(0, COMPARISON_SUMMARY_MAX_CHARS).trim()}${text.length > COMPARISON_SUMMARY_MAX_CHARS ? "…" : ""}`;
+  if (!sentences.length) {
+    const lead = summaryLeadSentence(text);
+    return `• ${lead.slice(0, COMPARISON_SUMMARY_MAX_CHARS).trim()}${lead.length > COMPARISON_SUMMARY_MAX_CHARS ? "…" : ""}`;
+  }
 
   const candidates = sentences.map((sentence, index) => ({ sentence, index }));
   const score = entry => {
@@ -280,22 +283,19 @@ function summarizeForComparison(item) {
   const prioritized = [...candidates].sort((a, b) =>
     score(b) - score(a) || a.sentence.length - b.sentence.length || a.index - b.index
   );
-  const selected = [];
-  let totalLength = 0;
+  const selected = [candidates[0]];
+  let totalLength = candidates[0].sentence.length;
 
   prioritized.forEach(entry => {
-    if (selected.length >= COMPARISON_SUMMARY_MAX_POINTS) return;
+    if (entry.index === 0 || selected.length >= COMPARISON_SUMMARY_MAX_POINTS) return;
     const addedLength = entry.sentence.length + (selected.length ? 3 : 0);
-    if (!selected.length || totalLength + addedLength <= COMPARISON_SUMMARY_MAX_CHARS) {
+    if (totalLength + addedLength <= COMPARISON_SUMMARY_MAX_CHARS) {
       selected.push(entry);
       totalLength += addedLength;
     }
   });
 
-  return selected
-    .sort((a, b) => a.index - b.index)
-    .map(entry => `• ${entry.sentence}`)
-    .join("\n");
+  return selected.map(entry => `• ${entry.sentence}`).join("\n");
 }
 
 function summarizeForReport(item) {
@@ -313,8 +313,7 @@ function summarizeForReport(item) {
     return "공식 제안이유 및 주요내용을 확인 중입니다.";
   }
 
-  let sentences = splitReportSentences(text)
-    .map(stripLeadingConnectives)
+  let sentences = summarySentencesWithLead(text)
     .filter(sentence => sentence.length >= 8);
 
   // 수집 원문이 글자 수 제한 때문에 문장 중간에서 잘린 짧은 꼬리는 제외합니다.
@@ -341,7 +340,6 @@ function summarizeForReport(item) {
   candidates.forEach(add);
 
   const points = selected.slice(0, REPORT_SUMMARY_MAX_POINTS)
-    .sort((a, b) => a.index - b.index)
     .map(entry => compactReportPoint(entry.sentence, 54));
   let summary = points.map(point => `• ${point}`).join("\n");
   if (summary.length > REPORT_SUMMARY_MAX_CHARS) {
