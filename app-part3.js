@@ -76,15 +76,13 @@ function wordProcessingDetails(item) {
   const result = String(item.processingResult || "").trim();
   if (!result || result === "처리결과 확인 중") return "";
   const alternatives = item.alternativeBills || [];
-  const outcomes = [...new Set(alternatives.map(alt => {
-    const related = state.data.find(entry => entry.billId === alt.billId);
-    return alt.processingResult || related?.processingResult || "";
-  }).filter(value => value && value !== "처리결과 확인 중"))];
-  const labels = [result, ...outcomes.map(value => `대안 ${value}`)];
-  if (alternatives.length) labels.push("병합심사");
   const numbers = [...new Set(alternatives.map(alt => displayBillNo(alt)).filter(Boolean))];
-  return `<div class="processing-note">※ ${escapeHtml(labels.join(" · "))}</div>` +
-    (numbers.length ? `<div class="alternative-no">반영 대안 의안번호 ${escapeHtml(numbers.join(", "))}</div>` : "");
+  if (!numbers.length && /\(대안\)\s*$/.test(String(item.title || ""))) {
+    const ownNumber = displayBillNo(item);
+    if (ownNumber) numbers.push(ownNumber);
+  }
+  return `<div class="processing-note">※ ${escapeHtml(result)}</div>` +
+    (numbers.length ? `<div class="alternative-no">- 대안 의안번호 : ${escapeHtml(numbers.join(", "))}</div>` : "");
 }
 
 function downloadItemsWordReport(items, reportTitle, filename, customFilterLabel = "", groupByAgency = true) {
