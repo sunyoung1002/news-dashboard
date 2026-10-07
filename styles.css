@@ -100,7 +100,7 @@ select:focus, input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgb
 .favorite-detail-stage { display: grid; gap: 5px; padding: 13px 15px; border-left: 4px solid var(--orange); border-radius: 8px; background: #fff8ee; }
 .favorite-detail-stage span { color: #7c5a2d; font-size: 12px; }
 .favorite-detail-body h3 { margin: 20px 0 9px; color: var(--navy); }
-.favorite-detail-summary { max-height: 45vh; overflow: auto; color: #334e68; font-size: 14px; line-height: 1.8; white-space: normal; }
+.favorite-detail-summary { max-width: 86ch; max-height: 45vh; overflow: auto; color: #334e68; font-size: 14px; line-height: 1.8; white-space: normal; }
 .favorite-detail-actions { display: flex; align-items: center; justify-content: flex-end; gap: 12px; margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--line); }
 
 .favorite-category-dialog { width: min(940px, calc(100vw - 36px)); max-height: calc(100vh - 36px); padding: 0; border: 0; border-radius: 18px; color: var(--text); box-shadow: 0 24px 80px rgba(15,34,57,.35); }

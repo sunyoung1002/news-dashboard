@@ -56,7 +56,7 @@ function downloadFavoriteItemWordReport(itemId) {
     [item],
     `${item.title} 주요내용`,
     `${safeFilename}_보고서.doc`,
-    `즐겨찾기 개별 법안 · ${item.billNo || "의안번호 확인 중"}`
+    `즐겨찾기 개별 법안 · 의안번호 ${displayBillNo(item) || "확인 중"}`
   );
 }
 
@@ -98,7 +98,7 @@ function downloadItemsWordReport(items, reportTitle, filename, customFilterLabel
         <td class="number">${agencyNumber}</td>
         <td>
           <strong>${escapeHtml(item.title)}</strong><br>
-          <span class="sub">의안번호 ${escapeHtml(item.billNo || "확인 중")}</span><br>
+          <span class="sub">의안번호 ${escapeHtml(displayBillNo(item) || "확인 중")}</span><br>
           <span class="sub">${escapeHtml(item.proposer || "발의자 확인 중")}</span>
         </td>
         <td>

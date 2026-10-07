@@ -58,6 +58,25 @@ function isMissingBillSummary(content) {
   return !content || /해당\s*의안\s*정보를\s*찾을\s*수\s*없습니다|확인\s*중입니다/.test(content);
 }
 
+function displayBillNo(item) {
+  return String(item.billNo || "").replace(/^(?:의안\s*번호\s*[:：]?\s*)+/g, "").trim();
+}
+
+function summarizeForPopup(item) {
+  const content = cleanBillSummary(item);
+  if (isMissingBillSummary(content)) return "주요내용 데이터가 없습니다. 공식 원문에서 확인해 주세요.";
+  const complete = splitReportSentences(content).filter(sentence => /[.!?]$/.test(sentence));
+  if (!complete.length) return "수집된 주요내용이 문장 중간에서 끊겨 요약할 수 없습니다. 공식 원문에서 확인해 주세요.";
+  const selected = [];
+  let length = 0;
+  for (const sentence of complete) {
+    if (selected.length >= 4 || (selected.length && length + sentence.length > 330)) break;
+    selected.push(sentence);
+    length += sentence.length;
+  }
+  return selected.join(" ");
+}
+
 function favoriteCategoryGroups(items = favoriteItems()) {
   const grouped = new Map(FAVORITE_CATEGORIES.map(category => [category.id, { ...category, items: [] }]));
   items.forEach(item => grouped.get(favoriteCategoryForItem(item).id).items.push(item));
@@ -146,12 +165,9 @@ function openFavoriteDetail(itemId) {
   const item = state.data.find(entry => itemKey(entry) === itemId) || state.favoriteRows.get(itemId);
   if (!item) return;
   $("#favoriteDetailTitle").textContent = item.title;
-  $("#favoriteDetailMeta").textContent = `${item.agency || "기타"} · ${item.committee || "위원회 확인 중"} · ${item.billNo || "의안번호 확인 중"} · ${item.proposer || "발의자 확인 중"}`;
+  $("#favoriteDetailMeta").textContent = `${item.agency || "기타"} · ${item.committee || "위원회 확인 중"} · 의안번호 ${displayBillNo(item) || "확인 중"} · ${item.proposer || "발의자 확인 중"}`;
   $("#favoriteDetailStage").innerHTML = `<strong>${escapeHtml(item.previousStage || "-")} → ${escapeHtml(item.stage || "-")}</strong><span>${escapeHtml(item.change || "변동 내용 확인 중")} · ${escapeHtml(item.changedDate || "")}</span>`;
-  const detailSummary = cleanBillSummary(item);
-  $("#favoriteDetailSummary").textContent = isMissingBillSummary(detailSummary)
-    ? "주요내용 데이터가 없습니다. 공식 원문에서 확인해 주세요."
-    : detailSummary;
+  $("#favoriteDetailSummary").textContent = summarizeForPopup(item);
   const source = $("#favoriteDetailSource");
   source.href = item.sourceUrl || "#";
   source.hidden = !item.sourceUrl;
