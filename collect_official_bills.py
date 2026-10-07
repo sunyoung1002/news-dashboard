@@ -5,6 +5,7 @@ import json
 import os
 import re
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -20,6 +21,8 @@ KEYWORDS_FILE = ROOT / "bill_keywords.yaml"
 ASSEMBLY_BASE = "https://open.assembly.go.kr/portal/openapi"
 PENDING_API = "nwbqublzajtcqpdae"
 ALL_BILLS_API = "ALLBILLV2"
+SUMMARY_API = "BPMBILLSUMMARY"
+ALTERNATIVE_API = "TVBPMBILL11"
 SUMMARY_URL = "https://likms.assembly.go.kr/bill/bi/popup/billSummary.do"
 LAW_SEARCH_URL = "https://www.law.go.kr/DRF/lawSearch.do"
 
@@ -55,11 +58,11 @@ CATEGORY_AGENCY = {
 }
 
 
-def request_json(url, params, retries=3):
+def request_json(url, params, retries=3, timeout=35):
     last_error = None
     for attempt in range(retries):
         try:
-            response = requests.get(url, params=params, timeout=35)
+            response = requests.get(url, params=params, timeout=timeout)
             response.raise_for_status()
             return response.json()
         except (requests.RequestException, ValueError) as exc:
@@ -203,9 +206,9 @@ def clean_text(value):
     return re.sub(r"\s+", " ", str(value or "")).strip()
 
 
-def fetch_summary(bill_id):
+def fetch_summary(bill_id, timeout=20):
     try:
-        response = requests.get(SUMMARY_URL, params={"billId": bill_id}, timeout=20)
+        response = requests.get(SUMMARY_URL, params={"billId": bill_id}, timeout=timeout)
         response.raise_for_status()
         text = BeautifulSoup(response.text, "html.parser").get_text("\n", strip=True)
         for marker in ("제안이유 및 주요내용", "제안이유"):
@@ -216,6 +219,86 @@ def fetch_summary(bill_id):
         return text[:420] if text else "공식 제안이유 및 주요내용을 확인 중입니다."
     except requests.RequestException:
         return "공식 제안이유 및 주요내용을 확인 중입니다."
+
+
+def official_processed_summary(row):
+    """의안번호로 공식 제안이유를 조회하고, 반환된 BILL_ID를 대조한다."""
+    bill_no = clean_text(row.get("BILL_NO"))
+    bill_id = clean_text(row.get("BILL_ID"))
+    if bill_no:
+        try:
+            payload = request_json(
+                f"{ASSEMBLY_BASE}/{SUMMARY_API}",
+                {"KEY": ASSEMBLY_KEY, "Type": "json", "pIndex": 1,
+                 "pSize": 100, "BILL_NO": bill_no}, retries=1, timeout=12,
+            )
+            result = assembly_result(payload, SUMMARY_API)
+            if result.get("CODE", "INFO-000") not in ("INFO-000", "INFO-200"):
+                raise RuntimeError(result.get("MESSAGE", "요약 API 오류"))
+            for entry in assembly_rows(payload, SUMMARY_API):
+                if clean_text(entry.get("BILL_ID")) == bill_id:
+                    summary = clean_text(entry.get("SUMMARY"))
+                    if summary:
+                        return summary[:1200]
+        except (RuntimeError, requests.RequestException, ValueError):
+            pass
+    # 이전 HTML 요약 경로가 가능한 경우에도 내용을 최대한 보완한다.
+    return fetch_summary(bill_id, timeout=8)
+
+
+def enrich_processed_summaries(items, rows):
+    by_id = {item["billId"]: item for item in items if item.get("status") == "처리의안"}
+    missing = [row for row in rows if "확인 중" in by_id[row["BILL_ID"]]["summary"]]
+    with ThreadPoolExecutor(max_workers=12) as pool:
+        futures = {pool.submit(official_processed_summary, row): row["BILL_ID"] for row in missing}
+        for future in as_completed(futures):
+            summary = future.result()
+            if summary and "확인 중" not in summary:
+                by_id[futures[future]]["summary"] = summary
+    remaining = sum("확인 중" in item["summary"] for item in by_id.values())
+    print(f"처리의안 주요내용: 보완 대상 {len(missing)}건, 확인 대기 {remaining}건")
+
+
+def fetch_absorbed_ids(alternative_id):
+    payload = request_json(
+        f"{ASSEMBLY_BASE}/{ALTERNATIVE_API}",
+        {"KEY": ASSEMBLY_KEY, "Type": "json", "pIndex": 1, "pSize": 1000,
+         "AGE": "22", "BILL_ID_REF": alternative_id}, retries=2, timeout=15,
+    )
+    result = assembly_result(payload, ALTERNATIVE_API)
+    if result.get("CODE", "INFO-000") not in ("INFO-000", "INFO-200"):
+        raise RuntimeError(f"대안정보 API 오류: {result.get('MESSAGE', result.get('CODE'))}")
+    return {clean_text(row.get("BILL_ID")) for row in assembly_rows(payload, ALTERNATIVE_API)}
+
+
+def enrich_alternative_links(items):
+    by_id = {item["billId"]: item for item in items if item.get("status") == "처리의안"}
+    alternatives = [item for item in by_id.values() if item["title"].rstrip().endswith("(대안)")]
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        futures = {pool.submit(fetch_absorbed_ids, alt["billId"]): alt for alt in alternatives}
+        for future in as_completed(futures):
+            alt = futures[future]
+            try:
+                absorbed_ids = future.result()
+            except (RuntimeError, requests.RequestException, ValueError) as exc:
+                print(f"[안내] 대안 {alt['billNo']} 관계 조회 실패: {exc}")
+                continue
+            for bill_id in absorbed_ids:
+                absorbed = by_id.get(bill_id)
+                if not absorbed or absorbed.get("processingResult") != "대안반영폐기":
+                    continue
+                relation = {"billId": alt["billId"], "billNo": alt["billNo"],
+                            "title": alt["title"], "sourceUrl": alt["sourceUrl"]}
+                links = absorbed.setdefault("alternativeBills", [])
+                if all(link["billId"] != alt["billId"] for link in links):
+                    links.append(relation)
+    linked = 0
+    for item in by_id.values():
+        if item.get("alternativeBills"):
+            item["alternativeBills"].sort(key=lambda alt: alt["billNo"])
+            item["change"] += " → " + ", ".join(alt["billNo"] for alt in item["alternativeBills"])
+            linked += 1
+    print(f"대안반영폐기 연결: {linked}건 / 대안 {len(alternatives)}건 조회")
 
 
 def load_previous():
@@ -309,6 +392,7 @@ def make_processed_item(row, old, month, today):
         "stage": stage,
         "status": "처리의안",
         "processingResult": result or "처리결과 확인 중",
+        "alternativeBills": old.get("alternativeBills", []) if old else [],
         "previousStage": old.get("stage", "-") if old else "-",
         "changed": changed,
         "changedDate": today if changed else (old.get("changedDate", today) if old else today),
@@ -395,6 +479,9 @@ def main():
     for row in processed_rows:
         key = str(row.get("BILL_ID") or "")
         items.append(make_processed_item(row, old_index.get(key, {}), month, today))
+
+    enrich_processed_summaries(items, processed_rows)
+    enrich_alternative_links(items)
 
     laws = fetch_promulgated_laws(keywords, month, today)
     items.extend(laws)

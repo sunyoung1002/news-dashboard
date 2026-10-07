@@ -66,7 +66,7 @@ function summarizeForPopup(item) {
   const content = cleanBillSummary(item);
   if (isMissingBillSummary(content)) return "주요내용 데이터가 없습니다. 공식 원문에서 확인해 주세요.";
   const complete = splitReportSentences(content).filter(sentence => /[.!?]$/.test(sentence));
-  if (!complete.length) return "수집된 주요내용이 문장 중간에서 끊겨 요약할 수 없습니다. 공식 원문에서 확인해 주세요.";
+  if (!complete.length) return content.length > 360 ? `${content.slice(0, 360).trim()}…` : content;
   const selected = [];
   let length = 0;
   for (const sentence of complete) {
@@ -166,7 +166,12 @@ function openFavoriteDetail(itemId) {
   if (!item) return;
   $("#favoriteDetailTitle").textContent = item.title;
   $("#favoriteDetailMeta").textContent = `${item.agency || "기타"} · ${item.committee || "위원회 확인 중"} · 의안번호 ${displayBillNo(item) || "확인 중"} · ${item.proposer || "발의자 확인 중"}`;
-  $("#favoriteDetailStage").innerHTML = `<strong>${escapeHtml(item.previousStage || "-")} → ${escapeHtml(item.stage || "-")}</strong><span>${escapeHtml(item.change || "변동 내용 확인 중")} · ${escapeHtml(item.changedDate || "")}</span>`;
+  const alternatives = item.alternativeBills || [];
+  const alternativeLine = item.processingResult === "대안반영폐기"
+    ? `<span>반영 대안: ${alternatives.length
+      ? alternatives.map(alt => `<a href="${escapeHtml(alt.sourceUrl)}" target="_blank" rel="noreferrer">${escapeHtml(alt.billNo)} · ${escapeHtml(alt.title)}</a>`).join(", ")
+      : "공식 대안정보에서 연결 의안을 확인 중입니다."}</span>` : "";
+  $("#favoriteDetailStage").innerHTML = `<strong>${escapeHtml(item.previousStage || "-")} → ${escapeHtml(item.stage || "-")}</strong><span>${escapeHtml(item.change || "변동 내용 확인 중")} · ${escapeHtml(item.changedDate || "")}</span>${alternativeLine}`;
   $("#favoriteDetailSummary").textContent = summarizeForPopup(item);
   const source = $("#favoriteDetailSource");
   source.href = item.sourceUrl || "#";
@@ -317,4 +322,3 @@ function distinctiveKeywords(item, allItems) {
   const others = allItems.filter(other => itemKey(other) !== itemKey(item)).map(billTokens);
   return [...own].filter(word => others.every(set => !set.has(word))).slice(0, 8);
 }
-

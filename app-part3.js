@@ -100,6 +100,7 @@ function downloadItemsWordReport(items, reportTitle, filename, customFilterLabel
           <strong>${escapeHtml(item.title)}</strong><br>
           <span class="sub">의안번호 ${escapeHtml(displayBillNo(item) || "확인 중")}</span><br>
           <span class="sub">${escapeHtml(item.proposer || "발의자 확인 중")}</span>
+          ${(item.alternativeBills || []).map(alt => `<br><span class="sub">반영 대안: ${escapeHtml(alt.billNo)} · ${escapeHtml(alt.title)}</span>`).join("")}
         </td>
         <td width="12.5%" style="width:12.5%">
           ${escapeHtml(item.agency)}
@@ -186,6 +187,7 @@ function downloadComparisonWordReport() {
     ["소관기관·위원회", item => `${escapeHtml(item.agency)}<br>${escapeHtml(item.committee)}`],
     ["진행단계", item => wordStageProgress(item.stage)],
     ["최근 변동", item => escapeHtml(item.change)],
+    ["반영 대안", item => (item.alternativeBills || []).map(alt => `${escapeHtml(alt.billNo)} · ${escapeHtml(alt.title)}`).join("<br>") || "-"],
     ["주요 내용 요약", item => escapeHtml(summarizeForComparison(item)).replace(/\n/g, "<br>")],
     ["차별화 핵심어", item => distinctiveKeywords(item, items).map(escapeHtml).join(", ") || "-"]
   ];
@@ -252,7 +254,7 @@ function summarizeForComparison(item) {
   const sentences = splitReportSentences(text)
     .map(sentence => sentence.replace(/\s+/g, " ").trim())
     .filter(sentence => sentence.length >= 12 && /[.!?]$/.test(sentence));
-  if (!sentences.length) return "공식 원문에서 완결된 주요 문장을 확인해 주세요.";
+  if (!sentences.length) return `• ${text.slice(0, COMPARISON_SUMMARY_MAX_CHARS).trim()}${text.length > COMPARISON_SUMMARY_MAX_CHARS ? "…" : ""}`;
 
   const candidates = sentences.map((sentence, index) => ({ sentence, index }));
   const score = entry => {
