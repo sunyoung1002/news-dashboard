@@ -23,16 +23,39 @@ function favoriteCategoryForItem(item) {
 }
 
 function briefSummary(item, maxLength = 90) {
-  const raw = String(item.summary || "")
-    .replace(/(?:창|장)\s*닫기/g, " ")
-    .replace(/의안\s*번호\s*[:：]?\s*(?:제\s*)?\d+(?:호)?/g, " ")
-    .replace(/제안이유\s*및\s*주요내용|제안이유|주요내용/g, " ")
-    .replace(/\s+/g, " ").trim();
-  if (!raw) return "주요내용 확인 중";
-  const sentence = raw.match(/^.{10,}?[.!?](?=\s|$)/)?.[0] || raw;
+  const content = cleanBillSummary(item);
+  if (isMissingBillSummary(content)) {
+    return "주요내용 데이터가 없습니다.";
+  }
+  const sentence = content.match(/^.{10,}?[.!?](?=\s|$)/)?.[0] || content;
   if (sentence.length <= maxLength) return sentence;
   const cut = sentence.slice(0, maxLength - 1).replace(/\s+\S*$/, "").trim();
   return `${cut || sentence.slice(0, maxLength - 1)}…`;
+}
+
+function cleanBillSummary(item, allowOtherMonths = true) {
+  let content = String(item.summary || "")
+    .replace(/(?:창|장)\s*닫기/g, " ")
+    .replace(/\[\s*\d{5,}\s*\]/g, " ")
+    .replace(/의안\s*번호\s*[:：]?\s*(?:제\s*)?\d+(?:호)?/g, " ")
+    .replace(/제안이유\s*및\s*주요내용|제안이유|주요내용/g, " ")
+    .replace(/\s+/g, " ").trim();
+  for (const prefix of [item.title, item.proposer, item.billNo]) {
+    const value = String(prefix || "").trim();
+    if (value && content.startsWith(value)) content = content.slice(value.length).trim();
+  }
+  content = content.replace(/^(?:의원\s*등?\s*\d+인?|등\s*\d+인?)\s*/, "").trim();
+  if (allowOtherMonths && isMissingBillSummary(content) && item.billNo) {
+    const otherMonth = state.data.find(entry => entry !== item &&
+      String(entry.billNo || "") === String(item.billNo) &&
+      !isMissingBillSummary(cleanBillSummary(entry, false)));
+    if (otherMonth) return cleanBillSummary(otherMonth, false);
+  }
+  return content;
+}
+
+function isMissingBillSummary(content) {
+  return !content || /해당\s*의안\s*정보를\s*찾을\s*수\s*없습니다|확인\s*중입니다/.test(content);
 }
 
 function favoriteCategoryGroups(items = favoriteItems()) {
@@ -125,7 +148,10 @@ function openFavoriteDetail(itemId) {
   $("#favoriteDetailTitle").textContent = item.title;
   $("#favoriteDetailMeta").textContent = `${item.agency || "기타"} · ${item.committee || "위원회 확인 중"} · ${item.billNo || "의안번호 확인 중"} · ${item.proposer || "발의자 확인 중"}`;
   $("#favoriteDetailStage").innerHTML = `<strong>${escapeHtml(item.previousStage || "-")} → ${escapeHtml(item.stage || "-")}</strong><span>${escapeHtml(item.change || "변동 내용 확인 중")} · ${escapeHtml(item.changedDate || "")}</span>`;
-  $("#favoriteDetailSummary").innerHTML = escapeHtml(item.summary || "공식 주요내용을 확인 중입니다.").replace(/\n/g, "<br>");
+  const detailSummary = cleanBillSummary(item);
+  $("#favoriteDetailSummary").textContent = isMissingBillSummary(detailSummary)
+    ? "주요내용 데이터가 없습니다. 공식 원문에서 확인해 주세요."
+    : detailSummary;
   const source = $("#favoriteDetailSource");
   source.href = item.sourceUrl || "#";
   source.hidden = !item.sourceUrl;

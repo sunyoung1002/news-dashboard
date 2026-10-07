@@ -72,7 +72,7 @@ function wordStageProgress(stage) {
   return `<table class="stage-progress" cellspacing="0" cellpadding="0" style="width:100%;border:0;table-layout:fixed"><tr>${bars}</tr><tr>${labels}</tr></table>`;
 }
 
-function downloadItemsWordReport(items, reportTitle, filename, customFilterLabel = "", groupByAgency = false) {
+function downloadItemsWordReport(items, reportTitle, filename, customFilterLabel = "", groupByAgency = true) {
   if (!items.length) {
     window.alert("Word 보고서로 출력할 법안이 없습니다.");
     return;
@@ -83,8 +83,11 @@ function downloadItemsWordReport(items, reportTitle, filename, customFilterLabel
     return agencyOrder || String(a.title || "").localeCompare(String(b.title || ""), "ko");
   }) : items;
   let previousAgency = "";
-  const rows = reportItems.map((item, index) => {
+  let agencyNumber = 0;
+  const rows = reportItems.map(item => {
     const agency = item.agency || "기타";
+    if (agency !== previousAgency) agencyNumber = 0;
+    agencyNumber += 1;
     const agencyRow = groupByAgency && agency !== previousAgency
       ? `<tr class="agency-group"><td colspan="5">${escapeHtml(agency)}</td></tr>`
       : "";
@@ -92,20 +95,18 @@ function downloadItemsWordReport(items, reportTitle, filename, customFilterLabel
     const summary = summarizeForComparison(item);
     return `${agencyRow}
       <tr>
-        <td class="number">${index + 1}</td>
+        <td class="number">${agencyNumber}</td>
         <td>
-          <strong>${escapeHtml(item.title)}</strong>
-          <span class="sub">${escapeHtml(item.billNo)}</span>
-          <span class="sub">${escapeHtml(item.proposer)}</span>
+          <strong>${escapeHtml(item.title)}</strong><br>
+          <span class="sub">의안번호 ${escapeHtml(item.billNo || "확인 중")}</span><br>
+          <span class="sub">${escapeHtml(item.proposer || "발의자 확인 중")}</span>
         </td>
         <td>
           ${escapeHtml(item.agency)}
-          <span class="sub">${escapeHtml(item.committee)}</span>
+          <br><span class="sub">${escapeHtml(item.committee)}</span>
         </td>
         <td>
           ${wordStageProgress(item.stage)}
-          <span class="sub">${escapeHtml(item.change)}</span>
-          <span class="sub">기준일 ${escapeHtml(item.changedDate)}</span>
         </td>
         <td class="summary-cell">
           ${escapeHtml(summary)}
@@ -147,7 +148,7 @@ function downloadItemsWordReport(items, reportTitle, filename, customFilterLabel
         th, td { border: 0.75pt solid #64748b; padding: 5pt; vertical-align: top; line-height: 1.45; word-break: keep-all; overflow-wrap: break-word; }
         th { background: #dbeafe; text-align: center; font-weight: bold; }
         .number { text-align: center; }
-        .sub { display: block; margin-top: 3pt; color: #475569; font-size: 8pt; }
+        .sub { color: #475569; font-size: 8pt; }
         table.stage-progress { width: 100%; border: 0; margin: 0 0 5pt; }
         table.stage-progress td { vertical-align: middle; }
         .summary-cell { line-height: 1.5; white-space: pre-line; }
@@ -184,7 +185,7 @@ function downloadComparisonWordReport() {
     ["대표발의자", item => escapeHtml(item.proposer)],
     ["소관기관·위원회", item => `${escapeHtml(item.agency)}<br>${escapeHtml(item.committee)}`],
     ["진행단계", item => wordStageProgress(item.stage)],
-    ["최근 변동", item => `${escapeHtml(item.change)}<br>${escapeHtml(item.changedDate)}`],
+    ["최근 변동", item => escapeHtml(item.change)],
     ["주요 내용 요약", item => escapeHtml(summarizeForComparison(item)).replace(/\n/g, "<br>")],
     ["차별화 핵심어", item => distinctiveKeywords(item, items).map(escapeHtml).join(", ") || "-"]
   ];
@@ -233,10 +234,7 @@ function createWordDownload(content, filename) {
 }
 
 function summarizeForComparison(item) {
-  let text = String(item.summary || "")
-    .replace(/창닫기|의안 상세정보|인쇄/g, " ")
-    .replace(/\[\s*\d+\s*\]/g, " ")
-    .replace(/제안이유\s*및\s*주요내용|제안이유|주요내용/g, " ");
+  let text = cleanBillSummary(item).replace(/의안 상세정보|인쇄/g, " ");
 
   [item.title, item.proposer, item.billNo].filter(Boolean).forEach(value => {
     text = text.split(String(value)).join(" ");
@@ -247,8 +245,8 @@ function summarizeForComparison(item) {
     .replace(/\s+/g, " ")
     .trim();
 
-  if (!text || text.includes("확인 중입니다")) {
-    return "공식 제안이유 및 주요내용을 확인 중입니다.";
+  if (isMissingBillSummary(text)) {
+    return "주요내용 데이터가 없습니다.";
   }
 
   const sentences = splitReportSentences(text)
