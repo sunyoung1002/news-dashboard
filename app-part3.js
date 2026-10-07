@@ -95,20 +95,20 @@ function downloadItemsWordReport(items, reportTitle, filename, customFilterLabel
     const summary = summarizeForComparison(item);
     return `${agencyRow}
       <tr>
-        <td class="number">${agencyNumber}</td>
-        <td>
+        <td class="number" width="3.5%" style="width:3.5%">${agencyNumber}</td>
+        <td width="16.5%" style="width:16.5%">
           <strong>${escapeHtml(item.title)}</strong><br>
           <span class="sub">의안번호 ${escapeHtml(displayBillNo(item) || "확인 중")}</span><br>
           <span class="sub">${escapeHtml(item.proposer || "발의자 확인 중")}</span>
         </td>
-        <td>
+        <td width="12.5%" style="width:12.5%">
           ${escapeHtml(item.agency)}
           <br><span class="sub">${escapeHtml(item.committee)}</span>
         </td>
-        <td>
+        <td width="16.5%" style="width:16.5%">
           ${wordStageProgress(item.stage)}
         </td>
-        <td class="summary-cell">
+        <td class="summary-cell" width="51%" style="width:51%">
           ${escapeHtml(summary)}
         </td>
       </tr>`;
@@ -160,11 +160,11 @@ function downloadItemsWordReport(items, reportTitle, filename, customFilterLabel
     <body><div class="WordSection1">
       <h1>${escapeHtml(reportTitle)}</h1>
       <p class="meta">조회조건: ${escapeHtml(filters)} · 총 ${items.length.toLocaleString()}건 · 작성일 ${escapeHtml(generatedAt)}</p>
-      <table>
+      <table class="report-table" width="100%" style="width:100%;table-layout:fixed;mso-table-layout-alt:fixed">
         <colgroup>
-          <col style="width:4%"><col style="width:22%"><col style="width:13%"><col style="width:16%"><col style="width:45%">
+          <col width="3.5%" style="width:3.5%"><col width="16.5%" style="width:16.5%"><col width="12.5%" style="width:12.5%"><col width="16.5%" style="width:16.5%"><col width="51%" style="width:51%">
         </colgroup>
-        <thead><tr><th>번호</th><th>법안 정보</th><th>소관 기관</th><th>진행 현황</th><th>주요내용 요약</th></tr></thead>
+        <thead><tr><th width="3.5%" style="width:3.5%">번호</th><th width="16.5%" style="width:16.5%">법안 정보</th><th width="12.5%" style="width:12.5%">소관 기관</th><th width="16.5%" style="width:16.5%">진행 현황</th><th width="51%" style="width:51%">주요내용 요약</th></tr></thead>
         <tbody>${rows}</tbody>
       </table>
       <p class="note">※ 주요내용은 원문에서 개정 취지·문제점을 중심으로 약 5~6줄 분량의 완결된 문장으로 정리했습니다. 정확한 내용은 공식 원문을 확인해 주세요.</p>
