@@ -42,9 +42,24 @@ function stripLeadingConnectives(value) {
 
 function summarySentences(content) {
   return splitReportSentences(content)
-    .map(sentence => stripLeadingConnectives(sentence)
-      .replace(/^(?:이\s*)?(?:개정안|법안|법률안)은\s+/, ""))
+    .map(normalizePolicySentence)
     .filter(Boolean);
+}
+
+function normalizePolicySentence(sentence) {
+  let text = stripLeadingConnectives(sentence)
+    .replace(/^(?:이\s*)?(?:개정안|법안|법률안)은\s+/, "");
+  // 개정 조치를 설명하는 문장에서는 앞 문맥을 전제로 하는 시간 부사를 빼고 시작합니다.
+  if (/^(?:이미|앞서|기존에)\s+/.test(text) &&
+      /(?:고자\s*함|하려는\s*것임|도록\s*함|신설함|개정함|폐지함|제외함|금지함)(?:\s*\([^)]*\))?[.!?]?$/.test(text)) {
+    text = text.replace(/^(?:이미|앞서|기존에)\s+/, "");
+  }
+  // 조치 뒤에 붙은 입법 목적보다 실제 변경 사항을 먼저 보여줍니다.
+  const action = text.match(/^(.*?)(하지\s*아니하도록|하지\s*않도록)\s*하여\s+.+?(?:고자\s*함|하려는\s*것임)(\s*\([^)]*\))?[.!?]?$/);
+  if (action && action[1].length >= 12) {
+    return `${action[1]}하지 않도록 함${action[3] || ""}.`;
+  }
+  return text;
 }
 
 function summaryLeadSentence(content) {

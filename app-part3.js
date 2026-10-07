@@ -340,7 +340,7 @@ function summarizeForReport(item) {
   candidates.forEach(add);
 
   const points = selected.slice(0, REPORT_SUMMARY_MAX_POINTS)
-    .map(entry => compactReportPoint(entry.sentence, 54));
+    .map((entry, index) => compactReportPoint(entry.sentence, index === 0 ? 100 : 54));
   let summary = points.map(point => `• ${point}`).join("\n");
   if (summary.length > REPORT_SUMMARY_MAX_CHARS) {
     summary = `${summary.slice(0, REPORT_SUMMARY_MAX_CHARS - 1).replace(/[\s,.;:]+$/, "")}…`;
