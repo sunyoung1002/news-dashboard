@@ -41,7 +41,7 @@ python -m http.server 8080
 
 ## 자동 업데이트
 
-GitHub Actions가 매일 오전 6시 37분(한국시간)에 실행됩니다. 공식 API 호출이 실패하면 최대 3회 재시도하며, 수집 결과가 0건이면 기존 정상 데이터를 보호하기 위해 저장하지 않습니다. 수동 실행은 GitHub의 `Actions` → `update-official-bills` → `Run workflow`에서 할 수 있습니다.
+GitHub Actions가 매일 오전 6시 30분(한국시간)에 실행됩니다. 계류의안과 제22대 처리의안 전체 처리결과를 함께 수집합니다. 공식 API 호출이 실패하면 최대 3회 재시도하며, 수집 결과가 0건이면 기존 정상 데이터를 보호하기 위해 저장하지 않습니다. 수동 실행은 GitHub의 `Actions` → `update-official-bills` → `Run workflow`에서 할 수 있습니다. GitHub Actions의 예약 실행은 혼잡 시 몇 분 늦어질 수 있습니다.
 
 ## 추적 법안 추가
 

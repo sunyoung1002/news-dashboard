@@ -124,7 +124,7 @@ function bindEvents() {
 function filteredItems() {
   const stageIndex = stage => STAGES.indexOf(stage);
   const result = state.data.filter(item => {
-    const haystack = `${item.title} ${item.billNo} ${item.agency} ${item.committee} ${item.proposer || ""} ${item.summary}`.toLowerCase();
+    const haystack = `${item.title} ${item.billNo} ${item.agency} ${item.committee} ${item.proposer || ""} ${item.summary} ${item.processingResult || ""}`.toLowerCase();
     return item.month === state.month && (!state.selectedOnly || state.selectedIds.has(itemKey(item))) &&
       (!state.favoriteOnly || state.favoriteIds.has(itemKey(item))) &&
       (!state.agency || item.agency === state.agency) &&
@@ -471,4 +471,3 @@ function saveLocalFavoriteIds() {
   window.localStorage.setItem(FAVORITES_STORAGE_KEY, JSON.stringify([...state.favoriteIds]));
   state.legacyFavoriteIds = new Set(state.favoriteIds);
 }
-
