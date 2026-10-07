@@ -33,6 +33,13 @@ function briefSummary(item, maxLength = 90) {
   return `${cut || sentence.slice(0, maxLength - 1)}…`;
 }
 
+function stripLeadingConnectives(value) {
+  let text = String(value || "").trim();
+  const connective = /^(?:[•·\-–]\s*)?(?:이에\s*따라|이와\s*같이|이러한|그러나|그런데|따라서|이에|또한|아울러|한편|그리고|그러므로|그\s*결과|이처럼|이로써)(?=$|[\s,，:：])[,，:：\s]*/u;
+  while (connective.test(text)) text = text.replace(connective, "").trim();
+  return text;
+}
+
 function cleanBillSummary(item, allowOtherMonths = true) {
   let content = String(item.summary || "")
     .replace(/(?:창|장)\s*닫기/g, " ")
@@ -44,7 +51,7 @@ function cleanBillSummary(item, allowOtherMonths = true) {
     const value = String(prefix || "").trim();
     if (value && content.startsWith(value)) content = content.slice(value.length).trim();
   }
-  content = content.replace(/^(?:의원\s*등?\s*\d+인?|등\s*\d+인?)\s*/, "").trim();
+  content = stripLeadingConnectives(content.replace(/^(?:의원\s*등?\s*\d+인?|등\s*\d+인?)\s*/, ""));
   if (allowOtherMonths && isMissingBillSummary(content) && item.billNo) {
     const otherMonth = state.data.find(entry => entry !== item &&
       String(entry.billNo || "") === String(item.billNo) &&
@@ -65,7 +72,9 @@ function displayBillNo(item) {
 function summarizeForPopup(item) {
   const content = cleanBillSummary(item);
   if (isMissingBillSummary(content)) return "주요내용 데이터가 없습니다. 공식 원문에서 확인해 주세요.";
-  const complete = splitReportSentences(content).filter(sentence => /[.!?]$/.test(sentence));
+  const complete = splitReportSentences(content)
+    .map(stripLeadingConnectives)
+    .filter(sentence => sentence && /[.!?]$/.test(sentence));
   if (!complete.length) return content.length > 360 ? `${content.slice(0, 360).trim()}…` : content;
   const selected = [];
   let length = 0;

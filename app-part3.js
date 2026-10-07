@@ -267,7 +267,7 @@ function summarizeForComparison(item) {
   }
 
   const sentences = splitReportSentences(text)
-    .map(sentence => sentence.replace(/\s+/g, " ").trim())
+    .map(sentence => stripLeadingConnectives(sentence.replace(/\s+/g, " ")))
     .filter(sentence => sentence.length >= 12 && /[.!?]$/.test(sentence));
   if (!sentences.length) return `• ${text.slice(0, COMPARISON_SUMMARY_MAX_CHARS).trim()}${text.length > COMPARISON_SUMMARY_MAX_CHARS ? "…" : ""}`;
 
@@ -307,14 +307,14 @@ function summarizeForReport(item) {
   [item.title, item.proposer, item.billNo].filter(Boolean).forEach(value => {
     text = text.split(String(value)).join(" ");
   });
-  text = text.replace(/의안번호\s*\d+/g, " ").replace(/\s+/g, " ").trim();
+  text = stripLeadingConnectives(text.replace(/의안번호\s*\d+/g, " ").replace(/\s+/g, " "));
 
   if (!text || text.includes("확인 중입니다")) {
     return "공식 제안이유 및 주요내용을 확인 중입니다.";
   }
 
   let sentences = splitReportSentences(text)
-    .map(sentence => sentence.trim())
+    .map(stripLeadingConnectives)
     .filter(sentence => sentence.length >= 8);
 
   // 수집 원문이 글자 수 제한 때문에 문장 중간에서 잘린 짧은 꼬리는 제외합니다.
@@ -326,7 +326,7 @@ function summarizeForReport(item) {
   // 마침표 없이 이어진 긴 원문도 보고서에서 읽기 좋게 의미 단위로 나눕니다.
   if (sentences.length < 2 && text.length > 90) {
     sentences = text.split(/(?=그런데|그러나|또한|특히|한편|이에|따라서)/)
-      .map(sentence => sentence.trim())
+      .map(stripLeadingConnectives)
       .filter(sentence => sentence.length >= 8);
   }
 
@@ -351,7 +351,7 @@ function summarizeForReport(item) {
 }
 
 function compactReportPoint(sentence, maxLength) {
-  const cleaned = sentence.replace(/\s+/g, " ").replace(/^[,.;:\s]+|[,;:\s]+$/g, "").trim();
+  const cleaned = stripLeadingConnectives(sentence.replace(/\s+/g, " ").replace(/^[,.;:\s]+|[,;:\s]+$/g, ""));
   if (cleaned.length <= maxLength) return /[.!?]$/.test(cleaned) ? cleaned : `${cleaned}.`;
   return `${cleaned.slice(0, maxLength - 1).replace(/[\s,.;:]+$/, "")}…`;
 }
