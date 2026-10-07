@@ -5,7 +5,9 @@ const COMPARISON_SUMMARY_MAX_POINTS = 2;
 const COMPARISON_SUMMARY_MAX_CHARS = 190;
 const FAVORITES_STORAGE_KEY = "newsDashboard.favoriteBillIds.v1";
 const FAVORITE_CATEGORIES = [
-  { id: "political-affairs", label: "정무위", keywords: ["정무위", "독점규제및공정거래", "공정거래법", "자본시장과금융투자업", "자본시장법", "금융투자업", "하도급거래공정화", "하도급법", "하도급거래"] },
+  { id: "fair-trade", label: "공정거래법", keywords: ["독점규제및공정거래", "공정거래법"] },
+  { id: "capital-markets", label: "자본시장법", keywords: ["자본시장과금융투자업", "자본시장법", "금융투자업"] },
+  { id: "subcontracting", label: "하도급법", keywords: ["하도급거래공정화", "하도급법", "하도급거래"] },
   { id: "commercial-litigation", label: "상법·집단소송·민사소송", keywords: ["상법", "집단소송", "민사소송법", "민사소송"] },
   { id: "mutual-growth", label: "상생협력법", keywords: ["대중소기업상생협력", "상생협력법", "상생협력"] },
   { id: "carbon-labor-youth", label: "탄소중립법·노동법·청년고용", keywords: ["탄소중립", "기후위기대응", "노동법", "노동", "근로기준법", "노동조합", "산업안전", "중대재해", "최저임금", "청년고용", "고용"] },
@@ -122,7 +124,7 @@ function bindEvents() {
 function filteredItems() {
   const stageIndex = stage => STAGES.indexOf(stage);
   const result = state.data.filter(item => {
-    const haystack = `${item.title} ${item.billNo} ${item.agency} ${item.committee} ${item.summary}`.toLowerCase();
+    const haystack = `${item.title} ${item.billNo} ${item.agency} ${item.committee} ${item.proposer || ""} ${item.summary}`.toLowerCase();
     return item.month === state.month && (!state.selectedOnly || state.selectedIds.has(itemKey(item))) &&
       (!state.favoriteOnly || state.favoriteIds.has(itemKey(item))) &&
       (!state.agency || item.agency === state.agency) &&

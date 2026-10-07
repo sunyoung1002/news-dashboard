@@ -23,7 +23,11 @@ function favoriteCategoryForItem(item) {
 }
 
 function briefSummary(item, maxLength = 90) {
-  const raw = String(item.summary || "").replace(/제안이유\s*및\s*주요내용|제안이유|주요내용/g, " ").replace(/\s+/g, " ").trim();
+  const raw = String(item.summary || "")
+    .replace(/(?:창|장)\s*닫기/g, " ")
+    .replace(/의안\s*번호\s*[:：]?\s*(?:제\s*)?\d+(?:호)?/g, " ")
+    .replace(/제안이유\s*및\s*주요내용|제안이유|주요내용/g, " ")
+    .replace(/\s+/g, " ").trim();
   if (!raw) return "주요내용 확인 중";
   const sentence = raw.match(/^.{10,}?[.!?](?=\s|$)/)?.[0] || raw;
   if (sentence.length <= maxLength) return sentence;
@@ -55,6 +59,10 @@ async function toggleFavorite(item) {
 function renderFavoritesPanel() {
   const items = favoriteItems();
   const groups = favoriteCategoryGroups(items);
+  const politicalIds = new Set(["fair-trade", "capital-markets", "subcontracting"]);
+  const politicalGroups = FAVORITE_CATEGORIES.filter(category => politicalIds.has(category.id))
+    .map(category => groups.find(group => group.id === category.id) || { ...category, items: [] });
+  const otherGroups = groups.filter(group => !politicalIds.has(group.id));
 
   $("#favoriteHeaderCount").textContent = items.length.toLocaleString();
   $("#favoritesStatus").textContent = items.length
@@ -63,14 +71,23 @@ function renderFavoritesPanel() {
   $("#toggleFavoriteOnly").disabled = items.length === 0;
   $("#toggleFavoriteOnly").textContent = state.favoriteOnly ? "전체 법안 보기" : "즐겨찾기만 보기";
   $("#downloadFavorites").disabled = items.length === 0;
-  $("#favoriteAgencyGroups").innerHTML = groups.map(group => `
+  $("#favoriteAgencyGroups").innerHTML = `
+    <section class="favorite-committee-group" aria-labelledby="politicalAffairsTitle">
+      <h3 id="politicalAffairsTitle">정무위</h3>
+      <div class="favorite-committee-items">${politicalGroups.map(renderFavoriteGroup).join("")}</div>
+    </section>
+    ${otherGroups.map(renderFavoriteGroup).join("")}`;
+}
+
+function renderFavoriteGroup(group) {
+  return `
     <section class="favorite-agency-group favorite-topic-group">
       <div class="favorite-group-head">
         <button class="favorite-group-title" type="button" data-view-favorite-category="${escapeHtml(group.id)}">
           <span>${escapeHtml(group.label)}</span><small>${group.items.length.toLocaleString()}건 · 전체보기 ›</small>
         </button>
       </div>
-      <ul>${group.items.slice(0, 3).map(item => `
+      <ul>${group.items.length ? group.items.slice(0, 3).map(item => `
         <li class="favorite-item">
           <span class="favorite-remove" aria-hidden="true">★</span>
           <div class="favorite-item-main">
@@ -79,8 +96,8 @@ function renderFavoritesPanel() {
             <span class="favorite-item-summary">${escapeHtml(briefSummary(item))}</span>
           </div>
           <div class="favorite-item-actions"></div>
-        </li>`).join("")}${group.items.length > 3 ? `<li class="favorite-more">분야명을 누르면 전체 ${group.items.length.toLocaleString()}건을 볼 수 있습니다.</li>` : ""}</ul>
-    </section>`).join("");
+        </li>`).join("") : `<li class="favorite-more">등록된 법안이 없습니다.</li>`}${group.items.length > 3 ? `<li class="favorite-more">분야명을 누르면 전체 ${group.items.length.toLocaleString()}건을 볼 수 있습니다.</li>` : ""}</ul>
+    </section>`;
 }
 
 function toggleFavoriteOnly() {
@@ -117,11 +134,14 @@ function openFavoriteDetail(itemId) {
 }
 
 function openFavoriteCategory(categoryId) {
-  const group = favoriteCategoryGroups().find(entry => entry.id === categoryId);
+  const group = favoriteCategoryGroups().find(entry => entry.id === categoryId) ||
+    (FAVORITE_CATEGORIES.some(category => category.id === categoryId)
+      ? { ...FAVORITE_CATEGORIES.find(category => category.id === categoryId), items: [] } : null);
   if (!group) return;
   $("#favoriteCategoryTitle").textContent = group.label;
   $("#favoriteCategoryCount").textContent = `즐겨찾기에 등록된 법안 ${group.items.length.toLocaleString()}건`;
   $("#downloadFavoriteCategoryDialog").dataset.categoryId = categoryId;
+  $("#downloadFavoriteCategoryDialog").disabled = group.items.length === 0;
   $("#favoriteCategoryItems").innerHTML = group.items.map(item => `
     <li class="favorite-category-item">
       <button class="favorite-item-title" type="button" data-view-favorite-id="${escapeHtml(itemKey(item))}">${escapeHtml(item.title)}</button>
