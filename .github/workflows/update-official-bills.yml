@@ -3,8 +3,13 @@ name: update-official-bills
 on:
   workflow_dispatch:
   schedule:
-    # 매일 오전 6시 20분(한국시간) = 전날 21시 20분(UTC)
+    # GitHub 예약 실행 지연에 대비한 사전 호출입니다.
+    # 먼저 시작되더라도 아래 단계에서 한국시간 06:30까지 기다립니다.
+    - cron: "20 21 * * *"
+    # 한국시간 매일 06:30 = 전날 21:30 UTC
     - cron: "30 21 * * *"
+    # 앞의 예약 실행이 누락될 경우 한국시간 07:00에 다시 확인합니다.
+    - cron: "0 22 * * *"
 
 permissions:
   contents: write
@@ -16,34 +21,128 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 50
+    env:
+      TZ: Asia/Seoul
+
     steps:
       - name: 저장소 가져오기
         uses: actions/checkout@v4
 
+      - name: 한국시간 오전 6시 30분까지 대기
+        if: github.event_name == 'schedule'
+        shell: bash
+        run: |
+          now_epoch=$(date +%s)
+          target_epoch=$(date -d "$(date +%F) 06:30:00" +%s)
+          if [ "$now_epoch" -lt "$target_epoch" ]; then
+            wait_seconds=$((target_epoch - now_epoch))
+            echo "한국시간 06:30까지 ${wait_seconds}초 기다립니다."
+            sleep "$wait_seconds"
+          fi
+
+      - name: 오늘 업데이트 필요 여부 확인
+        id: freshness
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "run_update=true" >> "$GITHUB_OUTPUT"
+            echo "수동 실행이므로 데이터를 새로 수집합니다."
+            exit 0
+          fi
+
+          today_kst=$(date +%F)
+          updated_at=$(python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path("sample-bills.json")
+          if not path.exists():
+              print("")
+          else:
+              try:
+                  print(str(json.loads(path.read_text(encoding="utf-8")).get("updatedAt", "")))
+              except Exception:
+                  print("")
+          PY
+          )
+
+          echo "한국시간 오늘 날짜: $today_kst"
+          echo "현재 기준일: $updated_at"
+          if [[ "$updated_at" == "$today_kst"* ]]; then
+            echo "run_update=false" >> "$GITHUB_OUTPUT"
+            echo "오늘 업데이트가 이미 완료되어 종료합니다."
+          else
+            echo "run_update=true" >> "$GITHUB_OUTPUT"
+            echo "오늘 데이터가 없으므로 수집을 시작합니다."
+          fi
+
       - name: Python 설정
+        if: steps.freshness.outputs.run_update == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
           cache: pip
 
       - name: 라이브러리 설치
+        if: steps.freshness.outputs.run_update == 'true'
         run: pip install -r requirements.txt
 
       - name: 국회·법제처 공식 데이터 수집
+        if: steps.freshness.outputs.run_update == 'true'
         env:
           ASSEMBLY_API_KEY: ${{ secrets.ASSEMBLY_API_KEY }}
           MOLEG_OC: ${{ secrets.MOLEG_OC }}
-        run: python collect_official_bills.py
+        shell: bash
+        run: |
+          for attempt in 1 2 3; do
+            echo "수집 시도 ${attempt}/3"
+            if python collect_official_bills.py; then
+              exit 0
+            fi
+            if [ "$attempt" -lt 3 ]; then
+              sleep $((attempt * 60))
+            fi
+          done
+          echo "공식 데이터 수집이 3회 모두 실패했습니다."
+          exit 1
+
+      - name: 결과 검증
+        if: steps.freshness.outputs.run_update == 'true'
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from datetime import datetime, timedelta, timezone
+          from pathlib import Path
+
+          path = Path("sample-bills.json")
+          data = json.loads(path.read_text(encoding="utf-8"))
+          items = data.get("items")
+          updated_at = str(data.get("updatedAt", ""))
+          today_kst = datetime.now(timezone(timedelta(hours=9))).strftime("%Y-%m-%d")
+
+          if not isinstance(items, list) or not items:
+              raise SystemExit("수집 결과가 0건이어서 기존 파일을 보호합니다.")
+          if not updated_at.startswith(today_kst):
+              raise SystemExit(f"기준일이 한국시간 오늘 날짜가 아닙니다: {updated_at}")
+
+          print(f"검증 완료: {len(items):,}건 / 기준일 {updated_at}")
+          PY
 
       - name: 결과를 GitHub에 저장
+        if: steps.freshness.outputs.run_update == 'true'
+        shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add sample-bills.json
+
           if git diff --cached --quiet; then
             echo "변경사항이 없습니다."
-          else
-            git commit -m "Update official bill status"
-            git push
+            exit 0
           fi
+
+          git commit -m "Update official bill status (KST)"
+          git pull --rebase origin main
+          git push origin main
