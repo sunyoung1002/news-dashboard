@@ -3,8 +3,17 @@ name: update-official-bills
 on:
   workflow_dispatch:
   schedule:
-    # 매일 한국시간 오전 6시 30분 = 전날 UTC 21시 30분
-    - cron: "30 21 * * *"
+    # 한국시간 06:30 실행, 지연·누락 시 15분 간격 재시도
+    - cron: "30 6 * * *"
+      timezone: "Asia/Seoul"
+    - cron: "45 6 * * *"
+      timezone: "Asia/Seoul"
+    - cron: "0 7 * * *"
+      timezone: "Asia/Seoul"
+    - cron: "15 7 * * *"
+      timezone: "Asia/Seoul"
+    - cron: "30 7 * * *"
+      timezone: "Asia/Seoul"
 
 permissions:
   contents: write
@@ -24,43 +33,64 @@ jobs:
       - name: 저장소 가져오기
         uses: actions/checkout@v4
 
+      - name: 오늘 갱신 여부 확인
+        id: freshness
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, os
+          from datetime import datetime, timedelta, timezone
+
+          today = datetime.now(timezone(timedelta(hours=9))).strftime("%Y-%m-%d")
+          updated = ""
+          try:
+              with open("sample-bills.json", encoding="utf-8") as f:
+                  updated = str(json.load(f).get("updatedAt", ""))
+          except Exception:
+              pass
+
+          run = os.environ.get("GITHUB_EVENT_NAME") == "workflow_dispatch" or not updated.startswith(today)
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as f:
+              f.write(f"run={'true' if run else 'false'}\n")
+          print(f"한국 날짜={today}, 기존 기준일={updated or '없음'}, 실행={run}")
+          PY
+
       - name: Python 설정
+        if: steps.freshness.outputs.run == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
           cache: pip
 
       - name: 라이브러리 설치
+        if: steps.freshness.outputs.run == 'true'
         run: pip install -r requirements.txt
 
       - name: 국회·법제처 공식 데이터 수집
+        if: steps.freshness.outputs.run == 'true'
         env:
           ASSEMBLY_API_KEY: ${{ secrets.ASSEMBLY_API_KEY }}
           MOLEG_OC: ${{ secrets.MOLEG_OC }}
         run: python collect_official_bills.py
 
       - name: 한국시간 기준일 검증
+        if: steps.freshness.outputs.run == 'true'
         run: |
           python - <<'PY'
           import json
           from datetime import datetime, timedelta, timezone
-
-          with open("sample-bills.json", encoding="utf-8") as file:
-              data = json.load(file)
-
-          items = data.get("items", [])
-          updated_at = str(data.get("updatedAt", ""))
+          with open("sample-bills.json", encoding="utf-8") as f:
+              data = json.load(f)
           today = datetime.now(timezone(timedelta(hours=9))).strftime("%Y-%m-%d")
-
-          if not items:
+          if not data.get("items"):
               raise SystemExit("수집 결과가 0건입니다.")
-          if not updated_at.startswith(today):
-              raise SystemExit(f"기준일 오류: {updated_at}")
-
-          print(f"검증 완료: {len(items):,}건 / {updated_at}")
+          if not str(data.get("updatedAt", "")).startswith(today):
+              raise SystemExit(f"기준일 오류: {data.get('updatedAt')}")
+          print(f"검증 완료: {len(data['items']):,}건 / {data['updatedAt']}")
           PY
 
       - name: 결과를 GitHub에 저장
+        if: steps.freshness.outputs.run == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
