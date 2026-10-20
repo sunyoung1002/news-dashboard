@@ -39,6 +39,10 @@
   font-weight: 800;
   white-space: nowrap;
 }
+.bill-card .summary,
+.favorite-detail-summary {
+  white-space: pre-line;
+}
 
 .favorite-committee-section {
   grid-column: 1 / -1;

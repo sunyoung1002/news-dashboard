@@ -148,6 +148,45 @@ def clean_text(value):
     return re.sub(r"\s+", " ", str(value or "")).strip()
 
 
+SUMMARY_LEADING_CONNECTORS = re.compile(
+    r"^(이에|그러나|따라서|그런데|이와\s*같이|이러한|또한|하지만|그래서|이와\s*관련(?:해서|하여)?)\s*[,，]?\s*"
+)
+
+
+def concise_summary(value):
+    """불필요한 머리말과 잘린 문장을 제거하고 핵심 완결문 2개 이하로 정리한다."""
+    text = str(value or "")
+    text = re.sub(r"창닫기\s*(?:\[\s*\d+\s*\])?", " ", text, flags=re.I)
+    text = re.sub(r"\[\s*\d{5,}\s*\]", " ", text)
+    if re.search(r"제안이유\s*및\s*주요내용", text):
+        text = re.split(r"제안이유\s*및\s*주요내용", text, maxsplit=1)[-1]
+    text = re.sub(r"의안 상세정보|인쇄|창닫기", " ", text)
+    text = re.sub(r"(?:\.{3,}|…+)", " ", text)
+    text = clean_text(text)
+    if not text or "확인 중입니다" in text:
+        return "공식 제안이유 및 주요내용을 확인 중입니다."
+
+    sentences = []
+    for index, sentence in enumerate(re.split(r"(?<=[.!?])\s+", text)):
+        sentence = SUMMARY_LEADING_CONNECTORS.sub("", clean_text(sentence))
+        if len(sentence) >= 12 and re.search(r"[.!?]$", sentence):
+            score = 0
+            if re.search(r"개정|신설|도입|확대|강화|완화|개선|보호|지원|의무|금지|부과|마련", sentence):
+                score += 4
+            if re.search(r"문제|지적|우려|어려|부담|피해|한계|필요", sentence):
+                score += 2
+            if len(sentence) <= 100:
+                score += 2
+            if index == 0:
+                score += 1
+            sentences.append((score, index, sentence))
+
+    if not sentences:
+        return "공식 원문에서 완결된 주요내용을 확인 중입니다."
+    selected = sorted(sentences, key=lambda row: (-row[0], len(row[2]), row[1]))[:2]
+    return " ".join(row[2] for row in sorted(selected, key=lambda row: row[1]))
+
+
 DAILY_COMPARE_FIELDS = {
     "title": "법안명",
     "billNo": "의안번호",
@@ -243,7 +282,7 @@ def fetch_summary_api(bill_id, bill_no):
 def fetch_summary(bill_id, bill_no=""):
     api_summary = fetch_summary_api(bill_id, bill_no)
     if api_summary:
-        return api_summary
+        return concise_summary(api_summary)
     try:
         response = requests.get(SUMMARY_URL, params={"billId": bill_id}, timeout=20)
         response.raise_for_status()
@@ -255,7 +294,7 @@ def fetch_summary(bill_id, bill_no=""):
         text = clean_text(text)
         text = re.sub(r"^(창닫기\s*)?(\[?\d{7}\]?\s*)?", "", text)
         text = re.sub(r"\s*(의안 상세정보|인쇄|창닫기)\s*$", "", text)
-        return text[:1200] if text else "공식 제안이유 및 주요내용을 확인 중입니다."
+        return concise_summary(text)
     except requests.RequestException:
         return "공식 제안이유 및 주요내용을 확인 중입니다."
 
@@ -311,7 +350,7 @@ def make_pending_item(row, old, month, today):
     committee = clean_text(row.get("CURR_COMMITTEE")) or "위원회 배정 전"
     proposer = clean_text(row.get("PROPOSER") or row.get("RST_PROPOSER")) or "제안자 확인 중"
     agency = CATEGORY_AGENCY.get(category, committee)
-    summary = old.get("summary", "") if old else ""
+    summary = concise_summary(old.get("summary", "")) if old else ""
     metadata_changed = bool(old) and any((
         clean_text(old.get("title")) != title,
         clean_text(old.get("stage")) != stage,

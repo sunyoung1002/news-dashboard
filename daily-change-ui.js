@@ -9,6 +9,84 @@
 
   state.statFilter = state.statFilter || "";
 
+  function cleanBillSummary(item) {
+    let text = String(item?.summary || "")
+      .replace(/창닫기\s*(?:\[\s*\d+\s*\])?/gi, " ")
+      .replace(/\[\s*\d{5,}\s*\]/g, " ")
+      .replace(/제안이유\s*및\s*주요내용|제안이유|주요내용|의안 상세정보|인쇄/g, " ")
+      .replace(/(?:\.{3,}|…+)/g, " ");
+
+    [item?.title, item?.proposer, item?.billNo].filter(Boolean).forEach(value => {
+      text = text.split(String(value)).join(" ");
+    });
+
+    return text
+      .replace(/의안번호\s*\d+/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function finishSummarySentence(sentence) {
+    let value = String(sentence || "")
+      .replace(/^(이에|그러나|따라서|그런데|이와\s*같이|이러한|또한|하지만|그래서|이와\s*관련(?:해서|하여)?)\s*[,，]?\s*/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+    if (!value) return "";
+    if (!/[.!?]$/.test(value)) return "";
+    return value;
+  }
+
+  function shortBillSummary(item, bullets = false) {
+    const text = cleanBillSummary(item);
+    if (!text || text.includes("확인 중입니다")) {
+      return "공식 제안이유 및 주요내용을 확인 중입니다.";
+    }
+
+    const sentences = text
+      .split(/(?<=[.!?])\s+/)
+      .map(finishSummarySentence)
+      .filter(sentence => sentence.length >= 12);
+
+    if (!sentences.length) {
+      return "공식 원문에서 완결된 주요내용을 확인 중입니다.";
+    }
+
+    const score = (sentence, index) => {
+      let value = 0;
+      if (/개정|신설|도입|확대|강화|완화|개선|보호|지원|의무|금지|부과|마련/.test(sentence)) value += 4;
+      if (/문제|지적|우려|어려|부담|피해|한계|필요/.test(sentence)) value += 2;
+      if (sentence.length <= 100) value += 2;
+      if (index === 0) value += 1;
+      return value;
+    };
+
+    const selected = sentences
+      .map((sentence, index) => ({ sentence, index, score: score(sentence, index) }))
+      .sort((a, b) => b.score - a.score || a.sentence.length - b.sentence.length || a.index - b.index)
+      .slice(0, 2)
+      .sort((a, b) => a.index - b.index)
+      .map(entry => entry.sentence);
+
+    return selected.map(sentence => bullets ? `• ${sentence}` : sentence).join("\n");
+  }
+
+  // 화면, 비교표, 즐겨찾기 및 Word 출력이 모두 같은 짧은 완결형 요약을 사용한다.
+  summarizeForComparison = function (item) {
+    return shortBillSummary(item, true);
+  };
+  summarizeForReport = function (item) {
+    return shortBillSummary(item, true);
+  };
+
+  const originalRenderCards = renderCards;
+  renderCards = function (items) {
+    originalRenderCards(items);
+    document.querySelectorAll("#billList .bill-card").forEach((card, index) => {
+      const summary = card.querySelector(".summary");
+      if (summary && items[index]) summary.textContent = shortBillSummary(items[index]);
+    });
+  };
+
   function dashboardDate() {
     const match = String(document.querySelector("#updatedAt")?.textContent || "").match(/\d{4}-\d{2}-\d{2}/);
     return match ? match[0] : "";
@@ -185,6 +263,14 @@
     const count = document.querySelector("#favoriteCategoryCount");
     if (count) count.textContent = `즐겨찾기 ${group.items.length.toLocaleString()}건 · 오늘 변동 ${dailyCount.toLocaleString()}건`;
     markDailyTitles(document.querySelector("#favoriteCategoryItems"), group.items);
+  };
+
+  const originalOpenFavoriteDetail = openFavoriteDetail;
+  openFavoriteDetail = function (itemId) {
+    originalOpenFavoriteDetail(itemId);
+    const item = state.data.find(entry => itemKey(entry) === itemId) || state.favoriteRows.get(itemId);
+    const summary = document.querySelector("#favoriteDetailSummary");
+    if (item && summary) summary.textContent = shortBillSummary(item);
   };
 
   const originalRender = render;
