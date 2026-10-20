@@ -15,7 +15,8 @@ ARCHIVE_FILE = ROOT / "bill_archive.csv"
 
 FIELDS = [
     "month", "billId", "title", "billNo", "agency", "committee", "proposer",
-    "stage", "previousStage", "changed", "changedDate", "stageDate", "change",
+    "stage", "previousStage", "changed", "changedDate", "stageDate",
+    "committeeDate", "committeePresentDate", "change",
     "processingResult", "summary", "sourceUrl", "archivedAt",
 ]
 
