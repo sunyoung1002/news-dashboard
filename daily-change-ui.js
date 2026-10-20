@@ -65,9 +65,97 @@
 
   function alternativeTrackFor(item) {
     const number = billNumber(item);
-    return ALTERNATIVE_TRACKS.find(track =>
+    const title = String(item?.title || "").replace(/\s+/g, "").trim();
+    const fixed = ALTERNATIVE_TRACKS.find(track =>
       track.alternativeNo === number || track.originals.some(original => billNumber(original) === number)
+      || (title && title === String(track.alternative.title || "").replace(/\s+/g, "").trim())
     );
+    return fixed || dynamicAlternativeTrackFor(item);
+  }
+
+  function normalizedBillBaseTitle(item) {
+    return String(item?.title || "")
+      .replace(/\s*\(대안\)\s*/g, "")
+      .replace(/\s+/g, "")
+      .trim();
+  }
+
+  function dynamicAlternativeTrackFor(item) {
+    const baseTitle = normalizedBillBaseTitle(item);
+    if (!baseTitle) return null;
+    const rows = [...state.data, ...state.favoriteRows.values()];
+    const unique = [...new Map(rows.map(row => [itemKey(row), row])).values()];
+    const sameTitle = unique.filter(row => normalizedBillBaseTitle(row) === baseTitle);
+    const alternatives = sameTitle.filter(row => /\(대안\)/.test(String(row.title || "")));
+    const discarded = sameTitle.filter(row =>
+      !/\(대안\)/.test(String(row.title || "")) &&
+      /대안반영폐기/.test(`${row.processingResult || ""} ${row.change || ""}`)
+    );
+    const isAlternative = /\(대안\)/.test(String(item?.title || ""));
+    const isDiscarded = /대안반영폐기/.test(`${item?.processingResult || ""} ${item?.change || ""}`);
+    if ((!isAlternative || !discarded.length) && (!isDiscarded || !alternatives.length)) return null;
+
+    const alternative = isAlternative ? item : alternatives[0];
+    const originals = discarded.map(original => ({
+      ...original,
+      reflected: original.reflected || `원안 주요내용: ${shortBillSummary(original)}`
+    }));
+    return {
+      alternativeNo: billNumber(alternative),
+      alternative,
+      originals
+    };
+  }
+
+  function trackingStatus(item) {
+    const track = alternativeTrackFor(item);
+    const number = billNumber(item);
+    if (track) {
+      if (number === track.alternativeNo || /\(대안\)/.test(String(item?.title || ""))) {
+        return {
+          state: "alternative",
+          label: `위원회 대안 · 흡수 원안 ${track.originals.length}건`,
+          result: track.alternative.change,
+          detail: track.originals.map(original => `${billNumber(original)} ${original.proposer}: ${original.reflected}`),
+          track
+        };
+      }
+      const original = track.originals.find(entry => billNumber(entry) === number);
+      const targetLabel = track.alternativeNo ? `대안 ${track.alternativeNo}` : "연결 위원회 대안";
+      return {
+        state: "discarded",
+        label: `대안반영폐기 → ${targetLabel}`,
+        result: "처리결과: 대안반영폐기",
+        detail: [original?.reflected || "위원회 대안에 일부 또는 전부 반영"],
+        track,
+        original
+      };
+    }
+
+    const result = String(item?.processingResult || item?.procResult || item?.committeeResult || item?.result || "");
+    const alternativeNo = String(item?.alternativeBillNo || item?.absorbedBy || "").match(/\d{7}/)?.[0] || "";
+    if (/대안반영폐기/.test(`${result} ${item?.change || ""}`)) {
+      return {
+        state: "discarded",
+        label: alternativeNo ? `대안반영폐기 → 대안 ${alternativeNo}` : "대안반영폐기 · 연결 대안 확인 중",
+        result: "처리결과: 대안반영폐기",
+        detail: [item?.reflected || "국회 대안정보에서 흡수된 위원회 대안을 확인 중입니다."]
+      };
+    }
+    if (/\(대안\)/.test(String(item?.title || ""))) {
+      return {
+        state: "alternative",
+        label: "위원회 대안 · 흡수 원안 확인 중",
+        result: result || "처리결과 확인 중",
+        detail: ["국회 대안정보에서 합쳐진 의원안 목록을 확인 중입니다."]
+      };
+    }
+    return {
+      state: "pending",
+      label: "통합·대안 추적 · 공식 연결정보 확인 중",
+      result: "대안반영폐기 여부 확인 중",
+      detail: ["의안번호를 기준으로 국회 대안정보와 위원회 심사결과를 확인 중입니다."]
+    };
   }
 
   function ensureAlternativeTrackingData() {
@@ -147,12 +235,12 @@
   // 화면, 비교표, 즐겨찾기 및 Word 출력이 모두 같은 짧은 완결형 요약을 사용한다.
   summarizeForComparison = function (item) {
     const summary = shortBillSummary(item, true);
-    const track = alternativeTrackFor(item);
-    if (!track) return summary;
-    const number = billNumber(item);
-    const relation = number === track.alternativeNo
-      ? `• 통합·대안: 의원안 ${track.originals.map(billNumber).join("·")}을 반영한 위원회 대안입니다.`
-      : `• 통합·대안: 대안반영폐기 후 위원회 대안 ${track.alternativeNo}에 통합되었습니다.`;
+    const status = trackingStatus(item);
+    const relation = status.state === "alternative" && status.track
+        ? `• 통합·대안: 의원안 ${status.track.originals.map(billNumber).filter(Boolean).join("·") || `${status.track.originals.length}건`}을 반영한 위원회 대안입니다.`
+      : status.state === "discarded" && status.track
+        ? `• 통합·대안: 대안반영폐기 후 ${status.track.alternativeNo ? `위원회 대안 ${status.track.alternativeNo}` : "연결 위원회 대안"}에 통합되었습니다. 주요 연계내용은 ${status.detail[0]}입니다.`
+        : `• 통합·대안: ${status.label}입니다.`;
     return `${summary}\n${relation}`;
   };
   summarizeForReport = function (item) {
@@ -245,187 +333,12 @@
       .sort((a, b) => String(b.changedDate || "").localeCompare(String(a.changedDate || "")));
   };
 
-  function installAlternativeTrackingControls() {
-    const list = document.querySelector("#billList");
-    if (!list || list.dataset.alternativeTrackingBound) return;
-    list.dataset.alternativeTrackingBound = "true";
-    list.addEventListener("click", event => {
-      const button = event.target.closest("button[data-track-search]");
-      if (!button) return;
-      state.query = button.dataset.trackSearch;
-      const input = document.querySelector("#searchInput");
-      if (input) input.value = state.query;
-      render();
-      document.querySelector(".results")?.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
-  }
-
-  function clearOrdinaryFilters() {
-    state.stage = "";
-    state.agency = "";
-    state.query = "";
-    state.changedOnly = false;
-    state.selectedOnly = false;
-    state.favoriteOnly = false;
-    const agency = document.querySelector("#agencyFilter");
-    const search = document.querySelector("#searchInput");
-    const changed = document.querySelector("#changedOnly");
-    if (agency) agency.value = "";
-    if (search) search.value = "";
-    if (changed) changed.checked = false;
-    document.querySelectorAll("#stageFilters .chip").forEach(chip =>
-      chip.classList.toggle("active", chip.dataset.stage === "")
-    );
-  }
-
-  function applyStatFilter(filterId) {
-    clearOrdinaryFilters();
-    state.statFilter = filterId;
-    render();
-    document.querySelector(".results")?.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
-
-  function installStatControls() {
-    Object.entries(STAT_FILTERS).forEach(([elementId, filter]) => {
-      const number = document.getElementById(elementId);
-      if (!number) return;
-      number.classList.add("stat-number-button");
-      number.dataset.statFilter = filter.id;
-      number.setAttribute("role", "button");
-      number.setAttribute("tabindex", "0");
-      number.setAttribute("aria-label", `${filter.label}만 진행현황에서 보기`);
-    });
-
-    const stats = document.querySelector(".stats");
-    if (!stats || stats.dataset.filterBound) return;
-    stats.dataset.filterBound = "true";
-    stats.addEventListener("click", event => {
-      const number = event.target.closest("[data-stat-filter]");
-      if (number) applyStatFilter(number.dataset.statFilter);
-    });
-    stats.addEventListener("keydown", event => {
-      const number = event.target.closest("[data-stat-filter]");
-      if (number && (event.key === "Enter" || event.key === " ")) {
-        event.preventDefault();
-        applyStatFilter(number.dataset.statFilter);
-      }
-    });
-
-    document.querySelector("#resetFilters")?.addEventListener("click", () => {
-      state.statFilter = "";
-    }, true);
-
-    ["#agencyFilter", "#searchInput", "#changedOnly"].forEach(selector => {
-      document.querySelector(selector)?.addEventListener("input", () => {
-        state.statFilter = "";
-      }, true);
-    });
-    document.querySelector("#stageFilters")?.addEventListener("click", () => {
-      state.statFilter = "";
-    }, true);
-  }
-
-  function updateStatControls() {
-    Object.values(STAT_FILTERS).forEach(filter => {
-      const number = document.querySelector(`[data-stat-filter="${filter.id}"]`);
-      const card = number?.closest(".stat-card");
-      const active = state.statFilter === filter.id;
-      card?.classList.toggle("stat-filter-active", active);
-      number?.setAttribute("aria-pressed", String(active));
-    });
-  }
-
-  function markDailyTitles(container, items) {
-    container?.querySelectorAll("[data-view-favorite-id]").forEach(button => {
-      const item = items.find(entry => itemKey(entry) === button.dataset.viewFavoriteId);
-      button.classList.toggle("daily-changed-title", Boolean(item && isDailyChanged(item)));
-      if (item && isDailyChanged(item)) {
-        button.setAttribute("title", `오늘 변동: ${(item.dailyChangeFields || ["세부내용"]).join(", ")}`);
-      }
-    });
-  }
-
-  function restoreCommitteeGroups() {
-    const host = document.querySelector("#favoriteAgencyGroups");
-    if (!host) return;
-
-    const committeeDefinitions = [
-      {
-        id: "political-affairs",
-        label: "정무위",
-        categoryIds: ["fair-trade", "capital-markets", "subcontracting"]
-      }
-    ];
-
-    committeeDefinitions.forEach(committee => {
-      const categorySections = committee.categoryIds.map(categoryId =>
-        host.querySelector(`[data-view-favorite-category="${categoryId}"]`)?.closest(".favorite-agency-group")
-      ).filter(Boolean);
-      if (!categorySections.length) return;
-
-      const wrapper = document.createElement("section");
-      wrapper.className = "favorite-committee-section";
-      wrapper.dataset.favoriteCommittee = committee.id;
-      wrapper.innerHTML = `
-        <div class="favorite-committee-head">
-          <span>${escapeHtml(committee.label)}</span>
-          <small>${categorySections.reduce((count, section) => {
-            const categoryId = section.querySelector("[data-view-favorite-category]")?.dataset.viewFavoriteCategory;
-            const group = favoriteCategoryGroups().find(entry => entry.id === categoryId);
-            return count + (group?.items.length || 0);
-          }, 0).toLocaleString()}건</small>
-        </div>
-        <div class="favorite-committee-grid"></div>`;
-
-      host.insertBefore(wrapper, categorySections[0]);
-      const grid = wrapper.querySelector(".favorite-committee-grid");
-      categorySections.forEach(section => grid.appendChild(section));
-    });
-  }
-
-  const originalRenderFavoritesPanel = renderFavoritesPanel;
-  renderFavoritesPanel = function () {
-    originalRenderFavoritesPanel();
-    const groups = favoriteCategoryGroups();
-    document.querySelectorAll("[data-view-favorite-category]").forEach(button => {
-      const group = groups.find(entry => entry.id === button.dataset.viewFavoriteCategory);
-      if (!group) return;
-      const dailyCount = group.items.filter(isDailyChanged).length;
-      const label = button.querySelector(":scope > span");
-      if (label) {
-        label.classList.add("favorite-group-label");
-        label.innerHTML = `<span>${escapeHtml(group.label)}</span><em>변동: ${dailyCount.toLocaleString()}건</em>`;
-      }
-    });
-    markDailyTitles(document.querySelector("#favoriteAgencyGroups"), favoriteItems());
-    restoreCommitteeGroups();
+  window.LegislationDailyUI = {
+    STAT_FILTERS,
+    billNumber,
+    trackingStatus,
+    shortBillSummary,
+    isDailyChanged
   };
-
-  const originalOpenFavoriteCategory = openFavoriteCategory;
-  openFavoriteCategory = function (categoryId) {
-    originalOpenFavoriteCategory(categoryId);
-    const group = favoriteCategoryGroups().find(entry => entry.id === categoryId);
-    if (!group) return;
-    const dailyCount = group.items.filter(isDailyChanged).length;
-    const count = document.querySelector("#favoriteCategoryCount");
-    if (count) count.textContent = `즐겨찾기 ${group.items.length.toLocaleString()}건 · 오늘 변동 ${dailyCount.toLocaleString()}건`;
-    markDailyTitles(document.querySelector("#favoriteCategoryItems"), group.items);
-  };
-
-  const originalOpenFavoriteDetail = openFavoriteDetail;
-  openFavoriteDetail = function (itemId) {
-    originalOpenFavoriteDetail(itemId);
-    const item = state.data.find(entry => itemKey(entry) === itemId) || state.favoriteRows.get(itemId);
-    const summary = document.querySelector("#favoriteDetailSummary");
-    if (item && summary) summary.textContent = shortBillSummary(item);
-  };
-
-  const originalRender = render;
-  render = function () {
-    originalRender();
-    updateStatControls();
-  };
-
-  installStatControls();
-  installAlternativeTrackingControls();
 })();
+
