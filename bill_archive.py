@@ -81,6 +81,34 @@ RECOVERED = [
     },
 ]
 
+# 계류 API에서 처리 완료 후 빠진 원안. 원안 번호로 계속 검색할 수 있게 누계에 고정한다.
+_CAPITAL_MARKET_ORIGINALS = [
+    ("2201944", "김현정의원 등 17인", "합병가액 산정 시 주가뿐 아니라 자산가치와 수익가치를 함께 고려하고, 불공정한 합병가액으로 투자자에게 손해가 발생하면 손해배상책임을 지도록 하는 내용입니다."),
+    ("2206175", "윤한홍의원 등 16인", "합병가액을 공정가액으로 산정하고 이사회 의견서와 외부평가를 공시하며, 물적분할 자회사 상장 시 모회사 일반주주에게 공모신주를 우선 배정할 근거를 마련하는 내용입니다."),
+    ("2206908", "김남근·한창민·신장식의원 등 24인", "기업 인수·합병 등 주요 자본거래에서 공정한 가격과 일반주주 보호조치를 강화하고, 지배권 인수 시 잔여주식 공개매수 의무를 도입하는 내용입니다."),
+    ("2208104", "이정문의원 등 12인", "공개매수 의무, 합병가액의 공정한 평가와 손해배상책임, 물적분할 자회사 상장 시 기존 주주 우선배정 등 일반주주 보호장치를 강화하는 내용입니다."),
+    ("2210863", "이강일의원 등 10인", "상장법인의 합병가액을 주식가격·자산가치·수익가치 등을 고려해 공정하게 산정하고, 순자산가치를 그 하한으로 두는 내용입니다."),
+]
+
+RECOVERED.extend({
+    "month": "2026-08", "billId": "", "title": "자본시장과 금융투자업에 관한 법률 일부개정법률안",
+    "billNo": f"의안번호 {number}", "agency": "금융위원회", "committee": "정무위원회",
+    "proposer": proposer, "stage": "본회의", "previousStage": "소관위", "changed": True,
+    "changedDate": "2026-08-20", "change": "대안반영폐기 · 위원회 대안 2220250에 통합",
+    "processingResult": "대안반영폐기", "summary": summary + " 해당 내용은 위원회 대안 2220250에 통합되어 법률 제21908호로 공포되었습니다.",
+    "sourceUrl": f"https://opinion.lawmaking.go.kr/gcom/nsmLmSts/out/{number}/detailRP",
+} for number, proposer, summary in _CAPITAL_MARKET_ORIGINALS)
+
+RECOVERED.append({
+    "month": "2026-09", "billId": "", "title": "대규모유통업에서의 거래 공정화에 관한 법률 일부개정법률안",
+    "billNo": "의안번호 2220803", "agency": "공정거래위원회", "committee": "정무위원회",
+    "proposer": "이강일의원 등 11인", "stage": "본회의", "previousStage": "소관위", "changed": True,
+    "changedDate": "2026-09-17", "change": "대안반영폐기 · 위원회 대안 2221277에 통합",
+    "processingResult": "대안반영폐기",
+    "summary": "납품·판매대금 지급기한을 단축하고 상품대금을 별도 신탁·예치 계좌로 관리하여 납품업자가 우선 수령하도록 보호하는 내용입니다. 위원회 심사에서 대안 2221277에 통합되었고, 대안은 법률 제22064호로 공포되었습니다.",
+    "sourceUrl": "https://opinion.lawmaking.go.kr/gcom/nsmLmSts/out/2220803/detailRP",
+})
+
 
 def recovered_favorites():
     packed = base64.b64decode(FAVORITES_B64)
