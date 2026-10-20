@@ -327,6 +327,20 @@ def format_date(value):
     return f"{digits[:4]}-{digits[4:6]}-{digits[6:8]}" if len(digits) >= 8 else ""
 
 
+def official_stage_date(row, stage):
+    fields = {
+        "접수": ("PROPOSE_DT",),
+        "소관위": ("COMMITTEE_DT", "CMT_PRESENT_DT", "CMT_PROC_DT"),
+        "법사위": ("LAW_PROC_DT", "LAW_PRESENT_DT", "CMT_PROC_DT"),
+        "본회의": ("LAW_PROC_DT", "LAW_PRESENT_DT", "CMT_PROC_DT"),
+    }.get(stage, ())
+    for key in fields:
+        date = format_date(row.get(key))
+        if date:
+            return date
+    return ""
+
+
 def make_pending_item(row, old, month, today):
     bill_id = str(row.get("BILL_ID") or "")
     title = clean_text(row.get("BILL_NAME"))
@@ -354,7 +368,8 @@ def make_pending_item(row, old, month, today):
     committee = clean_text(row.get("CURR_COMMITTEE")) or "위원회 배정 전"
     proposer = clean_text(row.get("PROPOSER") or row.get("RST_PROPOSER")) or "제안자 확인 중"
     agency = CATEGORY_AGENCY.get(category, committee)
-    summary = concise_summary(old.get("summary", "")) if old else ""
+    old_summary = old.get("summary", "") if old else ""
+    summary = concise_summary(old_summary) if old else ""
     metadata_changed = bool(old) and any((
         clean_text(old.get("title")) != title,
         clean_text(old.get("stage")) != stage,
@@ -362,7 +377,7 @@ def make_pending_item(row, old, month, today):
         clean_text(old.get("proposer")) != proposer,
         clean_text(old.get("agency")) != agency,
     ))
-    if not summary or "확인 중" in summary or metadata_changed:
+    if not summary or "확인 중" in summary or re.search(r"\.{3,}|…", str(old_summary)) or metadata_changed:
         refreshed_summary = fetch_summary(bill_id, row.get("BILL_NO"))
         if refreshed_summary and "확인 중" not in refreshed_summary:
             summary = refreshed_summary
@@ -379,6 +394,7 @@ def make_pending_item(row, old, month, today):
         "previousStage": previous_stage,
         "changed": changed,
         "changedDate": changed_date,
+        "stageDate": official_stage_date(row, stage) or old.get("stageDate", "") or changed_date,
         "change": change,
         "processingResult": clean_text(row.get("CMT_PROC_RESULT_CD") or row.get("LAW_PROC_RESULT_CD")),
         "summary": summary,
