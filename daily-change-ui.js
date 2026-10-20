@@ -120,6 +120,44 @@
     });
   }
 
+  function restoreCommitteeGroups() {
+    const host = document.querySelector("#favoriteAgencyGroups");
+    if (!host) return;
+
+    const committeeDefinitions = [
+      {
+        id: "political-affairs",
+        label: "정무위",
+        categoryIds: ["fair-trade", "capital-markets", "subcontracting"]
+      }
+    ];
+
+    committeeDefinitions.forEach(committee => {
+      const categorySections = committee.categoryIds.map(categoryId =>
+        host.querySelector(`[data-view-favorite-category="${categoryId}"]`)?.closest(".favorite-agency-group")
+      ).filter(Boolean);
+      if (!categorySections.length) return;
+
+      const wrapper = document.createElement("section");
+      wrapper.className = "favorite-committee-section";
+      wrapper.dataset.favoriteCommittee = committee.id;
+      wrapper.innerHTML = `
+        <div class="favorite-committee-head">
+          <span>${escapeHtml(committee.label)}</span>
+          <small>${categorySections.reduce((count, section) => {
+            const categoryId = section.querySelector("[data-view-favorite-category]")?.dataset.viewFavoriteCategory;
+            const group = favoriteCategoryGroups().find(entry => entry.id === categoryId);
+            return count + (group?.items.length || 0);
+          }, 0).toLocaleString()}건</small>
+        </div>
+        <div class="favorite-committee-grid"></div>`;
+
+      host.insertBefore(wrapper, categorySections[0]);
+      const grid = wrapper.querySelector(".favorite-committee-grid");
+      categorySections.forEach(section => grid.appendChild(section));
+    });
+  }
+
   const originalRenderFavoritesPanel = renderFavoritesPanel;
   renderFavoritesPanel = function () {
     originalRenderFavoritesPanel();
@@ -135,6 +173,7 @@
       }
     });
     markDailyTitles(document.querySelector("#favoriteAgencyGroups"), favoriteItems());
+    restoreCommitteeGroups();
   };
 
   const originalOpenFavoriteCategory = openFavoriteCategory;

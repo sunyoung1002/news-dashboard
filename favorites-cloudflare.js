@@ -1,15 +1,99 @@
 const FAVORITES_API_URL = "https://news-dashboard-favorites-api.babosun2.workers.dev";
 const FAVORITES_PASSWORD_SESSION_KEY = "newsDashboard.favoritesPassword.v1";
+const FAVORITES_DETAIL_CACHE_KEY = "newsDashboard.favoriteBillDetails.v1";
 
 let favoritesPassword = window.sessionStorage.getItem(FAVORITES_PASSWORD_SESSION_KEY) || "";
 let favoritesUnlocked = false;
 let favoritesRequestPending = false;
+
+// 계류 목록에서 빠지며 상세정보가 유실된 기존 공용 즐겨찾기 복구값.
+// 이후 수집 데이터에 같은 의안이 다시 포함되면 최신 수집값이 이 값을 덮어쓴다.
+const RECOVERED_FAVORITE_DETAILS = {
+  "PRC_V2X6R0E5I1T3Z1P7I5O7R0R2Q2R5T1": {
+    month: "2026-09",
+    billNo: "의안번호 2220247",
+    agency: "공정거래위원회",
+    committee: "정무위원회",
+    proposer: "정무위원장",
+    stage: "공포·시행",
+    previousStage: "본회의",
+    change: "2026-08-20 원안가결 · 2026-09-08 공포",
+    changedDate: "2026-09-08",
+    summary: "기술유용 피해기업의 손해배상 입증을 돕기 위해 자료제출명령 제도를 확대하고, 영업비밀 보호를 위한 비밀유지명령 근거를 마련합니다. 공정거래위원회의 자료제출 의무를 강화하고, 무처분 결정 등에 대한 신고인의 이의신청 절차를 신설해 피해구제를 보강하는 내용입니다."
+  }
+};
 
 function encodeFavoritePassword(value) {
   const bytes = new TextEncoder().encode(String(value || ""));
   let binary = "";
   bytes.forEach(byte => { binary += String.fromCharCode(byte); });
   return btoa(binary);
+}
+
+function normalizedBillNumber(value) {
+  return String(value || "").replace(/\D/g, "");
+}
+
+function normalizedBillTitle(value) {
+  return String(value || "").replace(/\s+/g, " ").trim();
+}
+
+function officialBillUrl(billId) {
+  const id = String(billId || "").trim();
+  return id && !id.startsWith("law-")
+    ? `https://likms.assembly.go.kr/bill/billDetail.do?billId=${encodeURIComponent(id)}`
+    : "";
+}
+
+function loadFavoriteDetailCache() {
+  try {
+    const rows = JSON.parse(window.localStorage.getItem(FAVORITES_DETAIL_CACHE_KEY) || "{}");
+    return rows && typeof rows === "object" ? rows : {};
+  } catch (_) {
+    return {};
+  }
+}
+
+function saveFavoriteDetailSnapshot(item) {
+  if (!item) return;
+  const id = itemKey(item);
+  if (!id) return;
+  const cache = loadFavoriteDetailCache();
+  cache[id] = {
+    billId: item.billId || id,
+    billNo: item.billNo || "",
+    title: item.title || "",
+    category: favoriteCategoryForItem(item).label,
+    agency: item.agency || "",
+    committee: item.committee || "",
+    proposer: item.proposer || "",
+    month: item.month || state.month,
+    stage: item.stage || "-",
+    previousStage: item.previousStage || "-",
+    change: item.change || "",
+    changedDate: item.changedDate || "",
+    summary: item.summary || "",
+    sourceUrl: item.sourceUrl || officialBillUrl(item.billId || id)
+  };
+  const entries = Object.entries(cache).slice(-100);
+  window.localStorage.setItem(FAVORITES_DETAIL_CACHE_KEY, JSON.stringify(Object.fromEntries(entries)));
+}
+
+function findCollectedBill(row) {
+  const rowId = String(row.bill_id || row.billId || "");
+  const direct = state.data.find(item => itemKey(item) === rowId);
+  if (direct) return direct;
+
+  const rowNumber = normalizedBillNumber(row.bill_no || row.billNo);
+  if (rowNumber) {
+    const byNumber = state.data.find(item => normalizedBillNumber(item.billNo) === rowNumber);
+    if (byNumber) return byNumber;
+  }
+
+  const title = normalizedBillTitle(row.title);
+  if (!title) return null;
+  const exactTitles = state.data.filter(item => normalizedBillTitle(item.title) === title);
+  return exactTitles.length === 1 ? exactTitles[0] : null;
 }
 
 async function favoritesApi(path, options = {}, password = favoritesPassword) {
@@ -38,9 +122,13 @@ async function favoritesApi(path, options = {}, password = favoritesPassword) {
 }
 
 function cloudFavoriteRowToItem(row) {
-  return {
-    billId: String(row.bill_id || ""),
-    billNo: String(row.bill_id || ""),
+  const id = String(row.bill_id || "");
+  const recovered = RECOVERED_FAVORITE_DETAILS[id] || {};
+  const cached = loadFavoriteDetailCache()[id] || {};
+  const collected = findCollectedBill(row) || {};
+  const fallback = {
+    billId: id,
+    billNo: "의안번호 확인 중",
     title: row.title || "제목 확인 중",
     category: row.category || "기타 주요법안",
     agency: row.agency || "기타",
@@ -52,16 +140,46 @@ function cloudFavoriteRowToItem(row) {
     change: "공용 주요법안으로 등록",
     changedDate: String(row.updated_at || row.added_at || "").slice(0, 10),
     summary: "",
-    sourceUrl: ""
+    sourceUrl: officialBillUrl(id)
   };
+  const serverDetails = {
+    billNo: row.bill_no || "",
+    committee: row.committee || "",
+    proposer: row.proposer || "",
+    stage: row.stage || "",
+    previousStage: row.previous_stage || "",
+    change: row.change || "",
+    changedDate: row.changed_date || "",
+    summary: row.summary || "",
+    sourceUrl: row.source_url || ""
+  };
+  Object.keys(serverDetails).forEach(key => {
+    if (!serverDetails[key]) delete serverDetails[key];
+  });
+  const merged = { ...fallback, ...recovered, ...serverDetails, ...cached, ...collected };
+  merged.billId = id || merged.billId;
+  merged.title = row.title || merged.title;
+  merged.category = row.category || merged.category;
+  merged.agency = row.agency || merged.agency;
+  merged.sourceUrl = merged.sourceUrl || officialBillUrl(merged.billId);
+  return merged;
 }
 
 function cloudFavoritePayload(item) {
   return {
     bill_id: itemKey(item),
+    bill_no: item.billNo || "",
     title: item.title || "",
     category: favoriteCategoryForItem(item).label,
-    agency: item.agency || ""
+    agency: item.agency || "",
+    committee: item.committee || "",
+    proposer: item.proposer || "",
+    stage: item.stage || "",
+    previous_stage: item.previousStage || "",
+    change: item.change || "",
+    changed_date: item.changedDate || "",
+    summary: item.summary || "",
+    source_url: item.sourceUrl || officialBillUrl(item.billId || itemKey(item))
   };
 }
 
@@ -147,6 +265,7 @@ toggleFavorite = async function (item) {
     if (state.favoriteIds.has(id)) {
       await favoritesApi(`/favorites/${encodeURIComponent(id)}`, { method: "DELETE" });
     } else {
+      saveFavoriteDetailSnapshot(item);
       await favoritesApi("/favorites", {
         method: "POST",
         body: JSON.stringify(cloudFavoritePayload(item))
@@ -170,6 +289,7 @@ showFavoritesPage = async function () {
 
 const renderPrivateFavoritesPanel = renderFavoritesPanel;
 renderFavoritesPanel = function () {
+  favoriteItems().forEach(saveFavoriteDetailSnapshot);
   renderPrivateFavoritesPanel();
   if (!$("#favoritesStatus")) return;
 

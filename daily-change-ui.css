@@ -39,3 +39,44 @@
   font-weight: 800;
   white-space: nowrap;
 }
+
+.favorite-committee-section {
+  grid-column: 1 / -1;
+  padding: 12px;
+  border: 1px solid #e7c75f;
+  border-radius: 14px;
+  background: #fff4c7;
+  box-shadow: 0 5px 18px rgba(126, 93, 14, .08);
+}
+.favorite-committee-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 2px 10px;
+}
+.favorite-committee-head span {
+  color: #705500;
+  font-size: 15px;
+  font-weight: 900;
+}
+.favorite-committee-head small {
+  color: #8a711e;
+  font-size: 11px;
+  font-weight: 800;
+}
+.favorite-committee-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+.favorite-committee-grid .favorite-agency-group {
+  min-width: 0;
+  background: #fff;
+}
+
+@media (max-width: 980px) {
+  .favorite-committee-grid {
+    grid-template-columns: 1fr;
+  }
+}

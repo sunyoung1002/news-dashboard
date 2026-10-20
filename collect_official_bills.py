@@ -19,6 +19,7 @@ KEYWORDS_FILE = ROOT / "bill_keywords.yaml"
 
 ASSEMBLY_BASE = "https://open.assembly.go.kr/portal/openapi"
 PENDING_API = "nwbqublzajtcqpdae"
+SUMMARY_API = "BPMBILLSUMMARY"
 SUMMARY_URL = "https://likms.assembly.go.kr/bill/bi/popup/billSummary.do"
 LAW_SEARCH_URL = "https://www.law.go.kr/DRF/lawSearch.do"
 
@@ -191,7 +192,58 @@ def daily_change_metadata(old, current, today):
     }
 
 
-def fetch_summary(bill_id):
+def summary_from_api_row(row):
+    preferred_keys = (
+        "BILL_SUMMARY", "PROPOSE_REASON", "MAJOR_CONTENTS", "SUMMARY",
+        "BILL_CONTENTS", "CONTENTS", "제안이유및주요내용", "주요내용",
+    )
+    values = []
+    for key in preferred_keys:
+        value = clean_text(row.get(key))
+        if value and value not in values:
+            values.append(value)
+    if not values:
+        for key, raw_value in row.items():
+            upper_key = str(key).upper()
+            if any(word in upper_key for word in ("SUMMARY", "REASON", "CONTENT")):
+                value = clean_text(raw_value)
+                if len(value) >= 30 and value not in values:
+                    values.append(value)
+    return clean_text(" ".join(values))
+
+
+def fetch_summary_api(bill_id, bill_no):
+    if not ASSEMBLY_KEY:
+        return ""
+    queries = []
+    if bill_id:
+        queries.append({"BILL_ID": bill_id})
+    normalized_no = re.sub(r"\D", "", str(bill_no or ""))
+    if normalized_no:
+        queries.append({"BILL_NO": normalized_no})
+    for query in queries:
+        try:
+            payload = request_json(
+                f"{ASSEMBLY_BASE}/{SUMMARY_API}",
+                {
+                    "KEY": ASSEMBLY_KEY, "Type": "json", "pIndex": 1,
+                    "pSize": 5, "AGE": "22", **query,
+                },
+                retries=2,
+            )
+            for row in assembly_rows(payload, SUMMARY_API):
+                text = summary_from_api_row(row)
+                if text:
+                    return text[:1200]
+        except RuntimeError as exc:
+            print(f"[안내] 주요내용 API 보완 조회 실패: {query} ({exc})")
+    return ""
+
+
+def fetch_summary(bill_id, bill_no=""):
+    api_summary = fetch_summary_api(bill_id, bill_no)
+    if api_summary:
+        return api_summary
     try:
         response = requests.get(SUMMARY_URL, params={"billId": bill_id}, timeout=20)
         response.raise_for_status()
@@ -201,7 +253,9 @@ def fetch_summary(bill_id):
                 text = text.split(marker, 1)[1]
                 break
         text = clean_text(text)
-        return text[:420] if text else "공식 제안이유 및 주요내용을 확인 중입니다."
+        text = re.sub(r"^(창닫기\s*)?(\[?\d{7}\]?\s*)?", "", text)
+        text = re.sub(r"\s*(의안 상세정보|인쇄|창닫기)\s*$", "", text)
+        return text[:1200] if text else "공식 제안이유 및 주요내용을 확인 중입니다."
     except requests.RequestException:
         return "공식 제안이유 및 주요내용을 확인 중입니다."
 
@@ -266,7 +320,7 @@ def make_pending_item(row, old, month, today):
         clean_text(old.get("agency")) != agency,
     ))
     if not summary or "확인 중" in summary or metadata_changed:
-        refreshed_summary = fetch_summary(bill_id)
+        refreshed_summary = fetch_summary(bill_id, row.get("BILL_NO"))
         if refreshed_summary and "확인 중" not in refreshed_summary:
             summary = refreshed_summary
 
@@ -362,9 +416,28 @@ def main():
             time.sleep(0.2)
 
     items.extend(fetch_promulgated_laws(keywords, month, today, old_index))
+    current_keys = {
+        item.get("billId") or item.get("billNo") or item.get("title")
+        for item in items
+    }
+    # 계류 목록에서 빠진 대안·처리 법안도 즐겨찾기 상세조회에 계속 필요하다.
+    # 같은 달의 기존 항목을 삭제하지 않고 보존해 제목·의안번호·제안자·주요내용이
+    # '확인 중'으로 되돌아가는 문제를 막는다.
+    carried_current = []
+    for old_item in old_items:
+        old_key = old_item.get("billId") or old_item.get("billNo") or old_item.get("title")
+        if old_item.get("month") == month and old_key not in current_keys:
+            preserved = dict(old_item)
+            preserved.update({
+                "dailyChanged": False,
+                "dailyChangedDate": "",
+                "dailyChangeFields": [],
+            })
+            carried_current.append(preserved)
+
     history = [item for item in old_items if item.get("month", "") < month]
     history = [item for item in history if item.get("month", "") >= (now - timedelta(days=370)).strftime("%Y-%m")]
-    combined = history + sorted(items, key=lambda item: (item["stage"], item["title"]))
+    combined = history + sorted(carried_current + items, key=lambda item: (item["stage"], item["title"]))
     payload = {
         "mode": "official",
         "updatedAt": now.strftime("%Y-%m-%d %H:%M"),
