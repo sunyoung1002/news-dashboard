@@ -195,6 +195,7 @@ DAILY_COMPARE_FIELDS = {
     "committee": "소관위원회",
     "proposer": "제안자",
     "change": "처리내용",
+    "processingResult": "처리결과",
     "summary": "주요내용",
 }
 
@@ -203,17 +204,22 @@ def daily_change_metadata(old, current, today):
     """직전 수집본과 비교해 오늘 발생한 변동을 표시한다."""
     if not old:
         fields = ["신규 확인"]
+        details = [{"label": "신규 확인", "before": "", "after": current.get("billNo") or current.get("title") or "신규 의안"}]
     else:
-        fields = [
-            label for key, label in DAILY_COMPARE_FIELDS.items()
-            if clean_text(old.get(key)) != clean_text(current.get(key))
-        ]
+        details = []
+        for key, label in DAILY_COMPARE_FIELDS.items():
+            before = clean_text(old.get(key))
+            after = clean_text(current.get(key))
+            if before != after:
+                details.append({"label": label, "before": before, "after": after})
+        fields = [detail["label"] for detail in details]
 
     if fields:
         return {
             "dailyChanged": True,
             "dailyChangedDate": today,
             "dailyChangeFields": fields,
+            "dailyChangeDetails": details,
         }
 
     # 오전 변동 표시는 같은 날 오후 재수집 후에도 유지한다.
@@ -222,12 +228,14 @@ def daily_change_metadata(old, current, today):
             "dailyChanged": True,
             "dailyChangedDate": today,
             "dailyChangeFields": old.get("dailyChangeFields") or ["세부내용"],
+            "dailyChangeDetails": old.get("dailyChangeDetails") or [],
         }
 
     return {
         "dailyChanged": False,
         "dailyChangedDate": "",
         "dailyChangeFields": [],
+        "dailyChangeDetails": [],
     }
 
 
@@ -376,6 +384,7 @@ def make_pending_item(row, old, month, today):
         "changed": changed,
         "changedDate": changed_date,
         "change": change,
+        "processingResult": clean_text(row.get("CMT_PROC_RESULT_CD") or row.get("LAW_PROC_RESULT_CD")),
         "summary": summary,
         "sourceUrl": row.get("LINK_URL") or f"{SUMMARY_URL}?billId={bill_id}",
     }
@@ -471,6 +480,7 @@ def main():
                 "dailyChanged": False,
                 "dailyChangedDate": "",
                 "dailyChangeFields": [],
+                "dailyChangeDetails": [],
             })
             carried_current.append(preserved)
 
