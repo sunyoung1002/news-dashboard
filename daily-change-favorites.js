@@ -256,7 +256,13 @@
     const stageBox = document.querySelector("#favoriteDetailStage");
     if (item && stageBox) {
       const transition = `${item.previousStage || "-"} → ${item.stage || "-"}`;
-      stageBox.innerHTML = `<strong>${escapeHtml(transition)}</strong><span>${escapeHtml(transition)} · ${escapeHtml(item.stageDate || item.changedDate || "")}</span>`;
+      const stageDate = item.stageDate || item.changedDate || "";
+      const present = item.committeePresentDate ? ` · 상정일: ${item.committeePresentDate}` : "";
+      const current = `${item.stage || "-"} · ${stageDate}${item.stage === "소관위" ? present : ""}`;
+      const committeeDate = item.committeeDate || item.committeePresentDate || "";
+      const committee = item.stage !== "소관위" && committeeDate
+        ? `<span>소관위 · ${escapeHtml(committeeDate)}${escapeHtml(present)}</span>` : "";
+      stageBox.innerHTML = `<strong>${escapeHtml(transition)}</strong><span>${escapeHtml(current)}</span>${committee}`;
     }
     const body = document.querySelector("#favoriteDetailDialog .favorite-detail-body");
     body?.querySelectorAll(".favorite-today-change, .favorite-detail-tracking").forEach(element => element.remove());
