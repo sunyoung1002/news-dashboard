@@ -207,6 +207,33 @@
     return value;
   }
 
+  function nominalEnding(sentence) {
+    let value = String(sentence || "").replace(/[.!?]+$/, "").trim();
+    if (value.length > 125) {
+      const parts = value.split(/[,;]|\s+(?:및|또는|하며|하거나|하고)\s+/)
+        .map(part => part.trim()).filter(part => part.length >= 15);
+      const policy = parts.filter(part => /개정|신설|도입|확대|강화|완화|개선|보호|지원|의무|금지|부과|마련|규정/.test(part));
+      value = (policy.sort((a, b) => a.length - b.length)[0] || parts.sort((a, b) => a.length - b.length)[0] || value);
+    }
+    value = value
+      .replace(/제기되고\s*있(?:습니다|다)$/g, "제기됨")
+      .replace(/할\s*수\s*있(?:습니다|다)$/g, "할 수 있음")
+      .replace(/있(?:습니다|다)$/g, "있음")
+      .replace(/필요(?:합니다|하다)$/g, "필요함")
+      .replace(/보호(?:합니다|한다)$/g, "보호함")
+      .replace(/강화(?:합니다|한다)$/g, "강화함")
+      .replace(/개선(?:합니다|한다)$/g, "개선함")
+      .replace(/마련(?:합니다|한다)$/g, "마련함")
+      .replace(/규정(?:합니다|한다)$/g, "규정함")
+      .replace(/(?:하도록|하고자)\s*(?:합니다|한다)$/g, "하도록 함")
+      .replace(/하는\s*내용(?:입니다|이다)$/g, "하는 내용임")
+      .replace(/(?:입니다|이다)$/g, "임")
+      .replace(/(?:합니다|한다|하였다|하였습니다)$/g, "함")
+      .replace(/(?:됩니다|된다|되었다|되었습니다)$/g, "됨");
+    if (!/[음함임됨]$/.test(value)) value = `${value} 내용임`;
+    return `${value}.`;
+  }
+
   function shortBillSummary(item, bullets = false) {
     const text = cleanBillSummary(item);
     if (!text || text.includes("확인 중입니다")) {
@@ -224,7 +251,7 @@
 
     const score = (sentence, index) => {
       let value = 0;
-      if (/개정|신설|도입|확대|강화|완화|개선|보호|지원|의무|금지|부과|마련/.test(sentence)) value += 4;
+      value += (sentence.match(/개정|신설|도입|확대|강화|완화|개선|보호|지원|의무|금지|부과|마련/g) || []).length * 4;
       if (/문제|지적|우려|어려|부담|피해|한계|필요/.test(sentence)) value += 2;
       if (sentence.length <= 100) value += 2;
       if (index === 0) value += 1;
@@ -234,9 +261,9 @@
     const selected = sentences
       .map((sentence, index) => ({ sentence, index, score: score(sentence, index) }))
       .sort((a, b) => b.score - a.score || a.sentence.length - b.sentence.length || a.index - b.index)
-      .slice(0, 2)
+      .slice(0, 1)
       .sort((a, b) => a.index - b.index)
-      .map(entry => entry.sentence);
+      .map(entry => nominalEnding(entry.sentence));
 
     return selected.map(sentence => bullets ? `• ${sentence}` : sentence).join("\n");
   }
@@ -338,7 +365,17 @@
         (!state.selectedOnly || state.selectedIds.has(itemKey(item))) &&
         (!state.favoriteOnly || state.favoriteIds.has(itemKey(item)));
     });
-    return [...current, ...historicalMatches]
+    historicalMatches.forEach(item => foundKeys.add(itemKey(item)));
+    const favoriteMatches = [...state.favoriteRows.values()].filter(item => {
+      if (foundKeys.has(itemKey(item))) return false;
+      const haystack = `${item.title || ""} ${item.billNo || ""} ${item.agency || ""} ${item.committee || ""} ${item.proposer || ""} ${item.summary || ""}`.toLowerCase();
+      return haystack.includes(query) &&
+        (!state.agency || item.agency === state.agency) &&
+        (!state.stage || item.stage === state.stage) &&
+        (!state.changedOnly || item.changed) &&
+        (!state.selectedOnly || state.selectedIds.has(itemKey(item)));
+    });
+    return [...current, ...historicalMatches, ...favoriteMatches]
       .filter(matchesStatFilter)
       .sort((a, b) => String(b.changedDate || "").localeCompare(String(a.changedDate || "")));
   };
