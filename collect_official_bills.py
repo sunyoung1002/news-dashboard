@@ -1,14 +1,8 @@
-from __future__ import annotations
-
-import json
-import os
-import re
-import time
+import json, os, re, time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-import requests
-import yaml
+import requests, yaml
 from bs4 import BeautifulSoup
 
 KST = timezone(timedelta(hours=9))
@@ -25,32 +19,19 @@ LAW_SEARCH_URL = "https://www.law.go.kr/DRF/lawSearch.do"
 ASSEMBLY_KEY = os.environ.get("ASSEMBLY_API_KEY", "").strip()
 MOLEG_OC = os.environ.get("MOLEG_OC", "").strip()
 
-STAGE_ORDER = ["접수", "소관위", "법사위", "본회의", "공포·시행"]
-
 CATEGORY_AGENCY = {
-    "공정거래법": "공정거래위원회",
-    "하도급법": "공정거래위원회",
-    "가맹사업법": "공정거래위원회",
-    "대규모유통업법": "공정거래위원회",
-    "대리점법": "공정거래위원회",
-    "약관법": "공정거래위원회",
-    "전자상거래법": "공정거래위원회",
-    "표시광고법": "공정거래위원회",
-    "소비자기본법": "공정거래위원회",
-    "상생협력법": "중소벤처기업부",
-    "자본시장법": "금융위원회",
-    "건설산업기본법": "국토교통부",
-    "행정조사기본법": "국무조정실",
-    "상법": "법무부",
-    "중대재해처벌법": "고용노동부",
-    "민사소송법": "법무부",
-    "조세특례제한법": "기획재정부",
-    "집단소송": "법무부",
-    "산업안전보건법": "고용노동부",
-    "지속가능성·책임경영": "기후에너지환경부",
-    "고용": "고용노동부",
-    "탄소중립": "기후에너지환경부",
-    "상속세·증여세": "기획재정부",
+    "공정거래법":"공정거래위원회", "하도급법":"공정거래위원회",
+    "가맹사업법":"공정거래위원회", "대규모유통업법":"공정거래위원회",
+    "대리점법":"공정거래위원회", "약관법":"공정거래위원회",
+    "전자상거래법":"공정거래위원회", "표시광고법":"공정거래위원회",
+    "소비자기본법":"공정거래위원회", "상생협력법":"중소벤처기업부",
+    "자본시장법":"금융위원회", "건설산업기본법":"국토교통부",
+    "행정조사기본법":"국무조정실", "상법":"법무부",
+    "중대재해처벌법":"고용노동부", "민사소송법":"법무부",
+    "조세특례제한법":"기획재정부", "집단소송":"법무부",
+    "산업안전보건법":"고용노동부", "지속가능성·책임경영":"기후에너지환경부",
+    "고용":"고용노동부", "탄소중립":"기후에너지환경부",
+    "상속세·증여세":"기획재정부",
 }
 
 
@@ -395,6 +376,8 @@ def make_pending_item(row, old, month, today):
         "changed": changed,
         "changedDate": changed_date,
         "stageDate": official_stage_date(row, stage) or old.get("stageDate", "") or changed_date,
+        "committeeDate": format_date(row.get("COMMITTEE_DT")) or old.get("committeeDate", ""),
+        "committeePresentDate": format_date(row.get("CMT_PRESENT_DT")) or old.get("committeePresentDate", ""),
         "change": change,
         "processingResult": clean_text(row.get("CMT_PROC_RESULT_CD") or row.get("LAW_PROC_RESULT_CD")),
         "summary": summary,
