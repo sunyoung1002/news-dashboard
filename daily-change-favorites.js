@@ -134,6 +134,7 @@
 
   function favoriteTraceBriefMarkup(item) {
     const status = trackingStatus(item);
+    if (status.state === "pending") return "";
     return `<div class="favorite-trace-brief favorite-trace-${escapeHtml(status.state)}">
       <b>통합·대안 추적</b><span>${escapeHtml(status.label)}</span>
       <small>${escapeHtml(status.detail[0])}</small>
@@ -152,6 +153,7 @@
 
   function favoriteDetailTrackingMarkup(item) {
     const status = trackingStatus(item);
+    if (status.state === "pending") return "";
     const track = status.track;
     const related = status.state === "alternative" && track
       ? `<ul>${track.originals.map(original => `<li>
