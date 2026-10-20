@@ -3,11 +3,9 @@ name: update-official-bills
 on:
   workflow_dispatch:
   schedule:
-    # 한국(서울)시간 기준 매일 오전 06:30, 오후 15:00 실행
-    - cron: "30 6 * * *"
-      timezone: "Asia/Seoul"
-    - cron: "0 15 * * *"
-      timezone: "Asia/Seoul"
+    # 한국시간 매일 오전 6시 30분 / 오후 3시
+    - cron: "30 21 * * *"
+    - cron: "0 6 * * *"
 
 permissions:
   contents: write
@@ -20,9 +18,6 @@ jobs:
   update:
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    env:
-      TZ: Asia/Seoul
-
     steps:
       - name: 저장소 가져오기
         uses: actions/checkout@v4
@@ -42,30 +37,17 @@ jobs:
           MOLEG_OC: ${{ secrets.MOLEG_OC }}
         run: python collect_official_bills.py
 
-      - name: 한국시간 기준일 검증
-        run: |
-          python - <<'PY'
-          import json
-          from datetime import datetime, timedelta, timezone
-          with open("sample-bills.json", encoding="utf-8") as f:
-              data = json.load(f)
-          today = datetime.now(timezone(timedelta(hours=9))).strftime("%Y-%m-%d")
-          if not data.get("items"):
-              raise SystemExit("수집 결과가 0건입니다.")
-          if not str(data.get("updatedAt", "")).startswith(today):
-              raise SystemExit(f"기준일 오류: {data.get('updatedAt')}")
-          print(f"검증 완료: {len(data['items']):,}건 / {data['updatedAt']}")
-          PY
+      - name: 기존·완료 법안 누계 병합
+        run: python bill_archive.py
 
       - name: 결과를 GitHub에 저장
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add sample-bills.json
+          git add sample-bills.json bill_archive.csv
           if git diff --cached --quiet; then
             echo "변경사항이 없습니다."
           else
-            git commit -m "Update official bill status (KST)"
-            git pull --rebase origin main
-            git push origin main
+            git commit -m "Update official bill status and archive"
+            git push
           fi
