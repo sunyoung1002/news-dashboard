@@ -253,6 +253,11 @@
     const item = state.data.find(entry => itemKey(entry) === itemId) || state.favoriteRows.get(itemId);
     const summary = document.querySelector("#favoriteDetailSummary");
     if (item && summary) summary.textContent = shortBillSummary(item);
+    const stageBox = document.querySelector("#favoriteDetailStage");
+    if (item && stageBox) {
+      const transition = `${item.previousStage || "-"} → ${item.stage || "-"}`;
+      stageBox.innerHTML = `<strong>${escapeHtml(transition)}</strong><span>${escapeHtml(transition)} · ${escapeHtml(item.stageDate || item.changedDate || "")}</span>`;
+    }
     const body = document.querySelector("#favoriteDetailDialog .favorite-detail-body");
     body?.querySelectorAll(".favorite-today-change, .favorite-detail-tracking").forEach(element => element.remove());
     const actions = body?.querySelector(".favorite-detail-actions");
