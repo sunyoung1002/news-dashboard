@@ -143,10 +143,19 @@
       };
     }
     if (/\(대안\)/.test(String(item?.title || ""))) {
+      const passed = `${result} ${item?.change || ""}`.match(/원안가결|수정가결|가결/);
+      if (passed) {
+        return {
+          state: "alternative",
+          label: `위원회 대안 · ${passed[0]}`,
+          result: `처리결과: ${passed[0]}`,
+          detail: ["위원회 대안의 처리결과가 공식 자료에서 확인되었습니다."]
+        };
+      }
       return {
-        state: "alternative",
-        label: "위원회 대안 · 흡수 원안 확인 중",
-        result: result || "처리결과 확인 중",
+        state: "pending",
+        label: "위원회 대안 연결정보 확인 중",
+        result: "처리결과 확인 중",
         detail: ["국회 대안정보에서 합쳐진 의원안 목록을 확인 중입니다."]
       };
     }
@@ -236,6 +245,7 @@
   summarizeForComparison = function (item) {
     const summary = shortBillSummary(item, true);
     const status = trackingStatus(item);
+    if (status.state === "pending") return summary;
     const relation = status.state === "alternative" && status.track
         ? `• 통합·대안: 의원안 ${status.track.originals.map(billNumber).filter(Boolean).join("·") || `${status.track.originals.length}건`}을 반영한 위원회 대안입니다.`
       : status.state === "discarded" && status.track
