@@ -5,7 +5,6 @@ import json
 import os
 import re
 import time
-from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -20,9 +19,6 @@ KEYWORDS_FILE = ROOT / "bill_keywords.yaml"
 
 ASSEMBLY_BASE = "https://open.assembly.go.kr/portal/openapi"
 PENDING_API = "nwbqublzajtcqpdae"
-ALL_BILLS_API = "ALLBILLV2"
-SUMMARY_API = "BPMBILLSUMMARY"
-ALTERNATIVE_API = "TVBPMBILL11"
 SUMMARY_URL = "https://likms.assembly.go.kr/bill/bi/popup/billSummary.do"
 LAW_SEARCH_URL = "https://www.law.go.kr/DRF/lawSearch.do"
 
@@ -58,11 +54,11 @@ CATEGORY_AGENCY = {
 }
 
 
-def request_json(url, params, retries=3, timeout=35):
+def request_json(url, params, retries=3):
     last_error = None
     for attempt in range(retries):
         try:
-            response = requests.get(url, params=params, timeout=timeout)
+            response = requests.get(url, params=params, timeout=35)
             response.raise_for_status()
             return response.json()
         except (requests.RequestException, ValueError) as exc:
@@ -82,25 +78,6 @@ def assembly_rows(payload, service_id):
         if isinstance(block, dict) and isinstance(block.get("row"), list):
             return block["row"]
     return []
-
-
-def assembly_result(payload, service_id):
-    result = payload.get("RESULT")
-    if not isinstance(result, dict):
-        blocks = payload.get(service_id, [])
-        result = {}
-        for block in blocks if isinstance(blocks, list) else []:
-            if not isinstance(block, dict):
-                continue
-            if isinstance(block.get("RESULT"), dict):
-                result = block["RESULT"]
-                break
-            head = block.get("head", [])
-            result = next((part["RESULT"] for part in head
-                           if isinstance(part, dict) and isinstance(part.get("RESULT"), dict)), {})
-            if result:
-                break
-    return result
 
 
 def load_tracking_rules():
@@ -152,42 +129,6 @@ def fetch_pending_bills(keywords, tracked_bill_numbers):
     return list(matched.values())
 
 
-def fetch_processed_bills(keywords, tracked_bill_numbers, pending_ids):
-    """제22대 의안정보 통합 API에서 계류 목록에 없는 처리의안을 수집한다."""
-    matched = {}
-    searches = [{"BILL_NM": word} for word in keywords]
-    searches.extend({"BILL_NO": number} for number in sorted(tracked_bill_numbers))
-    for search in searches:
-        for page in range(1, 101):
-            payload = request_json(
-                f"{ASSEMBLY_BASE}/{ALL_BILLS_API}",
-                {"KEY": ASSEMBLY_KEY, "Type": "json", "pIndex": page,
-                 "pSize": 1000, "ERACO": "제22대", **search},
-            )
-            result = assembly_result(payload, ALL_BILLS_API)
-            if result.get("CODE") == "INFO-200":
-                break
-            if result.get("CODE", "INFO-000") != "INFO-000":
-                raise RuntimeError(f"국회 처리의안 API 오류: {result.get('CODE')} {result.get('MESSAGE', '')}")
-            rows = assembly_rows(payload, ALL_BILLS_API)
-            if not rows and page == 1 and not result and ALL_BILLS_API not in payload:
-                raise RuntimeError(f"국회 처리의안 API 응답을 읽을 수 없습니다: {search}")
-            for row in rows:
-                bill_id = clean_text(row.get("BILL_ID"))
-                title = clean_text(row.get("BILL_NM") or row.get("BILL_NAME"))
-                bill_no = re.sub(r"\D", "", str(row.get("BILL_NO") or ""))
-                category = matched_category(title, keywords)
-                if bill_id and bill_id not in pending_ids and (category or bill_no in tracked_bill_numbers):
-                    row["_CATEGORY"] = category or "직접선택"
-                    matched[bill_id] = row
-            if len(rows) < 1000:
-                break
-            time.sleep(0.08)
-        else:
-            raise RuntimeError(f"처리의안 검색 페이지 한도를 초과했습니다: {search}")
-    return list(matched.values())
-
-
 def derive_stage(row):
     law_result = str(row.get("LAW_PROC_RESULT_CD") or "")
     if law_result:
@@ -206,9 +147,53 @@ def clean_text(value):
     return re.sub(r"\s+", " ", str(value or "")).strip()
 
 
-def fetch_summary(bill_id, timeout=20):
+DAILY_COMPARE_FIELDS = {
+    "title": "법안명",
+    "billNo": "의안번호",
+    "agency": "소관기관",
+    "stage": "진행단계",
+    "committee": "소관위원회",
+    "proposer": "제안자",
+    "change": "처리내용",
+    "summary": "주요내용",
+}
+
+
+def daily_change_metadata(old, current, today):
+    """직전 수집본과 비교해 오늘 발생한 변동을 표시한다."""
+    if not old:
+        fields = ["신규 확인"]
+    else:
+        fields = [
+            label for key, label in DAILY_COMPARE_FIELDS.items()
+            if clean_text(old.get(key)) != clean_text(current.get(key))
+        ]
+
+    if fields:
+        return {
+            "dailyChanged": True,
+            "dailyChangedDate": today,
+            "dailyChangeFields": fields,
+        }
+
+    # 오전 변동 표시는 같은 날 오후 재수집 후에도 유지한다.
+    if old.get("dailyChanged") and old.get("dailyChangedDate") == today:
+        return {
+            "dailyChanged": True,
+            "dailyChangedDate": today,
+            "dailyChangeFields": old.get("dailyChangeFields") or ["세부내용"],
+        }
+
+    return {
+        "dailyChanged": False,
+        "dailyChangedDate": "",
+        "dailyChangeFields": [],
+    }
+
+
+def fetch_summary(bill_id):
     try:
-        response = requests.get(SUMMARY_URL, params={"billId": bill_id}, timeout=timeout)
+        response = requests.get(SUMMARY_URL, params={"billId": bill_id}, timeout=20)
         response.raise_for_status()
         text = BeautifulSoup(response.text, "html.parser").get_text("\n", strip=True)
         for marker in ("제안이유 및 주요내용", "제안이유"):
@@ -219,86 +204,6 @@ def fetch_summary(bill_id, timeout=20):
         return text[:420] if text else "공식 제안이유 및 주요내용을 확인 중입니다."
     except requests.RequestException:
         return "공식 제안이유 및 주요내용을 확인 중입니다."
-
-
-def official_processed_summary(row):
-    """의안번호로 공식 제안이유를 조회하고, 반환된 BILL_ID를 대조한다."""
-    bill_no = clean_text(row.get("BILL_NO"))
-    bill_id = clean_text(row.get("BILL_ID"))
-    if bill_no:
-        try:
-            payload = request_json(
-                f"{ASSEMBLY_BASE}/{SUMMARY_API}",
-                {"KEY": ASSEMBLY_KEY, "Type": "json", "pIndex": 1,
-                 "pSize": 100, "BILL_NO": bill_no}, retries=1, timeout=12,
-            )
-            result = assembly_result(payload, SUMMARY_API)
-            if result.get("CODE", "INFO-000") not in ("INFO-000", "INFO-200"):
-                raise RuntimeError(result.get("MESSAGE", "요약 API 오류"))
-            for entry in assembly_rows(payload, SUMMARY_API):
-                if clean_text(entry.get("BILL_ID")) == bill_id:
-                    summary = clean_text(entry.get("SUMMARY"))
-                    if summary:
-                        return summary[:1200]
-        except (RuntimeError, requests.RequestException, ValueError):
-            pass
-    # 이전 HTML 요약 경로가 가능한 경우에도 내용을 최대한 보완한다.
-    return fetch_summary(bill_id, timeout=8)
-
-
-def enrich_processed_summaries(items, rows):
-    by_id = {item["billId"]: item for item in items if item.get("status") == "처리의안"}
-    missing = [row for row in rows if "확인 중" in by_id[row["BILL_ID"]]["summary"]]
-    with ThreadPoolExecutor(max_workers=12) as pool:
-        futures = {pool.submit(official_processed_summary, row): row["BILL_ID"] for row in missing}
-        for future in as_completed(futures):
-            summary = future.result()
-            if summary and "확인 중" not in summary:
-                by_id[futures[future]]["summary"] = summary
-    remaining = sum("확인 중" in item["summary"] for item in by_id.values())
-    print(f"처리의안 주요내용: 보완 대상 {len(missing)}건, 확인 대기 {remaining}건")
-
-
-def fetch_absorbed_ids(alternative_id):
-    payload = request_json(
-        f"{ASSEMBLY_BASE}/{ALTERNATIVE_API}",
-        {"KEY": ASSEMBLY_KEY, "Type": "json", "pIndex": 1, "pSize": 1000,
-         "AGE": "22", "BILL_ID_REF": alternative_id}, retries=2, timeout=15,
-    )
-    result = assembly_result(payload, ALTERNATIVE_API)
-    if result.get("CODE", "INFO-000") not in ("INFO-000", "INFO-200"):
-        raise RuntimeError(f"대안정보 API 오류: {result.get('MESSAGE', result.get('CODE'))}")
-    return {clean_text(row.get("BILL_ID")) for row in assembly_rows(payload, ALTERNATIVE_API)}
-
-
-def enrich_alternative_links(items):
-    by_id = {item["billId"]: item for item in items if item.get("status") == "처리의안"}
-    alternatives = [item for item in by_id.values() if item["title"].rstrip().endswith("(대안)")]
-    with ThreadPoolExecutor(max_workers=8) as pool:
-        futures = {pool.submit(fetch_absorbed_ids, alt["billId"]): alt for alt in alternatives}
-        for future in as_completed(futures):
-            alt = futures[future]
-            try:
-                absorbed_ids = future.result()
-            except (RuntimeError, requests.RequestException, ValueError) as exc:
-                print(f"[안내] 대안 {alt['billNo']} 관계 조회 실패: {exc}")
-                continue
-            for bill_id in absorbed_ids:
-                absorbed = by_id.get(bill_id)
-                if not absorbed or absorbed.get("processingResult") != "대안반영폐기":
-                    continue
-                relation = {"billId": alt["billId"], "billNo": alt["billNo"],
-                            "title": alt["title"], "sourceUrl": alt["sourceUrl"]}
-                links = absorbed.setdefault("alternativeBills", [])
-                if all(link["billId"] != alt["billId"] for link in links):
-                    links.append(relation)
-    linked = 0
-    for item in by_id.values():
-        if item.get("alternativeBills"):
-            item["alternativeBills"].sort(key=lambda alt: alt["billNo"])
-            item["change"] += " → " + ", ".join(alt["billNo"] for alt in item["alternativeBills"])
-            linked += 1
-    print(f"대안반영폐기 연결: {linked}건 / 대안 {len(alternatives)}건 조회")
 
 
 def load_previous():
@@ -348,20 +253,31 @@ def make_pending_item(row, old, month, today):
         changed = True
         changed_date = today
 
-    summary = old.get("summary", "") if old else ""
-    if not summary or "확인 중" in summary:
-        summary = fetch_summary(bill_id)
-
     category = row.get("_CATEGORY", "")
     committee = clean_text(row.get("CURR_COMMITTEE")) or "위원회 배정 전"
-    return {
+    proposer = clean_text(row.get("PROPOSER") or row.get("RST_PROPOSER")) or "제안자 확인 중"
+    agency = CATEGORY_AGENCY.get(category, committee)
+    summary = old.get("summary", "") if old else ""
+    metadata_changed = bool(old) and any((
+        clean_text(old.get("title")) != title,
+        clean_text(old.get("stage")) != stage,
+        clean_text(old.get("committee")) != committee,
+        clean_text(old.get("proposer")) != proposer,
+        clean_text(old.get("agency")) != agency,
+    ))
+    if not summary or "확인 중" in summary or metadata_changed:
+        refreshed_summary = fetch_summary(bill_id)
+        if refreshed_summary and "확인 중" not in refreshed_summary:
+            summary = refreshed_summary
+
+    item = {
         "month": month,
         "billId": bill_id,
         "title": title,
         "billNo": f"의안번호 {clean_text(row.get('BILL_NO'))}",
-        "agency": CATEGORY_AGENCY.get(category, committee),
+        "agency": agency,
         "committee": committee,
-        "proposer": clean_text(row.get("PROPOSER") or row.get("RST_PROPOSER")) or "제안자 확인 중",
+        "proposer": proposer,
         "stage": stage,
         "previousStage": previous_stage,
         "changed": changed,
@@ -370,36 +286,8 @@ def make_pending_item(row, old, month, today):
         "summary": summary,
         "sourceUrl": row.get("LINK_URL") or f"{SUMMARY_URL}?billId={bill_id}",
     }
-
-
-def make_processed_item(row, old, month, today):
-    bill_id = clean_text(row.get("BILL_ID"))
-    result = clean_text(row.get("RGS_CONF_RSLT") or row.get("PROC_RESULT")
-                        or row.get("LAW_PROC_RESULT_CD") or row.get("CMT_PROC_RESULT_CD"))
-    # 처리 결과가 본회의까지 도달했음을 뜻하는 경우에만 본회의 단계로 표시한다.
-    stage = "본회의" if any(word in result for word in ("가결", "부결", "본회의")) else "소관위"
-    committee = clean_text(row.get("JRCMIT_NM") or row.get("CURR_COMMITTEE")) or "위원회 확인 중"
-    changed = bool(old and old.get("stage") != stage) or bool(old and old.get("status") != "처리의안")
-    summary = clean_text(row.get("BILL_SUMMARY")) or (old.get("summary", "") if old else "")
-    return {
-        "month": month,
-        "billId": bill_id,
-        "title": clean_text(row.get("BILL_NM") or row.get("BILL_NAME")),
-        "billNo": f"의안번호 {clean_text(row.get('BILL_NO'))}",
-        "agency": CATEGORY_AGENCY.get(row["_CATEGORY"], committee),
-        "committee": committee,
-        "proposer": clean_text(row.get("PPSR_NM") or row.get("RST_PROPOSER") or row.get("PROPOSER")) or "제안자 확인 중",
-        "stage": stage,
-        "status": "처리의안",
-        "processingResult": result or "처리결과 확인 중",
-        "alternativeBills": old.get("alternativeBills", []) if old else [],
-        "previousStage": old.get("stage", "-") if old else "-",
-        "changed": changed,
-        "changedDate": today if changed else (old.get("changedDate", today) if old else today),
-        "change": f"처리의안 · {result}" if result else "처리의안 · 처리결과 확인 중",
-        "summary": summary or "공식 제안이유 및 주요내용을 확인 중입니다.",
-        "sourceUrl": row.get("LINK_URL") or f"{SUMMARY_URL}?billId={bill_id}",
-    }
+    item.update(daily_change_metadata(old, item, today))
+    return item
 
 
 def law_rows(payload):
@@ -410,7 +298,7 @@ def law_rows(payload):
     return rows if isinstance(rows, list) else []
 
 
-def fetch_promulgated_laws(keywords, month, today):
+def fetch_promulgated_laws(keywords, month, today, old_index):
     if not MOLEG_OC:
         print("[안내] MOLEG_OC가 없어 법제처 공포 법령 조회는 건너뜁니다.")
         return []
@@ -432,7 +320,7 @@ def fetch_promulgated_laws(keywords, month, today):
                 continue
             law_id = str(row.get("법령ID") or row.get("법령일련번호") or title)
             effective = format_date(row.get("시행일자"))
-            found[law_id] = {
+            item = {
                 "month": month,
                 "billId": f"law-{law_id}",
                 "title": title,
@@ -448,6 +336,8 @@ def fetch_promulgated_laws(keywords, month, today):
                 "summary": f"{clean_text(row.get('제개정구분명')) or '제·개정'} 법령으로 법제처 국가법령정보에서 공식 확인됨.",
                 "sourceUrl": "https://www.law.go.kr" + str(row.get("법령상세링크") or ""),
             }
+            item.update(daily_change_metadata(old_index.get(item["billId"], {}), item, today))
+            found[law_id] = item
         time.sleep(0.15)
     return list(found.values())
 
@@ -464,11 +354,6 @@ def main():
     pending_rows = fetch_pending_bills(keywords, tracked_bill_numbers)
     if not pending_rows:
         raise RuntimeError("국회 API가 계류 법안을 0건 반환했습니다. 기존 데이터를 보호하기 위해 저장을 중단합니다.")
-    processed_rows = fetch_processed_bills(
-        keywords, tracked_bill_numbers, {str(row.get("BILL_ID")) for row in pending_rows}
-    )
-    if not processed_rows:
-        raise RuntimeError("국회 API가 처리 의안을 0건 반환했습니다. 기존 데이터를 보호하기 위해 저장을 중단합니다.")
     items = []
     for index, row in enumerate(pending_rows, 1):
         key = str(row.get("BILL_ID") or "")
@@ -476,15 +361,7 @@ def main():
         if index % 20 == 0:
             time.sleep(0.2)
 
-    for row in processed_rows:
-        key = str(row.get("BILL_ID") or "")
-        items.append(make_processed_item(row, old_index.get(key, {}), month, today))
-
-    enrich_processed_summaries(items, processed_rows)
-    enrich_alternative_links(items)
-
-    laws = fetch_promulgated_laws(keywords, month, today)
-    items.extend(laws)
+    items.extend(fetch_promulgated_laws(keywords, month, today, old_index))
     history = [item for item in old_items if item.get("month", "") < month]
     history = [item for item in history if item.get("month", "") >= (now - timedelta(days=370)).strftime("%Y-%m")]
     combined = history + sorted(items, key=lambda item: (item["stage"], item["title"]))
@@ -494,7 +371,7 @@ def main():
         "items": combined,
     }
     OUTPUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"완료: 계류 법안 {len(pending_rows)}건, 처리 의안 {len(processed_rows)}건, 공포 법령 {len(laws)}건")
+    print(f"완료: 계류 법안 {len(pending_rows)}건, 공포 법령 {len(items) - len(pending_rows)}건")
 
 
 if __name__ == "__main__":
