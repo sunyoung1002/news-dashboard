@@ -39,6 +39,64 @@
   font-weight: 800;
   white-space: nowrap;
 }
+.favorite-trace-brief {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 2px 8px;
+  width: 100%;
+  margin-top: 5px;
+  padding: 7px 9px;
+  border: 1px solid #c9dcf8;
+  border-radius: 8px;
+  background: #f4f8ff;
+  color: #35516f;
+  font-size: 11px;
+}
+.favorite-trace-brief b { color: #1554a3; }
+.favorite-trace-brief span { min-width: 0; font-weight: 800; }
+.favorite-trace-brief small { grid-column: 2; color: #65758b; line-height: 1.45; }
+.favorite-trace-discarded { border-color: #f0c9a8; background: #fff8f1; }
+.favorite-trace-discarded b, .favorite-trace-discarded .favorite-tracking-label { color: #a84d00; }
+
+.favorite-today-change,
+.favorite-detail-tracking {
+  margin-top: 16px;
+  padding: 14px;
+  border: 1px solid #b8d3f8;
+  border-radius: 12px;
+  background: #f4f8ff;
+}
+.favorite-today-change h3,
+.favorite-detail-tracking h3 { margin: 0 0 9px; color: #1554a3; font-size: 14px; }
+.favorite-today-change ul,
+.favorite-detail-tracking ul { margin: 0; padding: 0; list-style: none; }
+.favorite-today-change li {
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr);
+  gap: 9px;
+  padding: 7px 0;
+  border-top: 1px solid #dce8f8;
+  font-size: 12px;
+}
+.favorite-today-change li:first-child { border-top: 0; }
+.favorite-today-change li b { color: #1f6feb; }
+.favorite-tracking-label { margin: 0 0 10px; color: #1f6feb; font-weight: 900; }
+.favorite-detail-tracking li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 4px 10px;
+  padding: 10px 0;
+  border-top: 1px solid #dce8f8;
+}
+.favorite-detail-tracking li div { display: flex; flex-wrap: wrap; gap: 5px 9px; }
+.favorite-detail-tracking li strong { color: #b24b00; font-size: 12px; }
+.favorite-detail-tracking li p { grid-column: 1 / -1; margin: 0; color: #52606d; font-size: 12px; }
+.favorite-detail-tracking li a,
+.favorite-tracking-result a { color: #1f6feb; font-size: 12px; font-weight: 800; text-decoration: none; }
+.favorite-detail-tracking > small { display: block; margin-top: 10px; color: #65758b; line-height: 1.5; }
+.favorite-tracking-result b { color: #a84d00; }
+.favorite-tracking-result p { margin: 6px 0; color: #52606d; font-size: 12px; }
 .bill-card .summary,
 .favorite-detail-summary {
   white-space: pre-line;
