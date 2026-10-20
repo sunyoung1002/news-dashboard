@@ -12,6 +12,42 @@
     return item.stageDate || item.dailyChangedDate || item.changedDate || "-";
   }
 
+  function favoriteSummary(item) {
+    let text = String(item.summary || "")
+      .replace(/창닫기\s*(?:\[\s*\d+\s*\])?|의안 상세정보|인쇄/g, " ")
+      .replace(/\[\s*\d{5,}\s*\]/g, " ")
+      .replace(/제안이유\s*및\s*주요내용|제안이유|주요내용/g, " ")
+      .replace(/\.{3,}|…+/g, " ");
+    [item.title, item.proposer, item.billNo].filter(Boolean).forEach(value => {
+      text = text.split(String(value)).join(" ");
+    });
+    text = text.replace(/의안번호\s*\d+/g, " ").replace(/\s+/g, " ").trim();
+    if (!text || text.includes("확인 중입니다")) return "공식 제안이유 및 주요내용을 확인 중입니다.";
+
+    const sentences = text.split(/(?<=[.!?])\s+/)
+      .map(sentence => sentence.replace(/^(이에|그러나|따라서|또한)\s*[,，]?\s*/, "").trim())
+      .filter(sentence => sentence.length >= 12 && /[.!?]$/.test(sentence));
+    if (!sentences.length) return summarizeForReport(item);
+    const scored = sentences.map((sentence, index) => ({ sentence, index, score:
+      (sentence.match(/개정|신설|도입|확대|강화|완화|개선|보호|지원|의무|금지|부과|마련/g) || []).length * 4
+      + (/문제|지적|우려|어려|부담|피해|한계|필요/.test(sentence) ? 2 : 0)
+      + (index === 0 ? 1 : 0) }));
+    const selected = scored.sort((a, b) => b.score - a.score || a.index - b.index).slice(0, 3)
+      .sort((a, b) => a.index - b.index).map(entry => `• ${entry.sentence}`);
+    return selected.join("\n");
+  }
+
+  function stageDateMarkup(item, favoriteReport) {
+    if (!favoriteReport) return `기준일 ${escapeHtml(referenceDate(item))}`;
+    const stage = escapeHtml(item.stage || "진행단계");
+    const date = escapeHtml(referenceDate(item));
+    const present = item.committeePresentDate ? ` · 상정일: ${escapeHtml(item.committeePresentDate)}` : "";
+    if (item.stage === "소관위") return `${stage} · ${date}${present}`;
+    const committeeDate = item.committeeDate || item.committeePresentDate;
+    const committeeLine = committeeDate ? `<br>소관위 · ${escapeHtml(committeeDate)}${present}` : "";
+    return `${stage} · ${date}${committeeLine}`;
+  }
+
   function progressMarkup(item) {
     const stages = ["접수", "소관위", "법사위", "본회의", "공포·시행"];
     const current = Math.max(0, stages.indexOf(item.stage));
@@ -30,6 +66,7 @@
       return;
     }
 
+    const favoriteReport = /주요법안현황|즐겨찾기/.test(`${reportTitle} ${customFilterLabel}`);
     const reportItems = groupByAgency ? [...items].sort((a, b) => {
       const agencyOrder = String(a.agency || "기타").localeCompare(String(b.agency || "기타"), "ko");
       return agencyOrder || String(a.title || "").localeCompare(String(b.title || ""), "ko");
@@ -46,8 +83,8 @@
         <td class="bill-info">${billInfoMarkup(item)}</td>
         <td>${escapeHtml(agency)}<div class="sub">${escapeHtml(item.committee || "위원회 확인 중")}</div></td>
         <td>${progressMarkup(item)}
-          <div class="reference-date">기준일 ${escapeHtml(referenceDate(item))}</div></td>
-        <td class="summary-cell">${escapeHtml(summarizeForReport(item))}</td>
+          <div class="reference-date">${stageDateMarkup(item, favoriteReport)}</div></td>
+        <td class="summary-cell">${escapeHtml(favoriteReport ? favoriteSummary(item) : summarizeForReport(item))}</td>
       </tr>`;
     }).join("");
 
