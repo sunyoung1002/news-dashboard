@@ -5,6 +5,7 @@ const FAVORITES_DETAIL_CACHE_KEY = "newsDashboard.favoriteBillDetails.v1";
 let favoritesPassword = window.sessionStorage.getItem(FAVORITES_PASSWORD_SESSION_KEY) || "";
 let favoritesUnlocked = false;
 let favoritesRequestPending = false;
+let claimedCollectedBillKeys = new Set();
 
 // 계류 목록에서 빠지며 상세정보가 유실된 기존 공용 즐겨찾기 복구값.
 // 이후 수집 데이터에 같은 의안이 다시 포함되면 최신 수집값이 이 값을 덮어쓴다.
@@ -80,20 +81,48 @@ function saveFavoriteDetailSnapshot(item) {
 }
 
 function findCollectedBill(row) {
+  const claim = item => {
+    if (item) claimedCollectedBillKeys.add(itemKey(item));
+    return item || null;
+  };
   const rowId = String(row.bill_id || row.billId || "");
   const direct = state.data.find(item => itemKey(item) === rowId);
-  if (direct) return direct;
+  if (direct) return claim(direct);
 
   const rowNumber = normalizedBillNumber(row.bill_no || row.billNo);
   if (rowNumber) {
     const byNumber = state.data.find(item => normalizedBillNumber(item.billNo) === rowNumber);
-    if (byNumber) return byNumber;
+    if (byNumber) return claim(byNumber);
   }
 
   const title = normalizedBillTitle(row.title);
   if (!title) return null;
-  const exactTitles = state.data.filter(item => normalizedBillTitle(item.title) === title);
-  return exactTitles.length === 1 ? exactTitles[0] : null;
+  let exactTitles = state.data.filter(item => normalizedBillTitle(item.title) === title);
+  if (!exactTitles.length) return null;
+
+  const agency = normalizedBillTitle(row.agency);
+  const sameAgency = agency
+    ? exactTitles.filter(item => normalizedBillTitle(item.agency) === agency)
+    : [];
+  if (sameAgency.length) exactTitles = sameAgency;
+
+  const proposer = normalizedBillTitle(row.proposer);
+  const sameProposer = proposer
+    ? exactTitles.filter(item => normalizedBillTitle(item.proposer) === proposer)
+    : [];
+  if (sameProposer.length) exactTitles = sameProposer;
+
+  const detailScore = item => [item.billNo, item.committee, item.proposer, item.stage, item.summary]
+    .filter(value => value && !String(value).includes("확인 중") && value !== "-").length;
+  exactTitles.sort((a, b) => {
+    const aFree = claimedCollectedBillKeys.has(itemKey(a)) ? 0 : 1;
+    const bFree = claimedCollectedBillKeys.has(itemKey(b)) ? 0 : 1;
+    return bFree - aFree ||
+      detailScore(b) - detailScore(a) ||
+      String(b.month || "").localeCompare(String(a.month || "")) ||
+      String(b.changedDate || "").localeCompare(String(a.changedDate || ""));
+  });
+  return claim(exactTitles[0]);
 }
 
 async function favoritesApi(path, options = {}, password = favoritesPassword) {
@@ -194,6 +223,7 @@ async function fetchCloudFavorites(saveSnapshot = true) {
 
   state.favoriteIds = new Set();
   state.favoriteRows = new Map();
+  claimedCollectedBillKeys = new Set();
   rows.forEach(row => {
     const id = String(row.bill_id || "");
     if (!id) return;
