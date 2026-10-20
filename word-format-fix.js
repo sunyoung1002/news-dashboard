@@ -12,6 +12,16 @@
     return item.dailyChangedDate || item.changedDate || "-";
   }
 
+  function progressMarkup(item) {
+    const stages = ["접수", "소관위", "법사위", "본회의", "공포·시행"];
+    const current = Math.max(0, stages.indexOf(item.stage));
+    return `<table class="word-progress" role="presentation"><tr>${stages.map((stage, index) =>
+      `<td class="${index <= current ? "done" : "waiting"}${index === current ? " current" : ""}">
+        <span class="dot">${index <= current ? "●" : "○"}</span><br>${stage}</td>`
+    ).join("")}</tr></table>
+      <div class="progress-result">${escapeHtml(item.previousStage || "-")} → <strong>${escapeHtml(item.stage || "-")}</strong></div>`;
+  }
+
   downloadItemsWordReport = function (items, reportTitle, filename, customFilterLabel = "", groupByAgency = false) {
     if (!items.length) {
       window.alert("Word 보고서로 출력할 법안이 없습니다.");
@@ -33,7 +43,7 @@
         <td class="number">${index + 1}</td>
         <td class="bill-info">${billInfoMarkup(item)}</td>
         <td>${escapeHtml(agency)}<div class="sub">${escapeHtml(item.committee || "위원회 확인 중")}</div></td>
-        <td><strong>${escapeHtml(item.previousStage || "-")} → ${escapeHtml(item.stage || "-")}</strong>
+        <td>${progressMarkup(item)}
           <div class="reference-date">기준일 ${escapeHtml(referenceDate(item))}</div></td>
         <td class="summary-cell">${escapeHtml(summarizeForComparison(item))}</td>
       </tr>`;
@@ -66,6 +76,12 @@
         .bill-title { font-weight:bold; color:#172033; }
         .bill-number,.bill-proposer,.sub,.reference-date { display:block; margin-top:4pt; color:#475569; font-size:8pt; }
         .summary-cell { line-height:1.5; white-space:pre-line; }
+        .word-progress { width:100%; border:0; border-collapse:collapse; table-layout:fixed; }
+        .word-progress td { border:0; border-top:3pt solid #cbd5e1; padding:2pt 0; text-align:center; font-size:6.5pt; color:#94a3b8; }
+        .word-progress td.done { border-top-color:#2563eb; color:#2563eb; font-weight:bold; }
+        .word-progress td.current { background:#eff6ff; color:#1d4ed8; }
+        .word-progress .dot { font-size:9pt; line-height:1; }
+        .progress-result { margin-top:4pt; text-align:center; font-size:8pt; }
         .agency-group td { padding:5pt 7pt; background:#eff6ff; color:#163f70; font-size:10pt; font-weight:bold; }
         .note { margin-top:7pt; color:#64748b; font-size:7.5pt; }
       </style></head><body><div class="WordSection1">
@@ -89,7 +105,7 @@
     const comparisonRows = [
       ["법안 정보", item => billInfoMarkup(item)],
       ["소관기관·위원회", item => `${escapeHtml(item.agency || "-")}<br>${escapeHtml(item.committee || "-")}`],
-      ["진행단계", item => `${escapeHtml(item.previousStage || "-")} → <strong>${escapeHtml(item.stage || "-")}</strong>`],
+      ["진행현황", item => progressMarkup(item)],
       ["기준일", item => escapeHtml(referenceDate(item))],
       ["주요 내용 요약", item => escapeHtml(summarizeForComparison(item)).replace(/\n/g, "<br>")],
       ["차별화 핵심어", item => distinctiveKeywords(item, items).map(escapeHtml).join(", ") || "-"]
@@ -111,6 +127,12 @@
         th,td { border:.75pt solid #64748b; padding:5pt; vertical-align:top; line-height:1.45; word-break:keep-all; }
         thead th { background:#dbeafe; text-align:center; } tbody th { width:11%; background:#f1f5f9; text-align:left; }
         .bill-title { font-weight:bold; } .bill-number,.bill-proposer { display:block; margin-top:4pt; color:#475569; font-size:8pt; }
+        .word-progress { width:100%; border:0; border-collapse:collapse; table-layout:fixed; }
+        .word-progress td { border:0; border-top:3pt solid #cbd5e1; padding:2pt 0; text-align:center; font-size:6.5pt; color:#94a3b8; }
+        .word-progress td.done { border-top-color:#2563eb; color:#2563eb; font-weight:bold; }
+        .word-progress td.current { background:#eff6ff; color:#1d4ed8; }
+        .word-progress .dot { font-size:9pt; line-height:1; }
+        .progress-result { margin-top:4pt; text-align:center; font-size:8pt; }
       </style></head><body><div class="WordSection1">
         <h1>${formatMonth(state.month)} 유사·선택 법안 비교 보고서</h1>
         <p class="meta">비교 법안 ${items.length}건 · 작성일 ${escapeHtml(generatedAt)}</p>
