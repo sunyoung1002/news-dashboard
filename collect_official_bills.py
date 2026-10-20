@@ -1,4 +1,3 @@
-"""국회·법제처 공식 API 결과를 대시보드용 sample-bills.json으로 저장한다."""
 from __future__ import annotations
 
 import json
@@ -154,7 +153,6 @@ SUMMARY_LEADING_CONNECTORS = re.compile(
 
 
 def concise_summary(value):
-    """불필요한 머리말과 잘린 문장을 제거하고 핵심 완결문 2개 이하로 정리한다."""
     text = str(value or "")
     text = re.sub(r"창닫기\s*(?:\[\s*\d+\s*\])?", " ", text, flags=re.I)
     text = re.sub(r"\[\s*\d{5,}\s*\]", " ", text)
@@ -201,7 +199,6 @@ DAILY_COMPARE_FIELDS = {
 
 
 def daily_change_metadata(old, current, today):
-    """직전 수집본과 비교해 오늘 발생한 변동을 표시한다."""
     if not old:
         fields = ["신규 확인"]
         details = [{"label": "신규 확인", "before": "", "after": current.get("billNo") or current.get("title") or "신규 의안"}]
@@ -222,7 +219,6 @@ def daily_change_metadata(old, current, today):
             "dailyChangeDetails": details,
         }
 
-    # 오전 변동 표시는 같은 날 오후 재수집 후에도 유지한다.
     if old.get("dailyChanged") and old.get("dailyChangedDate") == today:
         return {
             "dailyChanged": True,
@@ -468,9 +464,6 @@ def main():
         item.get("billId") or item.get("billNo") or item.get("title")
         for item in items
     }
-    # 계류 목록에서 빠진 대안·처리 법안도 즐겨찾기 상세조회에 계속 필요하다.
-    # 같은 달의 기존 항목을 삭제하지 않고 보존해 제목·의안번호·제안자·주요내용이
-    # '확인 중'으로 되돌아가는 문제를 막는다.
     carried_current = []
     for old_item in old_items:
         old_key = old_item.get("billId") or old_item.get("billNo") or old_item.get("title")
