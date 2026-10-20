@@ -171,7 +171,9 @@
   function todayChangeMarkup(item) {
     const rows = todayChangeRows(item);
     if (!rows.length) return "";
-    return `<section class="favorite-today-change"><h3>오늘 바뀐 항목</h3><ul>${rows.map(row =>
+    const changedDate = item.dailyChangedDate || item.changedDate || "";
+    const heading = changedDate ? `오늘(${changedDate}) 변경 항목` : "오늘 변경 항목";
+    return `<section class="favorite-today-change"><h3>${escapeHtml(heading)}</h3><ul>${rows.map(row =>
       `<li><b>${escapeHtml(row.label)}</b><span>${escapeHtml(row.value)}</span></li>`
     ).join("")}</ul></section>`;
   }
