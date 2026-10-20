@@ -15,11 +15,13 @@
   function progressMarkup(item) {
     const stages = ["접수", "소관위", "법사위", "본회의", "공포·시행"];
     const current = Math.max(0, stages.indexOf(item.stage));
-    return `<table class="word-progress" role="presentation"><tr>${stages.map((stage, index) =>
-      `<td class="${index <= current ? "done" : "waiting"}${index === current ? " current" : ""}">
-        <span class="dot">${index <= current ? "●" : "○"}</span><br>${stage}</td>`
-    ).join("")}</tr></table>
-      <div class="progress-result">${escapeHtml(item.previousStage || "-")} → <strong>${escapeHtml(item.stage || "-")}</strong></div>`;
+    const stateClass = index => index < current ? "past" : index === current ? "current" : "waiting";
+    return `<table class="word-progress" role="presentation">
+      <tr class="progress-bars">${stages.map((_, index) =>
+        `<td class="${stateClass(index)}">&nbsp;</td>`).join("")}</tr>
+      <tr class="progress-labels">${stages.map((stage, index) =>
+        `<td class="${stateClass(index)}">${stage}</td>`).join("")}</tr>
+    </table>`;
   }
 
   downloadItemsWordReport = function (items, reportTitle, filename, customFilterLabel = "", groupByAgency = false) {
@@ -76,12 +78,13 @@
         .bill-title { font-weight:bold; color:#172033; }
         .bill-number,.bill-proposer,.sub,.reference-date { display:block; margin-top:4pt; color:#475569; font-size:8pt; }
         .summary-cell { line-height:1.5; white-space:pre-line; }
-        .word-progress { width:100%; border:0; border-collapse:collapse; table-layout:fixed; }
-        .word-progress td { border:0; border-top:3pt solid #cbd5e1; padding:2pt 0; text-align:center; font-size:6.5pt; color:#94a3b8; }
-        .word-progress td.done { border-top-color:#2563eb; color:#2563eb; font-weight:bold; }
-        .word-progress td.current { background:#eff6ff; color:#1d4ed8; }
-        .word-progress .dot { font-size:9pt; line-height:1; }
-        .progress-result { margin-top:4pt; text-align:center; font-size:8pt; }
+        .word-progress { width:100%; border:0; border-collapse:separate; border-spacing:3pt 0; table-layout:fixed; }
+        .word-progress td { border:0; text-align:center; }
+        .word-progress .progress-bars td { height:4pt; padding:0; background:#e5edf5; font-size:1pt; line-height:1pt; }
+        .word-progress .progress-bars td.past { background:#2878ee; }
+        .word-progress .progress-bars td.current { background:#ed7800; }
+        .word-progress .progress-labels td { padding:4pt 0 0; color:#9aafc5; font-size:6.5pt; white-space:nowrap; }
+        .word-progress .progress-labels td.past,.word-progress .progress-labels td.current { color:#334155; font-weight:bold; }
         .agency-group td { padding:5pt 7pt; background:#eff6ff; color:#163f70; font-size:10pt; font-weight:bold; }
         .note { margin-top:7pt; color:#64748b; font-size:7.5pt; }
       </style></head><body><div class="WordSection1">
@@ -127,12 +130,13 @@
         th,td { border:.75pt solid #64748b; padding:5pt; vertical-align:top; line-height:1.45; word-break:keep-all; }
         thead th { background:#dbeafe; text-align:center; } tbody th { width:11%; background:#f1f5f9; text-align:left; }
         .bill-title { font-weight:bold; } .bill-number,.bill-proposer { display:block; margin-top:4pt; color:#475569; font-size:8pt; }
-        .word-progress { width:100%; border:0; border-collapse:collapse; table-layout:fixed; }
-        .word-progress td { border:0; border-top:3pt solid #cbd5e1; padding:2pt 0; text-align:center; font-size:6.5pt; color:#94a3b8; }
-        .word-progress td.done { border-top-color:#2563eb; color:#2563eb; font-weight:bold; }
-        .word-progress td.current { background:#eff6ff; color:#1d4ed8; }
-        .word-progress .dot { font-size:9pt; line-height:1; }
-        .progress-result { margin-top:4pt; text-align:center; font-size:8pt; }
+        .word-progress { width:100%; border:0; border-collapse:separate; border-spacing:3pt 0; table-layout:fixed; }
+        .word-progress td { border:0; text-align:center; }
+        .word-progress .progress-bars td { height:4pt; padding:0; background:#e5edf5; font-size:1pt; line-height:1pt; }
+        .word-progress .progress-bars td.past { background:#2878ee; }
+        .word-progress .progress-bars td.current { background:#ed7800; }
+        .word-progress .progress-labels td { padding:4pt 0 0; color:#9aafc5; font-size:6.5pt; white-space:nowrap; }
+        .word-progress .progress-labels td.past,.word-progress .progress-labels td.current { color:#334155; font-weight:bold; }
       </style></head><body><div class="WordSection1">
         <h1>${formatMonth(state.month)} 유사·선택 법안 비교 보고서</h1>
         <p class="meta">비교 법안 ${items.length}건 · 작성일 ${escapeHtml(generatedAt)}</p>
