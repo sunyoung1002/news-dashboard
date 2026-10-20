@@ -9,7 +9,7 @@
   }
 
   function referenceDate(item) {
-    return item.dailyChangedDate || item.changedDate || "-";
+    return item.stageDate || item.dailyChangedDate || item.changedDate || "-";
   }
 
   function progressMarkup(item) {
@@ -47,7 +47,7 @@
         <td>${escapeHtml(agency)}<div class="sub">${escapeHtml(item.committee || "위원회 확인 중")}</div></td>
         <td>${progressMarkup(item)}
           <div class="reference-date">기준일 ${escapeHtml(referenceDate(item))}</div></td>
-        <td class="summary-cell">${escapeHtml(summarizeForComparison(item))}</td>
+        <td class="summary-cell">${escapeHtml(summarizeForReport(item))}</td>
       </tr>`;
     }).join("");
 
@@ -90,7 +90,7 @@
       </style></head><body><div class="WordSection1">
         <h1>${escapeHtml(reportTitle)}</h1>
         <p class="meta">조회조건: ${escapeHtml(filters)} · 총 ${items.length.toLocaleString()}건 · 작성일 ${escapeHtml(generatedAt)}</p>
-        <table><colgroup><col style="width:4%"><col style="width:22%"><col style="width:13%"><col style="width:16%"><col style="width:45%"></colgroup>
+        <table><colgroup><col style="width:3.5%"><col style="width:18.5%"><col style="width:13.5%"><col style="width:18%"><col style="width:46.5%"></colgroup>
           <thead><tr><th>번호</th><th>법안 정보</th><th>소관 기관</th><th>진행 현황</th><th>주요내용 요약</th></tr></thead>
           <tbody>${rows}</tbody></table>
         <p class="note">※ 주요내용은 개정 취지와 핵심 내용을 중심으로 완결된 문장으로 정리했습니다.</p>
@@ -110,7 +110,7 @@
       ["소관기관·위원회", item => `${escapeHtml(item.agency || "-")}<br>${escapeHtml(item.committee || "-")}`],
       ["진행현황", item => progressMarkup(item)],
       ["기준일", item => escapeHtml(referenceDate(item))],
-      ["주요 내용 요약", item => escapeHtml(summarizeForComparison(item)).replace(/\n/g, "<br>")],
+      ["주요 내용 요약", item => escapeHtml(summarizeForReport(item)).replace(/\n/g, "<br>")],
       ["차별화 핵심어", item => distinctiveKeywords(item, items).map(escapeHtml).join(", ") || "-"]
     ];
     const rows = comparisonRows.map(([label, renderCell]) =>
