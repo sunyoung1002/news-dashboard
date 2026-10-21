@@ -87,6 +87,7 @@ def fetch_pending_bills(keywords, tracked_bill_numbers):
     if not ASSEMBLY_KEY:
         raise RuntimeError("GitHub Secret ASSEMBLY_API_KEY가 설정되지 않았습니다.")
     matched = {}
+    current_month = datetime.now(KST).strftime("%Y-%m")
     for page in range(1, 301):
         payload = request_json(
             f"{ASSEMBLY_BASE}/{PENDING_API}",
@@ -101,7 +102,8 @@ def fetch_pending_bills(keywords, tracked_bill_numbers):
             bill_id = str(row.get("BILL_ID") or "").strip()
             bill_no = re.sub(r"\D", "", str(row.get("BILL_NO") or ""))
             is_directly_tracked = bill_no in tracked_bill_numbers
-            if bill_id and (category or is_directly_tracked):
+            monthly_proposal = format_date(row.get("PROPOSE_DT")).startswith(current_month)
+            if bill_id and (category or is_directly_tracked or monthly_proposal):
                 row["_CATEGORY"] = category or "직접선택"
                 matched[bill_id] = row
         if len(rows) < 100:
@@ -371,6 +373,10 @@ def make_pending_item(row, old, month, today):
         "agency": agency,
         "committee": committee,
         "proposer": proposer,
+        "proposeDate": format_date(row.get("PROPOSE_DT")) or old.get("proposeDate", ""),
+        "relatedCommitteeReviews": old.get("relatedCommitteeReviews", []),
+        "officialDetailCheckedAt": old.get("officialDetailCheckedAt", ""),
+        "officialDetailCheck": old.get("officialDetailCheck", ""),
         "stage": stage,
         "previousStage": previous_stage,
         "changed": changed,
