@@ -1,9 +1,9 @@
 /* 오늘 변동 표시 + 월간 요약 카드 필터 (기존 app.js를 수정하지 않는 보조 파일) */
 (function () {
   const STAT_FILTERS = {
-    statTotal: { id: "all", label: "선택 월 전체 법안" },
-    statChanged: { id: "changed", label: "이번 달 변동 법안" },
-    statCommittee: { id: "committee", label: "위원회 심사 법안" },
+    statTotal: { id: "all", label: "월 발의 법안" },
+    statChanged: { id: "changed", label: "소관위 법안" },
+    statCommittee: { id: "committee", label: "상임위 법안" },
     statCompleted: { id: "completed", label: "의결·공포 법안" }
   };
   const ALTERNATIVE_TRACKS = [
@@ -340,6 +340,7 @@
   }
 
   function matchesStatFilter(item) {
+    if (window.MonthlyBillUI) return window.MonthlyBillUI.matches(item);
     if (!state.statFilter || state.statFilter === "all") return true;
     if (state.statFilter === "changed") return Boolean(item.changed);
     if (state.statFilter === "committee") return ["소관위", "법사위"].includes(item.stage);
