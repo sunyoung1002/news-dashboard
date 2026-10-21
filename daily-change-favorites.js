@@ -44,8 +44,9 @@
   function applyStatFilter(filterId) {
     clearOrdinaryFilters();
     state.statFilter = filterId;
+    state.committeeFilter = "";
     render();
-    document.querySelector(".results")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (filterId !== "changed") document.querySelector(".results")?.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
   function installStatControls() {
@@ -56,6 +57,7 @@
       number.dataset.statFilter = filter.id;
       number.setAttribute("role", "button");
       number.setAttribute("tabindex", "0");
+      number.closest(".stat-card").style.cursor = "pointer";
       number.setAttribute("aria-label", `${filter.label}만 진행현황에서 보기`);
     });
 
@@ -63,11 +65,11 @@
     if (!stats || stats.dataset.filterBound) return;
     stats.dataset.filterBound = "true";
     stats.addEventListener("click", event => {
-      const number = event.target.closest("[data-stat-filter]");
+      const number = event.target.closest(".stat-card")?.querySelector("[data-stat-filter]");
       if (number) applyStatFilter(number.dataset.statFilter);
     });
     stats.addEventListener("keydown", event => {
-      const number = event.target.closest("[data-stat-filter]");
+      const number = event.target.closest(".stat-card")?.querySelector("[data-stat-filter]");
       if (number && (event.key === "Enter" || event.key === " ")) {
         event.preventDefault();
         applyStatFilter(number.dataset.statFilter);
@@ -250,19 +252,19 @@
   const originalOpenFavoriteDetail = openFavoriteDetail;
   openFavoriteDetail = function (itemId) {
     originalOpenFavoriteDetail(itemId);
-    const item = state.data.find(entry => itemKey(entry) === itemId) || state.favoriteRows.get(itemId);
+    const item = window.MonthlyBillUI.latestItem(itemId);
     const summary = document.querySelector("#favoriteDetailSummary");
-    if (item && summary) summary.textContent = shortBillSummary(item);
+    if (item && summary) {
+      summary.textContent = shortBillSummary(item);
+      document.querySelector("#favoriteDetailTitle").textContent = item.title;
+      document.querySelector("#favoriteDetailMeta").textContent = `${item.agency || "기타"} · ${item.committee || "위원회 확인 중"} · ${item.billNo || "의안번호 확인 중"} · ${item.proposer || "발의자 확인 중"}`;
+    }
     const stageBox = document.querySelector("#favoriteDetailStage");
     if (item && stageBox) {
       const transition = `${item.previousStage || "-"} → ${item.stage || "-"}`;
-      const stageDate = item.stageDate || item.changedDate || "";
-      const present = item.committeePresentDate ? ` · 상정일: ${item.committeePresentDate}` : "";
-      const current = `${item.stage || "-"} · ${stageDate}${item.stage === "소관위" ? present : ""}`;
-      const committeeDate = item.committeeDate || item.committeePresentDate || "";
-      const committee = item.stage !== "소관위" && committeeDate
-        ? `<span>소관위 · ${escapeHtml(committeeDate)}${escapeHtml(present)}</span>` : "";
-      stageBox.innerHTML = `<strong>${escapeHtml(transition)}</strong><span>${escapeHtml(current)}</span>${committee}`;
+      const stageDate = window.MonthlyBillUI.validDate(item.stageDate);
+      const current = item.stage !== "소관위" && stageDate ? `<span>${escapeHtml(item.stage || "진행단계")} · ${escapeHtml(stageDate)}</span>` : "";
+      stageBox.innerHTML = `<strong>${escapeHtml(transition)}</strong>${window.MonthlyBillUI.progressMarkup(item)}${current}${window.MonthlyBillUI.committeeDatesMarkup(item)}`;
     }
     const body = document.querySelector("#favoriteDetailDialog .favorite-detail-body");
     body?.querySelectorAll(".favorite-today-change, .favorite-detail-tracking").forEach(element => element.remove());
