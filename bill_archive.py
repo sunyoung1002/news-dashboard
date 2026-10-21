@@ -17,6 +17,7 @@ FIELDS = [
     "month", "billId", "title", "billNo", "agency", "committee", "proposer",
     "stage", "previousStage", "changed", "changedDate", "stageDate",
     "committeeDate", "committeePresentDate", "change",
+    "proposeDate", "relatedCommitteeReviews", "officialDetailCheckedAt", "officialDetailCheck",
     "processingResult", "summary", "sourceUrl", "archivedAt",
 ]
 
@@ -153,6 +154,10 @@ def read_archive():
         rows = list(csv.DictReader(handle))
     for row in rows:
         row["changed"] = text(row.get("changed")).lower() == "true"
+        try:
+            row["relatedCommitteeReviews"] = json.loads(row.get("relatedCommitteeReviews") or "[]")
+        except (ValueError, TypeError):
+            row["relatedCommitteeReviews"] = []
         row["dailyChanged"] = False
         row["dailyChangedDate"] = ""
         row["dailyChangeFields"] = []
@@ -163,6 +168,8 @@ def read_archive():
 def archive_row(item, archived_at):
     row = {field: item.get(field, "") for field in FIELDS}
     row["changed"] = bool(item.get("changed"))
+    if isinstance(row.get("relatedCommitteeReviews"), list):
+        row["relatedCommitteeReviews"] = json.dumps(row["relatedCommitteeReviews"], ensure_ascii=False)
     row["archivedAt"] = text(item.get("archivedAt")) or archived_at
     return row
 
