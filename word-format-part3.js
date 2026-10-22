@@ -2,12 +2,14 @@
 (function (W) {
   "use strict";
   const { billInfoMarkup, referenceDate, sourceSummary, favoriteSummary, coreKeywords, effectsMarkup, stageDateMarkup, progressMarkup, textUnits, compactTitle, compactSummaryLines, compactDate, compactState, compactEffects } = W;
-  function compactRow(item, number, font) {
+  function compactRow(item, number, font, groupByAgency = false) {
     const columns = [20, 146, 102, 184, 103];
     const line = font + 1.5;
     const summary = compactSummaryLines(item, Math.floor((columns[3] - 6) / font) - 1);
-    const info = [compactTitle(item), item.billNo || "의안번호 확인 중", item.proposer || "발의자 확인 중"];
-    const status = [item.agency || "기타", compactState(item), compactDate(item)].filter(Boolean);
+    const proposer = String(item.proposer || "발의자 확인 중").replace(/\s*(?:등|외)\s*[\d,]+\s*인/g, "").replace(/의원(?=\s*(?:[·ㆍ,]|$))/g, "").replace(/\s+/g, " ").trim();
+    const numberText = String(item.billNo || "").match(/\d{7}/)?.[0] || "확인 중";
+    const info = [compactTitle(item), `${proposer}(의안번호: ${numberText})`];
+    const status = [...(groupByAgency ? [] : [item.agency || "기타"]), compactState(item), compactDate(item)].filter(Boolean);
     const alternative = String(item.alternativeBillNo || item.absorbedBy || "").match(/\d{7}/)?.[0];
     if (alternative) status.push(`대안 ${alternative}`);
     const values = [[String(number)], info, status, summary, compactEffects(item)];
@@ -23,7 +25,7 @@
       const agency = item.agency || "기타";
       if (agency !== previous) number = 0;
       number += 1;
-      const row = compactRow(item, groupByAgency ? number : pages.reduce((n, rows) => n + rows.filter(entry => entry.item).length, 0) + page.filter(entry => entry.item).length + 1, font);
+      const row = compactRow(item, groupByAgency ? number : pages.reduce((n, rows) => n + rows.filter(entry => entry.item).length, 0) + page.filter(entry => entry.item).length + 1, font, groupByAgency);
       let heading = groupByAgency && (agency !== previous || !page.length);
       if (page.length && height + row.height + (heading ? 12 : 0) > 738) {
         pages.push(page); page = []; height = 0; heading = groupByAgency;
