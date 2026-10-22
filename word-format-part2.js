@@ -9,7 +9,7 @@
     return String(item.title || "법안명 확인 중").replace(/\s*일부\s*개정\s*법률안/g, "").replace(/\s+/g, " ").trim();
   }
   function compactSummaryLines(item, limit) {
-    const terms = coreKeywords(item).filter(term => textUnits(term) <= limit - 6);
+    const terms = coreKeywords(item).filter(term => textUnits(term) <= limit - 8);
     let summary = favoriteSummary(item);
     if (textUnits(summary) > limit) {
       let topic = terms.slice(0, 2).join("·");
@@ -18,9 +18,9 @@
     }
     const selected = [];
     terms.forEach(term => {
-      if (selected.length < 3 && textUnits("핵심어: " + [...selected, term].join("·")) <= limit) selected.push(term);
+      if (selected.length < 3 && textUnits("핵심키워드: " + [...selected, term].join("·")) <= limit) selected.push(term);
     });
-    return [summary, `핵심어: ${selected.join("·") || "확인 중"}`];
+    return [summary, `핵심키워드: ${selected.join("·") || "확인 중"}`];
   }
   function compactDate(item) {
     const valid = value => /^\d{4}-\d{2}-\d{2}$/.test(String(value || ""));
@@ -53,7 +53,22 @@
     let text = effectsMarkup(item).replace(/<br\s*\/?\s*>/gi, "\n").replace(/<[^>]*>/g, "");
     text = text.replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&#39;/g, "'").replace(/&quot;/g, '"');
     replacements.forEach(([from, to]) => { text = text.split(from).join(to); });
-    return text.split("\n").filter(Boolean);
+    const values = text.split("\n").filter(Boolean).map(value => value.replace(/^(?:긍정|부정)\s*:\s*/, "").replace(/[.!?]+$/, "").trim());
+    const subject = value => {
+      const noun = value.trim(), code = noun.charCodeAt(noun.length - 1);
+      const particle = code >= 0xac00 && code <= 0xd7a3 && (code - 0xac00) % 28 ? "이" : "가";
+      return noun + particle;
+    };
+    const clause = (value, continuing) => {
+      if (/\s*기대$/.test(value)) return subject(value.replace(/\s*기대$/, "")) + (continuing ? " 기대되며" : " 기대됨");
+      if (/\s*우려$/.test(value)) return subject(value.replace(/\s*우려$/, "")) + (continuing ? " 우려되며" : " 우려됨");
+      if (/\s*필요$/.test(value)) return subject(value.replace(/\s*필요$/, "")) + (continuing ? " 필요하며" : " 필요함");
+      if (/\s*가능$/.test(value)) return subject(value.replace(/\s*가능$/, "")) + (continuing ? " 가능하며" : " 가능함");
+      if (continuing) return value.replace(/됨$/, "되며").replace(/함$/, "하며").replace(/임$/, "이며").replace(/다$/, "며");
+      return value;
+    };
+    if (values[0] === "효과 검토 필요" && values[1] === "부작용 검토 필요") return ["기대효과와 부작용에 대한 추가 검토가 필요함."];
+    return [values.map((value, index) => clause(value, index < values.length - 1)).join(" ") + "."];
   }
   Object.assign(W, { textUnits, compactTitle, compactSummaryLines, compactDate, compactState, compactEffects });
 })(window.LegislationWordParts = window.LegislationWordParts || {});
