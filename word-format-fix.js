@@ -1,7 +1,7 @@
 /* Small loader. Upload word-format-part1.js through part6.js first. */
 (function () {
   "use strict";
-  const release = "20261022-split1";
+  const release = "20261022-single2";
   const base = document.currentScript?.src || new URL("word-format-fix.js", document.baseURI).href;
   const buttons = "#downloadReport,#downloadSelected,#downloadFavorites,#downloadFavoriteCategoryDialog,#downloadFavoriteDetail,#downloadComparison";
   const queued = new WeakSet();
