@@ -39,14 +39,8 @@
     const sorted = groupByAgency ? [...rows].sort((a,b) => String(a.agency || "기타").localeCompare(String(b.agency || "기타"), "ko") || String(a.title || "").localeCompare(String(b.title || ""), "ko")) : rows;
     let font = items.length >= 85 ? 7 : 7.5, pages = compactPages(sorted, groupByAgency, font);
     while (pages.length > 4 && items.length <= 110 && font > 7) { font -= .25; pages = compactPages(sorted, groupByAgency, font); }
-    const parts = Math.ceil(pages.length / 4), files = [];
     const name = filename.replace(/\.docx?$/i, "");
-    for (let i = 0; i < parts; i++) {
-      const xml = compactDocx(pages.slice(i * 4, i * 4 + 4), title, rows.length, font, i + 1, parts);
-      if (parts === 1) { compactZip(xml, `${name}.docx`); return; }
-      files.push({name:`${name}_${i + 1}권.docx`, content:compactZip(xml, "", true)});
-    }
-    compactZip(files, `${name}_분권.zip`);
+    compactZip(compactDocx(pages, title, rows.length, font, 1, 1), `${name}.docx`);
   }
 
   Object.assign(W, { compactZip, downloadCompactFavorites });
