@@ -30,17 +30,17 @@ def is_law(row):
     kind = first(row, "BILL_KIND", "BILL_KND", "BILL_KIND_NM", "BILL_KND_NM", "KIND")
     if kind:
         return "법률" in kind
-    return bool(re.search(r"법률안|법안", first(row, "BILL_NAME")))
+    return bool(re.search(r"법률안|법안", first(row, "BILL_NM", "BILL_NAME")))
 
 
 def normalize(row, old, term, now):
     number = bill_number(row)
-    title = first(row, "BILL_NAME", "BILL_NM", "의안명")
+    title = first(row, "BILL_NM", "BILL_NAME", "의안명")
     if not title:
         raise CollectionError(f"{number}: 의안명이 없어 저장을 중단합니다.")
     today, month = now.strftime("%Y-%m-%d"), now.strftime("%Y-%m")
-    committee = first(row, "CURR_COMMITTEE", "COMMITTEE", "COMMITTEE_NM", "CURR_COMMITTEE_NM") or old.get("committee", "위원회 배정 전")
-    plenary_result = first(row, "PROC_RESULT", "PROC_RESULT_CD", "PROC_RESULT_NM", "BILL_PROC_RESULT", "PLENARY_PROC_RESULT")
+    committee = first(row, "JRCMIT_NM", "CURR_COMMITTEE", "COMMITTEE", "COMMITTEE_NM", "CURR_COMMITTEE_NM") or old.get("committee", "위원회 배정 전")
+    plenary_result = first(row, "RGS_CONF_RSLT", "PROC_RESULT", "PROC_RESULT_CD", "PROC_RESULT_NM", "BILL_PROC_RESULT", "PLENARY_PROC_RESULT")
     result = plenary_result
     result = result or first(row, "CMT_PROC_RESULT_CD", "LAW_PROC_RESULT_CD") or old.get("processingResult", "")
     referral = date(first(row, "COMMITTEE_DT", "CMT_DT")) or old.get("committeeDate", "")
@@ -48,7 +48,7 @@ def normalize(row, old, term, now):
     process = date(first(row, "PROC_DT", "PROC_DATE", "PLENARY_PROC_DT"))
     law_date = date(first(row, "LAW_PRESENT_DT", "LAW_PROC_DT"))
     promulgated = date(first(row, "PROMULGATION_DT", "PROMULG_DT", "PROM_DT")) or old.get("promulgationDate", "")
-    proposal = date(first(row, "PROPOSE_DT", "PROPOSE_DATE", "RCP_DT", "RECEIPT_DT")) or old.get("proposeDate", "")
+    proposal = date(first(row, "PPSL_DT", "PROPOSE_DT", "PROPOSE_DATE", "RCP_DT", "RECEIPT_DT")) or old.get("proposeDate", "")
     if promulgated:
         stage, stage_date = "공포·시행", promulgated
     elif re.search(r"원안가결|수정가결|^가결$|^부결$", plenary_result) or (process and not re.search(r"폐기|철회|만료", result)):
@@ -70,7 +70,7 @@ def normalize(row, old, term, now):
     item = {**old,
         "assemblyTerm": str(term), "billId": first(row, "BILL_ID") or old.get("billId") or f"assembly-{number}",
         "billNo": f"의안번호 {number}", "title": title, "agency": agency, "committee": committee,
-        "proposer": first(row, "PROPOSER", "RST_PROPOSER", "PROPOSER_NM", "REP_PROPOSER") or old.get("proposer", "제안자 확인 중"),
+        "proposer": first(row, "PPSR_NM", "PROPOSER", "RST_PROPOSER", "PROPOSER_NM", "REP_PROPOSER") or old.get("proposer", "제안자 확인 중"),
         "proposeDate": proposal, "billKind": first(row, "BILL_KIND", "BILL_KND", "BILL_KIND_NM", "BILL_KND_NM", "KIND") or ("법률안" if is_law(row) else "기타 의안"),
         "isLaw": is_law(row), "stage": stage, "stageDate": stage_date,
         "committeeDate": referral, "committeePresentDate": present,
