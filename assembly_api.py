@@ -171,15 +171,40 @@ def parse(payload, service):
     return rows, total
 
 
+def select_term(service, term, report, page_size):
+    # ERACO is a label (e.g. 제21대) on the integrated service; AGE is numeric
+    # on older list services. Never intersect two different naming conventions.
+    label = {"ERACO": f"제{term}대"}
+    numeric = {"AGE": str(term)}
+    candidates = [label, numeric, {"ERACO": str(term)}] if service.upper() in ("ALLBILL", "ALLBILLV2") else [numeric, label, {"ERACO": str(term)}]
+    attempts = []
+    report["termQueries"] = attempts
+    for selector in candidates:
+        params = {**selector, "pSize": page_size}
+        rows, total = parse(request(service, {**params, "pIndex": 1}), service)
+        attempt = {"selector": selector, "officialCount": total}
+        attempts.append(attempt)
+        if not rows and not total:
+            attempt["status"] = "empty"
+            continue
+        if not rows or not total:
+            raise CollectionError(f"{service}: 공식 총건수와 첫 페이지 응답이 일치하지 않습니다.")
+        if any(term_of(row) != str(term) for row in rows):
+            attempt["status"] = "wrong-term"
+            continue
+        attempt["status"] = "selected"
+        report["termSelector"] = selector
+        return params, (rows, total)
+    raise CollectionError(f"{service} {term}대: 대수 입력 형식별 조회가 모두 0건이거나 다른 대수였습니다. 대수 필터·서비스 제공 범위 확인 필요. 기존 자료를 유지합니다.")
+
+
 def fetch_all(service, term, report, page_size=100):
-    # Send both documented naming conventions. Validate returned terms: ignored
-    # filters can never silently mix the 21st and 22nd assemblies.
-    params = {"AGE": str(term), "ERACO": str(term), "pSize": page_size}
+    params, preview = select_term(service, term, report, page_size)
     found, raw_count, page, total = {}, 0, 1, None
     fingerprints = set()
     first_numbers = None
     while True:
-        rows, declared = parse(request(service, {**params, "pIndex": page}), service)
+        rows, declared = preview if page == 1 else parse(request(service, {**params, "pIndex": page}), service)
         if total is None:
             total = declared
             report.update(service=service, term=str(term), officialCount=total)
