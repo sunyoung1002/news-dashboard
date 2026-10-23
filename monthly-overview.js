@@ -19,7 +19,7 @@
       return Array.isArray(value) ? value.filter(row => row && typeof row === "object") : [];
     } catch (_) { return []; }
   }
-  function completed(item) { return ["본회의", "공포·시행"].includes(item.stage); }
+  function completed(item) { return Boolean(item.isCompleted) || /가결|부결|폐기|철회|종결|만료/.test(item.processingResult || "") || ["본회의", "공포·시행"].includes(item.stage); }
   function pendingCommittee(item) {
     return ["소관위", "관련위", "관련위 심사"].includes(item.stage) &&
       !/폐기|철회|부결|가결|의결/.test(item.processingResult || "");
@@ -45,8 +45,12 @@
   favoriteItems = function () {
     return [...state.favoriteIds].map(latestItem).filter(Boolean).sort((a, b) => String(a.agency || "기타").localeCompare(String(b.agency || "기타"), "ko") || String(a.title || "").localeCompare(String(b.title || ""), "ko"));
   };
-  function monthItems() { return unique(state.data.filter(item => item.month === state.month)); }
+  function monthItems() {
+    if (window.AssemblyScope?.active()) return window.AssemblyScope.monthItems();
+    return unique(state.data.filter(item => item.month === state.month));
+  }
   function proposedItems() {
+    if (window.AssemblyScope?.active()) return window.AssemblyScope.proposedItems();
     // 과거 월에는 해당 월 스냅샷을 우선 사용하고, 당시 스냅샷이 없을 때만 다른 월의 발의정보를 사용한다.
     const all = unique([...state.data].sort((a, b) => String(a.month).localeCompare(String(b.month))));
     const selected = new Map(all.map(item => [key(item), item]));
@@ -64,10 +68,10 @@
   }
   const originalFilteredItems = filteredItems;
   filteredItems = function () {
-    if (!state.statFilter) return originalFilteredItems();
+    if (!state.statFilter && !window.AssemblyScope?.active()) return originalFilteredItems();
     const rows = state.statFilter === "all" ? proposedItems() : monthItems();
     const query = state.query.toLowerCase();
-    return rows.filter(item => matches(item) &&
+    return rows.filter(item => (!state.statFilter || matches(item)) &&
       (!state.stage || state.stage === item.stage) && (!state.agency || state.agency === item.agency) &&
       (!state.changedOnly || item.changed) && (!state.selectedOnly || state.selectedIds.has(itemKey(item))) &&
       (!state.favoriteOnly || state.favoriteIds.has(itemKey(item))) &&
@@ -77,7 +81,7 @@
   };
   function updateOverview() {
     const rows = monthItems();
-    const labels = { statTotal: `${Number(state.month.split("-")[1])}월 발의 법안`, statChanged: "소관위", statCommittee: "상임위", statCompleted: "의결·공포" };
+    const labels = { statTotal: `${Number(state.month.split("-")[1])}월 ${window.AssemblyScope?.active() ? "접수의안" : "발의 법안"}`, statChanged: "소관위", statCommittee: "상임위", statCompleted: "의결·공포" };
     const counts = { statTotal: proposedItems().length, statChanged: rows.filter(pendingCommittee).length,
       statCommittee: rows.filter(relatedReview).length, statCompleted: rows.filter(completed).length };
     Object.entries(labels).forEach(([id, label]) => {
@@ -88,7 +92,7 @@
       card.querySelector(":scope > span").textContent = label;
       card.querySelector("small")?.remove();
       number.setAttribute("aria-label", `${label} ${counts[id]}건 보기`);
-      if (id === "statTotal") number.title = "공식 발의일이 조회 월에 해당하는 수집 법안 수. 발의일 미확인 자료는 집계에서 제외됩니다.";
+      if (id === "statTotal") number.title = window.AssemblyScope?.active() ? "선택 대수의 전체 의안 중 공식 발의·접수일이 조회 월인 의안 수. 법률안 외 의안과 처리의안도 포함합니다." : "공식 발의일이 조회 월에 해당하는 수집 법안 수. 발의일 미확인 자료는 집계에서 제외됩니다.";
       if (id === "statCommittee") number.title = "소관위 법안 중 공식 관련위 심사정보에 상정일이 있고 처리가 완료되지 않은 법안";
     });
     let panel = document.getElementById("committeeOverview");
@@ -133,4 +137,10 @@
   }
   window.MonthlyBillUI = { committees, proposalDate, reviews, pendingCommittee, relatedReview, committeeLabel,
     monthItems, proposedItems, latestItem, matches, committeeDatesMarkup, progressMarkup, validDate };
+  const scopeScript = document.createElement("script");
+  const scopeUrl = new URL("assembly-browser.js", document.currentScript?.src || document.baseURI);
+  scopeUrl.searchParams.set("v", "20261022-assembly1");
+  scopeScript.src = scopeUrl.href;
+  scopeScript.onerror = () => console.warn("assembly-browser.js를 불러오지 못해 기존 월별 화면을 유지합니다.");
+  document.head.appendChild(scopeScript);
 })();
