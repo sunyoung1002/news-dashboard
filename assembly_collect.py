@@ -70,7 +70,17 @@ def collect(force_history=False, root=ROOT):
             items = []
             for number, row in sorted(master.items()):
                 merged = {**reception[number], **{k: v for k, v in row.items() if v not in (None, "")}}
-                items.append(normalize(merged, old.get(number, {}), term, now))
+                item = normalize(merged, old.get(number, {}), term, now)
+                differences = {}
+                for source, source_audit in record["sources"].items():
+                    fields = source_audit.get("duplicateFieldConflicts", {}).get(number)
+                    if fields:
+                        differences[source] = fields
+                if differences:
+                    item["officialSourceVariants"] = differences
+                else:
+                    item.pop("officialSourceVariants", None)
+                items.append(item)
             processed = sum(item["isCompleted"] for item in items)
             missing_dates = [item["billNo"] for item in items if not item["proposeDate"]]
             if term == "21" and processed == 0:

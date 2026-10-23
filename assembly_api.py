@@ -203,6 +203,8 @@ def fetch_all(service, term, report, page_size=100):
     found, raw_count, page, total = {}, 0, 1, None
     fingerprints = set()
     first_numbers = None
+    duplicates = {}
+    conflicts = {}
     while True:
         rows, declared = preview if page == 1 else parse(request(service, {**params, "pIndex": page}), service)
         if total is None:
@@ -215,7 +217,7 @@ def fetch_all(service, term, report, page_size=100):
                 raise CollectionError(f"{service} {term}대: 마지막 페이지 전에 조회가 중단됐습니다.")
             break
         numbers = [bill_number(row) for row in rows]
-        fingerprint = hashlib.sha256("|".join(numbers).encode()).hexdigest()
+        fingerprint = hashlib.sha256(json.dumps(rows, sort_keys=True, ensure_ascii=False, separators=(",", ":")).encode()).hexdigest()
         if fingerprint in fingerprints:
             raise CollectionError(f"{service} {term}대: 같은 페이지 반복. 페이지 입력조건 확인 필요")
         fingerprints.add(fingerprint)
@@ -225,10 +227,34 @@ def fetch_all(service, term, report, page_size=100):
             if term_of(row) != str(term):
                 raise CollectionError(f"{service}: 대수 필터가 적용되지 않았습니다. AGE/ERACO 명세 확인 필요")
             if number in found:
-                raise CollectionError(f"{service} {term}대: 목록에 중복 의안번호 {number}. 재실행 필요")
-            found[number] = row
+                duplicates[number] = duplicates.get(number, 0) + 1
+                previous = found[number]
+                # A repeated bill number is normalizable data, not proof that
+                # pagination failed. Keep the identity guard and page checks.
+                old_id, new_id = text(previous.get("BILL_ID")), text(row.get("BILL_ID"))
+                if old_id and new_id and old_id != new_id:
+                    report["identityConflictBillNumber"] = number
+                    raise CollectionError(f"{service} {term}대: 같은 의안번호 {number}의 BILL_ID가 서로 다릅니다. 원문 대조 필요")
+                different = {key: [previous[key], value] for key, value in row.items()
+                             if key in previous and previous[key] not in (None, "", [])
+                             and value not in (None, "", []) and previous[key] != value}
+                if different:
+                    details = conflicts.setdefault(number, {})
+                    for key, values in different.items():
+                        options = details.setdefault(key, [])
+                        for value in values:
+                            if value not in options:
+                                options.append(value)
+                # Fill complementary fields. Do not silently overwrite two
+                # conflicting nonempty values with whichever row arrived last.
+                found[number] = {**row, **{key: value for key, value in previous.items() if value not in (None, "", [])}}
+            else:
+                found[number] = dict(row)
         raw_count += len(rows)
-        report.update(pages=page, fetchedCount=raw_count, uniqueCount=len(found))
+        report.update(pages=page, fetchedCount=raw_count, uniqueCount=len(found),
+                      countUnit="officialCount/fetchedCount는 API 행 수, uniqueCount는 중복 통합 후 의안 수",
+                      duplicateRowCount=sum(duplicates.values()), duplicateBillNumbers=sorted(duplicates),
+                      duplicateOccurrences=dict(sorted(duplicates.items())), duplicateFieldConflicts=conflicts)
         if raw_count > total:
             raise CollectionError(f"{service} {term}대: 공식 총건수보다 많은 행이 반환됐습니다.")
         if raw_count == total:
