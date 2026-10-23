@@ -7,6 +7,7 @@ import time
 import urllib.error
 import urllib.parse
 import urllib.request
+import xml.etree.ElementTree as ET
 
 BASE = "https://open.assembly.go.kr/portal/openapi/"
 
@@ -40,6 +41,62 @@ def term_of(row):
     return number[:2]
 
 
+def decode_response(body, service, status, content_type):
+    """Accept official JSON/XML, and keep diagnostic output free of URLs/keys."""
+    value = body.decode("utf-8-sig", errors="replace").strip()
+    try:
+        return json.loads(value)
+    except ValueError:
+        pass
+    if re.search(r"<!doctype\s+html|<html\b", value[:500], re.I):
+        raise CollectionError(f"{service}: HTTP {status}, HTML 안내/차단 페이지. 서비스 제공 상태 확인 필요")
+    try:
+        root = ET.fromstring(value)
+    except ET.ParseError:
+        kind = "HTML 안내/차단 페이지" if re.search(r"<!doctype\s+html|<html\b", value[:500], re.I) else "JSON/XML이 아닌 응답"
+        raise CollectionError(f"{service}: HTTP {status}, {kind}. 서버 주소·서비스 제공 상태 확인 필요") from None
+    tag = lambda node: node.tag.rsplit("}", 1)[-1]
+    codes = [node.text or "" for node in root.iter() if tag(node).upper() == "CODE"]
+    for code in codes:
+        safe_code = re.sub(r"[^A-Za-z0-9_-]", "", code)[:40]
+        if safe_code and safe_code != "INFO-000":
+            return {"RESULT": {"CODE": safe_code}}
+    if tag(root).lower() != service.lower():
+        raise CollectionError(f"{service}: HTTP {status}, 예상하지 못한 XML 응답. 서비스 명세 확인 필요")
+    total = next((node.text for node in root.iter() if tag(node).lower() == "list_total_count"), None)
+    if total is None:
+        raise CollectionError(f"{service}: XML 응답에 공식 총건수가 없습니다.")
+    rows = [{tag(child): child.text or "" for child in node} for node in root if tag(node).lower() == "row"]
+    return {service: [{"head": [{"list_total_count": total}, {"RESULT": {"CODE": "INFO-000"}}]}, {"row": rows}]}
+
+
+def get_response(url):
+    """Use the same Requests client as the existing, working collector."""
+    try:
+        import requests
+    except ImportError:
+        headers = {"Accept": "application/json, application/xml, text/xml", "User-Agent": "news-dashboard/1.1"}
+        try:
+            with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=40) as response:
+                return response.status, response.headers.get("Content-Type", ""), response.read()
+        except urllib.error.HTTPError as error:
+            return error.code, error.headers.get("Content-Type", ""), error.read()
+        except TimeoutError:
+            raise CollectionError("연결 시간 초과") from None
+        except urllib.error.URLError as error:
+            kind = "TLS 인증서/보안 연결 오류" if "SSL" in type(error.reason).__name__.upper() else "DNS 또는 서버 연결 오류"
+            raise CollectionError(kind) from None
+    try:
+        response = requests.get(url, timeout=40)
+        return response.status_code, response.headers.get("Content-Type", ""), response.content
+    except requests.exceptions.SSLError:
+        raise CollectionError("TLS 인증서/보안 연결 오류") from None
+    except requests.exceptions.Timeout:
+        raise CollectionError("연결 시간 초과") from None
+    except requests.exceptions.RequestException:
+        raise CollectionError("DNS 또는 서버 연결 오류") from None
+
+
 def request(service, params):
     if not re.fullmatch(r"[A-Za-z0-9_]+", service):
         raise CollectionError("API 서비스명이 올바르지 않습니다.")
@@ -48,15 +105,31 @@ def request(service, params):
         raise CollectionError("GitHub Secrets의 ASSEMBLY_API_KEY가 필요합니다.")
     query = {"KEY": key, "Type": "json", **params}
     url = BASE + service + "?" + urllib.parse.urlencode(query)
+    last_error = ""
     for attempt in range(3):
         try:
-            with urllib.request.urlopen(url, timeout=40) as response:
-                return json.loads(response.read().decode("utf-8-sig"))
-        except (urllib.error.URLError, ValueError, TimeoutError):
-            if attempt == 2:
-                # Never print exception URLs, which contain the authentication key.
-                raise CollectionError(f"{service}: 연결 또는 JSON 응답 오류. 인증키·서비스 권한 확인 필요") from None
+            status, content_type, body = get_response(url)
+        except CollectionError as error:
+            last_error = f"{service}: {error}"
+        else:
+            if 200 <= status < 300:
+                return decode_response(body, service, status, content_type)
+            # Some errors are returned as official XML even with Type=json.
+            try:
+                payload = decode_response(body, service, status, content_type)
+                code = str(payload.get("RESULT", {}).get("CODE", ""))
+                code = code if re.fullmatch(r"(?:INFO|ERROR)-\d+", code) else ""
+            except (CollectionError, AttributeError):
+                code = ""
+            label = {400: "요청 주소·입력조건 확인 필요", 401: "서비스 인증 확인 필요",
+                     403: "서버 접근 차단 또는 서비스 접근권한 확인 필요",
+                     404: "API 경로 또는 서비스명 확인 필요", 429: "호출량 제한"}.get(status, "국회 서버 응답 오류")
+            last_error = f"{service}: HTTP {status}, {label}" + (f" ({code})" if code else "")
+            if status not in (408, 429) and status < 500:
+                raise CollectionError(last_error) from None
+        if attempt < 2:
             time.sleep(2 * (attempt + 1))
+    raise CollectionError(last_error + ". 잠시 뒤 재실행하거나 표시된 상태를 확인해 주세요.") from None
 
 
 def parse(payload, service):
