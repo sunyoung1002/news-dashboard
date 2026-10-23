@@ -2,8 +2,13 @@ name: update-official-bills
 
 on:
   workflow_dispatch:
+    inputs:
+      refresh_history:
+        description: "21대 자료도 다시 수집·대조 (처음에는 자동 전체 수집)"
+        type: boolean
+        default: false
   schedule:
-    # 한국시간 매일 오전 6시 30분 / 오후 3시
+    # 한국시간 오전 6:30, 오후 3:00
     - cron: "30 21 * * *"
     - cron: "0 6 * * *"
 
@@ -17,7 +22,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 90
     steps:
       - name: 저장소 가져오기
         uses: actions/checkout@v4
@@ -26,28 +31,48 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-          cache: pip
 
-      - name: 라이브러리 설치
+      - name: 기존 수집 라이브러리 설치
         run: pip install -r requirements.txt
 
-      - name: 국회·법제처 공식 데이터 수집
+      - name: 기존 상세·공포 자료 갱신
         env:
           ASSEMBLY_API_KEY: ${{ secrets.ASSEMBLY_API_KEY }}
           MOLEG_OC: ${{ secrets.MOLEG_OC }}
         run: python collect_official_bills.py
 
-      - name: 기존·완료 법안 누계 병합
-        run: python bill_archive.py
+      - name: 21·22대 전체 의안 수집 및 공식 접수목록 대조
+        env:
+          ASSEMBLY_API_KEY: ${{ secrets.ASSEMBLY_API_KEY }}
+          ASSEMBLY_ALL_SERVICE: ${{ vars.ASSEMBLY_ALL_SERVICE || 'ALLBILLV2' }}
+          ASSEMBLY_RECEIPT_SERVICE: ${{ vars.ASSEMBLY_RECEIPT_SERVICE || 'BILLRCP' }}
+          REFRESH_HISTORY: ${{ inputs.refresh_history }}
+        run: |
+          if [ "$REFRESH_HISTORY" = "true" ]; then
+            python assembly_collect.py --refresh-history
+          else
+            python assembly_collect.py
+          fi
 
-      - name: 결과를 GitHub에 저장
+      - name: 수집 대조 결과 보관
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: assembly-collection-audit
+          path: |
+            assembly-audit.json
+            assembly-audit-failed.json
+          if-no-files-found: ignore
+          retention-days: 30
+
+      - name: 검증된 자료만 저장
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add sample-bills.json bill_archive.csv
+          git add sample-bills.json assembly-21.json assembly-22.json assembly-index.json assembly-audit.json
           if git diff --cached --quiet; then
             echo "변경사항이 없습니다."
           else
-            git commit -m "Update official bill status and archive"
+            git commit -m "Update and reconcile assembly catalogs"
             git push
           fi
