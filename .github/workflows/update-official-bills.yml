@@ -87,6 +87,22 @@ jobs:
           echo "### 기존 자료 갱신과 전체 수집 결과" >> "$GITHUB_STEP_SUMMARY"
           echo "기존 자료는 수집·저장했습니다. 21·22대 전체 의안 수집·대조는 실패했으며, 기존 전체 수집본을 유지합니다. 상세 원인은 수집 단계와 감사 파일을 확인해 주세요." >> "$GITHUB_STEP_SUMMARY"
 
+      - name: 누락된 공식 주요내용 보완
+        id: summaries
+        continue-on-error: true
+        run: python restore_bill_summaries.py
+
+      - name: 보완된 주요내용 저장
+        if: ${{ success() && steps.summaries.outcome == 'success' }}
+        run: |
+          for file in sample-bills.json assembly-21.json assembly-22.json summary-backfill-state.json; do
+            if [ -f "$file" ]; then git add -- "$file"; fi
+          done
+          if ! git diff --cached --quiet; then
+            git commit -m "Restore official bill summaries"
+            git push
+          fi
+
       - name: 수집 대조 결과 보관
         if: always()
         continue-on-error: true
