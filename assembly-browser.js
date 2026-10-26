@@ -112,20 +112,16 @@
     const month = document.querySelector("#monthSelect");
     if (!month || !month.options.length) return;
     installed = true;
-    const label = document.createElement("label");
-    label.textContent = "국회 대수 ";
     const select = document.createElement("select"); select.id = "assemblyTermSelect"; select.setAttribute("aria-label", "국회 대수 선택");
     for (const term of ["22", "21"]) {
       const option = document.createElement("option"); option.value = term; option.textContent = `${term}대`; select.appendChild(option);
     }
-    label.appendChild(select);
-    month.parentElement.insertAdjacentElement("beforebegin", label);
     const note = document.createElement("p"); note.id = "assemblyCollectionNote"; note.setAttribute("role", "status");
     note.style.cssText = "font-size:12px;color:#52647a;margin:8px 0;line-height:1.5";
     document.querySelector(".stats")?.insertAdjacentElement("beforebegin", note);
     select.addEventListener("change", event => loadTerm(event.target.value));
     const audit = document.createElement("a"); audit.href = urlFor("assembly-audit.json"); audit.textContent = "수집 대조 결과"; audit.target = "_blank"; audit.rel = "noopener"; audit.style.fontSize = "12px"; audit.hidden = true;
-    label.insertAdjacentElement("afterend", audit);
+    month.parentElement.insertAdjacentElement("afterend", audit);
     try {
       const response = await fetch(urlFor("assembly-index.json"), { cache: "no-store" });
       if (!response.ok) throw new Error("전체 의안 수집본 준비 전입니다. 기존 자료를 표시합니다.");
