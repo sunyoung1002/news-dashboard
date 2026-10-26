@@ -2,9 +2,15 @@ name: update-official-bills
 
 on:
   workflow_dispatch:
+    inputs:
+      refresh_history:
+        description: "21대 자료도 다시 수집·대조 (처음에는 자동 전체 수집)"
+        type: boolean
+        default: false
   schedule:
-    # 매일 오전 6시 30분(한국시간) = 전날 21시 30분(UTC)
+    # 한국시간 오전 6:30, 오후 3:00
     - cron: "30 21 * * *"
+    - cron: "0 6 * * *"
 
 permissions:
   contents: write
@@ -16,7 +22,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 90
     steps:
       - name: 저장소 가져오기
         uses: actions/checkout@v4
@@ -25,25 +31,70 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-          cache: pip
 
-      - name: 라이브러리 설치
+      - name: 기존 수집 라이브러리 설치
         run: pip install -r requirements.txt
 
-      - name: 국회·법제처 공식 데이터 수집
+      - name: 기존 상세·공포 자료 갱신
+        id: current
         env:
           ASSEMBLY_API_KEY: ${{ secrets.ASSEMBLY_API_KEY }}
           MOLEG_OC: ${{ secrets.MOLEG_OC }}
         run: python collect_official_bills.py
 
-      - name: 결과를 GitHub에 저장
+      - name: 기존 갱신 자료 먼저 저장
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add sample-bills.json
+          git add -- sample-bills.json
           if git diff --cached --quiet; then
-            echo "변경사항이 없습니다."
+            echo "기존 자료의 변경사항이 없습니다."
           else
             git commit -m "Update official bill status"
             git push
           fi
+
+      - name: 21·22대 전체 의안 수집 및 공식 접수목록 대조
+        id: catalogs
+        continue-on-error: true
+        env:
+          ASSEMBLY_API_KEY: ${{ secrets.ASSEMBLY_API_KEY }}
+          ASSEMBLY_ALL_SERVICE: ${{ vars.ASSEMBLY_ALL_SERVICE || 'ALLBILLV2' }}
+          ASSEMBLY_RECEIPT_SERVICE: ${{ vars.ASSEMBLY_RECEIPT_SERVICE || 'BILLRCP' }}
+          REFRESH_HISTORY: ${{ inputs.refresh_history }}
+        run: |
+          if [ "$REFRESH_HISTORY" = "true" ]; then
+            python assembly_collect.py --refresh-history
+          else
+            python assembly_collect.py
+          fi
+
+      - name: 검증 완료된 전체 의안 자료만 저장
+        if: ${{ success() && steps.catalogs.outcome == 'success' }}
+        run: |
+          git add -- assembly-21.json assembly-22.json assembly-index.json assembly-audit.json
+          if git diff --cached --quiet; then
+            echo "전체 의안 자료의 변경사항이 없습니다."
+          else
+            git commit -m "Update and reconcile assembly catalogs"
+            git push
+          fi
+
+      - name: 전체 의안 수집 오류 별도 안내
+        if: ${{ success() && steps.catalogs.outcome == 'failure' }}
+        run: |
+          echo "::warning::21·22대 전체 의안 수집은 실패했습니다. 앞서 갱신한 기존 자료는 저장됐습니다. 전체 수집 완료를 의미하지 않습니다."
+          echo "### 기존 자료 갱신과 전체 수집 결과" >> "$GITHUB_STEP_SUMMARY"
+          echo "기존 자료는 수집·저장했습니다. 21·22대 전체 의안 수집·대조는 실패했으며, 기존 전체 수집본을 유지합니다. 상세 원인은 수집 단계와 감사 파일을 확인해 주세요." >> "$GITHUB_STEP_SUMMARY"
+
+      - name: 수집 대조 결과 보관
+        if: always()
+        continue-on-error: true
+        uses: actions/upload-artifact@v4
+        with:
+          name: assembly-collection-audit
+          path: |
+            assembly-audit.json
+            assembly-audit-failed.json
+          if-no-files-found: ignore
+          retention-days: 30
