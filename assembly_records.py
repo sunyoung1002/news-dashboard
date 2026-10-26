@@ -15,6 +15,11 @@ AGENCIES = [
 FINAL = re.compile(r"가결|부결|폐기|철회|의결|승인|채택|동의|종결|만료")
 
 
+def usable_summary(value):
+    content = text(value)
+    return len(content) >= 12 and not re.search(r"확인\s*중|내용.*없습니다|조회.*실패", content)
+
+
 def date(value):
     digits = re.sub(r"\D", "", text(value))
     if len(digits) != 8:
@@ -65,8 +70,11 @@ def normalize(row, old, term, now):
     # Preserve explicitly established ministry assignments on existing records.
     if old.get("agency") and old.get("agency") != old.get("committee"):
         agency = old["agency"]
-    summary = first(row, "BILL_SUMMARY", "SUMMARY", "MAJOR_CONTENTS", "PROPOSE_REASON")
-    summary = old.get("summary") or summary or "공식 제안이유 및 주요내용을 확인 중입니다."
+    summary = next((text(row.get(k)) for k in (
+        "BILL_SUMMARY", "SUMMARY", "MAJOR_CONTENTS", "PROPOSE_REASON",
+        "BILL_CONTENTS", "CONTENTS", "제안이유및주요내용", "제안이유 및 주요내용", "주요내용"
+    ) if usable_summary(row.get(k))), "")
+    summary = summary or (old.get("summary") if usable_summary(old.get("summary")) else "")
     item = {**old,
         "assemblyTerm": str(term), "billId": first(row, "BILL_ID") or old.get("billId") or f"assembly-{number}",
         "billNo": f"의안번호 {number}", "title": title, "agency": agency, "committee": committee,
@@ -104,4 +112,6 @@ def index_existing(items):
             previous = result.get(number[0], {})
             # Missing values in list responses must not erase previously collected detail.
             result[number[0]] = {**previous, **{k: v for k, v in item.items() if v not in ("", None, [])}}
+            if usable_summary(previous.get("summary")) and not usable_summary(item.get("summary")):
+                result[number[0]]["summary"] = previous["summary"]
     return result

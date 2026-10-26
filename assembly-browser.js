@@ -109,6 +109,15 @@
         const payload = await response.json();
         if (!Array.isArray(payload.items) || payload.assemblyTerm !== term || payload.updatedAt !== record.checkedAt || payload.items.length !== record.count || payload.items.some(item => termOf(item) !== term) || new Set(payload.items.map(billNo)).size !== record.count) throw new Error(`${term}대 수집 파일과 검증 목록이 일치하지 않습니다. 새로고침해 주세요.`);
         catalogs.set(term, payload.items);
+        // Recover known content from earlier snapshots without a per-card scan.
+        const knownSummaries = new Map();
+        const usableSummary = value => String(value || "").trim().length >= 12 && !/확인\s*중|내용.*없습니다|조회.*실패/.test(String(value));
+        for (const item of state.data) {
+          if (usableSummary(item.summary) && billNo(item)) knownSummaries.set(billNo(item), item.summary);
+        }
+        for (const item of payload.items) {
+          if (!usableSummary(item.summary) && knownSummaries.has(billNo(item))) item.summary = knownSummaries.get(billNo(item));
+        }
         // Preserve snapshots and stored favorite IDs. Put current metadata first
         // for existing detail handlers that resolve a row with Array.find().
         state.data = [...payload.items, ...state.data];
