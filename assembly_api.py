@@ -234,6 +234,20 @@ def fetch_all(service, term, report, page_size=100):
                 old_id, new_id = text(previous.get("BILL_ID")), text(row.get("BILL_ID"))
                 if old_id and new_id and old_id != new_id:
                     report["identityConflictBillNumber"] = number
+                    # Retain public identity fields so the conflicting records can
+                    # be compared without exposing request URLs or API credentials.
+                    identity_fields = (
+                        "BILL_NO", "BILL_NUMBER", "의안번호", "BILL_ID",
+                        "AGE", "ERACO", "DAESU", "대수",
+                        "BILL_NM", "BILL_NAME", "의안명",
+                        "PPSL_DT", "PROPOSE_DT", "제안일자",
+                        "LINK_URL", "DETAIL_LINK", "BILL_URL", "URL",
+                        "PROPOSER", "PPSR_NM", "RPRS_PPSR_NM",
+                    )
+                    report["identityConflictRows"] = [
+                        {key: candidate[key] for key in identity_fields if key in candidate}
+                        for candidate in (previous, row)
+                    ]
                     raise CollectionError(f"{service} {term}대: 같은 의안번호 {number}의 BILL_ID가 서로 다릅니다. 원문 대조 필요")
                 different = {key: [previous[key], value] for key, value in row.items()
                              if key in previous and previous[key] not in (None, "", [])
