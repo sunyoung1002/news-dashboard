@@ -41,6 +41,33 @@ def term_of(row):
     return number[:2]
 
 
+def related_procedure_pair(left, right):
+    """Recognize only a linked PRC/GOV pair, without guessing procedure type."""
+    a = re.fullmatch(r"(PRC|GOV)_([A-Za-z0-9]+)", first(left, "BILL_ID"))
+    b = re.fullmatch(r"(PRC|GOV)_([A-Za-z0-9]+)", first(right, "BILL_ID"))
+    if not a or not b or {a[1], b[1]} != {"PRC", "GOV"} or a[2] != b[2]:
+        return False
+    title = first(left, "BILL_NM", "BILL_NAME", "의안명")
+    other = first(right, "BILL_NM", "BILL_NAME", "의안명")
+    return (bool(title) and title == other and bill_number(left) == bill_number(right)
+            and term_of(left) == term_of(right))
+
+
+def merge_procedure_pair(left, right):
+    # PRC retains its proposal fields; GOV data never fills proposal/status fields.
+    original = left if first(left, "BILL_ID").startswith("PRC_") else right
+    records = []
+    for candidate in (left, right):
+        source_rows = candidate.get("_PROCEDURE_RECORDS") or [candidate]
+        for record in source_rows:
+            raw = {k: v for k, v in record.items() if not k.startswith("_")}
+            if raw not in records:
+                records.append(raw)
+    return {**original, "_PROCEDURE_RECORDS": sorted(
+        records, key=lambda row: (not first(row, "BILL_ID").startswith("PRC_"),
+                                  first(row, "BILL_ID"), json.dumps(row, sort_keys=True, ensure_ascii=False)))}
+
+
 def decode_response(body, service, status, content_type):
     """Accept official JSON/XML, and keep diagnostic output free of URLs/keys."""
     value = body.decode("utf-8-sig", errors="replace").strip()
@@ -232,6 +259,12 @@ def fetch_all(service, term, report, page_size=100):
                 # A repeated bill number is normalizable data, not proof that
                 # pagination failed. Keep the identity guard and page checks.
                 old_id, new_id = text(previous.get("BILL_ID")), text(row.get("BILL_ID"))
+                if old_id and new_id and old_id != new_id and related_procedure_pair(previous, row):
+                    found[number] = merge_procedure_pair(previous, row)
+                    report.setdefault("relatedProcedureBillNumbers", [])
+                    if number not in report["relatedProcedureBillNumbers"]:
+                        report["relatedProcedureBillNumbers"].append(number)
+                    continue
                 if old_id and new_id and old_id != new_id:
                     report["identityConflictBillNumber"] = number
                     # Retain public identity fields so the conflicting records can
@@ -261,7 +294,11 @@ def fetch_all(service, term, report, page_size=100):
                                 options.append(value)
                 # Fill complementary fields. Do not silently overwrite two
                 # conflicting nonempty values with whichever row arrived last.
-                found[number] = {**row, **{key: value for key, value in previous.items() if value not in (None, "", [])}}
+                if previous.get("_PROCEDURE_RECORDS") and new_id.startswith("GOV_"):
+                    # Repeated GOV rows belong to the retained procedure history.
+                    found[number] = merge_procedure_pair(previous, row)
+                else:
+                    found[number] = {**row, **{key: value for key, value in previous.items() if value not in (None, "", [])}}
             else:
                 found[number] = dict(row)
         raw_count += len(rows)
