@@ -80,12 +80,29 @@
       .trim();
   }
 
+  let titleIndex = null, indexedData = null, indexedLength = -1;
+  let indexedFavorites = null, indexedFavoriteCount = -1;
+  function alternativeTitleIndex() {
+    if (titleIndex && indexedData === state.data && indexedLength === state.data.length &&
+        indexedFavorites === state.favoriteRows && indexedFavoriteCount === state.favoriteRows.size) return titleIndex;
+    indexedData = state.data; indexedLength = state.data.length;
+    indexedFavorites = state.favoriteRows; indexedFavoriteCount = state.favoriteRows.size;
+    titleIndex = new Map();
+    const unique = new Map();
+    for (const row of state.data) unique.set(itemKey(row), row);
+    for (const row of state.favoriteRows.values()) unique.set(itemKey(row), row);
+    for (const row of unique.values()) {
+      const base = normalizedBillBaseTitle(row);
+      if (!titleIndex.has(base)) titleIndex.set(base, []);
+      titleIndex.get(base).push(row);
+    }
+    return titleIndex;
+  }
+
   function dynamicAlternativeTrackFor(item) {
     const baseTitle = normalizedBillBaseTitle(item);
     if (!baseTitle) return null;
-    const rows = [...state.data, ...state.favoriteRows.values()];
-    const unique = [...new Map(rows.map(row => [itemKey(row), row])).values()];
-    const sameTitle = unique.filter(row => normalizedBillBaseTitle(row) === baseTitle);
+    const sameTitle = alternativeTitleIndex().get(baseTitle) || [];
     const alternatives = sameTitle.filter(row => /\(대안\)/.test(String(row.title || "")));
     const discarded = sameTitle.filter(row =>
       !/\(대안\)/.test(String(row.title || "")) &&
@@ -286,6 +303,8 @@
 
   const originalRenderCards = renderCards;
   renderCards = function (items) {
+    // Refresh once per rendered page, including in-place metadata edits.
+    titleIndex = null;
     originalRenderCards(items);
     document.querySelectorAll("#billList .bill-card").forEach((card, index) => {
       const summary = card.querySelector(".summary");
