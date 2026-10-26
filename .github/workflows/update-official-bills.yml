@@ -36,12 +36,27 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: 기존 상세·공포 자료 갱신
+        id: current
         env:
           ASSEMBLY_API_KEY: ${{ secrets.ASSEMBLY_API_KEY }}
           MOLEG_OC: ${{ secrets.MOLEG_OC }}
         run: python collect_official_bills.py
 
+      - name: 기존 갱신 자료 먼저 저장
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- sample-bills.json
+          if git diff --cached --quiet; then
+            echo "기존 자료의 변경사항이 없습니다."
+          else
+            git commit -m "Update official bill status"
+            git push
+          fi
+
       - name: 21·22대 전체 의안 수집 및 공식 접수목록 대조
+        id: catalogs
+        continue-on-error: true
         env:
           ASSEMBLY_API_KEY: ${{ secrets.ASSEMBLY_API_KEY }}
           ASSEMBLY_ALL_SERVICE: ${{ vars.ASSEMBLY_ALL_SERVICE || 'ALLBILLV2' }}
@@ -54,8 +69,27 @@ jobs:
             python assembly_collect.py
           fi
 
+      - name: 검증 완료된 전체 의안 자료만 저장
+        if: ${{ success() && steps.catalogs.outcome == 'success' }}
+        run: |
+          git add -- assembly-21.json assembly-22.json assembly-index.json assembly-audit.json
+          if git diff --cached --quiet; then
+            echo "전체 의안 자료의 변경사항이 없습니다."
+          else
+            git commit -m "Update and reconcile assembly catalogs"
+            git push
+          fi
+
+      - name: 전체 의안 수집 오류 별도 안내
+        if: ${{ success() && steps.catalogs.outcome == 'failure' }}
+        run: |
+          echo "::warning::21·22대 전체 의안 수집은 실패했습니다. 앞서 갱신한 기존 자료는 저장됐습니다. 전체 수집 완료를 의미하지 않습니다."
+          echo "### 기존 자료 갱신과 전체 수집 결과" >> "$GITHUB_STEP_SUMMARY"
+          echo "기존 자료는 수집·저장했습니다. 21·22대 전체 의안 수집·대조는 실패했으며, 기존 전체 수집본을 유지합니다. 상세 원인은 수집 단계와 감사 파일을 확인해 주세요." >> "$GITHUB_STEP_SUMMARY"
+
       - name: 수집 대조 결과 보관
         if: always()
+        continue-on-error: true
         uses: actions/upload-artifact@v4
         with:
           name: assembly-collection-audit
@@ -64,15 +98,3 @@ jobs:
             assembly-audit-failed.json
           if-no-files-found: ignore
           retention-days: 30
-
-      - name: 검증된 자료만 저장
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add sample-bills.json assembly-21.json assembly-22.json assembly-index.json assembly-audit.json
-          if git diff --cached --quiet; then
-            echo "변경사항이 없습니다."
-          else
-            git commit -m "Update and reconcile assembly catalogs"
-            git push
-          fi
