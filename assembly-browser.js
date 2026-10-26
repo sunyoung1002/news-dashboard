@@ -8,6 +8,41 @@
   const urlFor = name => new URL(name, scriptBase).href;
   const billNo = item => String(item.billNo || "").match(/\d{7}/)?.[0] || "";
   const termOf = item => String(item.assemblyTerm || billNo(item).slice(0, 2));
+  // Limit live cards, not the filtered dataset used for counts and reports.
+  const pageSize = 100;
+  let pageRows = [], pageOffset = 0;
+  const originalRenderCards = renderCards;
+  function paintPage() {
+    const host = document.getElementById("billList");
+    originalRenderCards(pageRows.slice(pageOffset, pageOffset + pageSize));
+    if (!host) return;
+    let pager = document.getElementById("billListPagination");
+    if (!pager) {
+      pager = document.createElement("nav");
+      pager.id = "billListPagination";
+      pager.setAttribute("aria-label", "법안 목록 페이지");
+      pager.style.cssText = "display:flex;gap:12px;align-items:center;justify-content:center;margin:16px 0;flex-wrap:wrap";
+      const previous = document.createElement("button");
+      previous.type = "button"; previous.className = "secondary-button"; previous.textContent = "이전 100건";
+      const status = document.createElement("span"); status.setAttribute("aria-live", "polite");
+      const next = document.createElement("button");
+      next.type = "button"; next.className = "secondary-button"; next.textContent = "다음 100건";
+      pager.append(previous, status, next);
+      previous.addEventListener("click", () => { pageOffset = Math.max(0, pageOffset - pageSize); paintPage(); host.scrollIntoView({ block: "start" }); });
+      next.addEventListener("click", () => { pageOffset = Math.min(Math.floor((pageRows.length - 1) / pageSize) * pageSize, pageOffset + pageSize); paintPage(); host.scrollIntoView({ block: "start" }); });
+      host.insertAdjacentElement("afterend", pager);
+    }
+    pager.hidden = pageRows.length <= pageSize;
+    pager.style.display = pager.hidden ? "none" : "flex";
+    pager.children[0].disabled = pageOffset === 0;
+    pager.children[1].textContent = pageRows.length ? `${(pageOffset + 1).toLocaleString()}–${Math.min(pageOffset + pageSize, pageRows.length).toLocaleString()} / 전체 ${pageRows.length.toLocaleString()}건` : "0건";
+    pager.children[2].disabled = pageOffset + pageSize >= pageRows.length;
+  }
+  renderCards = function (items) {
+    if (items.length !== pageRows.length || items.some((item, index) => item !== pageRows[index])) pageOffset = 0;
+    pageRows = items;
+    paintPage();
+  };
   const currentMonth = () => manifest?.terms?.[selectedTerm]?.checkedAt?.slice(0, 7) || "";
   const final = item => Boolean(item.isCompleted) || /가결|부결|폐기|철회|종결|만료/.test(item.processingResult || "");
   const active = () => catalogs.has(selectedTerm);
@@ -120,14 +155,11 @@
     note.style.cssText = "font-size:12px;color:#52647a;margin:8px 0;line-height:1.5";
     document.querySelector(".stats")?.insertAdjacentElement("beforebegin", note);
     select.addEventListener("change", event => loadTerm(event.target.value));
-    const audit = document.createElement("a"); audit.href = urlFor("assembly-audit.json"); audit.textContent = "수집 대조 결과"; audit.target = "_blank"; audit.rel = "noopener"; audit.style.fontSize = "12px"; audit.hidden = true;
-    month.parentElement.insertAdjacentElement("afterend", audit);
     try {
       const response = await fetch(urlFor("assembly-index.json"), { cache: "no-store" });
       if (!response.ok) throw new Error("전체 의안 수집본 준비 전입니다. 기존 자료를 표시합니다.");
       manifest = await response.json();
       if (manifest.schemaVersion !== 1 || !manifest.terms) throw new Error("수집 목록 형식을 확인해 주세요.");
-      audit.hidden = false;
       await loadTerm("22");
     } catch (error) {
       notice = error.message; select.disabled = true; paintNotice();
