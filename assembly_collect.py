@@ -10,7 +10,7 @@ from collections import Counter
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from assembly_api import CollectionError, atomic_json, fetch_all, reconcile
+from assembly_api import CollectionError, atomic_json, fetch_all, reconcile, related_procedure_pair
 from assembly_records import index_existing, normalize
 
 ROOT = Path(__file__).resolve().parent
@@ -69,8 +69,23 @@ def collect(force_history=False, root=ROOT):
             old = index_existing(existing + previous.get("items", []))
             items = []
             for number, row in sorted(master.items()):
-                merged = {**reception[number], **{k: v for k, v in row.items() if v not in (None, "")}}
+                receipt = reception[number]
+                # A linked GOV reception row must not overwrite missing original
+                # proposal fields or supply a result for a different procedure.
+                linked = related_procedure_pair(row, receipt)
+                merged = dict(row) if linked else {**receipt, **{k: v for k, v in row.items() if v not in (None, "")}}
+                if linked and str(receipt.get("BILL_ID", "")).startswith("PRC_"):
+                    merged = dict(receipt)
                 item = normalize(merged, old.get(number, {}), term, now)
+                history = []
+                for source, candidate in ((master_service, row), (receipt_service, receipt)):
+                    for raw in candidate.get("_PROCEDURE_RECORDS", [candidate] if linked else []):
+                        entry = {"source": source, "record": {k: v for k, v in raw.items() if not k.startswith("_")}}
+                        if entry not in history:
+                            history.append(entry)
+                if history:
+                    item["officialProcedureHistory"] = history
+                    item["officialProcedureHistoryNote"] = "동일 의안번호의 관련 원본 기록 보존. 절차 종류와 시간순 현재 상태는 별도 원문 확인 필요."
                 differences = {}
                 for source, source_audit in record["sources"].items():
                     fields = source_audit.get("duplicateFieldConflicts", {}).get(number)
@@ -83,8 +98,11 @@ def collect(force_history=False, root=ROOT):
                 items.append(item)
             processed = sum(item["isCompleted"] for item in items)
             missing_dates = [item["billNo"] for item in items if not item["proposeDate"]]
+            # List completeness and availability of final outcomes are distinct.
+            # Missing outcomes stay blank and never imply pending/completed.
+            record["missingProcessingResultCount"] = sum(not item.get("processingResult") for item in items)
             if term == "21" and processed == 0:
-                raise CollectionError("21대 처리결과가 모두 비어 있습니다. 전체·처리의안 제공 범위 확인 필요")
+                record["processingResultWarning"] = "처리결과로 완료 여부를 확인할 수 없습니다. 목록 대조는 완료했으며 결과는 추정하지 않습니다."
             record.update(status="verified", count=len(items), processedCount=processed,
                           unknownProposalDateCount=len(missing_dates), unknownProposalDateBills=missing_dates)
             staged[term] = {"schemaVersion": VERSION, "assemblyTerm": term,
