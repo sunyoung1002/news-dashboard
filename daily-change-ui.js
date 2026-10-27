@@ -302,25 +302,45 @@
   };
 
   const originalRenderCards = renderCards;
+  function officialBillUrl(item) {
+    const source = String(item.sourceUrl || "");
+    if (/^https?:\/\//i.test(source)) return source;
+    const id = String(item.billId || "");
+    return /^(?:PRC|GOV)_[A-Za-z0-9]+$/.test(id)
+      ? `https://likms.assembly.go.kr/bill/billDetail.do?billId=${encodeURIComponent(id)}` : "";
+  }
+
+  function updateMainCard(card, item) {
+    const summary = card.querySelector(".summary");
+    if (summary) {
+      const content = cleanBillSummary(item);
+      const missing = !content || /확인\s*중|내용.*없습니다|조회.*실패/.test(content);
+      summary.textContent = missing ? "주요내용 미수집 · 법안 제목을 눌러 공식 원문 확인" : shortBillSummary(item).replace(/\s+/g, " ").trim();
+      summary.title = missing ? "" : content;
+      summary.style.cssText += ";display:block;-webkit-line-clamp:unset;line-clamp:unset;white-space:nowrap;overflow-x:auto;overflow-y:hidden;max-width:100%;min-width:0;text-overflow:clip";
+    }
+    const title = card.querySelector(".bill-title");
+    const url = officialBillUrl(item);
+    if (title && url) {
+      const link = document.createElement("a");
+      link.href = url;
+      link.textContent = item.title;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.title = "공식 원문 보기";
+      link.style.cssText = "color:inherit;text-decoration:underline;text-underline-offset:3px";
+      title.textContent = "";
+      title.appendChild(link);
+    }
+    // Only remove the source action in main cards; detail dialogs keep theirs.
+    if (url) card.querySelector(".card-actions .source-link")?.remove();
+  }
   renderCards = function (items) {
     // Refresh once per rendered page, including in-place metadata edits.
     titleIndex = null;
     originalRenderCards(items);
     document.querySelectorAll("#billList .bill-card").forEach((card, index) => {
-      const summary = card.querySelector(".summary");
-      if (summary && items[index]) summary.textContent = shortBillSummary(items[index]);
-      if (summary && items[index] && (!items[index].summary || /확인\s*중/.test(items[index].summary))) {
-        summary.textContent = "주요내용 원문: ";
-        const link = document.createElement("a");
-        link.textContent = "제안이유 및 주요내용 보기";
-        const id = String(items[index].billId || "");
-        const source = String(items[index].sourceUrl || "");
-        link.href = /^(?:PRC|GOV)_[A-Za-z0-9]+$/.test(id)
-          ? `https://likms.assembly.go.kr/bill/bi/popup/billSummary.do?billId=${encodeURIComponent(id)}`
-          : /^https:\/\/likms\.assembly\.go\.kr\//.test(source) ? source : "https://likms.assembly.go.kr/bill/";
-        link.target = "_blank"; link.rel = "noopener noreferrer";
-        summary.appendChild(link);
-      }
+      if (items[index]) updateMainCard(card, items[index]);
       const trackBox = items[index] ? alternativeTrackingMarkup(items[index]) : "";
       if (trackBox) card.querySelector(".card-footer")?.insertAdjacentHTML("beforebegin", trackBox);
     });
