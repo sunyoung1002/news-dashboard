@@ -133,7 +133,11 @@
       selectedTerm = term;
       state.assemblyTerm = term;
       const updated = document.getElementById("updatedAt");
-      if (updated) updated.textContent = `기준일 ${record.checkedAt}`;
+      if (updated) {
+        updated.textContent = `기준일 ${record.checkedAt}`;
+        updated.style.visibility = "visible";
+        updated.title = "전체 의안 목록의 실제 확인 시각입니다.";
+      }
       state.committeeFilter = "";
       state.statFilter = "all";
       document.querySelectorAll(".stat-card").forEach(card => card.classList.toggle("active", Boolean(card.querySelector("#statTotal"))));
@@ -148,6 +152,8 @@
       busy = false;
       if (control) control.disabled = false;
       paintNotice();
+      const updated = document.getElementById("updatedAt");
+      if (updated) updated.style.visibility = "visible";
     }
   }
 
@@ -172,9 +178,16 @@
       await loadTerm("22");
     } catch (error) {
       notice = error.message; select.disabled = true; paintNotice();
+      const updated = document.getElementById("updatedAt");
+      if (updated) updated.style.visibility = "visible";
     }
   }
   const previousRender = render;
-  render = function () { previousRender(); paintNotice(); if (!installed) install(); };
+  render = function () {
+    previousRender();
+    window.MonthlyBillUI?.refreshOverview?.();
+    paintNotice();
+    if (!installed) install();
+  };
   if (state.data.length) install();
 })();

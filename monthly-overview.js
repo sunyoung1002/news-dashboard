@@ -136,10 +136,11 @@
       `<li class="${index < current ? "past" : index === current ? "current" : "waiting"}"${index === current ? ' aria-current="step"' : ""}><i aria-hidden="true">${index < current ? "✓" : index + 1}</i><span>${stage}</span></li>`).join("")}</ol>`;
   }
   window.MonthlyBillUI = { committees, proposalDate, reviews, pendingCommittee, relatedReview, committeeLabel,
-    monthItems, proposedItems, latestItem, matches, committeeDatesMarkup, progressMarkup, validDate };
+    monthItems, proposedItems, latestItem, matches, committeeDatesMarkup, progressMarkup, validDate,
+    refreshOverview: updateOverview };
   const scopeScript = document.createElement("script");
   const scopeUrl = new URL("assembly-browser.js", document.currentScript?.src || document.baseURI);
-  scopeUrl.searchParams.set("v", "20261027-card1");
+  scopeUrl.searchParams.set("v", "20261027-repair2");
   scopeScript.src = scopeUrl.href;
   scopeScript.onerror = () => console.warn("assembly-browser.js를 불러오지 못해 기존 월별 화면을 유지합니다.");
   document.head.appendChild(scopeScript);
