@@ -9,11 +9,14 @@ ROOT = Path(__file__).resolve().parent
 
 
 def usable(value):
-    return len(str(value or "").strip()) >= 12 and not re.search(r"확인\s*중|내용.*없습니다|조회.*실패", str(value or ""))
+    return len(str(value or "").strip()) >= 12 and not re.search(r"확인\s*중|미수집|미확보|원문\s*확인\s*필요|내용.*없습니다|조회.*실패", str(value or ""))
 
 
 def main(root=ROOT):
     archive = root / "official-summary-data"
+    if not (archive / "manifest.json").exists():
+        print("공식 첨부 복원자료 없음: 공개 원문 보완 단계에서 계속합니다.")
+        return
     manifest = json.loads((archive / "manifest.json").read_text())
     excerpts = {}
     for term in ("21", "22"):
@@ -35,7 +38,7 @@ def main(root=ROOT):
         payload = json.loads(path.read_text(encoding="utf-8-sig"))
         restored = 0
         for item in payload.get("items", []):
-            if usable(item.get("summary")):
+            if usable(item.get("summary")) and item.get("summarySource") != "official-xlsx-excerpt":
                 continue
             found = re.search(r"\d{7}", str(item.get("billNo", "")))
             entry = excerpts.get(found[0]) if found else None
@@ -46,6 +49,8 @@ def main(root=ROOT):
             if item.get("proposeDate") and entry[1] and item["proposeDate"] != entry[1]:
                 continue
             if not usable(entry[2]):
+                continue
+            if item.get("summary") == entry[2]:
                 continue
             item.update(summary=entry[2], summarySource="official-xlsx-excerpt", summarySourceDate=manifest["sourceDate"])
             restored += 1
