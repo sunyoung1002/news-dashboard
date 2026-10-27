@@ -8,7 +8,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlencode
-from urllib.request import urlopen
+from urllib.request import urlopen, Request
 from urllib.error import URLError
 
 
@@ -37,7 +37,7 @@ class PageText(HTMLParser):
 
 def usable(value):
     value = str(value or "").strip()
-    return len(value) >= 12 and not re.search(r"확인\s*중|내용.*없습니다|조회.*실패", value)
+    return len(value) >= 12 and not re.search(r"확인\s*중|미수집|미확보|원문\s*확인\s*필요|내용.*없습니다|조회.*실패", value)
 
 
 def number(row):
@@ -45,38 +45,47 @@ def number(row):
     return found[0] if found else ""
 
 
+def extract_text(html, bill_no):
+    parser = PageText()
+    parser.feed(html)
+    content = "\n".join(parser.parts)
+    matches = list(re.finditer(r"제안이유\s*및\s*주요내용", content))
+    if not matches:
+        return ""
+    displayed = re.findall(r"\[\s*(\d{7})\s*\]|의안번호\s*[:：]?\s*(\d{7})", content)
+    displayed = {a or b for a, b in displayed}
+    if displayed and bill_no not in displayed:
+        return ""
+    # The detail page repeats the section title in a heading and a table cell.
+    match = matches[-1]
+    content = content[match.end():]
+    content = re.split(r"\n(?:창닫기|창 닫기|인쇄|닫기|접수정보|위원회 심사|소관위 심사정보|관련위 심사정보|본회의 심의정보|정부이송정보|공포정보|제안자 목록|목록)\s*(?:\n|$)", content)[0]
+    content = re.sub(r"\s+", " ", content).strip()
+    return content if usable(content) and len(content) >= 30 else ""
+
+
 def fetch_text(pair, deadline):
     bill_no, bill_id = pair
-    if time.monotonic() >= deadline:
-        return bill_no, ""
-    try:
-        with urlopen(URL + "?" + urlencode({"billId": bill_id}), timeout=10) as response:
-            body = response.read(2_000_001)
-            charset = response.headers.get_content_charset() or "utf-8"
-        if len(body) > 2_000_000:
-            return bill_no, ""
+    for base in (URL, "https://likms.assembly.go.kr/bill/billDetail.do"):
+        if time.monotonic() >= deadline:
+            break
         try:
-            html = body.decode(charset)
-        except UnicodeDecodeError:
-            html = body.decode("cp949")
-        parser = PageText()
-        parser.feed(html)
-        content = "\n".join(parser.parts)
-        # Only accept an actual official summary section, not a login/error page.
-        match = re.search(r"제안이유\s*및\s*주요내용", content)
-        if not match:
-            return bill_no, ""
-        displayed = re.findall(r"\[\s*(\d{7})\s*\]", content[:match.start()])
-        if displayed and bill_no not in displayed:
-            return bill_no, ""
-        content = content[match.end():]
-        content = re.split(r"\n(?:창닫기|창 닫기|인쇄|닫기)\s*(?:\n|$)", content)[0]
-        content = re.sub(r"\s+", " ", content).strip()
-        if not usable(content) or len(content) < 30:
-            return bill_no, ""
-        return bill_no, content
-    except (URLError, OSError, ValueError, UnicodeError):
-        return bill_no, ""
+            request = Request(base + "?" + urlencode({"billId": bill_id}), headers={"User-Agent": "Mozilla/5.0", "Accept": "text/html"})
+            with urlopen(request, timeout=10) as response:
+                body = response.read(2_000_001)
+                charset = response.headers.get_content_charset() or "utf-8"
+            if len(body) > 2_000_000:
+                continue
+            try:
+                html = body.decode(charset)
+            except UnicodeDecodeError:
+                html = body.decode("cp949")
+            content = extract_text(html, bill_no)
+            if content:
+                return bill_no, content
+        except (URLError, OSError, ValueError, UnicodeError):
+            continue
+    return bill_no, ""
 
 
 def main(root=ROOT):
