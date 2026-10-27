@@ -37,8 +37,7 @@
   function downloadCompactFavorites(items, title, filename, groupByAgency) {
     const rows = items.map(item => window.MonthlyBillUI?.latestItem(itemKey(item)) || item);
     const sorted = groupByAgency ? [...rows].sort((a,b) => String(a.agency || "기타").localeCompare(String(b.agency || "기타"), "ko") || String(a.title || "").localeCompare(String(b.title || ""), "ko")) : rows;
-    let font = items.length >= 85 ? 7 : 7.5, pages = compactPages(sorted, groupByAgency, font);
-    while (pages.length > 4 && items.length <= 110 && font > 7) { font -= .25; pages = compactPages(sorted, groupByAgency, font); }
+    const font = 8, pages = compactPages(sorted, groupByAgency, font);
     const name = filename.replace(/\.docx?$/i, "");
     compactZip(compactDocx(pages, title, rows.length, font, 1, 1), `${name}.docx`);
   }
