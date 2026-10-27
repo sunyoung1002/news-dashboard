@@ -1,6 +1,6 @@
 {
   "mode": "official",
-  "updatedAt": "2026-10-26 21:36",
+  "updatedAt": "2026-10-27 09:37",
   "items": [
     {
       "month": "2026-08",
@@ -47162,6 +47162,114 @@
     },
     {
       "month": "2026-10",
+      "billId": "PRC_C3EFF177DB6D487BBC6A6B44D52C00",
+      "title": "가사소송법 일부개정법률안",
+      "billNo": "의안번호 2222060",
+      "agency": "법제사법위원회",
+      "committee": "법제사법위원회",
+      "proposer": "채현일의원 등 12인",
+      "proposeDate": "2026-10-23",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "소관위",
+      "previousStage": "접수",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "2026-10-26",
+      "committeePresentDate": "",
+      "change": "접수 → 소관위",
+      "processingResult": "",
+      "summary": "현행법은 가사소송 절차에 관하여 특별한 규정이 있는 경우를 제외하고는 「민사소송법」에 따르도록 하고 있어, 생명 또는 신체에 대한 위해의 우려가 있는 소송관계인은 「민사소송법」 제163조제2항에 따라 주소 등 개인정보에 관한 보호조치를 신청할 수 있음. 특히 최근 가정폭력을 피해 거주지를 옮긴 피해자의 주소가 이혼소송 과정에서 배우자에게 노출된 이후 피해자가 살해되는 사건이 발생한 바 있어, 가사사건의 접수 단계부터 개인정보 노출 가능성을 안내하고 위해의 우려가 있는 사건을 선제적으로 확인하여 보호할 필요가 있음.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_C3EFF177DB6D487BBC6A6B44D52C00",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "소관기관",
+        "진행단계",
+        "소관위원회",
+        "처리내용"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "소관기관",
+          "before": "위원회 배정 전",
+          "after": "법제사법위원회"
+        },
+        {
+          "label": "진행단계",
+          "before": "접수",
+          "after": "소관위"
+        },
+        {
+          "label": "소관위원회",
+          "before": "위원회 배정 전",
+          "after": "법제사법위원회"
+        },
+        {
+          "label": "처리내용",
+          "before": "이번 달 신규 확인",
+          "after": "접수 → 소관위"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_570D9742119541A59B73E1F1FD553C",
+      "title": "가정폭력범죄의 처벌 등에 관한 특례법 일부개정법률안",
+      "billNo": "의안번호 2222058",
+      "agency": "법제사법위원회",
+      "committee": "법제사법위원회",
+      "proposer": "채현일의원 등 10인",
+      "proposeDate": "2026-10-23",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "소관위",
+      "previousStage": "접수",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "2026-10-26",
+      "committeePresentDate": "",
+      "change": "접수 → 소관위",
+      "processingResult": "",
+      "summary": "현행법은 가정폭력 피해자를 보호하기 위하여 가정폭력행위자를 피해자 또는 가정구성원으로부터 격리하거나 이들에 대한 접근을 금지할 수 있는 근거를 임시조치 등의 제도에 두고 있으나, 「스토킹범죄의 처벌 등에 관한 법률」과 달리 위치추적 전자장치를 부착할 수 있는 근거는 규정하고 있지 아니함. 특히 최근 광주에서 가정폭력 가해자에 대한 분리 조치가 이루어진 상황에서도 가해자가 배우자에게 접근하여 살해하는 사건이 발생하면서 접근 금지 등 조치의 실효성을 높이고 고위험 피해자에 대한 보호를 강화할 필요성이 제기되고 있음.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_570D9742119541A59B73E1F1FD553C",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "소관기관",
+        "진행단계",
+        "소관위원회",
+        "처리내용"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "소관기관",
+          "before": "위원회 배정 전",
+          "after": "법제사법위원회"
+        },
+        {
+          "label": "진행단계",
+          "before": "접수",
+          "after": "소관위"
+        },
+        {
+          "label": "소관위원회",
+          "before": "위원회 배정 전",
+          "after": "법제사법위원회"
+        },
+        {
+          "label": "처리내용",
+          "before": "이번 달 신규 확인",
+          "after": "접수 → 소관위"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
       "billId": "PRC_739C48D54E2742EB82B054F1D4FB34",
       "title": "가정폭력범죄의 처벌 등에 관한 특례법 일부개정법률안",
       "billNo": "의안번호 2221762",
@@ -47187,6 +47295,60 @@
       "dailyChangedDate": "",
       "dailyChangeFields": [],
       "dailyChangeDetails": []
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_DCCEC0F5B7C04F23AC4B7B3398A4DC",
+      "title": "가축전염병 예방법 일부개정법률안",
+      "billNo": "의안번호 2222039",
+      "agency": "농림축산식품해양수산위원회",
+      "committee": "농림축산식품해양수산위원회",
+      "proposer": "송옥주의원 등 12인",
+      "proposeDate": "2026-10-23",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "소관위",
+      "previousStage": "접수",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "2026-10-26",
+      "committeePresentDate": "",
+      "change": "접수 → 소관위",
+      "processingResult": "",
+      "summary": "현행법은 가축전염병이 발생하거나 퍼지는 것을 막기 위한 이동제한 조치 또는 반출금지 명령을 이행하여 피해를 입은 가축의 소유자에게 예산의 범위에서 소득안정을 위한 비용을 지원할 수 있도록 규정하고 있음. 가축전염병 방역을 위한 이동제한 조치 또는 반출금지 명령으로 인해 가금농장에 공급할 예정이던 종란 또는 초생추를 공급하지 못하여 폐기하는 등 부화업자에게 직접적인 경제적 피해가 발생할 수 있으나, 현행법에서는 이러한 경우에 대한 지원범위가 명확하게 규정되어 있지 않음.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_DCCEC0F5B7C04F23AC4B7B3398A4DC",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "소관기관",
+        "진행단계",
+        "소관위원회",
+        "처리내용"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "소관기관",
+          "before": "위원회 배정 전",
+          "after": "농림축산식품해양수산위원회"
+        },
+        {
+          "label": "진행단계",
+          "before": "접수",
+          "after": "소관위"
+        },
+        {
+          "label": "소관위원회",
+          "before": "위원회 배정 전",
+          "after": "농림축산식품해양수산위원회"
+        },
+        {
+          "label": "처리내용",
+          "before": "이번 달 신규 확인",
+          "after": "접수 → 소관위"
+        }
+      ]
     },
     {
       "month": "2026-10",
@@ -47554,29 +47716,29 @@
     },
     {
       "month": "2026-10",
-      "billId": "PRC_AA3A82DA13244856B5AA6FC25A0A58",
+      "billId": "PRC_6518A8B797AB4F7CAAFEE2896B206D",
       "title": "건설산업기본법 일부개정법률안",
-      "billNo": "의안번호 2222030",
+      "billNo": "의안번호 2222037",
       "agency": "국토교통부",
       "committee": "국토교통위원회",
       "proposer": "김남근의원 등 11인",
-      "proposeDate": "2026-10-22",
+      "proposeDate": "2026-10-23",
       "relatedCommitteeReviews": [],
       "officialDetailCheckedAt": "",
       "officialDetailCheck": "",
       "stage": "소관위",
       "previousStage": "접수",
       "changed": true,
-      "changedDate": "2026-10-26",
-      "stageDate": "2026-10-23",
-      "committeeDate": "2026-10-23",
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "2026-10-26",
       "committeePresentDate": "",
       "change": "접수 → 소관위",
       "processingResult": "",
-      "summary": "문제를 개선하기 위해서는 직접 시공하는 전문건설사업자가 하도급업체가 아닌 공동계약의 당사자로 참여할 수 있도록 할 필요가 있음. 다단계 하도급 구조 개선과 건설사업자 간 상생협력에 앞장서야 할 공공기관에서도 제도의 활용이 저조하여, 공공부문의 주계약자 공동도급을 활성화할 필요가 있음.",
-      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_AA3A82DA13244856B5AA6FC25A0A58",
+      "summary": "그럼에도 불구하고, 현행법상 종합건설업체의 4억 3천만원 미만 공사 수주를 제한하는 영세 전문건설업체 보호조치는, 법률조항에 기준 금액이 구체적으로 명시돼(제16조제1항제4호 단서) 변화된 업계 상황 등을 반영하지 못한 채 경직적으로 운영되는 문제가 있으며, 위 조치는 2026. 위원회에서 건설공사비지수 등을 고려하여 3년마다 의제부대공사의 범위를 정하도록 하여, 전문건설업체의 경쟁력 회복에 도움을 주기 위한 것임(안 제16조 및 제16조의2 신설 등).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_6518A8B797AB4F7CAAFEE2896B206D",
       "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
+      "dailyChangedDate": "2026-10-27",
       "dailyChangeFields": [
         "진행단계",
         "소관위원회",
@@ -47599,6 +47761,34 @@
           "after": "접수 → 소관위"
         }
       ]
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_AA3A82DA13244856B5AA6FC25A0A58",
+      "title": "건설산업기본법 일부개정법률안",
+      "billNo": "의안번호 2222030",
+      "agency": "국토교통부",
+      "committee": "국토교통위원회",
+      "proposer": "김남근의원 등 11인",
+      "proposeDate": "2026-10-22",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "소관위",
+      "previousStage": "접수",
+      "changed": true,
+      "changedDate": "2026-10-26",
+      "stageDate": "2026-10-23",
+      "committeeDate": "2026-10-23",
+      "committeePresentDate": "",
+      "change": "접수 → 소관위",
+      "processingResult": "",
+      "summary": "문제를 개선하기 위해서는 직접 시공하는 전문건설사업자가 하도급업체가 아닌 공동계약의 당사자로 참여할 수 있도록 할 필요가 있음. 다단계 하도급 구조 개선과 건설사업자 간 상생협력에 앞장서야 할 공공기관에서도 제도의 활용이 저조하여, 공공부문의 주계약자 공동도급을 활성화할 필요가 있음.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_AA3A82DA13244856B5AA6FC25A0A58",
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-10",
@@ -48915,6 +49105,60 @@
       "dailyChangedDate": "",
       "dailyChangeFields": [],
       "dailyChangeDetails": []
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_256ABCA24B8F4E8D8902F122D733A8",
+      "title": "경찰관 직무집행법 일부개정법률안",
+      "billNo": "의안번호 2222065",
+      "agency": "행정안전위원회",
+      "committee": "행정안전위원회",
+      "proposer": "이상식의원 등 11인",
+      "proposeDate": "2026-10-23",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "소관위",
+      "previousStage": "접수",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "2026-10-26",
+      "committeePresentDate": "",
+      "change": "접수 → 소관위",
+      "processingResult": "",
+      "summary": "초국가범죄가 증가함에 따라 외국 법집행기관 및 국제기구와의 신속한 정보교환과 국제공조의 중요성이 높아지고 있으며, 국제형사경찰기구(인터폴)를 비롯한 국제치안협력기구를 통한 범죄정보 교환, 국제수배, 도피사범 추적ㆍ검거 및 송환 등 경찰의 국제협력 업무도 지속적으로 확대되고 있음. 경찰청장이 국제형사경찰기구와의 협력에 관한 국가중앙사무를 수행하고, 대통령령으로 정하는 정부 간 국제치안협력기구와 협력할 수 있도록 하며, 국제치안협력기구가 운용하는 보안통신체계를 구축ㆍ운영할 수 있는 근거를 마련하려는 것임.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_256ABCA24B8F4E8D8902F122D733A8",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "소관기관",
+        "진행단계",
+        "소관위원회",
+        "처리내용"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "소관기관",
+          "before": "위원회 배정 전",
+          "after": "행정안전위원회"
+        },
+        {
+          "label": "진행단계",
+          "before": "접수",
+          "after": "소관위"
+        },
+        {
+          "label": "소관위원회",
+          "before": "위원회 배정 전",
+          "after": "행정안전위원회"
+        },
+        {
+          "label": "처리내용",
+          "before": "이번 달 신규 확인",
+          "after": "접수 → 소관위"
+        }
+      ]
     },
     {
       "month": "2026-10",
@@ -51795,36 +52039,10 @@
       "processingResult": "",
       "summary": "지역완결형 공공의료를 강화하기 위해 공공의료에 종사할 지역별ㆍ분야별 의료인력의 양성과 수급이 필수적임. 감염병ㆍ항공ㆍ해상 재난 대응, 도서ㆍ접경지역 등 의료 취약지역에 상시 공공의료 서비스를 제공할 수 있도록 지역공공보건의료전담 의학전문대학원 등을 설립하여 공공의료 분야 종사에 특화된 교육과 연구 등을 체계적으로 제공하고 졸업 후 일정 기간 공공의료 분야에 복무하도록 함으로써 지역공공보건의료 강화와 국민건강의 보호ㆍ증진에 기여하고자 함(안 제22조의2 신설).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_93F951ECB2FF4A4AACF109002CAD6B",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "보건복지위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "보건복지위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-10",
@@ -51905,30 +52123,10 @@
       "processingResult": "",
       "summary": "현행법은 공무원이 공무상 사유로 사망한 경우 순직유족급여 또는 위험직무순직유족급여를 지급하도록 규정하고 있음. 순직유족급여 또는 위험직무순직유족급여를 청구한 유족에게 해당 급여의 지급 여부가 결정되기 전에 긴급생계지원금을 지급할 수 있도록 하여 유족의 생활안정을 도모하려는 것임(안 제59조의2 신설).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_8A940D63662F472898926D6557556B",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
-      "dailyChangeFields": [
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "행정안전위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-10",
@@ -52268,6 +52466,60 @@
     },
     {
       "month": "2026-10",
+      "billId": "PRC_0E901300B1D149909795D7B36C2510",
+      "title": "관세법 일부개정법률안",
+      "billNo": "의안번호 2222052",
+      "agency": "재정경제기획위원회",
+      "committee": "재정경제기획위원회",
+      "proposer": "최기상의원 등 12인",
+      "proposeDate": "2026-10-23",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "소관위",
+      "previousStage": "접수",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "2026-10-26",
+      "committeePresentDate": "",
+      "change": "접수 → 소관위",
+      "processingResult": "",
+      "summary": "현행법은 보세창고에 장치된 물품에 대하여 세관장이 물품관리에 필요하다고 인정할 때에는 장치기간 중에도 운영인에게 그 물품의 반출을 명할 수 있도록 하고, 이를 이행하지 아니한 자에게는 100만원 이하의 과태료를 부과하도록 규정하고 있음. 참고사항 이 법률안은 최기상의원이 대표발의한 「물가안정에 관한 법률 일부개정법률안」(의안번호 제22053호)의 의결을 전제로 하는 것이므로 같은 법률안이 의결되지 아니하거나 수정의결되는 경우에는 이에 맞추어 조정되어야 할 것임.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_0E901300B1D149909795D7B36C2510",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "소관기관",
+        "진행단계",
+        "소관위원회",
+        "처리내용"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "소관기관",
+          "before": "위원회 배정 전",
+          "after": "재정경제기획위원회"
+        },
+        {
+          "label": "진행단계",
+          "before": "접수",
+          "after": "소관위"
+        },
+        {
+          "label": "소관위원회",
+          "before": "위원회 배정 전",
+          "after": "재정경제기획위원회"
+        },
+        {
+          "label": "처리내용",
+          "before": "이번 달 신규 확인",
+          "after": "접수 → 소관위"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
       "billId": "PRC_C45249D3B5BC41B4A051A24CBE0B18",
       "title": "관세법 일부개정법률안",
       "billNo": "의안번호 2222002",
@@ -52517,6 +52769,60 @@
       "dailyChangedDate": "",
       "dailyChangeFields": [],
       "dailyChangeDetails": []
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_C2B6Z0Z9Y1Z5U1V8T1R5E5C3D0C2A0",
+      "title": "국가공무원법 일부개정법률안",
+      "billNo": "의안번호 2222057",
+      "agency": "행정안전위원회",
+      "committee": "행정안전위원회",
+      "proposer": "이해식의원 등 11인",
+      "proposeDate": "2026-10-23",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "소관위",
+      "previousStage": "접수",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "2026-10-26",
+      "committeePresentDate": "",
+      "change": "접수 → 소관위",
+      "processingResult": "",
+      "summary": "현행법은 공무상 질병휴직 기간을 3년 이내로 하되 2년의 범위에서 연장할 수 있도록 하고 있으나, 위험직무 수행에 따른 질병ㆍ부상으로 장기간 치료가 필요한 경우에는 현행 휴직기간으로는 충분한 치료를 받기 어렵고, 휴직기간 내에 복귀하지 못하면 직권면직 대상이 될 수 있는 문제가 있음. 위험직무를 수행하다 공무상 질병 또는 부상이 발생한 경우 질병휴직 기간을 5년 이내로, 연장기간을 3년의 범위로 확대하는 한편, 부적격 결정을 받은 고위공무원은 직권으로 강임할 수 있는 근거를 마련하는 등 공무원 인사제도의 합리성을 제고하려는 것임(안 제72조제1호의2, 제73조의4제1항 등).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_C2B6Z0Z9Y1Z5U1V8T1R5E5C3D0C2A0",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "소관기관",
+        "진행단계",
+        "소관위원회",
+        "처리내용"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "소관기관",
+          "before": "위원회 배정 전",
+          "after": "행정안전위원회"
+        },
+        {
+          "label": "진행단계",
+          "before": "접수",
+          "after": "소관위"
+        },
+        {
+          "label": "소관위원회",
+          "before": "위원회 배정 전",
+          "after": "행정안전위원회"
+        },
+        {
+          "label": "처리내용",
+          "before": "이번 달 신규 확인",
+          "after": "접수 → 소관위"
+        }
+      ]
     },
     {
       "month": "2026-10",
@@ -52772,6 +53078,60 @@
     },
     {
       "month": "2026-10",
+      "billId": "PRC_5932C7131EE742AC922BB5769A7973",
+      "title": "국가재정법 일부개정법률안",
+      "billNo": "의안번호 2222035",
+      "agency": "재정경제기획위원회",
+      "committee": "재정경제기획위원회",
+      "proposer": "임이자의원 등 10인",
+      "proposeDate": "2026-10-23",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "소관위",
+      "previousStage": "접수",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "2026-10-26",
+      "committeePresentDate": "",
+      "change": "접수 → 소관위",
+      "processingResult": "",
+      "summary": "이로 인해 공적 재원이 투입된 정책자금임에도 조성규모, 운용현황, 집행실적 및 성과 등에 대한 국회의 통합적인 심의와 통제가 어려워 재정의 투명성과 책임성이 충분히 확보되지 못하고 있다는 지적이 제기되고 있음. 정부가 공적 재원을 기반으로 조성한 정책자금에 대한 보고서를 매년 작성하여 회계연도 개시 120일 전까지 국회에 보고하도록 함으로써 재정 운용의 투명성과 책임성을 제고하고, 국회의 재정통제 기능을 강화하려는 것임(안 제54조의2 신설).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_5932C7131EE742AC922BB5769A7973",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "소관기관",
+        "진행단계",
+        "소관위원회",
+        "처리내용"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "소관기관",
+          "before": "위원회 배정 전",
+          "after": "재정경제기획위원회"
+        },
+        {
+          "label": "진행단계",
+          "before": "접수",
+          "after": "소관위"
+        },
+        {
+          "label": "소관위원회",
+          "before": "위원회 배정 전",
+          "after": "재정경제기획위원회"
+        },
+        {
+          "label": "처리내용",
+          "before": "이번 달 신규 확인",
+          "after": "접수 → 소관위"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
       "billId": "PRC_09ED2C8195754B74B3466319E24C05",
       "title": "국가재정법 일부개정법률안",
       "billNo": "의안번호 2222019",
@@ -52793,18 +53153,10 @@
       "processingResult": "",
       "summary": "규정들은 강행규정이 아니기 때문에 초과 조세수입이 국채 상환에 우선 투입되지 않거나 지방재정 지원이 적정하게 이루어지지 못할 우려가 있어, 초과 조세수입을 국채 상환에 우선 사용하도록 의무화하고, 세계잉여금을 지방교부세 및 지방교육재정교부금의 정산에 사용하도록 강제함으로써 국가채무의 증가를 억제하고 지방재정의 안정성을 더욱더 높이고자 함. 공적자금 상환부담을 미래세대에 전가하지 않고 현 세대에서 적극 해결하기 위하여 세계잉여금 중 지방교부세 및 교부금 정산금액을 제외한 잔액에 대한 공적자금상환기금 우선 출연 비율을 현행 100분의 30 이상에서 100분의 40 이상으로 상향 조정하며, 공적자금상환기금 출연 후의 잔액에 대한 국가채무 상환 의무 비율 역시 현행 100분의 30 이상에서 100분의 40 이상으로 상향하여 세계잉여금을 통한 공적자금 및 국가채무의 조기 상환 체계를 공고히 확립하려는 것임(안 제90조제1항부터 제4항까지).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_09ED2C8195754B74B3466319E24C05",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
-      "dailyChangeFields": [
-        "주요내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "주요내용",
-          "before": "이러한 규정들은 강행규정이 아니기 때문에 초과 조세수입이 국채 상환에 우선 투입되지 않거나 지방재정 지원이 적정하게 이루어지지 못할 우려가 있어, 초과 조세수입을 국채 상환에 우선 사용하도록 의무화하고, 세계잉여금을 지방교부세 및 지방교육재정교부금의 정산에 사용하도록 강제함으로써 국가채무의 증가를 억제하고 지방재정의 안정성을 더욱더 높이고자 함. 공적자금 상환부담을 미래세대에 전가하지 않고 현 세대에서 적극 해결하기 위하여 세계잉여금 중 지방교부세 및 교부금 정산금액을 제외한 잔액에 대한 공적자금상환기금 우선 출연 비율을 현행 100분의 30 이상에서 100분의 40 이상으로 상향 조정하며, 공적자금상환기금 출연 후의 잔액에 대한 국가채무 상환 의무 비율 역시 현행 100분의 30 이상에서 100분의 40 이상으로 상향하여 세계잉여금을 통한 공적자금 및 국가채무의 조기 상환 체계를 공고히 확립하려는 것임(안 제90조제1항부터 제4항까지).",
-          "after": "규정들은 강행규정이 아니기 때문에 초과 조세수입이 국채 상환에 우선 투입되지 않거나 지방재정 지원이 적정하게 이루어지지 못할 우려가 있어, 초과 조세수입을 국채 상환에 우선 사용하도록 의무화하고, 세계잉여금을 지방교부세 및 지방교육재정교부금의 정산에 사용하도록 강제함으로써 국가채무의 증가를 억제하고 지방재정의 안정성을 더욱더 높이고자 함. 공적자금 상환부담을 미래세대에 전가하지 않고 현 세대에서 적극 해결하기 위하여 세계잉여금 중 지방교부세 및 교부금 정산금액을 제외한 잔액에 대한 공적자금상환기금 우선 출연 비율을 현행 100분의 30 이상에서 100분의 40 이상으로 상향 조정하며, 공적자금상환기금 출연 후의 잔액에 대한 국가채무 상환 의무 비율 역시 현행 100분의 30 이상에서 100분의 40 이상으로 상향하여 세계잉여금을 통한 공적자금 및 국가채무의 조기 상환 체계를 공고히 확립하려는 것임(안 제90조제1항부터 제4항까지)."
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-10",
@@ -53004,6 +53356,114 @@
     },
     {
       "month": "2026-10",
+      "billId": "PRC_39AAB30937334A96B3087D22BCE1EF",
+      "title": "국민건강보험법 일부개정법률안",
+      "billNo": "의안번호 2222068",
+      "agency": "보건복지위원회",
+      "committee": "보건복지위원회",
+      "proposer": "박용갑의원 등 14인",
+      "proposeDate": "2026-10-23",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "소관위",
+      "previousStage": "접수",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "2026-10-26",
+      "committeePresentDate": "",
+      "change": "접수 → 소관위",
+      "processingResult": "",
+      "summary": "현행법은 국민의 의료비 부담 완화를 위해서 본인부담상한제를 운영하고 있으며, 실손의료보험 표준약관은 본인부담상한액을 초과하여 공단으로부터 환급받을 수 있는 금액을 실손의료보험금 지급 대상에서 제외하여 이중지급을 방지하고 있음. 공단이 본인부담상한액을 확정하면 보험회사가 이를 확인한 후, 사후정산을 할 수 있도록 근거를 신설해 실손의료보험금이 덜 지급되거나 이중지급되는 문제를 해결하려는 것임(안 제44조의2 신설).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_39AAB30937334A96B3087D22BCE1EF",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "소관기관",
+        "진행단계",
+        "소관위원회",
+        "처리내용"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "소관기관",
+          "before": "위원회 배정 전",
+          "after": "보건복지위원회"
+        },
+        {
+          "label": "진행단계",
+          "before": "접수",
+          "after": "소관위"
+        },
+        {
+          "label": "소관위원회",
+          "before": "위원회 배정 전",
+          "after": "보건복지위원회"
+        },
+        {
+          "label": "처리내용",
+          "before": "이번 달 신규 확인",
+          "after": "접수 → 소관위"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_A2Z6Z0H9I1G5E1F0D0Z1A1Z5X1Y4W1",
+      "title": "국민건강보험법 일부개정법률안",
+      "billNo": "의안번호 2222066",
+      "agency": "보건복지위원회",
+      "committee": "보건복지위원회",
+      "proposer": "이인영의원 등 11인",
+      "proposeDate": "2026-10-23",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "소관위",
+      "previousStage": "접수",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "2026-10-26",
+      "committeePresentDate": "",
+      "change": "접수 → 소관위",
+      "processingResult": "",
+      "summary": "현행법령은 법령이 정하는 바에 따라 요양급여 비용의 일부를 본인이 부담하도록 규정하면서도, 국민에게 과도한 의료비 부담을 완화하기 위한 안전장치로서 건강보험 본인부담상한제와 재난적 의료비 제도를 두고 있음. 재난적 의료비 제도는 「재난적의료비 지원에 관한 법률」에 따라 「보험업법」에 따른 보험회사 등으로부터 받은 보험금 등을 제외하고 지급하고 있으나, 건강보험 본인부담상한제에는 이러한 규정이 없음.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_A2Z6Z0H9I1G5E1F0D0Z1A1Z5X1Y4W1",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "소관기관",
+        "진행단계",
+        "소관위원회",
+        "처리내용"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "소관기관",
+          "before": "위원회 배정 전",
+          "after": "보건복지위원회"
+        },
+        {
+          "label": "진행단계",
+          "before": "접수",
+          "after": "소관위"
+        },
+        {
+          "label": "소관위원회",
+          "before": "위원회 배정 전",
+          "after": "보건복지위원회"
+        },
+        {
+          "label": "처리내용",
+          "before": "이번 달 신규 확인",
+          "after": "접수 → 소관위"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
       "billId": "PRC_8ED32CA4E74B4058BAE7D2751D2787",
       "title": "국민건강보험법 일부개정법률안",
       "billNo": "의안번호 2221902",
@@ -53116,6 +53576,60 @@
     },
     {
       "month": "2026-10",
+      "billId": "PRC_7CA479E9D9104547BD878ADA213BDC",
+      "title": "국방과학연구소법 일부개정법률안",
+      "billNo": "의안번호 2222048",
+      "agency": "국방위원회",
+      "committee": "국방위원회",
+      "proposer": "황명선의원 등 17인",
+      "proposeDate": "2026-10-23",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "소관위",
+      "previousStage": "접수",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "2026-10-26",
+      "committeePresentDate": "",
+      "change": "접수 → 소관위",
+      "processingResult": "",
+      "summary": "현행법상 국방과학연구소 소장 및 감사의 궐위 시 후임자의 임기를 전임자의 남은 기간으로 한정함에 따라, 잔여임기의 단기성으로 인해 우수한 전문가 유치가 어렵고 기관장 공석 시 직무대행 체제 장기화로 핵심 국방 R&D 사업의 지속성이 저해되는 문제가 발생하고 있음. 소장 및 감사의 궐위 시 전임자 임기의 남은 기간만 수행하도록 한 단서 규정을 삭제하여 3년의 임기를 새로 보장함으로써, 인사운영의 자율성을 확보하고 국방과학기술 연구의 연속성과 책임경영 체제를 강화하려는 것임(안 제10조제4항).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_7CA479E9D9104547BD878ADA213BDC",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "소관기관",
+        "진행단계",
+        "소관위원회",
+        "처리내용"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "소관기관",
+          "before": "위원회 배정 전",
+          "after": "국방위원회"
+        },
+        {
+          "label": "진행단계",
+          "before": "접수",
+          "after": "소관위"
+        },
+        {
+          "label": "소관위원회",
+          "before": "위원회 배정 전",
+          "after": "국방위원회"
+        },
+        {
+          "label": "처리내용",
+          "before": "이번 달 신규 확인",
+          "after": "접수 → 소관위"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
       "billId": "PRC_8B3ECC84E4AE44DFBB39D1350D0C68",
       "title": "국유재산특례제한법 일부개정법률안",
       "billNo": "의안번호 2221976",
@@ -53221,36 +53735,10 @@
       "processingResult": "",
       "summary": "국제개발협력 사업의 규모가 확대되고 시행기관이 다변화되고 있음에도 사업의 기획 단계에서 다른 시행기관의 유사한 사업과의 중복 여부를 확인하고 그 조정을 요청할 수 있는 절차가 마련되어 있지 아니하여 사업 간 조정이 사후적으로 이루어질 수밖에 없다는 지적이 있으며, 사업이 종료된 후 그 성과가 지속되는지를 확인하는 평가는 시행기관이 수립하는 자체평가 계획에 따라 그 대상이 선정되어 실시 여부가 시행기관의 재량에 맡겨져 있고 그 결과가 국회에 보고되지 아니하는 등 평가 결과의 환류에 한계가 있음. 시행기관이 사업을 기획할 때 다른 시행기관의 사업과의 유사ㆍ중복 여부를 확인하도록 하고 위원회와 주관기관이 이에 필요한 정보를 제공하도록 하는 한편, 일정 규모 이상의 사업이 종료된 경우에는 일정 기간 내에 외부전문가가 참여하는 사후평가를 실시하도록 하고, 그 결과를 공개하고 국회에 보고하며 다음 종합기본계획 및 종합시행계획에 반영하도록 함으로써 국제개발협력 사업의 관리체계를 강화하려는 것임(안 제14조의2 및 제16조제4항 신설, 제16조제5항부터 제8항까지).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_CCDE5406D50B4DD29169D498C43199",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "외교통일위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "외교통일위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-10",
@@ -57111,8 +57599,36 @@
       "processingResult": "",
       "summary": "현행법은 30인 미만 사업장에 대한 근로감독 권한을 지방자치단체에 일부 이양하는 지방노동감독관 제도를 도입하였으나, 제도 시행 초기 지방직 공무원의 노동법 전문성과 인력 부족 등의 현실적 한계가 우려되는 상황임. 특히 영세 사업장의 경우 단속과 처벌 위주의 직접 단속이 이루어질 경우, 소상공인의 경영 부담이 가중될 수 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_9AC9355E38C141C98F1E656D1AD942",
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_A2B6A0A7Y1X6Y1F6G2F7F4D2C1C3K0",
+      "title": "노인복지법 일부개정법률안",
+      "billNo": "의안번호 2222062",
+      "agency": "보건복지위원회",
+      "committee": "보건복지위원회",
+      "proposer": "허종식의원 등 11인",
+      "proposeDate": "2026-10-23",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "소관위",
+      "previousStage": "접수",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "2026-10-26",
+      "committeePresentDate": "",
+      "change": "접수 → 소관위",
+      "processingResult": "",
+      "summary": "현행법은 노인학대를 조기에 발견하고 피해노인을 보호하기 위하여 의료인, 노인복지시설 종사자, 장기요양기관 종사자 등 노인과 밀접하게 접촉하는 직군을 노인학대 신고의무자로 지정하고, 직무 수행 중 노인학대를 알게 된 경우 즉시 노인보호전문기관 또는 수사기관에 신고하도록 규정하고 있음. 노인평생교육시설의 장과 그 종사자를 노인학대 신고의무자에 추가함으로써 노인학대의 조기 발견과 신속한 대응을 도모하고 피해노인 보호 체계를 강화하려는 것임(안 제39조의6제2항제17호 신설).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_A2B6A0A7Y1X6Y1F6G2F7F4D2C1C3K0",
       "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
+      "dailyChangedDate": "2026-10-27",
       "dailyChangeFields": [
         "소관기관",
         "진행단계",
@@ -57123,7 +57639,7 @@
         {
           "label": "소관기관",
           "before": "위원회 배정 전",
-          "after": "기후에너지환경노동위원회"
+          "after": "보건복지위원회"
         },
         {
           "label": "진행단계",
@@ -57133,7 +57649,7 @@
         {
           "label": "소관위원회",
           "before": "위원회 배정 전",
-          "after": "기후에너지환경노동위원회"
+          "after": "보건복지위원회"
         },
         {
           "label": "처리내용",
@@ -57365,6 +57881,60 @@
       "dailyChangedDate": "",
       "dailyChangeFields": [],
       "dailyChangeDetails": []
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_084BC49AC8ED48FE905C788D7E6103",
+      "title": "농업기계화 촉진법 일부개정법률안",
+      "billNo": "의안번호 2222050",
+      "agency": "농림축산식품해양수산위원회",
+      "committee": "농림축산식품해양수산위원회",
+      "proposer": "윤준병의원 등 13인",
+      "proposeDate": "2026-10-23",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "소관위",
+      "previousStage": "접수",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "2026-10-26",
+      "committeePresentDate": "",
+      "change": "접수 → 소관위",
+      "processingResult": "",
+      "summary": "현행법은 거짓이나 그 밖의 부정한 방법으로 검정에 적합판정을 받은 농업기계에 대하여 농림축산식품부장관이 그 검정을 무효로 하고 있으며, 검정에 적합판정을 받은 농업기계와 동일한 형식의 농업기계에 대하여 품질유지 등을 위하여 필요하다고 인정하면 그 농업기계에 대하여 사후검정을 할 수 있도록 규정하고 있음. 사후검정 과정에서 정당한 사유 없이 사후검정을 거부ㆍ방해 또는 기피하거나 허위자료를 제공하는 경우에도 해당 농업기계의 검정을 무효로 할 수 있도록 법적 근거를 마련하고, 농업기계의 검정 업무를 농촌진흥청장에게 명시적으로 위임하도록 명문화함으로써 농업기계 검정 제도의 실효성과 신뢰성을 확보하고 안전한 농업환경을 조성하려는 것임(안 제10조제1항 및 제16조제1항).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_084BC49AC8ED48FE905C788D7E6103",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "소관기관",
+        "진행단계",
+        "소관위원회",
+        "처리내용"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "소관기관",
+          "before": "위원회 배정 전",
+          "after": "농림축산식품해양수산위원회"
+        },
+        {
+          "label": "진행단계",
+          "before": "접수",
+          "after": "소관위"
+        },
+        {
+          "label": "소관위원회",
+          "before": "위원회 배정 전",
+          "after": "농림축산식품해양수산위원회"
+        },
+        {
+          "label": "처리내용",
+          "before": "이번 달 신규 확인",
+          "after": "접수 → 소관위"
+        }
+      ]
     },
     {
       "month": "2026-10",
@@ -59321,36 +59891,10 @@
       "processingResult": "",
       "summary": "제안이유 최근 전월세 수급 불안이 지속되는데, 신규 택지 조성이나 재건축ㆍ재개발을 통한 주택공급은 입주까지 상당한 시간이 필요한 상황임. 이를 통해 도심 공실 문제와 전월세 공급 부족 문제를 함께 해소하고, 청년ㆍ신혼부부ㆍ고령자ㆍ직장인 등 다양한 가구가 직주근접형 주거시설을 안정적으로 이용할 수 있도록 하려는 것임.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_T2T6B0C8A2B4Z1Y1Y2G1G3F5G8E7C2",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "국토교통위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "국토교통위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-10",
@@ -59375,30 +59919,10 @@
       "processingResult": "",
       "summary": "제안이유 현행법은 사업자 간 부당한 공동행위를 금지하고, 이를 위반한 경우 시정조치 및 과징금 부과 등의 제재 처분을 할 수 있도록 하여 시장에서의 공정한 경쟁질서를 확립하고 있음. 사업자가 부당한 공동행위로 제재 처분을 받은 이후에도 동일 또는 유사한 공동행위를 반복하는 경우가 발생하는 한편, 자진신고 사업자에 대해 시정조치를 감면함으로써 시정조치의 효과가 저해되어 이를 개선해야 한다는 지적이 제기되고 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_9D27703F6A97479F9166F3206A9D11",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
-      "dailyChangeFields": [
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "정무위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-10",
@@ -61334,6 +61858,60 @@
     },
     {
       "month": "2026-10",
+      "billId": "PRC_398B1FB303674C00B2F4340D2F8185",
+      "title": "물가안정에 관한 법률 일부개정법률안",
+      "billNo": "의안번호 2222053",
+      "agency": "재정경제기획위원회",
+      "committee": "재정경제기획위원회",
+      "proposer": "최기상의원 등 13인",
+      "proposeDate": "2026-10-23",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "소관위",
+      "previousStage": "접수",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "2026-10-26",
+      "committeePresentDate": "",
+      "change": "접수 → 소관위",
+      "processingResult": "",
+      "summary": "현행법은 사업자가 폭리를 목적으로 물품을 매점하거나 판매를 기피하는 행위로서 재정경제부장관이 물가의 안정을 해칠 우려가 있다고 인정하여 지정한 행위를 매점매석 행위로 금지하고, 매점매석 행위를 하고 있는 사업자에 대하여 주무부장관이 시정 또는 중지를 명하도록 규정하고 있음. 재정경제부장관이 매점매석 행위의 지정 및 방지를 위하여 필요한 경우 관계 행정기관의 장에게 자료의 제출을 요구하거나 필요한 조치를 하도록 요청할 수 있도록 하여 매점매석 행위에 대한 범정부 차원의 대응체계를 마련하려는 것임(안 제7조의2 신설).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_398B1FB303674C00B2F4340D2F8185",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "소관기관",
+        "진행단계",
+        "소관위원회",
+        "처리내용"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "소관기관",
+          "before": "위원회 배정 전",
+          "after": "재정경제기획위원회"
+        },
+        {
+          "label": "진행단계",
+          "before": "접수",
+          "after": "소관위"
+        },
+        {
+          "label": "소관위원회",
+          "before": "위원회 배정 전",
+          "after": "재정경제기획위원회"
+        },
+        {
+          "label": "처리내용",
+          "before": "이번 달 신규 확인",
+          "after": "접수 → 소관위"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
       "billId": "PRC_F2DF784D62AA4A8E8ABA8C5055DF55",
       "title": "물가안정에 관한 법률 일부개정법률안",
       "billNo": "의안번호 2221789",
@@ -61359,6 +61937,54 @@
       "dailyChangedDate": "",
       "dailyChangeFields": [],
       "dailyChangeDetails": []
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_B9D83BC48CC94361B7C29B78DEC7F3",
+      "title": "민사소송법 일부개정법률안",
+      "billNo": "의안번호 2222059",
+      "agency": "법무부",
+      "committee": "법제사법위원회",
+      "proposer": "채현일의원 등 12인",
+      "proposeDate": "2026-10-23",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "소관위",
+      "previousStage": "접수",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "2026-10-26",
+      "committeePresentDate": "",
+      "change": "접수 → 소관위",
+      "processingResult": "",
+      "summary": "현행법은 소송관계인의 생명 또는 신체에 위해를 입을 우려가 있는 경우 해당 소송관계인의 신청에 따라 주소 등 개인정보가 당사자를 포함한 제3자에게 공개되지 아니하도록 법원이 보호조치를 할 수 있도록 규정하고 있음. 특히 최근 가정폭력을 피해 거주지를 옮긴 피해자의 주소가 이혼소송 과정에서 배우자에게 노출된 이후 피해자가 살해되는 사건이 발생하였으나, 현행법은 소송관계인의 신청이 있어야만 보호조치를 할 수 있어 위해의 우려가 확인되더라도 법원이 직권으로 개인정보를 보호하기 어려운 한계가 있음.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_B9D83BC48CC94361B7C29B78DEC7F3",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "진행단계",
+        "소관위원회",
+        "처리내용"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "진행단계",
+          "before": "접수",
+          "after": "소관위"
+        },
+        {
+          "label": "소관위원회",
+          "before": "위원회 배정 전",
+          "after": "법제사법위원회"
+        },
+        {
+          "label": "처리내용",
+          "before": "이번 달 신규 확인",
+          "after": "접수 → 소관위"
+        }
+      ]
     },
     {
       "month": "2026-10",
@@ -62615,8 +63241,36 @@
       "processingResult": "",
       "summary": "보조금 부정수급의 정의 신설(안 제2조제9호 신설) 나. 부정수급 적발을 위한 제도 보강(안 제26조의11 신설 및 안 제39조의3) 1) 부정수급 모니터링ㆍ점검ㆍ현장조사 및 후속조치 관련 사항을 규정하고, 현장조사 시 보조사업자 등에 대한 자료제출ㆍ보고ㆍ의견 진술 요구 등의 권한을 규정함.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_07557B43239D46B9BE76B0B58D0889",
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_S2Q6R0M9N1L8K1K8I0J1R2S0Q0Q9P9",
+      "title": "부가가치세법 일부개정법률안",
+      "billNo": "의안번호 2222044",
+      "agency": "재정경제기획위원회",
+      "committee": "재정경제기획위원회",
+      "proposer": "윤영석의원 등 11인",
+      "proposeDate": "2026-10-23",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "소관위",
+      "previousStage": "접수",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "2026-10-26",
+      "committeePresentDate": "",
+      "change": "접수 → 소관위",
+      "processingResult": "",
+      "summary": "현행법은 영세 개인사업자의 세부담을 완화하고 신용카드ㆍ현금영수증 등 투명한 거래를 활성화하기 위하여 신용카드 등 매출액에 대한 부가가치세 세액공제를 두고 있음. 현행 신용카드 등 매출세액공제의 우대 공제율 1.3퍼센트 및 연간 공제한도 1천만원을 2029년 12월 31일까지 유지하는 한편, 상대적으로 가격전가 능력과 경영여력이 취약한 소상공인에 대해서는 공제율을 1.5퍼센트, 연간 공제한도를 1천200만원으로 확대하고, 제도의 운영성과를 사후 평가하도록 함으로써 소상공인의 경영부담을 완화하고 거래의 투명성과 세원 양성화를 지속적으로 제고하려는 것임(안 제46조제1항제3호).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_S2Q6R0M9N1L8K1K8I0J1R2S0Q0Q9P9",
       "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
+      "dailyChangedDate": "2026-10-27",
       "dailyChangeFields": [
         "소관기관",
         "진행단계",
@@ -67044,6 +67698,54 @@
     },
     {
       "month": "2026-10",
+      "billId": "PRC_04BE93641AB84720984C9DA3B7611E",
+      "title": "상속세 및 증여세법 일부개정법률안",
+      "billNo": "의안번호 2222040",
+      "agency": "기획재정부",
+      "committee": "재정경제기획위원회",
+      "proposer": "김태호의원 등 11인",
+      "proposeDate": "2026-10-23",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "소관위",
+      "previousStage": "접수",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "2026-10-26",
+      "committeePresentDate": "",
+      "change": "접수 → 소관위",
+      "processingResult": "",
+      "summary": "제안이유 정부에서 추진 중인 2026년 세제개편안은 가업상속공제의 적용 요건을 강화하고 적용 대상 업종을 축소하는 내용을 포함하고 있어, 기업의 경영 여건과 가업승계 실태를 충분히 고려할 필요가 있다는 의견이 제기되고 있음. 정부 개편안에 따라 피상속인의 가업경영기간 요건이 현행 10년 이상에서 20년 이상으로 강화되면 공제 대상에서 제외되는 기업은 상속세 납부에 따른 자금 부담과 유동성 제약으로 기업의 존속을 위협받게 되고, 이는 결국 국가 경제적 손실로 이어질 우려가 있음.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_04BE93641AB84720984C9DA3B7611E",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "진행단계",
+        "소관위원회",
+        "처리내용"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "진행단계",
+          "before": "접수",
+          "after": "소관위"
+        },
+        {
+          "label": "소관위원회",
+          "before": "위원회 배정 전",
+          "after": "재정경제기획위원회"
+        },
+        {
+          "label": "처리내용",
+          "before": "이번 달 신규 확인",
+          "after": "접수 → 소관위"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
       "billId": "PRC_1B4C9C07463745AC8ACE21A18F8BDD",
       "title": "상속세 및 증여세법 일부개정법률안",
       "billNo": "의안번호 2222004",
@@ -69340,29 +70042,29 @@
     },
     {
       "month": "2026-10",
-      "billId": "PRC_53771BA479B04F758D5CCCE9C41D2C",
+      "billId": "PRC_34D86913223F4978BA23B9B18691C3",
       "title": "소득세법 일부개정법률안",
-      "billNo": "의안번호 2222026",
+      "billNo": "의안번호 2222064",
       "agency": "재정경제기획위원회",
       "committee": "재정경제기획위원회",
-      "proposer": "임이자의원 등 10인",
-      "proposeDate": "2026-10-22",
+      "proposer": "윤영석의원 등 10인",
+      "proposeDate": "2026-10-23",
       "relatedCommitteeReviews": [],
       "officialDetailCheckedAt": "",
       "officialDetailCheck": "",
       "stage": "소관위",
       "previousStage": "접수",
       "changed": true,
-      "changedDate": "2026-10-26",
-      "stageDate": "2026-10-23",
-      "committeeDate": "2026-10-23",
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "2026-10-26",
       "committeePresentDate": "",
       "change": "접수 → 소관위",
       "processingResult": "",
-      "summary": "현행법은 이러한 취약계층 노동자에게 100분의 3이라는 다소 높은 원천징수세율을 적용하고 있어, 실제 귀속되는 종합소득에 비해 과도하게 많은 세금을 원천징수함으로써 과도한 세수 환급금 발생 및 납세자의 불필요한 납세협력비용 지출 등 세무행정 전반의 비효율과 납세자 부담을 초래하고 있음. 저소득 인적용역 제공자들의 실질소득을 확대하고자 원천징수대상 사업소득 원천징수세율을 현행 100분의 3에서 1,000분의 15로 인하하려는 것임(안 제12조제3호더목 및 제129조제1항제3호).",
-      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_53771BA479B04F758D5CCCE9C41D2C",
+      "summary": "현행법은 일용근로자가 아닌 근로자에게 지급하는 근로소득(이하 “상용근로소득”이라 한다)을 지급하는 자에 대하여 반기마다 간이지급명세서를 제출하도록 하고 있으나, 2027년 1월 1일부터 적용되는 개정 조항에 따르면 매월 간이지급명세서를 제출하여야 함. 2027년부터 월별 간이지급명세서를 제출하게 되면 근로자를 1명이라도 고용하는 중소기업, 소상공인 등 영세 사업자는 2,000만명이 넘는 근로자 모두에 대하여 매월 거의 동일한 소득내용에 대하여 간이지급명세서 제출하여야 하는 과도한 협력의무를 지게 되고 근로자들은 개인정보 및 과세정보가 과도하게 노출될 우려가 있는 것은 물론 실제 사회안전망 구축을 위한 전 국민고용보험 도입을 위해서도 고용 중인 상용근로자의 소득자료가 전혀 불필요함에도 이를 제출하게 하여 과도한 규제에 해당하므로 현재의 제출 주기대로 반기마다 간이지급명세서를 제출하게 유지할 필요가 있음.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_34D86913223F4978BA23B9B18691C3",
       "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
+      "dailyChangedDate": "2026-10-27",
       "dailyChangeFields": [
         "소관기관",
         "진행단계",
@@ -69391,6 +70093,34 @@
           "after": "접수 → 소관위"
         }
       ]
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_53771BA479B04F758D5CCCE9C41D2C",
+      "title": "소득세법 일부개정법률안",
+      "billNo": "의안번호 2222026",
+      "agency": "재정경제기획위원회",
+      "committee": "재정경제기획위원회",
+      "proposer": "임이자의원 등 10인",
+      "proposeDate": "2026-10-22",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "소관위",
+      "previousStage": "접수",
+      "changed": true,
+      "changedDate": "2026-10-26",
+      "stageDate": "2026-10-23",
+      "committeeDate": "2026-10-23",
+      "committeePresentDate": "",
+      "change": "접수 → 소관위",
+      "processingResult": "",
+      "summary": "현행법은 이러한 취약계층 노동자에게 100분의 3이라는 다소 높은 원천징수세율을 적용하고 있어, 실제 귀속되는 종합소득에 비해 과도하게 많은 세금을 원천징수함으로써 과도한 세수 환급금 발생 및 납세자의 불필요한 납세협력비용 지출 등 세무행정 전반의 비효율과 납세자 부담을 초래하고 있음. 저소득 인적용역 제공자들의 실질소득을 확대하고자 원천징수대상 사업소득 원천징수세율을 현행 100분의 3에서 1,000분의 15로 인하하려는 것임(안 제12조제3호더목 및 제129조제1항제3호).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_53771BA479B04F758D5CCCE9C41D2C",
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-10",
@@ -69562,29 +70292,29 @@
     },
     {
       "month": "2026-10",
-      "billId": "PRC_D5E9F910E485438AA82A39E375D07D",
+      "billId": "PRC_3AF980A68020437C9DECC5C392A910",
       "title": "소방공무원 보건안전 및 복지 기본법 일부개정법률안",
-      "billNo": "의안번호 2222022",
+      "billNo": "의안번호 2222042",
       "agency": "행정안전위원회",
       "committee": "행정안전위원회",
       "proposer": "강명구의원 등 40인",
-      "proposeDate": "2026-10-22",
+      "proposeDate": "2026-10-23",
       "relatedCommitteeReviews": [],
       "officialDetailCheckedAt": "",
       "officialDetailCheck": "",
       "stage": "소관위",
       "previousStage": "접수",
       "changed": true,
-      "changedDate": "2026-10-26",
-      "stageDate": "2026-10-23",
-      "committeeDate": "2026-10-23",
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "2026-10-26",
       "committeePresentDate": "",
       "change": "접수 → 소관위",
       "processingResult": "",
-      "summary": "현행법은 소방공무원에 대한 보건안전 및 복지 정책의 수립ㆍ시행 등에 필요한 사항을 규정하고 있음. 화재진압, 구조ㆍ구급 등 소방활동의 특성으로 인하여 각종 소방활동재해에 취약한 소방공무원에 대하여는 특별히 그에 따르는 별도의 재활과 직무복귀 사업이 필요하다는 지적이 있음.",
-      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_D5E9F910E485438AA82A39E375D07D",
+      "summary": "현행법은 소방공무원의 건강관리를 위한 진단 및 진료 등 의료지원에 관한 사항을 규정하고 있으며, 소방활동재해로 부상하거나 질병에 걸린 소방공무원의 치료와 생활안정을 지원하도록 하고 있음. 소방공무원은 소방활동 과정에서 각종 유해물질에 반복적으로 노출되어 암, 호흡기질환 등 직무 관련 질병이 퇴직 후에 발생하거나 발견될 수 있음에도, 퇴직 후에는 직무 관련성을 인정받기 어려운 경우가 있어 치료비 지원과 지속적인 건강관리가 충분히 이루어지지 못한다는 지적이 제기되고 있음.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_3AF980A68020437C9DECC5C392A910",
       "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
+      "dailyChangedDate": "2026-10-27",
       "dailyChangeFields": [
         "소관기관",
         "진행단계",
@@ -69616,6 +70346,34 @@
     },
     {
       "month": "2026-10",
+      "billId": "PRC_D5E9F910E485438AA82A39E375D07D",
+      "title": "소방공무원 보건안전 및 복지 기본법 일부개정법률안",
+      "billNo": "의안번호 2222022",
+      "agency": "행정안전위원회",
+      "committee": "행정안전위원회",
+      "proposer": "강명구의원 등 40인",
+      "proposeDate": "2026-10-22",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "소관위",
+      "previousStage": "접수",
+      "changed": true,
+      "changedDate": "2026-10-26",
+      "stageDate": "2026-10-23",
+      "committeeDate": "2026-10-23",
+      "committeePresentDate": "",
+      "change": "접수 → 소관위",
+      "processingResult": "",
+      "summary": "현행법은 소방공무원에 대한 보건안전 및 복지 정책의 수립ㆍ시행 등에 필요한 사항을 규정하고 있음. 화재진압, 구조ㆍ구급 등 소방활동의 특성으로 인하여 각종 소방활동재해에 취약한 소방공무원에 대하여는 특별히 그에 따르는 별도의 재활과 직무복귀 사업이 필요하다는 지적이 있음.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_D5E9F910E485438AA82A39E375D07D",
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
+    },
+    {
+      "month": "2026-10",
       "billId": "PRC_BB03059F34E84AE998C1346C90356E",
       "title": "소방재정지원 및 시·도 소방특별회계 설치법 일부개정법률안",
       "billNo": "의안번호 2222017",
@@ -69637,36 +70395,10 @@
       "processingResult": "",
       "summary": "제안이유 현행법은 시ㆍ도에 소방특별회계를 설치하고 소방공무원의 인건비를 소방안전교부세, 시ㆍ도 일반회계 전입금 및 지역자원시설세 등으로 충당하도록 하고 있으나, 국가가 부담하여야 할 인건비의 최소 비율과 부족액의 교부 의무를 정하고 있지 아니함. 예산 계상, 인건비 소요액 제출, 교부예정액 통지, 분기별 교부 및 변동 조정을 의무화함(안 제5조의2제3항부터 제5항까지 신설).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_BB03059F34E84AE998C1346C90356E",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "행정안전위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "행정안전위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-10",
@@ -70342,6 +71074,60 @@
     },
     {
       "month": "2026-10",
+      "billId": "PRC_3565AC15028E499EAC1BE9E2B7CF56",
+      "title": "식품·의약품분야 시험·검사 등에 관한 법률 일부개정법률안",
+      "billNo": "의안번호 2222063",
+      "agency": "보건복지위원회",
+      "committee": "보건복지위원회",
+      "proposer": "허종식의원 등 10인",
+      "proposeDate": "2026-10-23",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "소관위",
+      "previousStage": "접수",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "2026-10-26",
+      "committeePresentDate": "",
+      "change": "접수 → 소관위",
+      "processingResult": "",
+      "summary": "국내외에서 유해물질이 검출된 축산물이나 그 밖에 위해발생의 우려가 제기되었거나 제기된 축산물의 처리ㆍ집유ㆍ가공ㆍ포장ㆍ보관ㆍ운반 또는 판매 등을 하는 영업자에 대하여 축산물 시험ㆍ검사기관 또는 국외시험ㆍ검사기관에서 검사를 받을 것을 명할 수 있도록 하는 축산물 검사명령 제도가 「축산물 위생관리법」의 개정으로 도입됨에 따라, 해당 검사를 수행하는 축산물 시험ㆍ검사기관을 지정할 수 있는 근거를 마련하려는 것임(안 제6조제2항).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_3565AC15028E499EAC1BE9E2B7CF56",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "소관기관",
+        "진행단계",
+        "소관위원회",
+        "처리내용"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "소관기관",
+          "before": "위원회 배정 전",
+          "after": "보건복지위원회"
+        },
+        {
+          "label": "진행단계",
+          "before": "접수",
+          "after": "소관위"
+        },
+        {
+          "label": "소관위원회",
+          "before": "위원회 배정 전",
+          "after": "보건복지위원회"
+        },
+        {
+          "label": "처리내용",
+          "before": "이번 달 신규 확인",
+          "after": "접수 → 소관위"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
       "billId": "PRC_46BB972AD92A4E3F9184984D7DCD9B",
       "title": "식품위생법 일부개정법률안",
       "billNo": "의안번호 2221754",
@@ -70535,6 +71321,60 @@
       "dailyChangedDate": "",
       "dailyChangeFields": [],
       "dailyChangeDetails": []
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_BDEA8A988DB249A99D3AA578B22D1C",
+      "title": "아동수당법 일부개정법률안",
+      "billNo": "의안번호 2222067",
+      "agency": "보건복지위원회",
+      "committee": "보건복지위원회",
+      "proposer": "허종식의원 등 11인",
+      "proposeDate": "2026-10-23",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "소관위",
+      "previousStage": "접수",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "2026-10-26",
+      "committeePresentDate": "",
+      "change": "접수 → 소관위",
+      "processingResult": "",
+      "summary": "아동의 건강한 성장과 기본적 권리 보장을 위해서는 출생 초기부터 성장 과정 전반에 걸쳐 안정적이고 지속적인 양육 지원이 이루어질 필요가 있음. 현행 양육지원급여는 아동수당, 부모급여, 첫만남이용권 등으로 구분되어 있어 아동의 성장단계에 따른 지원의 연속성을 높이고 다양한 양육 수요에 체계적으로 대응하는 데 한계가 있음.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_BDEA8A988DB249A99D3AA578B22D1C",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "소관기관",
+        "진행단계",
+        "소관위원회",
+        "처리내용"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "소관기관",
+          "before": "위원회 배정 전",
+          "after": "보건복지위원회"
+        },
+        {
+          "label": "진행단계",
+          "before": "접수",
+          "after": "소관위"
+        },
+        {
+          "label": "소관위원회",
+          "before": "위원회 배정 전",
+          "after": "보건복지위원회"
+        },
+        {
+          "label": "처리내용",
+          "before": "이번 달 신규 확인",
+          "after": "접수 → 소관위"
+        }
+      ]
     },
     {
       "month": "2026-10",
@@ -74990,6 +75830,54 @@
     },
     {
       "month": "2026-10",
+      "billId": "PRC_5859CB2F0CE04203B8DE132B32B0FC",
+      "title": "장애인고용촉진 및 직업재활법 일부개정법률안",
+      "billNo": "의안번호 2222036",
+      "agency": "고용노동부",
+      "committee": "기후에너지환경노동위원회",
+      "proposer": "김주영의원 등 11인",
+      "proposeDate": "2026-10-23",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "소관위",
+      "previousStage": "접수",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "2026-10-26",
+      "committeePresentDate": "",
+      "change": "접수 → 소관위",
+      "processingResult": "",
+      "summary": "장애인 표준사업장의 공공조달 참여를 지원하는 근거가 충분치 않을 뿐 아니라 「국가를 당사자로 하는 계약에 관한 법률 시행령」에 따라 수의계약을 위해서는 대상물품의 장애인 표준사업장 직접생산여부를 확인하여야 함에도 불구하고 현행법에는 해당 절차에 대한 명시적인 근거가 없는 상황임. 고용노동부장관이 장애인 표준사업장의 납품 계약 대행을 원활하게 수행할 수 있도록 근거를 마련하고, 고용노동부장관이 직접생산여부의 확인 등 수의계약에 필요한 절차를 지원함으로써 장애인 표준사업장 생산품의 우선구매를 활성화하려는 것임(안 제22조의4).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_5859CB2F0CE04203B8DE132B32B0FC",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "진행단계",
+        "소관위원회",
+        "처리내용"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "진행단계",
+          "before": "접수",
+          "after": "소관위"
+        },
+        {
+          "label": "소관위원회",
+          "before": "위원회 배정 전",
+          "after": "기후에너지환경노동위원회"
+        },
+        {
+          "label": "처리내용",
+          "before": "이번 달 신규 확인",
+          "after": "접수 → 소관위"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
       "billId": "PRC_W2U6V0D8E2C7C1B3Z3A5I5I7H6H4F5",
       "title": "장애인고용촉진 및 직업재활법 일부개정법률안",
       "billNo": "의안번호 2220996",
@@ -76950,6 +77838,60 @@
     },
     {
       "month": "2026-10",
+      "billId": "PRC_883857BC8E1745D094A54D8BB16B3E",
+      "title": "전쟁기념사업회법 일부개정법률안",
+      "billNo": "의안번호 2222046",
+      "agency": "국방위원회",
+      "committee": "국방위원회",
+      "proposer": "황명선의원 등 16인",
+      "proposeDate": "2026-10-23",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "소관위",
+      "previousStage": "접수",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "2026-10-26",
+      "committeePresentDate": "",
+      "change": "접수 → 소관위",
+      "processingResult": "",
+      "summary": "현행법상 전쟁기념사업회 임원의 궐위 시 보궐임기를 전임자 임기의 남은 기간으로 한정함에 따라 인사운영의 제약이 발생하고 있으며, 연임 관련 규정의 경우 실질적인 판단 기준이 부재하고 실제 적용 사례가 없어 실효성이 떨어진다는 지적이 있음. 보궐임기의 전임자 잔임기간 승계 규정을 삭제하여 3년의 임기를 새로 부여하도록 인사 자율성을 확보하는 한편, 실효성이 없는 연임 허용 문구를 삭제함으로써 법령을 정비하고 기관 운영의 효율성을 제고하려는 것임(안 제7조제1항 및 제2항).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_883857BC8E1745D094A54D8BB16B3E",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "소관기관",
+        "진행단계",
+        "소관위원회",
+        "처리내용"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "소관기관",
+          "before": "위원회 배정 전",
+          "after": "국방위원회"
+        },
+        {
+          "label": "진행단계",
+          "before": "접수",
+          "after": "소관위"
+        },
+        {
+          "label": "소관위원회",
+          "before": "위원회 배정 전",
+          "after": "국방위원회"
+        },
+        {
+          "label": "처리내용",
+          "before": "이번 달 신규 확인",
+          "after": "접수 → 소관위"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
       "billId": "PRC_E124335245E74DCFAFF6977223C766",
       "title": "전통사찰의 보존 및 지원에 관한 법률 일부개정법률안",
       "billNo": "의안번호 2221909",
@@ -77286,29 +78228,29 @@
     },
     {
       "month": "2026-10",
-      "billId": "PRC_1E43CE255A084EBC9DCC72EABD54E9",
+      "billId": "PRC_70C5005694444F39BB3432EFA9EE3F",
       "title": "조세특례제한법 일부개정법률안",
-      "billNo": "의안번호 2222034",
+      "billNo": "의안번호 2222055",
       "agency": "기획재정부",
       "committee": "재정경제기획위원회",
-      "proposer": "김남준의원 등 14인",
-      "proposeDate": "2026-10-22",
+      "proposer": "김남준의원 등 12인",
+      "proposeDate": "2026-10-23",
       "relatedCommitteeReviews": [],
       "officialDetailCheckedAt": "",
       "officialDetailCheck": "",
       "stage": "소관위",
       "previousStage": "접수",
       "changed": true,
-      "changedDate": "2026-10-26",
-      "stageDate": "2026-10-23",
-      "committeeDate": "2026-10-23",
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "2026-10-26",
       "committeePresentDate": "",
       "change": "접수 → 소관위",
       "processingResult": "",
-      "summary": "제안이유 현재는 청년층의 자산 형성을 지원하기 위하여 일정 소득요건을 갖춘 청년이 ‘청년미래적금’에 가입하는 경우 그 이자소득에 대하여 소득세를 비과세하는 특례를 규정하고 있음. 참고사항 이 법률안은 「국회법」 제85조의3제4항에 따라 2027년도 세입예산안 부수 법률안으로 지정될 필요가 있음.",
-      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_1E43CE255A084EBC9DCC72EABD54E9",
+      "summary": "고향사랑 기부제도는 지역 간 재정 격차를 완화하고 지역 균형발전을 도모하려는 제도임에도 지역별 여건 차이를 반영하지 못하고 있으며, 특히 「접경지역 지원 특별법」에 따른 접경지역은 각종 규제로 개발이 제한되기에 행정구역상 수도권에 속하더라도 지역경제 침체가 지속되고 있다는 지적이 있음. 경제ㆍ사회여건을 고려하여 우대할 필요가 있는 지역을 우대지역으로 정의하고, 10만원을 초과하는 기부금에 대한 공제율을 기부 대상 지방자치단체의 소재 지역에 따라 차등 적용하며, 접경지역은 수도권 소재 여부와 관계없이 가장 높은 수준의 공제율을 적용하여 접경지역에 대한 기부를 유도하고 지역 균형발전을 도모하려는 것임(안 제2조제1항제10호의4 신설 및 제58조제1항).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_70C5005694444F39BB3432EFA9EE3F",
       "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
+      "dailyChangedDate": "2026-10-27",
       "dailyChangeFields": [
         "진행단계",
         "소관위원회",
@@ -77331,6 +78273,322 @@
           "after": "접수 → 소관위"
         }
       ]
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_BBBCF1CAB547425E9BC63FA6A3AF58",
+      "title": "조세특례제한법 일부개정법률안",
+      "billNo": "의안번호 2222054",
+      "agency": "기획재정부",
+      "committee": "재정경제기획위원회",
+      "proposer": "주진우의원 등 10인",
+      "proposeDate": "2026-10-23",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "소관위",
+      "previousStage": "접수",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "2026-10-26",
+      "committeePresentDate": "",
+      "change": "접수 → 소관위",
+      "processingResult": "",
+      "summary": "육아휴직 후 원활한 직장 복귀와 경력단절 방지를 위해서는 육아휴직 복귀자에 대한 현행 세액공제를 지속할 필요가 있는 한편, 복직 이후에도 일정 기간 고용을 유지하는 기업에 추가적인 세제상 지원을 함으로써 안정적인 고용유지를 유도할 필요가 있다는 의견이 있음. 육아휴직 복귀자에 대한 세액공제의 적용기한을 2029년 12월 31일까지 연장하고, 육아휴직 복귀자를 복직일부터 3년간 계속 고용한 경우 1명당 중소기업은 300만원, 중견기업은 200만원을 추가로 세액공제하도록 함으로써 육아휴직 복귀자의 지속적인 고용 안정을 지원하려는 것임(안 제29조의8제5항 및 제6항 등).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_BBBCF1CAB547425E9BC63FA6A3AF58",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "진행단계",
+        "소관위원회",
+        "처리내용"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "진행단계",
+          "before": "접수",
+          "after": "소관위"
+        },
+        {
+          "label": "소관위원회",
+          "before": "위원회 배정 전",
+          "after": "재정경제기획위원회"
+        },
+        {
+          "label": "처리내용",
+          "before": "이번 달 신규 확인",
+          "after": "접수 → 소관위"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_7E4CCBA86505416581883FA6F430F8",
+      "title": "조세특례제한법 일부개정법률안",
+      "billNo": "의안번호 2222049",
+      "agency": "기획재정부",
+      "committee": "재정경제기획위원회",
+      "proposer": "안도걸의원 등 10인",
+      "proposeDate": "2026-10-23",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "소관위",
+      "previousStage": "접수",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "2026-10-26",
+      "committeePresentDate": "",
+      "change": "접수 → 소관위",
+      "processingResult": "",
+      "summary": "영상콘텐츠 간 세제지원의 형평성을 제고하고 문화역량 강화를 통한 관광활성화를 위하여 영상콘텐츠 제작비용 세액공제 대상에 음악영상물을 추가하려는 것임(안 제25조의6제1항제1호라목 신설). 참고사항 이 법률안은 「국회법」 제85조의3제4항에 따라 2027년도 세입예산안 부수 법률안으로 지정될 필요가 있음.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_7E4CCBA86505416581883FA6F430F8",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "진행단계",
+        "소관위원회",
+        "처리내용"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "진행단계",
+          "before": "접수",
+          "after": "소관위"
+        },
+        {
+          "label": "소관위원회",
+          "before": "위원회 배정 전",
+          "after": "재정경제기획위원회"
+        },
+        {
+          "label": "처리내용",
+          "before": "이번 달 신규 확인",
+          "after": "접수 → 소관위"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_4C998737186E45D1AFF06EFBF2F811",
+      "title": "조세특례제한법 일부개정법률안",
+      "billNo": "의안번호 2222047",
+      "agency": "기획재정부",
+      "committee": "재정경제기획위원회",
+      "proposer": "윤영석의원 등 11인",
+      "proposeDate": "2026-10-23",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "소관위",
+      "previousStage": "접수",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "2026-10-26",
+      "committeePresentDate": "",
+      "change": "접수 → 소관위",
+      "processingResult": "",
+      "summary": "기존의 시설투자 중심 세제지원만으로는 국내 생산기반의 지속적인 유지ㆍ확충과 생산물량 확대를 유도하는 데 한계가 있음. 아울러 수도권에 집중된 산업구조를 개선하기 위해？비수도권 생산활동에는 기본 공제율보다 높은 공제율을 적용하여 생산거점의 지방 이전과 신규 투자를 유도할 필요가 있음.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_4C998737186E45D1AFF06EFBF2F811",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "진행단계",
+        "소관위원회",
+        "처리내용"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "진행단계",
+          "before": "접수",
+          "after": "소관위"
+        },
+        {
+          "label": "소관위원회",
+          "before": "위원회 배정 전",
+          "after": "재정경제기획위원회"
+        },
+        {
+          "label": "처리내용",
+          "before": "이번 달 신규 확인",
+          "after": "접수 → 소관위"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_0305023DEB8F4ABB84CAA3599A8828",
+      "title": "조세특례제한법 일부개정법률안",
+      "billNo": "의안번호 2222043",
+      "agency": "기획재정부",
+      "committee": "재정경제기획위원회",
+      "proposer": "오기형의원 등 10인",
+      "proposeDate": "2026-10-23",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "소관위",
+      "previousStage": "접수",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "2026-10-26",
+      "committeePresentDate": "",
+      "change": "접수 → 소관위",
+      "processingResult": "",
+      "summary": "한국투자공사에 설치하는 전략형 국부펀드의 글로벌 투자 경쟁력을 제고하고 빠른 안착을 지원하기 위하여 「한국투자공사법」에 따른 전략투자계정에서 발생하는 소득에 대하여 법인세를 과세하지 아니하려는 것임(안 제104조의37 신설). 참고사항 이 법률안은 오기형의원이 대표발의한 「한국투자공사법 일부개정법률안」(의안번호 제21855호)의 의결을 전제로 하므로, 해당 법률안이 의결되지 아니하거나 수정의결되는 경우에는 이에 맞추어 조정되어야 할 것임.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_0305023DEB8F4ABB84CAA3599A8828",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "진행단계",
+        "소관위원회",
+        "처리내용"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "진행단계",
+          "before": "접수",
+          "after": "소관위"
+        },
+        {
+          "label": "소관위원회",
+          "before": "위원회 배정 전",
+          "after": "재정경제기획위원회"
+        },
+        {
+          "label": "처리내용",
+          "before": "이번 달 신규 확인",
+          "after": "접수 → 소관위"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_3E4BEEA9832944169E80FDEB1BC0AB",
+      "title": "조세특례제한법 일부개정법률안",
+      "billNo": "의안번호 2222041",
+      "agency": "기획재정부",
+      "committee": "재정경제기획위원회",
+      "proposer": "문진석의원 등 11인",
+      "proposeDate": "2026-10-23",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "소관위",
+      "previousStage": "접수",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "2026-10-26",
+      "committeePresentDate": "",
+      "change": "접수 → 소관위",
+      "processingResult": "",
+      "summary": "「법인세법」 및 「소득세법」은 이월결손금의 공제기간을 각각 15년으로 정하고 있는바, 세액공제의 이월공제기간이 이보다 짧아 결손금의 이월공제 체계와 연계되지 못한다는 지적이 있음. 참고사항 이 법률안은 「국회법」 제85조의3제4항에 따라 2027년도 세입예산안 부수 법률안으로 지정될 필요가 있음.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_3E4BEEA9832944169E80FDEB1BC0AB",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "진행단계",
+        "소관위원회",
+        "처리내용"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "진행단계",
+          "before": "접수",
+          "after": "소관위"
+        },
+        {
+          "label": "소관위원회",
+          "before": "위원회 배정 전",
+          "after": "재정경제기획위원회"
+        },
+        {
+          "label": "처리내용",
+          "before": "이번 달 신규 확인",
+          "after": "접수 → 소관위"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_50F621DFD83D48849F2A12EB185EE1",
+      "title": "조세특례제한법 일부개정법률안",
+      "billNo": "의안번호 2222038",
+      "agency": "기획재정부",
+      "committee": "재정경제기획위원회",
+      "proposer": "안상훈의원 등 11인",
+      "proposeDate": "2026-10-23",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "소관위",
+      "previousStage": "접수",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "2026-10-26",
+      "committeePresentDate": "",
+      "change": "접수 → 소관위",
+      "processingResult": "",
+      "summary": "전기자동차는 중국산 전기차의 점유율 확대와 주요국의 자국 생산 우대 정책으로 국내 생산물량의 해외 이전 우려가 커지고 있음. 철강은 주력산업에 핵심 소재를 공급하는 국가 기간산업이나, 세계적 공급과잉과 탄소규제 강화로 생산기반 위축이 우려되어 저탄소철강으로의 전환을 통한 경쟁력 확보가 시급함.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_50F621DFD83D48849F2A12EB185EE1",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "진행단계",
+        "소관위원회",
+        "처리내용"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "진행단계",
+          "before": "접수",
+          "after": "소관위"
+        },
+        {
+          "label": "소관위원회",
+          "before": "위원회 배정 전",
+          "after": "재정경제기획위원회"
+        },
+        {
+          "label": "처리내용",
+          "before": "이번 달 신규 확인",
+          "after": "접수 → 소관위"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_1E43CE255A084EBC9DCC72EABD54E9",
+      "title": "조세특례제한법 일부개정법률안",
+      "billNo": "의안번호 2222034",
+      "agency": "기획재정부",
+      "committee": "재정경제기획위원회",
+      "proposer": "김남준의원 등 14인",
+      "proposeDate": "2026-10-22",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "소관위",
+      "previousStage": "접수",
+      "changed": true,
+      "changedDate": "2026-10-26",
+      "stageDate": "2026-10-23",
+      "committeeDate": "2026-10-23",
+      "committeePresentDate": "",
+      "change": "접수 → 소관위",
+      "processingResult": "",
+      "summary": "제안이유 현재는 청년층의 자산 형성을 지원하기 위하여 일정 소득요건을 갖춘 청년이 ‘청년미래적금’에 가입하는 경우 그 이자소득에 대하여 소득세를 비과세하는 특례를 규정하고 있음. 참고사항 이 법률안은 「국회법」 제85조의3제4항에 따라 2027년도 세입예산안 부수 법률안으로 지정될 필요가 있음.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_1E43CE255A084EBC9DCC72EABD54E9",
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-10",
@@ -77355,30 +78613,10 @@
       "processingResult": "",
       "summary": "현행법은 문화예술단체 등에 대하여 고유목적사업준비금의 손금산입 특례를 인정하는 등 문화예술 분야에 대한 조세지원 제도를 규정하고 있음. 국제문화행사의 준비 및 운영을 위하여 금전ㆍ재화 또는 용역을 제공하는 경우에는 별도의 세액공제 특례가 마련되어 있지 않아 국제문화행사에 대한 민간 후원을 활성화하는 데 한계가 있다는 의견이 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_BCAE6723DFC94A0CB6298622C0D4F6",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
-      "dailyChangeFields": [
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "재정경제기획위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-10",
@@ -77403,30 +78641,10 @@
       "processingResult": "",
       "summary": "법인이 법인의 의사와 관계없이 토지등을 수용당하였음에도 그 양도차익에 대하여 법인세를 납부하도록 하는 것은 과도한 측면이 있으므로 법인의 경제적 부담을 완화하여 줄 필요가 있음. 「산업입지 및 개발에 관한 법률」에 따라 산업단지 조성을 위하여 사업용으로 직접 사용하던 토지등을 수용당한 내국법인에 대하여 토지등 양도차익의 익금불산입 특례를 신설하려는 것임(안 제77조의4 신설).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_Z2X6Y0G2G2E7F0D9C0C4Y4Y4X3X9W2",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
-      "dailyChangeFields": [
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "재정경제기획위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-10",
@@ -77451,30 +78669,10 @@
       "processingResult": "",
       "summary": "현행법은 재활용폐자원 및 중고자동차를 수집하는 사업자가 세금계산서를 발급할 수 없는 자 등으로부터 이를 취득하여 제조ㆍ가공하거나 공급하는 경우 일정 금액을 부가가치세 매입세액으로 공제하도록 규정하고 있음. 중고 이동통신단말장치를 개인 등으로부터 매입하여 재판매하는 거래가 활발함에도 현행 매입세액 공제특례의 대상에 포함되어 있지 않아 중고 유통시장의 활성화를 제약할 수 있고, 개인 간 거래가 많은 중고거래의 특성을 고려하여 거래 투명성을 확보할 필요가 있다는 의견이 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_EA8F73C153134E2B94E670EBC3F1E7",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
-      "dailyChangeFields": [
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "재정경제기획위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-10",
@@ -77499,30 +78697,10 @@
       "processingResult": "",
       "summary": "민간임대주택의 유형과 임대기간이 다양화되고 있음에도 현행 과세특례는 민간건설임대주택을 중심으로 규정되어 있어 민간매입임대주택과 새로 도입된 단기민간임대주택에는 적용되지 않고 있으며, 등록기한도 2027년 말로 예정되어 있어 임대주택의 공급 방식과 임대기간 등을 고려하여 과세특례를 정비할 필요가 있다는 의견이 있음. 민간건설임대주택의 등록기한을 2031년 12월 31일까지 연장하고 민간임대주택의 유형 및 임대기간에 따라 장기보유 특별공제율을 차등 적용하도록 함으로써 민간임대주택의 유형과 임대기간에 따른 세제지원 체계를 마련하려는 것임(안 제97조의3).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_K2L6J0K9I2Q2R1P6P1O8O5N5N4J5H5",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
-      "dailyChangeFields": [
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "재정경제기획위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-10",
@@ -77547,30 +78725,10 @@
       "processingResult": "",
       "summary": "현행법은 농업회사법인이 출자한 거주자에 대해 지급하는 배당소득에 대해 소득세 면제 및 분리과세하고 있음. 참고사항 이 법률안은 「국회법」 제85조의3제4항에 따라 2027년도 세입예산안 부수 법률안으로 지정될 필요가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_2AD0064DE2A8473EAAF061F0A98C4A",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
-      "dailyChangeFields": [
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "재정경제기획위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-10",
@@ -77595,30 +78753,10 @@
       "processingResult": "",
       "summary": "현행법은 농어민의 경영 부담을 완화하고 농림ㆍ어업의 경쟁력을 제고하기 위하여 농어업경영 및 농어작업 대행용역에 대한 부가가치세 면제, 농협 및 수협 중앙회의 전산용역과 명칭사용용역에 대한 부가가치세 감면 등 다양한 조세특례를 두고 있으나, 해당 특례는 2026년 12월 31일 종료될 예정임. 특히 영농조합법인과 영어조합법인 등이 제공하는 농어업경영 및 농어작업 대행용역은 고령 농어민의 노동력 부족을 보완하는 한편, 농어업의 규모화와 협업적 경영을 촉진하는 데 중요한 역할을 하고 있어 지속적인 세제지원이 필요한 상황임.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_P2O6P0N9N1W8U1U1S3U5S5S6A9Z7Z3",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
-      "dailyChangeFields": [
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "재정경제기획위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-10",
@@ -93078,6 +94216,60 @@
     },
     {
       "month": "2026-10",
+      "billId": "PRC_7C590A1AA6F54E168CE126CA2A2E85",
+      "title": "종합부동산세법 일부개정법률안",
+      "billNo": "의안번호 2222056",
+      "agency": "재정경제기획위원회",
+      "committee": "재정경제기획위원회",
+      "proposer": "오기형의원 등 10인",
+      "proposeDate": "2026-10-23",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "소관위",
+      "previousStage": "접수",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "2026-10-26",
+      "committeePresentDate": "",
+      "change": "접수 → 소관위",
+      "processingResult": "",
+      "summary": "현행은 공동명의 1주택자의 경우 주택의 공시가격, 지분율, 납세자의 연령 및 보유기간 등에 따라 부부가 각각 납세의무를 부담하는 경우와 1세대 1주택자 특례를 적용받는 경우의 유불리가 달라질 수 있어 납세자가 매년 두 가지 과세방식에 따른 세액을 직접 비교하여 유리한 과세방식을 선택하여야 하는 불편이 있음. 공동명의 1주택자가 일정 기간 내에 신청하는 경우 부부가 각각 납세의무를 부담하는 경우의 종합부동산세액 합산액과 1세대 1주택자 특례를 적용하는 경우의 종합부동산세액을 비교하여 그 중 적은 금액으로 과세관청이 고지할 수 있도록 함으로써 납세자의 세액 계산 및 특례 선택에 따른 불편을 완화하고 납세편의를 제고하려는 것임(안 제10조의2).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_7C590A1AA6F54E168CE126CA2A2E85",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "소관기관",
+        "진행단계",
+        "소관위원회",
+        "처리내용"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "소관기관",
+          "before": "위원회 배정 전",
+          "after": "재정경제기획위원회"
+        },
+        {
+          "label": "진행단계",
+          "before": "접수",
+          "after": "소관위"
+        },
+        {
+          "label": "소관위원회",
+          "before": "위원회 배정 전",
+          "after": "재정경제기획위원회"
+        },
+        {
+          "label": "처리내용",
+          "before": "이번 달 신규 확인",
+          "after": "접수 → 소관위"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
       "billId": "PRC_C3B66646ECAC461C91ADD3D2B19E36",
       "title": "종합부동산세법 일부개정법률안",
       "billNo": "의안번호 2221784",
@@ -93694,29 +94886,29 @@
     },
     {
       "month": "2026-10",
-      "billId": "PRC_57ADD3FE326C4C4E8C6804D17EE44A",
-      "title": "지방교부세법 일부개정법률안",
-      "billNo": "의안번호 2222016",
+      "billId": "PRC_G2H6F0G9E1C5D1K8L1K6K5J2H6I8P3",
+      "title": "지방공무원법 일부개정법률안",
+      "billNo": "의안번호 2222061",
       "agency": "행정안전위원회",
       "committee": "행정안전위원회",
-      "proposer": "임이자의원 등 10인",
-      "proposeDate": "2026-10-22",
+      "proposer": "이해식의원 등 11인",
+      "proposeDate": "2026-10-23",
       "relatedCommitteeReviews": [],
       "officialDetailCheckedAt": "",
       "officialDetailCheck": "",
       "stage": "소관위",
       "previousStage": "접수",
       "changed": true,
-      "changedDate": "2026-10-26",
-      "stageDate": "2026-10-23",
-      "committeeDate": "2026-10-23",
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "2026-10-26",
       "committeePresentDate": "",
       "change": "접수 → 소관위",
       "processingResult": "",
-      "summary": "해당 의안 정보를 찾을 수 없습니다.",
-      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_57ADD3FE326C4C4E8C6804D17EE44A",
+      "summary": "현행법은 공무상 질병휴직 기간을 3년 이내로 하되 2년의 범위에서 연장할 수 있도록 하고 있으나, 위험직무 수행에 따른 질병ㆍ부상으로 장기간 치료가 필요한 경우에는 현행 휴직기간으로는 충분한 치료를 받기 어렵고, 휴직기간 내에 복귀하지 못하면 직권면직 대상이 될 수 있는 문제가 있음. 위험직무를 수행하다 재해를 입은 공무원을 적극적으로 보호하기 위하여 위험직무 수행 중 공무상 질병 또는 부상을 입은 공무원의 질병휴직 기간을 5년 이내로, 연장기간을 3년의 범위로 확대하는 근거를 마련하려는 것임(안 제64조제1호의2 신설 등).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_G2H6F0G9E1C5D1K8L1K6K5J2H6I8P3",
       "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
+      "dailyChangedDate": "2026-10-27",
       "dailyChangeFields": [
         "소관기관",
         "진행단계",
@@ -93745,6 +94937,34 @@
           "after": "접수 → 소관위"
         }
       ]
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_57ADD3FE326C4C4E8C6804D17EE44A",
+      "title": "지방교부세법 일부개정법률안",
+      "billNo": "의안번호 2222016",
+      "agency": "행정안전위원회",
+      "committee": "행정안전위원회",
+      "proposer": "임이자의원 등 10인",
+      "proposeDate": "2026-10-22",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "소관위",
+      "previousStage": "접수",
+      "changed": true,
+      "changedDate": "2026-10-26",
+      "stageDate": "2026-10-23",
+      "committeeDate": "2026-10-23",
+      "committeePresentDate": "",
+      "change": "접수 → 소관위",
+      "processingResult": "",
+      "summary": "해당 의안 정보를 찾을 수 없습니다.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_57ADD3FE326C4C4E8C6804D17EE44A",
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-10",
@@ -93965,36 +95185,10 @@
       "processingResult": "",
       "summary": "정부의 종합부동산세ㆍ양도소득세 강화 정책에 따라서 향후 세금 부담이 늘어날 것으로 예상됨에 따라 생애최초 주택구입자들이 상대적으로 큰 부담을 지게 될 우려도 있음. 생애최초 주택구입자에 대한 취득세 감면 한도를 상향하고, 감면 일몰기한을 2031년으로 연장함으로써 생애최초 주택구입자의 세금 부담을 보다 완화하려는 것임.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_M2M6I0I9H2F2G1E6E1N8N2L2M3L3J4",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "행정안전위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "행정안전위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-10",
@@ -95307,36 +96501,10 @@
       "processingResult": "",
       "summary": "「대한민국헌법」 제32조는 모든 국민에게 근로의 권리와 의무가 있음을 명시하고 있으며, 그 권리에 따라 최저임금 제도의 시행을 규정하고 있음. 노동은 단순한 생계 보장이나 능력에 따른 성과의 문제가 아니라, 노동 및 고용에 대한 참여 자체가 일상의 영위와 인간 존엄성의 가치를 담보하고 있음을 알 수 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_A2Z6Y0Z3U2U0S1Q4R2Z0Y5X2V8W6E3",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "기후에너지환경노동위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "기후에너지환경노동위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-10",
@@ -97412,6 +98580,60 @@
     },
     {
       "month": "2026-10",
+      "billId": "PRC_92D91D15C64D4749BF297E147F7847",
+      "title": "한국국방연구원법 일부개정법률안",
+      "billNo": "의안번호 2222045",
+      "agency": "국방위원회",
+      "committee": "국방위원회",
+      "proposer": "황명선의원 등 17인",
+      "proposeDate": "2026-10-23",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "소관위",
+      "previousStage": "접수",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "2026-10-26",
+      "committeePresentDate": "",
+      "change": "접수 → 소관위",
+      "processingResult": "",
+      "summary": "현행법상 한국국방연구원 원장 및 감사의 궐위 시 후임자의 임기를 전임자 임기의 남은 기간으로 규정하고 있어, 유능한 안보·국방 정책 전문가 유치에 제약이 발생하고 직무대행 체제 장기화로 인한 기관 운영 및 안보 정책 연구의 지속성 저해할 우려가 있음. 궐위 시 잔임기간 승계 규정을 삭제하여 원장 및 감사의 임기를 3년으로 새로 부여함으로써 책임경영을 강화하고 안정적인 국방 정책 연구 환경을 조성하려는 것임(안 제8조 제4항).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_92D91D15C64D4749BF297E147F7847",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "소관기관",
+        "진행단계",
+        "소관위원회",
+        "처리내용"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "소관기관",
+          "before": "위원회 배정 전",
+          "after": "국방위원회"
+        },
+        {
+          "label": "진행단계",
+          "before": "접수",
+          "after": "소관위"
+        },
+        {
+          "label": "소관위원회",
+          "before": "위원회 배정 전",
+          "after": "국방위원회"
+        },
+        {
+          "label": "처리내용",
+          "before": "이번 달 신규 확인",
+          "after": "접수 → 소관위"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
       "billId": "PRC_A5833A63082748C0A965D3269B8FA6",
       "title": "한국발전공사법안",
       "billNo": "의안번호 2221937",
@@ -98168,353 +99390,83 @@
     },
     {
       "month": "2026-10",
-      "billId": "PRC_C3EFF177DB6D487BBC6A6B44D52C00",
-      "title": "가사소송법 일부개정법률안",
-      "billNo": "의안번호 2222060",
-      "agency": "위원회 배정 전",
-      "committee": "위원회 배정 전",
-      "proposer": "채현일의원 등 12인",
-      "proposeDate": "2026-10-23",
-      "relatedCommitteeReviews": [],
-      "officialDetailCheckedAt": "",
-      "officialDetailCheck": "",
-      "stage": "접수",
-      "previousStage": "-",
-      "changed": true,
-      "changedDate": "2026-10-26",
-      "stageDate": "2026-10-23",
-      "committeeDate": "",
-      "committeePresentDate": "",
-      "change": "이번 달 신규 확인",
-      "processingResult": "",
-      "summary": "현행법은 가사소송 절차에 관하여 특별한 규정이 있는 경우를 제외하고는 「민사소송법」에 따르도록 하고 있어, 생명 또는 신체에 대한 위해의 우려가 있는 소송관계인은 「민사소송법」 제163조제2항에 따라 주소 등 개인정보에 관한 보호조치를 신청할 수 있음. 특히 최근 가정폭력을 피해 거주지를 옮긴 피해자의 주소가 이혼소송 과정에서 배우자에게 노출된 이후 피해자가 살해되는 사건이 발생한 바 있어, 가사사건의 접수 단계부터 개인정보 노출 가능성을 안내하고 위해의 우려가 있는 사건을 선제적으로 확인하여 보호할 필요가 있음.",
-      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_C3EFF177DB6D487BBC6A6B44D52C00",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222060"
-        }
-      ]
-    },
-    {
-      "month": "2026-10",
-      "billId": "PRC_570D9742119541A59B73E1F1FD553C",
-      "title": "가정폭력범죄의 처벌 등에 관한 특례법 일부개정법률안",
-      "billNo": "의안번호 2222058",
-      "agency": "위원회 배정 전",
-      "committee": "위원회 배정 전",
-      "proposer": "채현일의원 등 10인",
-      "proposeDate": "2026-10-23",
-      "relatedCommitteeReviews": [],
-      "officialDetailCheckedAt": "",
-      "officialDetailCheck": "",
-      "stage": "접수",
-      "previousStage": "-",
-      "changed": true,
-      "changedDate": "2026-10-26",
-      "stageDate": "2026-10-23",
-      "committeeDate": "",
-      "committeePresentDate": "",
-      "change": "이번 달 신규 확인",
-      "processingResult": "",
-      "summary": "현행법은 가정폭력 피해자를 보호하기 위하여 가정폭력행위자를 피해자 또는 가정구성원으로부터 격리하거나 이들에 대한 접근을 금지할 수 있는 근거를 임시조치 등의 제도에 두고 있으나, 「스토킹범죄의 처벌 등에 관한 법률」과 달리 위치추적 전자장치를 부착할 수 있는 근거는 규정하고 있지 아니함. 특히 최근 광주에서 가정폭력 가해자에 대한 분리 조치가 이루어진 상황에서도 가해자가 배우자에게 접근하여 살해하는 사건이 발생하면서 접근 금지 등 조치의 실효성을 높이고 고위험 피해자에 대한 보호를 강화할 필요성이 제기되고 있음.",
-      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_570D9742119541A59B73E1F1FD553C",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222058"
-        }
-      ]
-    },
-    {
-      "month": "2026-10",
-      "billId": "PRC_DCCEC0F5B7C04F23AC4B7B3398A4DC",
-      "title": "가축전염병 예방법 일부개정법률안",
-      "billNo": "의안번호 2222039",
-      "agency": "위원회 배정 전",
-      "committee": "위원회 배정 전",
-      "proposer": "송옥주의원 등 12인",
-      "proposeDate": "2026-10-23",
-      "relatedCommitteeReviews": [],
-      "officialDetailCheckedAt": "",
-      "officialDetailCheck": "",
-      "stage": "접수",
-      "previousStage": "-",
-      "changed": true,
-      "changedDate": "2026-10-26",
-      "stageDate": "2026-10-23",
-      "committeeDate": "",
-      "committeePresentDate": "",
-      "change": "이번 달 신규 확인",
-      "processingResult": "",
-      "summary": "현행법은 가축전염병이 발생하거나 퍼지는 것을 막기 위한 이동제한 조치 또는 반출금지 명령을 이행하여 피해를 입은 가축의 소유자에게 예산의 범위에서 소득안정을 위한 비용을 지원할 수 있도록 규정하고 있음. 가축전염병 방역을 위한 이동제한 조치 또는 반출금지 명령으로 인해 가금농장에 공급할 예정이던 종란 또는 초생추를 공급하지 못하여 폐기하는 등 부화업자에게 직접적인 경제적 피해가 발생할 수 있으나, 현행법에서는 이러한 경우에 대한 지원범위가 명확하게 규정되어 있지 않음.",
-      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_DCCEC0F5B7C04F23AC4B7B3398A4DC",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222039"
-        }
-      ]
-    },
-    {
-      "month": "2026-10",
-      "billId": "PRC_6518A8B797AB4F7CAAFEE2896B206D",
-      "title": "건설산업기본법 일부개정법률안",
-      "billNo": "의안번호 2222037",
-      "agency": "국토교통부",
-      "committee": "위원회 배정 전",
-      "proposer": "김남근의원 등 11인",
-      "proposeDate": "2026-10-23",
-      "relatedCommitteeReviews": [],
-      "officialDetailCheckedAt": "",
-      "officialDetailCheck": "",
-      "stage": "접수",
-      "previousStage": "-",
-      "changed": true,
-      "changedDate": "2026-10-26",
-      "stageDate": "2026-10-23",
-      "committeeDate": "",
-      "committeePresentDate": "",
-      "change": "이번 달 신규 확인",
-      "processingResult": "",
-      "summary": "그럼에도 불구하고, 현행법상 종합건설업체의 4억 3천만원 미만 공사 수주를 제한하는 영세 전문건설업체 보호조치는, 법률조항에 기준 금액이 구체적으로 명시돼(제16조제1항제4호 단서) 변화된 업계 상황 등을 반영하지 못한 채 경직적으로 운영되는 문제가 있으며, 위 조치는 2026. 위원회에서 건설공사비지수 등을 고려하여 3년마다 의제부대공사의 범위를 정하도록 하여, 전문건설업체의 경쟁력 회복에 도움을 주기 위한 것임(안 제16조 및 제16조의2 신설 등).",
-      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_6518A8B797AB4F7CAAFEE2896B206D",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222037"
-        }
-      ]
-    },
-    {
-      "month": "2026-10",
-      "billId": "PRC_256ABCA24B8F4E8D8902F122D733A8",
-      "title": "경찰관 직무집행법 일부개정법률안",
-      "billNo": "의안번호 2222065",
-      "agency": "위원회 배정 전",
-      "committee": "위원회 배정 전",
-      "proposer": "이상식의원 등 11인",
-      "proposeDate": "2026-10-23",
-      "relatedCommitteeReviews": [],
-      "officialDetailCheckedAt": "",
-      "officialDetailCheck": "",
-      "stage": "접수",
-      "previousStage": "-",
-      "changed": true,
-      "changedDate": "2026-10-26",
-      "stageDate": "2026-10-23",
-      "committeeDate": "",
-      "committeePresentDate": "",
-      "change": "이번 달 신규 확인",
-      "processingResult": "",
-      "summary": "초국가범죄가 증가함에 따라 외국 법집행기관 및 국제기구와의 신속한 정보교환과 국제공조의 중요성이 높아지고 있으며, 국제형사경찰기구(인터폴)를 비롯한 국제치안협력기구를 통한 범죄정보 교환, 국제수배, 도피사범 추적ㆍ검거 및 송환 등 경찰의 국제협력 업무도 지속적으로 확대되고 있음. 경찰청장이 국제형사경찰기구와의 협력에 관한 국가중앙사무를 수행하고, 대통령령으로 정하는 정부 간 국제치안협력기구와 협력할 수 있도록 하며, 국제치안협력기구가 운용하는 보안통신체계를 구축ㆍ운영할 수 있는 근거를 마련하려는 것임.",
-      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_256ABCA24B8F4E8D8902F122D733A8",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222065"
-        }
-      ]
-    },
-    {
-      "month": "2026-10",
-      "billId": "PRC_0E901300B1D149909795D7B36C2510",
-      "title": "관세법 일부개정법률안",
-      "billNo": "의안번호 2222052",
-      "agency": "위원회 배정 전",
-      "committee": "위원회 배정 전",
-      "proposer": "최기상의원 등 12인",
-      "proposeDate": "2026-10-23",
-      "relatedCommitteeReviews": [],
-      "officialDetailCheckedAt": "",
-      "officialDetailCheck": "",
-      "stage": "접수",
-      "previousStage": "-",
-      "changed": true,
-      "changedDate": "2026-10-26",
-      "stageDate": "2026-10-23",
-      "committeeDate": "",
-      "committeePresentDate": "",
-      "change": "이번 달 신규 확인",
-      "processingResult": "",
-      "summary": "현행법은 보세창고에 장치된 물품에 대하여 세관장이 물품관리에 필요하다고 인정할 때에는 장치기간 중에도 운영인에게 그 물품의 반출을 명할 수 있도록 하고, 이를 이행하지 아니한 자에게는 100만원 이하의 과태료를 부과하도록 규정하고 있음. 참고사항 이 법률안은 최기상의원이 대표발의한 「물가안정에 관한 법률 일부개정법률안」(의안번호 제22053호)의 의결을 전제로 하는 것이므로 같은 법률안이 의결되지 아니하거나 수정의결되는 경우에는 이에 맞추어 조정되어야 할 것임.",
-      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_0E901300B1D149909795D7B36C2510",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222052"
-        }
-      ]
-    },
-    {
-      "month": "2026-10",
-      "billId": "PRC_C2B6Z0Z9Y1Z5U1V8T1R5E5C3D0C2A0",
-      "title": "국가공무원법 일부개정법률안",
-      "billNo": "의안번호 2222057",
-      "agency": "위원회 배정 전",
-      "committee": "위원회 배정 전",
-      "proposer": "이해식의원 등 11인",
-      "proposeDate": "2026-10-23",
-      "relatedCommitteeReviews": [],
-      "officialDetailCheckedAt": "",
-      "officialDetailCheck": "",
-      "stage": "접수",
-      "previousStage": "-",
-      "changed": true,
-      "changedDate": "2026-10-26",
-      "stageDate": "2026-10-23",
-      "committeeDate": "",
-      "committeePresentDate": "",
-      "change": "이번 달 신규 확인",
-      "processingResult": "",
-      "summary": "현행법은 공무상 질병휴직 기간을 3년 이내로 하되 2년의 범위에서 연장할 수 있도록 하고 있으나, 위험직무 수행에 따른 질병ㆍ부상으로 장기간 치료가 필요한 경우에는 현행 휴직기간으로는 충분한 치료를 받기 어렵고, 휴직기간 내에 복귀하지 못하면 직권면직 대상이 될 수 있는 문제가 있음. 위험직무를 수행하다 공무상 질병 또는 부상이 발생한 경우 질병휴직 기간을 5년 이내로, 연장기간을 3년의 범위로 확대하는 한편, 부적격 결정을 받은 고위공무원은 직권으로 강임할 수 있는 근거를 마련하는 등 공무원 인사제도의 합리성을 제고하려는 것임(안 제72조제1호의2, 제73조의4제1항 등).",
-      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_C2B6Z0Z9Y1Z5U1V8T1R5E5C3D0C2A0",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222057"
-        }
-      ]
-    },
-    {
-      "month": "2026-10",
-      "billId": "PRC_5932C7131EE742AC922BB5769A7973",
-      "title": "국가재정법 일부개정법률안",
-      "billNo": "의안번호 2222035",
-      "agency": "위원회 배정 전",
-      "committee": "위원회 배정 전",
-      "proposer": "임이자의원 등 10인",
-      "proposeDate": "2026-10-23",
-      "relatedCommitteeReviews": [],
-      "officialDetailCheckedAt": "",
-      "officialDetailCheck": "",
-      "stage": "접수",
-      "previousStage": "-",
-      "changed": true,
-      "changedDate": "2026-10-26",
-      "stageDate": "2026-10-23",
-      "committeeDate": "",
-      "committeePresentDate": "",
-      "change": "이번 달 신규 확인",
-      "processingResult": "",
-      "summary": "이로 인해 공적 재원이 투입된 정책자금임에도 조성규모, 운용현황, 집행실적 및 성과 등에 대한 국회의 통합적인 심의와 통제가 어려워 재정의 투명성과 책임성이 충분히 확보되지 못하고 있다는 지적이 제기되고 있음. 정부가 공적 재원을 기반으로 조성한 정책자금에 대한 보고서를 매년 작성하여 회계연도 개시 120일 전까지 국회에 보고하도록 함으로써 재정 운용의 투명성과 책임성을 제고하고, 국회의 재정통제 기능을 강화하려는 것임(안 제54조의2 신설).",
-      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_5932C7131EE742AC922BB5769A7973",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222035"
-        }
-      ]
-    },
-    {
-      "month": "2026-10",
-      "billId": "PRC_39AAB30937334A96B3087D22BCE1EF",
-      "title": "국민건강보험법 일부개정법률안",
-      "billNo": "의안번호 2222068",
-      "agency": "위원회 배정 전",
-      "committee": "위원회 배정 전",
+      "billId": "PRC_5C96C8016BB84E9BBAF4FD6F46D1D3",
+      "title": "희귀질환관리법 일부개정법률안",
+      "billNo": "의안번호 2222051",
+      "agency": "보건복지위원회",
+      "committee": "보건복지위원회",
       "proposer": "박용갑의원 등 14인",
       "proposeDate": "2026-10-23",
       "relatedCommitteeReviews": [],
       "officialDetailCheckedAt": "",
       "officialDetailCheck": "",
-      "stage": "접수",
-      "previousStage": "-",
+      "stage": "소관위",
+      "previousStage": "접수",
       "changed": true,
-      "changedDate": "2026-10-26",
-      "stageDate": "2026-10-23",
-      "committeeDate": "",
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "2026-10-26",
       "committeePresentDate": "",
-      "change": "이번 달 신규 확인",
+      "change": "접수 → 소관위",
       "processingResult": "",
-      "summary": "현행법은 국민의 의료비 부담 완화를 위해서 본인부담상한제를 운영하고 있으며, 실손의료보험 표준약관은 본인부담상한액을 초과하여 공단으로부터 환급받을 수 있는 금액을 실손의료보험금 지급 대상에서 제외하여 이중지급을 방지하고 있음. 공단이 본인부담상한액을 확정하면 보험회사가 이를 확인한 후, 사후정산을 할 수 있도록 근거를 신설해 실손의료보험금이 덜 지급되거나 이중지급되는 문제를 해결하려는 것임(안 제44조의2 신설).",
-      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_39AAB30937334A96B3087D22BCE1EF",
+      "summary": "현행법은 음식물의 섭취ㆍ소화ㆍ흡수ㆍ대사능력이 제한되거나 영양성분의 제한 또는 보충이 요구되는 희귀질환자를 위한 식품을 생산하거나 판매하는 자에 대해 필요한 행정적ㆍ재정적 지원을 할 수 있도록 정하고 있음. 매년 특수식품 생산실적에 대한 보고를 받고, 의약품이나 의료기기 공급 관리를 소관하는 식품의약품안전처가 희귀질환자의 생명유지에 필수적인 ‘공급안전관리대상’ 특수식을 지정하고, 이에 대한 수요조사 및 공급중단 대처 방안 마련 등 공급관리 체계를 구축하도록 하려는 것임(안 제18조제6항 신설 등).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_5C96C8016BB84E9BBAF4FD6F46D1D3",
       "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
+      "dailyChangedDate": "2026-10-27",
       "dailyChangeFields": [
-        "신규 확인"
+        "소관기관",
+        "진행단계",
+        "소관위원회",
+        "처리내용"
       ],
       "dailyChangeDetails": [
         {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222068"
+          "label": "소관기관",
+          "before": "위원회 배정 전",
+          "after": "보건복지위원회"
+        },
+        {
+          "label": "진행단계",
+          "before": "접수",
+          "after": "소관위"
+        },
+        {
+          "label": "소관위원회",
+          "before": "위원회 배정 전",
+          "after": "보건복지위원회"
+        },
+        {
+          "label": "처리내용",
+          "before": "이번 달 신규 확인",
+          "after": "접수 → 소관위"
         }
       ]
     },
     {
       "month": "2026-10",
-      "billId": "PRC_A2Z6Z0H9I1G5E1F0D0Z1A1Z5X1Y4W1",
-      "title": "국민건강보험법 일부개정법률안",
-      "billNo": "의안번호 2222066",
+      "billId": "PRC_C78A0DBCBFB541C48092CDBCD37C5D",
+      "title": "가사소송법 일부개정법률안",
+      "billNo": "의안번호 2222088",
       "agency": "위원회 배정 전",
       "committee": "위원회 배정 전",
-      "proposer": "이인영의원 등 11인",
-      "proposeDate": "2026-10-23",
+      "proposer": "허영의원 등 10인",
+      "proposeDate": "2026-10-26",
       "relatedCommitteeReviews": [],
       "officialDetailCheckedAt": "",
       "officialDetailCheck": "",
       "stage": "접수",
       "previousStage": "-",
       "changed": true,
-      "changedDate": "2026-10-26",
-      "stageDate": "2026-10-23",
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
       "committeeDate": "",
       "committeePresentDate": "",
       "change": "이번 달 신규 확인",
       "processingResult": "",
-      "summary": "현행법령은 법령이 정하는 바에 따라 요양급여 비용의 일부를 본인이 부담하도록 규정하면서도, 국민에게 과도한 의료비 부담을 완화하기 위한 안전장치로서 건강보험 본인부담상한제와 재난적 의료비 제도를 두고 있음. 재난적 의료비 제도는 「재난적의료비 지원에 관한 법률」에 따라 「보험업법」에 따른 보험회사 등으로부터 받은 보험금 등을 제외하고 지급하고 있으나, 건강보험 본인부담상한제에는 이러한 규정이 없음.",
-      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_A2Z6Z0H9I1G5E1F0D0Z1A1Z5X1Y4W1",
+      "summary": "피해자보호명령이나 신변보호조치 등으로 위험이 확인된 경우에도 소송 또는 심판 기록의 열람ㆍ복사ㆍ송달 전에 개인정보 보호 여부를 우선 심사하도록 하는 절차가 미흡하여, 피해자의 안전을 선제적으로 확보할 필요가 있음. 일정한 가사사건의 소 제기 또는 심판 청구 시 가정법원이 당사자에 대한 위해 우려와 주소ㆍ연락처의 공개 의사를 확인하고 개인정보 보호조치의 내용 및 신청 방법을 안내하도록 하려는 것임.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_C78A0DBCBFB541C48092CDBCD37C5D",
       "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
+      "dailyChangedDate": "2026-10-27",
       "dailyChangeFields": [
         "신규 확인"
       ],
@@ -98522,35 +99474,35 @@
         {
           "label": "신규 확인",
           "before": "",
-          "after": "의안번호 2222066"
+          "after": "의안번호 2222088"
         }
       ]
     },
     {
       "month": "2026-10",
-      "billId": "PRC_7CA479E9D9104547BD878ADA213BDC",
-      "title": "국방과학연구소법 일부개정법률안",
-      "billNo": "의안번호 2222048",
+      "billId": "PRC_Z2Z6R0Q5P2Y0U1T6D2B4X4W8E6D4A8",
+      "title": "교원의 지위 향상 및 교육활동 보호를 위한 특별법 일부개정법률안",
+      "billNo": "의안번호 2222108",
       "agency": "위원회 배정 전",
       "committee": "위원회 배정 전",
-      "proposer": "황명선의원 등 17인",
-      "proposeDate": "2026-10-23",
+      "proposer": "구자근의원 등 11인",
+      "proposeDate": "2026-10-26",
       "relatedCommitteeReviews": [],
       "officialDetailCheckedAt": "",
       "officialDetailCheck": "",
       "stage": "접수",
       "previousStage": "-",
       "changed": true,
-      "changedDate": "2026-10-26",
-      "stageDate": "2026-10-23",
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
       "committeeDate": "",
       "committeePresentDate": "",
       "change": "이번 달 신규 확인",
       "processingResult": "",
-      "summary": "현행법상 국방과학연구소 소장 및 감사의 궐위 시 후임자의 임기를 전임자의 남은 기간으로 한정함에 따라, 잔여임기의 단기성으로 인해 우수한 전문가 유치가 어렵고 기관장 공석 시 직무대행 체제 장기화로 핵심 국방 R&D 사업의 지속성이 저해되는 문제가 발생하고 있음. 소장 및 감사의 궐위 시 전임자 임기의 남은 기간만 수행하도록 한 단서 규정을 삭제하여 3년의 임기를 새로 보장함으로써, 인사운영의 자율성을 확보하고 국방과학기술 연구의 연속성과 책임경영 체제를 강화하려는 것임(안 제10조제4항).",
-      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_7CA479E9D9104547BD878ADA213BDC",
+      "summary": "현행법은 고등학교 이하 각급학교의 장이 학생의 보호자 등에 의해 교육활동 침해행위가 있었다는 사실을 알게 된 경우 지역교권보호위원회에 알려야 하고, 지역교권보호위원회는 서면사과, 재발방지 서약, 특별교육 이수 및 심리치료 등을 교육장에게 요청할 수 있도록 규정하고 있음. 교원의 전문성과 교권을 보호하고, 학부모 등에게 정당한 교육활동에 부당하게 간섭하지 않도록 하기 위해서는 해당 조치의 실효성을 강화할 필요가 있다는 지적이 있음.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_Z2Z6R0Q5P2Y0U1T6D2B4X4W8E6D4A8",
       "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
+      "dailyChangedDate": "2026-10-27",
       "dailyChangeFields": [
         "신규 확인"
       ],
@@ -98558,35 +99510,35 @@
         {
           "label": "신규 확인",
           "before": "",
-          "after": "의안번호 2222048"
+          "after": "의안번호 2222108"
         }
       ]
     },
     {
       "month": "2026-10",
-      "billId": "PRC_A2B6A0A7Y1X6Y1F6G2F7F4D2C1C3K0",
-      "title": "노인복지법 일부개정법률안",
-      "billNo": "의안번호 2222062",
+      "billId": "PRC_E537CDA7CC6B4A039D5183655B1E5B",
+      "title": "국가유공자 등 예우 및 지원에 관한 법률 일부개정법률안",
+      "billNo": "의안번호 2222095",
       "agency": "위원회 배정 전",
       "committee": "위원회 배정 전",
-      "proposer": "허종식의원 등 11인",
-      "proposeDate": "2026-10-23",
+      "proposer": "이언주의원 등 10인",
+      "proposeDate": "2026-10-26",
       "relatedCommitteeReviews": [],
       "officialDetailCheckedAt": "",
       "officialDetailCheck": "",
       "stage": "접수",
       "previousStage": "-",
       "changed": true,
-      "changedDate": "2026-10-26",
-      "stageDate": "2026-10-23",
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
       "committeeDate": "",
       "committeePresentDate": "",
       "change": "이번 달 신규 확인",
       "processingResult": "",
-      "summary": "현행법은 노인학대를 조기에 발견하고 피해노인을 보호하기 위하여 의료인, 노인복지시설 종사자, 장기요양기관 종사자 등 노인과 밀접하게 접촉하는 직군을 노인학대 신고의무자로 지정하고, 직무 수행 중 노인학대를 알게 된 경우 즉시 노인보호전문기관 또는 수사기관에 신고하도록 규정하고 있음. 노인평생교육시설의 장과 그 종사자를 노인학대 신고의무자에 추가함으로써 노인학대의 조기 발견과 신속한 대응을 도모하고 피해노인 보호 체계를 강화하려는 것임(안 제39조의6제2항제17호 신설).",
-      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_A2B6A0A7Y1X6Y1F6G2F7F4D2C1C3K0",
+      "summary": "현행법은 국가를 위해 희생ㆍ공헌한 사람과 유족을 예우ㆍ지원하고, 전투 또는 이에 준하는 직무수행 중 사망하거나 상이를 입은 군인 등을 전몰ㆍ전상군경으로 인정하고 있음. 관련 군사기록과 조사자료는 국가기관이 보유하고 있어 피해 군인이나 유족이 이를 확보ㆍ입증하는 데 한계가 있음.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_E537CDA7CC6B4A039D5183655B1E5B",
       "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
+      "dailyChangedDate": "2026-10-27",
       "dailyChangeFields": [
         "신규 확인"
       ],
@@ -98594,107 +99546,35 @@
         {
           "label": "신규 확인",
           "before": "",
-          "after": "의안번호 2222062"
+          "after": "의안번호 2222095"
         }
       ]
     },
     {
       "month": "2026-10",
-      "billId": "PRC_084BC49AC8ED48FE905C788D7E6103",
-      "title": "농업기계화 촉진법 일부개정법률안",
-      "billNo": "의안번호 2222050",
-      "agency": "위원회 배정 전",
-      "committee": "위원회 배정 전",
-      "proposer": "윤준병의원 등 13인",
-      "proposeDate": "2026-10-23",
-      "relatedCommitteeReviews": [],
-      "officialDetailCheckedAt": "",
-      "officialDetailCheck": "",
-      "stage": "접수",
-      "previousStage": "-",
-      "changed": true,
-      "changedDate": "2026-10-26",
-      "stageDate": "2026-10-23",
-      "committeeDate": "",
-      "committeePresentDate": "",
-      "change": "이번 달 신규 확인",
-      "processingResult": "",
-      "summary": "현행법은 거짓이나 그 밖의 부정한 방법으로 검정에 적합판정을 받은 농업기계에 대하여 농림축산식품부장관이 그 검정을 무효로 하고 있으며, 검정에 적합판정을 받은 농업기계와 동일한 형식의 농업기계에 대하여 품질유지 등을 위하여 필요하다고 인정하면 그 농업기계에 대하여 사후검정을 할 수 있도록 규정하고 있음. 사후검정 과정에서 정당한 사유 없이 사후검정을 거부ㆍ방해 또는 기피하거나 허위자료를 제공하는 경우에도 해당 농업기계의 검정을 무효로 할 수 있도록 법적 근거를 마련하고, 농업기계의 검정 업무를 농촌진흥청장에게 명시적으로 위임하도록 명문화함으로써 농업기계 검정 제도의 실효성과 신뢰성을 확보하고 안전한 농업환경을 조성하려는 것임(안 제10조제1항 및 제16조제1항).",
-      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_084BC49AC8ED48FE905C788D7E6103",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222050"
-        }
-      ]
-    },
-    {
-      "month": "2026-10",
-      "billId": "PRC_398B1FB303674C00B2F4340D2F8185",
-      "title": "물가안정에 관한 법률 일부개정법률안",
-      "billNo": "의안번호 2222053",
-      "agency": "위원회 배정 전",
-      "committee": "위원회 배정 전",
-      "proposer": "최기상의원 등 13인",
-      "proposeDate": "2026-10-23",
-      "relatedCommitteeReviews": [],
-      "officialDetailCheckedAt": "",
-      "officialDetailCheck": "",
-      "stage": "접수",
-      "previousStage": "-",
-      "changed": true,
-      "changedDate": "2026-10-26",
-      "stageDate": "2026-10-23",
-      "committeeDate": "",
-      "committeePresentDate": "",
-      "change": "이번 달 신규 확인",
-      "processingResult": "",
-      "summary": "현행법은 사업자가 폭리를 목적으로 물품을 매점하거나 판매를 기피하는 행위로서 재정경제부장관이 물가의 안정을 해칠 우려가 있다고 인정하여 지정한 행위를 매점매석 행위로 금지하고, 매점매석 행위를 하고 있는 사업자에 대하여 주무부장관이 시정 또는 중지를 명하도록 규정하고 있음. 재정경제부장관이 매점매석 행위의 지정 및 방지를 위하여 필요한 경우 관계 행정기관의 장에게 자료의 제출을 요구하거나 필요한 조치를 하도록 요청할 수 있도록 하여 매점매석 행위에 대한 범정부 차원의 대응체계를 마련하려는 것임(안 제7조의2 신설).",
-      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_398B1FB303674C00B2F4340D2F8185",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222053"
-        }
-      ]
-    },
-    {
-      "month": "2026-10",
-      "billId": "PRC_B9D83BC48CC94361B7C29B78DEC7F3",
-      "title": "민사소송법 일부개정법률안",
-      "billNo": "의안번호 2222059",
+      "billId": "PRC_057F921830B144A6A2760F624143CD",
+      "title": "군인 재해보상법 일부개정법률안",
+      "billNo": "의안번호 2222096",
       "agency": "법무부",
       "committee": "위원회 배정 전",
-      "proposer": "채현일의원 등 12인",
-      "proposeDate": "2026-10-23",
+      "proposer": "이언주의원 등 10인",
+      "proposeDate": "2026-10-26",
       "relatedCommitteeReviews": [],
       "officialDetailCheckedAt": "",
       "officialDetailCheck": "",
       "stage": "접수",
       "previousStage": "-",
       "changed": true,
-      "changedDate": "2026-10-26",
-      "stageDate": "2026-10-23",
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
       "committeeDate": "",
       "committeePresentDate": "",
       "change": "이번 달 신규 확인",
       "processingResult": "",
-      "summary": "현행법은 소송관계인의 생명 또는 신체에 위해를 입을 우려가 있는 경우 해당 소송관계인의 신청에 따라 주소 등 개인정보가 당사자를 포함한 제3자에게 공개되지 아니하도록 법원이 보호조치를 할 수 있도록 규정하고 있음. 특히 최근 가정폭력을 피해 거주지를 옮긴 피해자의 주소가 이혼소송 과정에서 배우자에게 노출된 이후 피해자가 살해되는 사건이 발생하였으나, 현행법은 소송관계인의 신청이 있어야만 보호조치를 할 수 있어 위해의 우려가 확인되더라도 법원이 직권으로 개인정보를 보호하기 어려운 한계가 있음.",
-      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_B9D83BC48CC94361B7C29B78DEC7F3",
+      "summary": "동일한 사고에 대하여 「군인사법」상 전상 인정기준과 「군인 재해보상법」상 전상에 관한 보상기준이 서로 달리 적용되어 불합리한 결과가 발생하지 않도록 할 필요가 있음. 이를 통하여 국가를 위한 희생에 대한 인정과 보상이 일관되게 이루어지도록 하고, 법률이 정한 지급요건을 충족하는 군인이 사고 원인에 관한 입증의 어려움으로 정당한 재해보상에서 배제되는 문제를 개선하려는 것임(안 제33조제1항제1호).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_057F921830B144A6A2760F624143CD",
       "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
+      "dailyChangedDate": "2026-10-27",
       "dailyChangeFields": [
         "신규 확인"
       ],
@@ -98702,35 +99582,35 @@
         {
           "label": "신규 확인",
           "before": "",
-          "after": "의안번호 2222059"
+          "after": "의안번호 2222096"
         }
       ]
     },
     {
       "month": "2026-10",
-      "billId": "PRC_S2Q6R0M9N1L8K1K8I0J1R2S0Q0Q9P9",
-      "title": "부가가치세법 일부개정법률안",
-      "billNo": "의안번호 2222044",
+      "billId": "PRC_0767D430A54D420BA3EEE8681C91E5",
+      "title": "군인사법 일부개정법률안",
+      "billNo": "의안번호 2222094",
       "agency": "위원회 배정 전",
       "committee": "위원회 배정 전",
-      "proposer": "윤영석의원 등 11인",
-      "proposeDate": "2026-10-23",
+      "proposer": "이언주의원 등 10인",
+      "proposeDate": "2026-10-26",
       "relatedCommitteeReviews": [],
       "officialDetailCheckedAt": "",
       "officialDetailCheck": "",
       "stage": "접수",
       "previousStage": "-",
       "changed": true,
-      "changedDate": "2026-10-26",
-      "stageDate": "2026-10-23",
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
       "committeeDate": "",
       "committeePresentDate": "",
       "change": "이번 달 신규 확인",
       "processingResult": "",
-      "summary": "현행법은 영세 개인사업자의 세부담을 완화하고 신용카드ㆍ현금영수증 등 투명한 거래를 활성화하기 위하여 신용카드 등 매출액에 대한 부가가치세 세액공제를 두고 있음. 현행 신용카드 등 매출세액공제의 우대 공제율 1.3퍼센트 및 연간 공제한도 1천만원을 2029년 12월 31일까지 유지하는 한편, 상대적으로 가격전가 능력과 경영여력이 취약한 소상공인에 대해서는 공제율을 1.5퍼센트, 연간 공제한도를 1천200만원으로 확대하고, 제도의 운영성과를 사후 평가하도록 함으로써 소상공인의 경영부담을 완화하고 거래의 투명성과 세원 양성화를 지속적으로 제고하려는 것임(안 제46조제1항제3호).",
-      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_S2Q6R0M9N1L8K1K8I0J1R2S0Q0Q9P9",
+      "summary": "특수위험구역의 군사상 직무 수행 중 폭발성 위험물에 의한 사망？상이의 경우 반증이 없는 한 적의 행위에 의한 것으로 추정함(안 제54조의2제4항？제5항 신설). 각군 참모총장과 국방부장관에게 조사？자료확보 및 비밀정보의 요지제공 의무를 부여하고, 설치 주체 입증을 피해 군인에게 전가하지 못하도록 함(안 제54조의8 신설).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_0767D430A54D420BA3EEE8681C91E5",
       "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
+      "dailyChangedDate": "2026-10-27",
       "dailyChangeFields": [
         "신규 확인"
       ],
@@ -98738,71 +99618,35 @@
         {
           "label": "신규 확인",
           "before": "",
-          "after": "의안번호 2222044"
+          "after": "의안번호 2222094"
         }
       ]
     },
     {
       "month": "2026-10",
-      "billId": "PRC_04BE93641AB84720984C9DA3B7611E",
-      "title": "상속세 및 증여세법 일부개정법률안",
-      "billNo": "의안번호 2222040",
-      "agency": "기획재정부",
-      "committee": "위원회 배정 전",
-      "proposer": "김태호의원 등 11인",
-      "proposeDate": "2026-10-23",
-      "relatedCommitteeReviews": [],
-      "officialDetailCheckedAt": "",
-      "officialDetailCheck": "",
-      "stage": "접수",
-      "previousStage": "-",
-      "changed": true,
-      "changedDate": "2026-10-26",
-      "stageDate": "2026-10-23",
-      "committeeDate": "",
-      "committeePresentDate": "",
-      "change": "이번 달 신규 확인",
-      "processingResult": "",
-      "summary": "제안이유 정부에서 추진 중인 2026년 세제개편안은 가업상속공제의 적용 요건을 강화하고 적용 대상 업종을 축소하는 내용을 포함하고 있어, 기업의 경영 여건과 가업승계 실태를 충분히 고려할 필요가 있다는 의견이 제기되고 있음. 정부 개편안에 따라 피상속인의 가업경영기간 요건이 현행 10년 이상에서 20년 이상으로 강화되면 공제 대상에서 제외되는 기업은 상속세 납부에 따른 자금 부담과 유동성 제약으로 기업의 존속을 위협받게 되고, 이는 결국 국가 경제적 손실로 이어질 우려가 있음.",
-      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_04BE93641AB84720984C9DA3B7611E",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222040"
-        }
-      ]
-    },
-    {
-      "month": "2026-10",
-      "billId": "PRC_34D86913223F4978BA23B9B18691C3",
-      "title": "소득세법 일부개정법률안",
-      "billNo": "의안번호 2222064",
+      "billId": "PRC_DB529ED34F754627926E5D2DB25947",
+      "title": "귀농어·귀촌 활성화 및 지원에 관한 법률 일부개정법률안",
+      "billNo": "의안번호 2222091",
       "agency": "위원회 배정 전",
       "committee": "위원회 배정 전",
-      "proposer": "윤영석의원 등 10인",
-      "proposeDate": "2026-10-23",
+      "proposer": "엄태영의원 등 10인",
+      "proposeDate": "2026-10-26",
       "relatedCommitteeReviews": [],
       "officialDetailCheckedAt": "",
       "officialDetailCheck": "",
       "stage": "접수",
       "previousStage": "-",
       "changed": true,
-      "changedDate": "2026-10-26",
-      "stageDate": "2026-10-23",
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
       "committeeDate": "",
       "committeePresentDate": "",
       "change": "이번 달 신규 확인",
       "processingResult": "",
-      "summary": "현행법은 일용근로자가 아닌 근로자에게 지급하는 근로소득(이하 “상용근로소득”이라 한다)을 지급하는 자에 대하여 반기마다 간이지급명세서를 제출하도록 하고 있으나, 2027년 1월 1일부터 적용되는 개정 조항에 따르면 매월 간이지급명세서를 제출하여야 함. 2027년부터 월별 간이지급명세서를 제출하게 되면 근로자를 1명이라도 고용하는 중소기업, 소상공인 등 영세 사업자는 2,000만명이 넘는 근로자 모두에 대하여 매월 거의 동일한 소득내용에 대하여 간이지급명세서 제출하여야 하는 과도한 협력의무를 지게 되고 근로자들은 개인정보 및 과세정보가 과도하게 노출될 우려가 있는 것은 물론 실제 사회안전망 구축을 위한 전 국민고용보험 도입을 위해서도 고용 중인 상용근로자의 소득자료가 전혀 불필요함에도 이를 제출하게 하여 과도한 규제에 해당하므로 현재의 제출 주기대로 반기마다 간이지급명세서를 제출하게 유지할 필요가 있음.",
-      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_34D86913223F4978BA23B9B18691C3",
+      "summary": "현행법은 농어촌 지역 중 「지방자치분권 및 균형성장에 관한 특별법」에 따른 특수상황지역으로 이주한 귀농어업인 및 귀촌인에 대하여 창업ㆍ주택구입자금 등을 지원하는 경우 세제상ㆍ금리상의 우대조치를 할 수 있도록 하고 있음. 인구감소와 지방소멸위기가 심화되고 있는 농어촌 지역의 인구 유입 및 정착을 촉진하기 위해서는 특수상황지역뿐만 아니라 인구감소지역으로 이주하는 귀농어업인 및 귀촌인에 대해서도 금융지원을 확대할 필요가 있으며, 주택구입자금뿐만 아니라 주택의 신축ㆍ수리 또는 임차에 필요한 자금을 지원하는 경우에도 세제상ㆍ금리상의 우대조치를 적용하여 안정적인 농어촌 정착을 지원할 필요가 있음.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_DB529ED34F754627926E5D2DB25947",
       "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
+      "dailyChangedDate": "2026-10-27",
       "dailyChangeFields": [
         "신규 확인"
       ],
@@ -98810,35 +99654,35 @@
         {
           "label": "신규 확인",
           "before": "",
-          "after": "의안번호 2222064"
+          "after": "의안번호 2222091"
         }
       ]
     },
     {
       "month": "2026-10",
-      "billId": "PRC_3AF980A68020437C9DECC5C392A910",
-      "title": "소방공무원 보건안전 및 복지 기본법 일부개정법률안",
-      "billNo": "의안번호 2222042",
+      "billId": "PRC_5177BC56A5E24107BAEF99E8782C10",
+      "title": "기업 활력 제고를 위한 특별법 일부개정법률안",
+      "billNo": "의안번호 2222082",
       "agency": "위원회 배정 전",
       "committee": "위원회 배정 전",
-      "proposer": "강명구의원 등 40인",
-      "proposeDate": "2026-10-23",
+      "proposer": "김성원의원 등 10인",
+      "proposeDate": "2026-10-26",
       "relatedCommitteeReviews": [],
       "officialDetailCheckedAt": "",
       "officialDetailCheck": "",
       "stage": "접수",
       "previousStage": "-",
       "changed": true,
-      "changedDate": "2026-10-26",
-      "stageDate": "2026-10-23",
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
       "committeeDate": "",
       "committeePresentDate": "",
       "change": "이번 달 신규 확인",
       "processingResult": "",
-      "summary": "현행법은 소방공무원의 건강관리를 위한 진단 및 진료 등 의료지원에 관한 사항을 규정하고 있으며, 소방활동재해로 부상하거나 질병에 걸린 소방공무원의 치료와 생활안정을 지원하도록 하고 있음. 소방공무원은 소방활동 과정에서 각종 유해물질에 반복적으로 노출되어 암, 호흡기질환 등 직무 관련 질병이 퇴직 후에 발생하거나 발견될 수 있음에도, 퇴직 후에는 직무 관련성을 인정받기 어려운 경우가 있어 치료비 지원과 지속적인 건강관리가 충분히 이루어지지 못한다는 지적이 제기되고 있음.",
-      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_3AF980A68020437C9DECC5C392A910",
+      "summary": "“대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다.”는 헌법 제1조제2항의 정신에 따르면 법률의 주인은 국민이며, 누구나 이해하기 쉬운 법률을 만드는 것은 국민을 대표하는 입법기관인 국회의 의무라 할 수 있음. 개정안은 훈민정음 반포 580주년이자 한글날 기념 100주년을 맞아, 어려운 한자어, 외래어ㆍ외국어, 지나치게 축약된 표현 등 어렵거나 불명확한 법률용어를 알기 쉬운 우리말로 정비함으로써 법률에 대한 국민의 가독성과 접근성을 높이려는 것임(안 제10조제4항제2호, 제13조제1항제2호 및 제28조제2항제1호).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_5177BC56A5E24107BAEF99E8782C10",
       "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
+      "dailyChangedDate": "2026-10-27",
       "dailyChangeFields": [
         "신규 확인"
       ],
@@ -98846,35 +99690,35 @@
         {
           "label": "신규 확인",
           "before": "",
-          "after": "의안번호 2222042"
+          "after": "의안번호 2222082"
         }
       ]
     },
     {
       "month": "2026-10",
-      "billId": "PRC_3565AC15028E499EAC1BE9E2B7CF56",
-      "title": "식품·의약품분야 시험·검사 등에 관한 법률 일부개정법률안",
-      "billNo": "의안번호 2222063",
+      "billId": "PRC_04B0FC95B73B432289D9E003D9B968",
+      "title": "기업활동 규제완화에 관한 특별조치법 일부개정법률안",
+      "billNo": "의안번호 2222086",
       "agency": "위원회 배정 전",
       "committee": "위원회 배정 전",
-      "proposer": "허종식의원 등 10인",
-      "proposeDate": "2026-10-23",
+      "proposer": "김성원의원 등 10인",
+      "proposeDate": "2026-10-26",
       "relatedCommitteeReviews": [],
       "officialDetailCheckedAt": "",
       "officialDetailCheck": "",
       "stage": "접수",
       "previousStage": "-",
       "changed": true,
-      "changedDate": "2026-10-26",
-      "stageDate": "2026-10-23",
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
       "committeeDate": "",
       "committeePresentDate": "",
       "change": "이번 달 신규 확인",
       "processingResult": "",
-      "summary": "국내외에서 유해물질이 검출된 축산물이나 그 밖에 위해발생의 우려가 제기되었거나 제기된 축산물의 처리ㆍ집유ㆍ가공ㆍ포장ㆍ보관ㆍ운반 또는 판매 등을 하는 영업자에 대하여 축산물 시험ㆍ검사기관 또는 국외시험ㆍ검사기관에서 검사를 받을 것을 명할 수 있도록 하는 축산물 검사명령 제도가 「축산물 위생관리법」의 개정으로 도입됨에 따라, 해당 검사를 수행하는 축산물 시험ㆍ검사기관을 지정할 수 있는 근거를 마련하려는 것임(안 제6조제2항).",
-      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_3565AC15028E499EAC1BE9E2B7CF56",
+      "summary": "“대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다.”는 헌법 제1조제2항의 정신에 따르면 법률의 주인은 국민이며, 누구나 이해하기 쉬운 법률을 만드는 것은 국민을 대표하는 입법기관인 국회의 의무라 할 수 있음. 개정안은 훈민정음 반포 580주년이자 한글날 기념 100주년을 맞아, 어려운 한자어, 외래어ㆍ외국어, 지나치게 축약된 표현 등 어렵거나 불명확한 법률용어를 알기 쉬운 우리말로 정비함으로써 법률에 대한 국민의 가독성과 접근성을 높이려는 것임(안 제16조의2제1호, 제32조부터 제38조까지).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_04B0FC95B73B432289D9E003D9B968",
       "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
+      "dailyChangedDate": "2026-10-27",
       "dailyChangeFields": [
         "신규 확인"
       ],
@@ -98882,35 +99726,35 @@
         {
           "label": "신규 확인",
           "before": "",
-          "after": "의안번호 2222063"
+          "after": "의안번호 2222086"
         }
       ]
     },
     {
       "month": "2026-10",
-      "billId": "PRC_BDEA8A988DB249A99D3AA578B22D1C",
-      "title": "아동수당법 일부개정법률안",
-      "billNo": "의안번호 2222067",
+      "billId": "PRC_D72D4EB7B91449839CB478BE9EA18D",
+      "title": "기초연금법 일부개정법률안",
+      "billNo": "의안번호 2222106",
       "agency": "위원회 배정 전",
       "committee": "위원회 배정 전",
-      "proposer": "허종식의원 등 11인",
-      "proposeDate": "2026-10-23",
+      "proposer": "이인영의원 등 10인",
+      "proposeDate": "2026-10-26",
       "relatedCommitteeReviews": [],
       "officialDetailCheckedAt": "",
       "officialDetailCheck": "",
       "stage": "접수",
       "previousStage": "-",
       "changed": true,
-      "changedDate": "2026-10-26",
-      "stageDate": "2026-10-23",
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
       "committeeDate": "",
       "committeePresentDate": "",
       "change": "이번 달 신규 확인",
       "processingResult": "",
-      "summary": "아동의 건강한 성장과 기본적 권리 보장을 위해서는 출생 초기부터 성장 과정 전반에 걸쳐 안정적이고 지속적인 양육 지원이 이루어질 필요가 있음. 현행 양육지원급여는 아동수당, 부모급여, 첫만남이용권 등으로 구분되어 있어 아동의 성장단계에 따른 지원의 연속성을 높이고 다양한 양육 수요에 체계적으로 대응하는 데 한계가 있음.",
-      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_BDEA8A988DB249A99D3AA578B22D1C",
+      "summary": "직역연금 수급권자와 그 배우자 중 소득인정액이 하위 45% 이하인 사람과 그 배우자에게는 기초연금을 지급함(안 제3조제3항 단서 신설). 소득인정액이 하위 45% 이하인 사람에게는 부부감액 비율을 10%로 완화함(안 제8조제1항 단서 신설).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_D72D4EB7B91449839CB478BE9EA18D",
       "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
+      "dailyChangedDate": "2026-10-27",
       "dailyChangeFields": [
         "신규 확인"
       ],
@@ -98918,71 +99762,35 @@
         {
           "label": "신규 확인",
           "before": "",
-          "after": "의안번호 2222067"
+          "after": "의안번호 2222106"
         }
       ]
     },
     {
       "month": "2026-10",
-      "billId": "PRC_5859CB2F0CE04203B8DE132B32B0FC",
-      "title": "장애인고용촉진 및 직업재활법 일부개정법률안",
-      "billNo": "의안번호 2222036",
-      "agency": "고용노동부",
-      "committee": "위원회 배정 전",
-      "proposer": "김주영의원 등 11인",
-      "proposeDate": "2026-10-23",
-      "relatedCommitteeReviews": [],
-      "officialDetailCheckedAt": "",
-      "officialDetailCheck": "",
-      "stage": "접수",
-      "previousStage": "-",
-      "changed": true,
-      "changedDate": "2026-10-26",
-      "stageDate": "2026-10-23",
-      "committeeDate": "",
-      "committeePresentDate": "",
-      "change": "이번 달 신규 확인",
-      "processingResult": "",
-      "summary": "장애인 표준사업장의 공공조달 참여를 지원하는 근거가 충분치 않을 뿐 아니라 「국가를 당사자로 하는 계약에 관한 법률 시행령」에 따라 수의계약을 위해서는 대상물품의 장애인 표준사업장 직접생산여부를 확인하여야 함에도 불구하고 현행법에는 해당 절차에 대한 명시적인 근거가 없는 상황임. 고용노동부장관이 장애인 표준사업장의 납품 계약 대행을 원활하게 수행할 수 있도록 근거를 마련하고, 고용노동부장관이 직접생산여부의 확인 등 수의계약에 필요한 절차를 지원함으로써 장애인 표준사업장 생산품의 우선구매를 활성화하려는 것임(안 제22조의4).",
-      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_5859CB2F0CE04203B8DE132B32B0FC",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222036"
-        }
-      ]
-    },
-    {
-      "month": "2026-10",
-      "billId": "PRC_883857BC8E1745D094A54D8BB16B3E",
-      "title": "전쟁기념사업회법 일부개정법률안",
-      "billNo": "의안번호 2222046",
+      "billId": "PRC_C559F342DCD94BD49FC809CC6E029A",
+      "title": "내수면어업법 일부개정법률안",
+      "billNo": "의안번호 2222093",
       "agency": "위원회 배정 전",
       "committee": "위원회 배정 전",
-      "proposer": "황명선의원 등 16인",
-      "proposeDate": "2026-10-23",
+      "proposer": "김선교의원 등 10인",
+      "proposeDate": "2026-10-26",
       "relatedCommitteeReviews": [],
       "officialDetailCheckedAt": "",
       "officialDetailCheck": "",
       "stage": "접수",
       "previousStage": "-",
       "changed": true,
-      "changedDate": "2026-10-26",
-      "stageDate": "2026-10-23",
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
       "committeeDate": "",
       "committeePresentDate": "",
       "change": "이번 달 신규 확인",
       "processingResult": "",
-      "summary": "현행법상 전쟁기념사업회 임원의 궐위 시 보궐임기를 전임자 임기의 남은 기간으로 한정함에 따라 인사운영의 제약이 발생하고 있으며, 연임 관련 규정의 경우 실질적인 판단 기준이 부재하고 실제 적용 사례가 없어 실효성이 떨어진다는 지적이 있음. 보궐임기의 전임자 잔임기간 승계 규정을 삭제하여 3년의 임기를 새로 부여하도록 인사 자율성을 확보하는 한편, 실효성이 없는 연임 허용 문구를 삭제함으로써 법령을 정비하고 기관 운영의 효율성을 제고하려는 것임(안 제7조제1항 및 제2항).",
-      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_883857BC8E1745D094A54D8BB16B3E",
+      "summary": "현행법은 「양식산업발전법」분법(′19년)이후, 「내수면어업법」의 적용 범위가 협소해지고, 동법제22조에 의거 「수산업법」및「수산자원관리법」을 준용하여 운영함에 따라 법 해석이 모호하여 지자체별로 다른 법 해석으로 민원이 발생하는 문제가 있음. 내수면어업 허가대장관리, 어업허가의 지위승계 및 허가어업과 신고어업의 변경ㆍ폐업 등과 관한 사항을 신설하여 현장 실무에서의 혼선을 예방하고, 허가ㆍ신고 업무 처리 일수를 20일로 변경하여 행정 처리 기간을 현실화하기 위한 것임(안 제9조, 제9조의2 및 제9조의3, 제11조제3항).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_C559F342DCD94BD49FC809CC6E029A",
       "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
+      "dailyChangedDate": "2026-10-27",
       "dailyChangeFields": [
         "신규 확인"
       ],
@@ -98990,7 +99798,871 @@
         {
           "label": "신규 확인",
           "before": "",
-          "after": "의안번호 2222046"
+          "after": "의안번호 2222093"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_28BB2D899CF241EFBDD5118F499C63",
+      "title": "노후거점산업단지의 활력증진 및 경쟁력강화를 위한 특별법 일부개정법률안",
+      "billNo": "의안번호 2222075",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "김성원의원 등 10인",
+      "proposeDate": "2026-10-26",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "“대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다”라는 「대한민국헌법」 제1조제2항의 정신에 따르면 법률의 주인은 국민이며, 누구나 이해하기 쉬운 법률을 만드는 것은 국민을 대표하는 입법기관인 국회의 의무라 할 수 있음. 개정안은 훈민정음 반포 580주년이자 한글날 기념 100주년을 맞아, 어려운 한자어, 외래어ㆍ외국어, 지나치게 축약된 표현 등 어렵거나 불명확한 법률용어를 알기 쉬운 우리말로 정비함으로써 법률에 대한 국민의 가독성과 접근성을 높이려는 것임(안 제15조제3항 및 제21조제1항제2호).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_28BB2D899CF241EFBDD5118F499C63",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222075"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_E00941D110C046AEA160154EFD0D4B",
+      "title": "대외무역법 일부개정법률안",
+      "billNo": "의안번호 2222085",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "김성원의원 등 10인",
+      "proposeDate": "2026-10-26",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "“대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다”라는 「대한민국헌법」 제1조제2항의 정신에 따르면 법률의 주인은 국민이며, 누구나 이해하기 쉬운 법률을 만드는 것은 국민을 대표하는 입법기관인 국회의 의무라 할 수 있음. 개정안은 훈민정음 반포 580주년이자 한글날 기념 100주년을 맞아, 어려운 한자어, 외래어ㆍ외국어, 지나치게 축약된 표현 등 어렵거나 불명확한 법률용어를 알기 쉬운 우리말로 정비함으로써 법률에 대한 국민의 가독성과 접근성을 높이려는 것임(안 제19조제3항제8호).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_E00941D110C046AEA160154EFD0D4B",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222085"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_B146744612DF4BC7846C9BE15E8FE3",
+      "title": "도시 및 주거환경정비법 일부개정법률안",
+      "billNo": "의안번호 2222084",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "황희의원 등 11인",
+      "proposeDate": "2026-10-26",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "그 결과 무주택 세대가 거주할 목적으로 양수하거나 근무ㆍ결혼ㆍ출산 등의 사유로 세대원 모두가 이주하기 위하여 양수하는 경우처럼 투기 목적이 없는 실수요 거래까지 일률적으로 금지되어 소유자의 재산권 행사가 과도하게 제약된다는 지적이 있음. 무주택 세대가 실거주할 목적으로 주택을 양수하여 정비사업의 시행으로 공급받는 주택에 일정 기간 이상 거주하려는 경우, 불가피한 사유로 세대원 모두가 해당 사업구역으로 이주하기 위하여 주택을 양수하는 경우 등에는 그 양수인이 조합원이 될 수 있도록 하여 실수요자를 보호하고 주택 거래를 정상화하려는 것임(안 제39조제4항 신설).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_B146744612DF4BC7846C9BE15E8FE3",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222084"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_47D8C8AA86804C0C9972AB71962FC3",
+      "title": "도시가스사업법 일부개정법률안",
+      "billNo": "의안번호 2222087",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "김성원의원 등 10인",
+      "proposeDate": "2026-10-26",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "“대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다.”는 헌법 제1조제2항의 정신에 따르면 법률의 주인은 국민이며, 누구나 이해하기 쉬운 법률을 만드는 것은 국민을 대표하는 입법기관인 국회의 의무라 할 수 있음. 개정안은 훈민정음 반포 580주년이자 한글날 기념 100주년을 맞아, 어려운 한자어, 외래어·외국어, 지나치게 축약된 표현 등 어렵거나 불명확한 법률용어를 알기 쉬운 우리말로 정비함으로써 법률에 대한 국민의 가독성과 접근성을 높이려는 것임(안 제7조의2 및 제18조제1항 등).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_47D8C8AA86804C0C9972AB71962FC3",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222087"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_X2V6V0U8V2C4D1C0A0A0Z2Z8H1G4G5",
+      "title": "도시숲 등의 조성 및 관리에 관한 법률 일부개정법률안",
+      "billNo": "의안번호 2222072",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "최수진의원 등 13인",
+      "proposeDate": "2026-10-26",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "현행법은 기후변화 대응과 국민의 삶의 질 향상을 위하여 도시숲 등의 조성 및 관리에 관한 기본적인 사항을 규정하고 있음. 해안ㆍ수변도시숲 및 입체형 도시숲의 정의를 신설하고, 국유재산 무상사용 허용, 테마형 특화도시숲 지정, 재정 우대 지원 및 전문인력 양성 근거를 마련함으로써, 도시 공간의 입체적 활용과 기후대응 역량을 강화하여 국민 삶의 질 향상에 보다 직접적으로 기여하려는 것임(안 제2조제1호의2ㆍ제1호의3, 제11조의2, 제14조의2 및 제20조의2 신설 등).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_X2V6V0U8V2C4D1C0A0A0Z2Z8H1G4G5",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222072"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_DDDC0B9D24364EE0813A95D809D360",
+      "title": "무형유산의 보전 및 진흥에 관한 법률 일부개정법률안",
+      "billNo": "의안번호 2222109",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "이정문의원 등 12인",
+      "proposeDate": "2026-10-26",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "인증표시 위반에 대한 과태료 부과 규정을 삭제함(제58조제1항제1호 삭제). 법 시행 당시 종전의 규정에 따라 인증을 받은 전승공예품은 인증의 유효기간이 종료될 때까지 종전의 규정을 적용하도록 경과조치를 마련함(안 부칙).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_DDDC0B9D24364EE0813A95D809D360",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222109"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_328790B5F21B42A89B3320427E428B",
+      "title": "민사소송법 일부개정법률안",
+      "billNo": "의안번호 2222081",
+      "agency": "법무부",
+      "committee": "위원회 배정 전",
+      "proposer": "허영의원 등 10인",
+      "proposeDate": "2026-10-26",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "현행법은 소송관계인의 생명 또는 신체에 대한 위해의 우려가 있다는 소명이 있는 경우 해당 소송관계인의 신청에 따라 법원이 주소 등 개인정보에 대한 보호조치를 할 수 있도록 하고 있음. 가정폭력·스토킹 등의 피해자가 보호제도를 알지 못하거나 급박한 상황에서 신청하지 못하는 경우에는 소송기록의 열람·복사·송달 과정에서 실제 거주지 등이 상대방에게 노출될 수 있다는 한계가 있음.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_328790B5F21B42A89B3320427E428B",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222081"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_07DF7CF068E84956B44DA524827C9D",
+      "title": "법원조직법 일부개정법률안",
+      "billNo": "의안번호 2222113",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "김용민의원 등 11인",
+      "proposeDate": "2026-10-26",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "현행법은 대법관을 대법원장의 제청으로 국회의 동의를 얻어 대통령이 임명하도록 규정하고 있음. 대법원장이 대법관을 제청할 때에는 제청할 대법관 수의 2배수 이상을 후보자로 제청하도록 의무화함으로써, 대통령의 대법관 임명에 관한 실질적인 선택권을 보장하고 대법원장의 제청권에 대한 견제와 균형을 강화하려는 것임(안 제41조제2항 후단 신설).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_07DF7CF068E84956B44DA524827C9D",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222113"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_S2N6O0N9N1L4M1K4S3T6R3R2Q3R5P6",
+      "title": "병역법 일부개정법률안",
+      "billNo": "의안번호 2222103",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "김태호의원 등 10인",
+      "proposeDate": "2026-10-26",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "현행법은 공중보건의사ㆍ병역판정검사전담의사ㆍ공익법무관 및 공중방역수의사의 의무복무기간을 3년으로 정하고 있으며, 복무기관 배치 전에 실시하는 군사교육소집 기간은 의무복무기간에 산입하지 않고 있음. 공중보건의사ㆍ병역판정검사전담의사ㆍ공익법무관 및 공중방역수의사의 의무복무기간을 2년으로 단축하고 군사교육소집 기간을 의무복무기간에 포함하도록 함으로써, 이들의 복무 부담을 완화하고 원활한 인력 충원에 기여하려는 것임(안 제34조제2항 및 제3항, 제34조의6제2항 및 제3항, 제34조의7제2항 및 제3항).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_S2N6O0N9N1L4M1K4S3T6R3R2Q3R5P6",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222103"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_EFA89E70ED7C43B59018108F845935",
+      "title": "사회보장기본법 일부개정법률안",
+      "billNo": "의안번호 2222104",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "전현희의원 등 12인",
+      "proposeDate": "2026-10-26",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "평생사회안전망 구축·운영 시 생활기본지원서비스가 생애주기 및 생활여건에 따라 적절히 제공되도록 하고, 대상자를 적극 발굴하여 적시에 제공하도록 노력할 의무를 규정함(안 제22조). 사회보장제도 운영 시 서비스가 필요한 국민을 적극 발굴하여 적시에 제공하도록 원칙을 정하고, 생활기본지원서비스가 적절하게 이루어지도록 명시함(안 제25조제6항 신설).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_EFA89E70ED7C43B59018108F845935",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222104"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_3BE7326B85344B52BC0CF24833F630",
+      "title": "성폭력방지 및 피해자보호 등에 관한 법률 일부개정법률안",
+      "billNo": "의안번호 2222078",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "김상훈의원 등 10인",
+      "proposeDate": "2026-10-26",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "현행법은 국가와 지방자치단체로 하여금 불법촬영물등이 정보통신망에 유포되어 피해를 입은 사람에 대하여 불법촬영물등 및 신상정보의 삭제를 지원할 수 있도록 하고 있음. 삭제지원의 내용으로서 정보통신서비스 제공자에게 불법촬영물등의 삭제를 요청할 수 있도록 명시하고, 이에 불응하거나 불법촬영물등을 재유포하는 경우에는 방송미디어통신심의위원회로 하여금 해당 정보통신서비스 제공자가 운영하는 인터넷 사이트에 대한 접속 차단 등 필요한 조치를 하여줄 것을 요청하도록 하는 한편, 접속 차단 등의 조치를 요청한 사이트와 동일ㆍ유사한 사이트에 대해서는 지체 없이 방송미디어통신심의위원회에 해당 인터넷 사이트에 대한 접속차단 등의 조치를 하여 줄 것을 요청하도록 하여 불법촬영물등으로 인한 피해 확산을 신속히 차단하고 불법사이트에 효과적으로 대응하려는 것임(안 제7조의4 신설 등).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_3BE7326B85344B52BC0CF24833F630",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222078"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_7B0BD33D527E4A2CBA72E84CDDA3A2",
+      "title": "성폭력범죄의 처벌 등에 관한 특례법 일부개정법률안",
+      "billNo": "의안번호 2222077",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "김상훈의원 등 10인",
+      "proposeDate": "2026-10-26",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "현행법은 불법촬영물이나 허위영상물을 직접 촬영ㆍ제작ㆍ반포판매ㆍ임대ㆍ전시ㆍ상영한 행위자 및 이를 소지ㆍ시청한 행위자만을 처벌 대상으로 규정할 뿐, 불법 유통 공간을 제공ㆍ관리한 사이트 개설자 및 운영자에 대해서는 독자적인 처벌 규정이 부재하여 개별 유포자의 범행을 도운 방조범으로만 기소할 수밖에 없는 입법적 한계가 존재해 왔으므로, 불법 유통 인프라를 구축하여 막대한 범죄 수익을 올려온 핵심 운영자들에게 범죄의 중대성에 상응하는 처벌 강화가 필요하다는 지적이 제기되고 있음. 영리를 목적으로 불법촬영물등을 유통하는 장소나 공간을 개설하거나 운영한 자를 처벌하도록 함으로써 불법 사이트 운영의 경제적 유인을 차단하고 디지털 성범죄로 인한 피해자 보호를 강화하려는 것임(안 제14조의4 신설 등).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_7B0BD33D527E4A2CBA72E84CDDA3A2",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222077"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_BE559BC93D694DFC8D1E2520F7632E",
+      "title": "수입식품안전관리 특별법 일부개정법률안",
+      "billNo": "의안번호 2222083",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "서미화의원 등 16인",
+      "proposeDate": "2026-10-26",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "식품의약품안전처장은 수입식품안전관리인증기준적용업소의 인증 등의 업무를 한국식품안전관리인증원 등에 위탁할 수 있도록 되어 있으나, 위탁업무에서 징수한 수수료를 수탁기관이 직접 활용할 수 있는 법적 근거가 미비하여 해당 기관에서 업무를 수행하는 데 어려움이 있는 실정임. 식품의약품안전처장이 법령에 따라 위탁한 업무를 수행하는 수탁기관 등의 효율적인 업무 수행을 위해 해당 기관이 직접 식품의약품안전처장의 승인을 받아 수수료를 정하여 징수하고 이를 자체 수입으로 활용할 수 있는 법적 근거를 마련하고자 하는 것임(안 제41조).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_BE559BC93D694DFC8D1E2520F7632E",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222083"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_F18244D7A07A4EB09706C9D7AA25DD",
+      "title": "스마트농업 육성 및 지원에 관한 법률 일부개정법률안",
+      "billNo": "의안번호 2222092",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "엄태영의원 등 10인",
+      "proposeDate": "2026-10-26",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "농촌지역의 고령화와 인구감소로 인한 농업인력 부족 현상이 심화되고, 농업의 규모화 및 농가의 경영환경 등이 변화함에 따라 농가 및 지역별 특성과 여건에 적합한 스마트농업 기술 및 시설의 도입을 촉진할 수 있는 스마트농업의 맞춤형 지원체계를 마련할 필요가 있음. 농림축산식품부장관이 기본계획을 수립하는 경우 맞춤형 스마트농업의 육성 및 지원에 관한 사항을 포함하도록 하고, 지역별 특성과 여건, 농가의 규모ㆍ경영상황 등을 고려하여 농업인에게 적합한 스마트농업의 육성 및 지원체계를 마련하도록 함으로써 스마트농업의 현장 적용성을 높이고, 농업인의 소득증대와 농업ㆍ농촌의 성장 및 발전에 이바지하려는 것임(안 제4조제2항제8호의2 및 제13조의2 신설).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_F18244D7A07A4EB09706C9D7AA25DD",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222092"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_A3AABBDF609349A3B964C2832A96E9",
+      "title": "스토킹범죄의 처벌 등에 관한 법률 일부개정법률안",
+      "billNo": "의안번호 2222073",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "김남희의원 등 11인",
+      "proposeDate": "2026-10-26",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "상대방에게 교제 등 관계의 형성, 유지나 재개를 강요하는 행위를 스토킹행위로 신설함(안 제2조제1호아목). 상대방등에게 상대방등을 감시하고 있음을 알리거나 그 사실을 인식하게 하는 표시ㆍ장치ㆍ정보 등을 두거나 제공하는 행위를 스토킹행위로 신설함(안 제2조제1호차목).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_A3AABBDF609349A3B964C2832A96E9",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222073"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_E85179AF0BB249199B32BA020A84FA",
+      "title": "식품위생법 일부개정법률안",
+      "billNo": "의안번호 2222098",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "서미화의원 등 16인",
+      "proposeDate": "2026-10-26",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "식품의약품안전처장은 식품안전관리인증기준적용업소의 인증 등의 업무를 한국식품안전관리인증원 등에 위탁할 수 있도록 되어 있으나, 위탁업무에서 징수한 수수료를 수탁기관이 직접 활용할 수 있는 법적 근거가 미비하여 해당 기관에서 업무를 수행하는 데 어려움이 있는 실정임. 식품의약품안전처장이 법령에 따라 위탁한 업무를 수행하는 수탁기관의 효율적인 업무 수행을 위해 해당 기관이 직접 식품의약품안전처장의 승인을 받아 수수료를 정하여 징수하고 이를 자체 수입으로 활용할 수 있는 법적 근거를 마련하고자 하는 것임(안 제92조).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_E85179AF0BB249199B32BA020A84FA",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222098"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_BDBB5211924D4842BE058AE4B661D8",
+      "title": "아동·청소년의 성보호에 관한 법률 일부개정법률안",
+      "billNo": "의안번호 2222079",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "김상훈의원 등 10인",
+      "proposeDate": "2026-10-26",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "현행법 제34조제2항은 학교, 의료기관, 아동복지시설 등 아동ㆍ청소년 관련 기관ㆍ시설의 장과 종사자에게 직무상 아동ㆍ청소년대상 성범죄의 발생 사실을 알게 된 경우에는 즉시 수사기관에 신고하도록 의무를 부과하고 있음. 정보통신서비스 제공자에게 아동ㆍ청소년성착취물로 의심되는 정보를 발견한 경우 수사기관에 신고하도록 의무화하고, 신고 시 이용자를 식별할 수 있는 ID, IP주소 등 정보를 함께 제공하도록 하는 한편, 미이행 시 과태료를 부과ㆍ징수하도록 하여 신속한 수사와 피해 확산 방지에 기여하려는 것임(안 제34조의2 신설 및 제67조).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_BDBB5211924D4842BE058AE4B661D8",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222079"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_EC2358F25F8F470FBC59639230ED44",
+      "title": "양육비 이행확보 및 지원에 관한 법률 일부개정법률안",
+      "billNo": "의안번호 2222076",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "김상훈의원 등 10인",
+      "proposeDate": "2026-10-26",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "양육비 채무 불이행자에 대한 제재조치 의결 건수는 2021년 하반기 27건에서 2022년 359건, 2023년 639건, 2024년 947건, 2025년 1,389건으로 지속적으로 증가하였으며, 2026년에도 1월부터 8월까지 1,042건이 의결되어 전년 같은 기간의 792건보다 증가하는 등 양육비 채무 불이행에 대한 제재 수요가 계속 확대되고 있음. 양육비 채무 불이행에 대한 형사처벌의 법정형을 상향하고, 감치명령 후 형사처벌이 가능해지는 기간을 단축하는 한편, 본인 동의 없이 양육비 채무자의 소득ㆍ재산 자료를 요청할 수 있는 대상을 양육비 이행확보 지원을 통하여 이행명령 결정 등을 받았음에도 양육비 채무를 이행하지 아니하는 경우까지 확대함으로써 양육비 이행확보 제도의 실효성을 높이고 미성년 자녀의 안정적인 양육환경을 조성하려는 것임(안 제16조제2항 및 제27조).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_EC2358F25F8F470FBC59639230ED44",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222076"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_415ED9361DAF4A40A9E5FEC4E6E3DE",
+      "title": "예술인의 지위와 권리의 보장에 관한 법률 일부개정법률안",
+      "billNo": "의안번호 2222105",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "이정문의원 등 14인",
+      "proposeDate": "2026-10-26",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "현행법은 예술인권리침해행위 등의 신고사건에 대하여 “예술인 권리보장 및 성희롱ㆍ성폭력 피해구제 위원회”의 심의ㆍ의결을 거쳐 문화체육관광부장관이 시정권고 또는 시정명령을 할 수 있도록 하고, 문화체육관광부장관은 조사절차를 종결하거나 위원회가 구제절차를 종결하는 경우에는 그 결과와 이유를 신고인에게 통지하도록 하고 있음. 문화체육관광부장관이 시정권고를 한 경우에는 시정방안의 내용, 시정권고에 대한 수락 여부 및 통보받은 이행사항을 신고인에게 통지하도록 하고, 시정명령을 한 경우에는 그 결과와 이유를 신고인에게 통지하도록 함으로써 신고인의 절차적 권리를 보장하려는 것임(안 제33조제5항 및 제34조제6항 신설).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_415ED9361DAF4A40A9E5FEC4E6E3DE",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222105"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_3B2D14FAB326485B9A4AC41C919883",
+      "title": "장애인복지법 일부개정법률안",
+      "billNo": "의안번호 2222111",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "서미화의원 등 20인",
+      "proposeDate": "2026-10-26",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "현행 장애인 복지서비스는 서비스별로 지원 대상과 이용방법 등이 정해져 있어 장애인의 개별적인 욕구와 필요에 맞는 서비스를 선택하여 이용하는 데 한계가 있음. 특히 보건복지부는 장애인의 자기결정권과 선택권을 확대하기 위하여 2024년 7월부터 장애인 개인예산제 시범사업을 추진하고 있으나, 개인예산제의 안정적이고 지속적인 시행을 위한 법률상 근거를 명확히 마련할 필요가 있음.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_3B2D14FAB326485B9A4AC41C919883",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222111"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_C2A6B0Z9Z1Y4U1U1S2T5S5S4R9Y8Z3",
+      "title": "장애인차별금지 및 권리구제 등에 관한 법률 일부개정법률안",
+      "billNo": "의안번호 2222097",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "서미화의원 등 13인",
+      "proposeDate": "2026-10-26",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "시정명령의 신청 및 교부 대상 등에 진정인을 포함하도록 하여 장애인차별에 관한 진정절차에서 진정인의 절차적 권리를 강화할 필요가 있음. 장애인차별시정심의위원회의 설치 및 구성에 관한 사항을 규정함(안 제43조의3 신설).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_C2A6B0Z9Z1Y4U1U1S2T5S5S4R9Y8Z3",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222097"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_58F94BFB07E84DE4B2EE9D18DAFDB8",
+      "title": "저작권법 일부개정법률안",
+      "billNo": "의안번호 2222112",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "이정문의원 등 12인",
+      "proposeDate": "2026-10-26",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "아울러 이용활성화 시책 대상을 확대하고 기관별 공공저작물관리책임관을 지정하도록 함으로써 공공저작물의 체계적인 관리와 이용 활성화를 도모하고자 함. 공공저작물의 자유이용 시 출처 명시 의무에 대한 예외를 마련하여, 국민이 공공저작물을 보다 자유롭고 폭넓게 활용할 수 있도록 함(안 제37조제1항 단서).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_58F94BFB07E84DE4B2EE9D18DAFDB8",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222112"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_592B28D8026547219223430B488C14",
+      "title": "전자장치 부착 등에 관한 법률 일부개정법률안",
+      "billNo": "의안번호 2222080",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "윤상현의원 등 15인",
+      "proposeDate": "2026-10-26",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "이로 인해 피부착자의 위험성이 구체적으로 드러난 경우에도 보호관찰소와 경찰의 대응이 개별적으로 이루어져 재범을 예방하는 데 한계가 있다는 지적이 있음. 피부착자가 흉기나 그 밖의 위험한 물건을 이용한 협박 등 다른 사람의 생명 또는 신체에 위해를 가할 우려가 있는 행위를 하는 경우에는 보호관찰소와 경찰관서가 상호 공동대응 또는 협력을 요청하거나 관계 기관에 이를 요청할 수 있도록 하고, 요청을 받은 기관의 장은 특별한 사유가 없으면 이에 따르도록 하며, 이 경우 보호관찰소의 장은 해당 피부착자에 대하여 재범의 위험성을 주기적으로 평가하도록 함으로써 피부착자의 재범을 방지하고 국민의 안전을 보호하려는 것임(안 제16조의4 신설 등).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_592B28D8026547219223430B488C14",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222080"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_C2B6J0J8I2J4H1H0G0V0V5U5U0T9R7",
+      "title": "전통시장 및 상점가 육성을 위한 특별법 일부개정법률안",
+      "billNo": "의안번호 2222069",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "최수진의원 등 12인",
+      "proposeDate": "2026-10-26",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "현행법은 문화관광형시장을 지정하여 지역특산품 판매시설 설치, 지역특성을 반영한 행사, 전통시장과 지역 문화ㆍ관광자원을 연계한 콘텐츠 개발 등의 정부지원을 할 수 있도록 함. 서울 남대문시장과 같이 외국인 방문객 비중이 높은 전통시장의 경우 외국인 수요에 대응하여 다국어ㆍ스마트 안내, 전자결제, 환급을 비롯한 각종 편의시설ㆍ서비스와 야간관광, 문화체험형 관광 등 다양한 프로그램이 맞물려 제공될 필요가 있으나 법적 근거가 미비하여 체계적 지원에 한계가 있다는 지적이 있음.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_C2B6J0J8I2J4H1H0G0V0V5U5U0T9R7",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222069"
         }
       ]
     },
@@ -99024,29 +100696,29 @@
     },
     {
       "month": "2026-10",
-      "billId": "PRC_70C5005694444F39BB3432EFA9EE3F",
+      "billId": "PRC_1E3B8E6E7C204DFDBF8546C5575BAD",
       "title": "조세특례제한법 일부개정법률안",
-      "billNo": "의안번호 2222055",
+      "billNo": "의안번호 2222114",
       "agency": "기획재정부",
       "committee": "위원회 배정 전",
-      "proposer": "김남준의원 등 12인",
-      "proposeDate": "2026-10-23",
+      "proposer": "안도걸의원 등 12인",
+      "proposeDate": "2026-10-26",
       "relatedCommitteeReviews": [],
       "officialDetailCheckedAt": "",
       "officialDetailCheck": "",
       "stage": "접수",
       "previousStage": "-",
       "changed": true,
-      "changedDate": "2026-10-26",
-      "stageDate": "2026-10-23",
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
       "committeeDate": "",
       "committeePresentDate": "",
       "change": "이번 달 신규 확인",
       "processingResult": "",
-      "summary": "고향사랑 기부제도는 지역 간 재정 격차를 완화하고 지역 균형발전을 도모하려는 제도임에도 지역별 여건 차이를 반영하지 못하고 있으며, 특히 「접경지역 지원 특별법」에 따른 접경지역은 각종 규제로 개발이 제한되기에 행정구역상 수도권에 속하더라도 지역경제 침체가 지속되고 있다는 지적이 있음. 경제ㆍ사회여건을 고려하여 우대할 필요가 있는 지역을 우대지역으로 정의하고, 10만원을 초과하는 기부금에 대한 공제율을 기부 대상 지방자치단체의 소재 지역에 따라 차등 적용하며, 접경지역은 수도권 소재 여부와 관계없이 가장 높은 수준의 공제율을 적용하여 접경지역에 대한 기부를 유도하고 지역 균형발전을 도모하려는 것임(안 제2조제1항제10호의4 신설 및 제58조제1항).",
-      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_70C5005694444F39BB3432EFA9EE3F",
+      "summary": "현행 세제지원은 투자 단계에 집중되어 있어 투자금액에 비해 생산 규모가 큰 산업은 실제 국내 생산활동에 상응하는 지원을 받지 못하는 한계가 있음. 특히 자동차 등 생산집약적 산업은 대규모 시설투자보다 고용을 기반으로 생산이 이루어지는 특성상 투자 중심의 현행 세액공제 혜택을 충분히 받기 어려우나, 국내에서 이루어진 생산 그 자체에 연계하여 지원하는 수단이 마련되어 있지 아니함.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_1E3B8E6E7C204DFDBF8546C5575BAD",
       "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
+      "dailyChangedDate": "2026-10-27",
       "dailyChangeFields": [
         "신규 확인"
       ],
@@ -99054,35 +100726,35 @@
         {
           "label": "신규 확인",
           "before": "",
-          "after": "의안번호 2222055"
+          "after": "의안번호 2222114"
         }
       ]
     },
     {
       "month": "2026-10",
-      "billId": "PRC_BBBCF1CAB547425E9BC63FA6A3AF58",
+      "billId": "PRC_D94177BBF39B4D3C85F59D522CFA9D",
       "title": "조세특례제한법 일부개정법률안",
-      "billNo": "의안번호 2222054",
+      "billNo": "의안번호 2222101",
       "agency": "기획재정부",
       "committee": "위원회 배정 전",
       "proposer": "주진우의원 등 10인",
-      "proposeDate": "2026-10-23",
+      "proposeDate": "2026-10-26",
       "relatedCommitteeReviews": [],
       "officialDetailCheckedAt": "",
       "officialDetailCheck": "",
       "stage": "접수",
       "previousStage": "-",
       "changed": true,
-      "changedDate": "2026-10-26",
-      "stageDate": "2026-10-23",
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
       "committeeDate": "",
       "committeePresentDate": "",
       "change": "이번 달 신규 확인",
       "processingResult": "",
-      "summary": "육아휴직 후 원활한 직장 복귀와 경력단절 방지를 위해서는 육아휴직 복귀자에 대한 현행 세액공제를 지속할 필요가 있는 한편, 복직 이후에도 일정 기간 고용을 유지하는 기업에 추가적인 세제상 지원을 함으로써 안정적인 고용유지를 유도할 필요가 있다는 의견이 있음. 육아휴직 복귀자에 대한 세액공제의 적용기한을 2029년 12월 31일까지 연장하고, 육아휴직 복귀자를 복직일부터 3년간 계속 고용한 경우 1명당 중소기업은 300만원, 중견기업은 200만원을 추가로 세액공제하도록 함으로써 육아휴직 복귀자의 지속적인 고용 안정을 지원하려는 것임(안 제29조의8제5항 및 제6항 등).",
-      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_BBBCF1CAB547425E9BC63FA6A3AF58",
+      "summary": "현행법은 수도권 밖에서 전문 이스포츠대회를 개최하는 내국법인에 대하여 이스포츠대회운영비용의 100분의 10을 법인세에서 공제하고 있으며, 해당 특례는 2026년 12월 31일 종료될 예정임. 현행 제도는 대회의 규모와 국제성에 관계없이 동일한 공제율을 적용하고 있음.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_D94177BBF39B4D3C85F59D522CFA9D",
       "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
+      "dailyChangedDate": "2026-10-27",
       "dailyChangeFields": [
         "신규 확인"
       ],
@@ -99090,35 +100762,35 @@
         {
           "label": "신규 확인",
           "before": "",
-          "after": "의안번호 2222054"
+          "after": "의안번호 2222101"
         }
       ]
     },
     {
       "month": "2026-10",
-      "billId": "PRC_7E4CCBA86505416581883FA6F430F8",
+      "billId": "PRC_86C06173DF614BB1AB32CBA59F136F",
       "title": "조세특례제한법 일부개정법률안",
-      "billNo": "의안번호 2222049",
+      "billNo": "의안번호 2222100",
       "agency": "기획재정부",
       "committee": "위원회 배정 전",
-      "proposer": "안도걸의원 등 10인",
-      "proposeDate": "2026-10-23",
+      "proposer": "이정문의원 등 10인",
+      "proposeDate": "2026-10-26",
       "relatedCommitteeReviews": [],
       "officialDetailCheckedAt": "",
       "officialDetailCheck": "",
       "stage": "접수",
       "previousStage": "-",
       "changed": true,
-      "changedDate": "2026-10-26",
-      "stageDate": "2026-10-23",
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
       "committeeDate": "",
       "committeePresentDate": "",
       "change": "이번 달 신규 확인",
       "processingResult": "",
-      "summary": "영상콘텐츠 간 세제지원의 형평성을 제고하고 문화역량 강화를 통한 관광활성화를 위하여 영상콘텐츠 제작비용 세액공제 대상에 음악영상물을 추가하려는 것임(안 제25조의6제1항제1호라목 신설). 참고사항 이 법률안은 「국회법」 제85조의3제4항에 따라 2027년도 세입예산안 부수 법률안으로 지정될 필요가 있음.",
-      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_7E4CCBA86505416581883FA6F430F8",
+      "summary": "최근 글로벌 온라인 동영상 서비스(OTT)의 확산과 함께 국내 영상콘텐츠의 해외 진출이 확대되고 있으나, 글로벌 플랫폼의 영향력 강화 등으로 국내 영상콘텐츠 제작ㆍ유통업계의 경쟁 여건은 어려워지고 있는 상황임. 영상콘텐츠 산업의 경쟁력을 높이기 위해서는 제작 단계뿐만 아니라 제작에 대한 민간투자를 활성화하고 온라인 유통 과정에서 발생하는 비용 부담을 완화할 필요가 있음.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_86C06173DF614BB1AB32CBA59F136F",
       "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
+      "dailyChangedDate": "2026-10-27",
       "dailyChangeFields": [
         "신규 확인"
       ],
@@ -99126,35 +100798,35 @@
         {
           "label": "신규 확인",
           "before": "",
-          "after": "의안번호 2222049"
+          "after": "의안번호 2222100"
         }
       ]
     },
     {
       "month": "2026-10",
-      "billId": "PRC_4C998737186E45D1AFF06EFBF2F811",
+      "billId": "PRC_A70A4FBF8855454F9CE498AA146BC1",
       "title": "조세특례제한법 일부개정법률안",
-      "billNo": "의안번호 2222047",
+      "billNo": "의안번호 2222071",
       "agency": "기획재정부",
       "committee": "위원회 배정 전",
-      "proposer": "윤영석의원 등 11인",
-      "proposeDate": "2026-10-23",
+      "proposer": "김남준의원 등 14인",
+      "proposeDate": "2026-10-26",
       "relatedCommitteeReviews": [],
       "officialDetailCheckedAt": "",
       "officialDetailCheck": "",
       "stage": "접수",
       "previousStage": "-",
       "changed": true,
-      "changedDate": "2026-10-26",
-      "stageDate": "2026-10-23",
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
       "committeeDate": "",
       "committeePresentDate": "",
       "change": "이번 달 신규 확인",
       "processingResult": "",
-      "summary": "기존의 시설투자 중심 세제지원만으로는 국내 생산기반의 지속적인 유지ㆍ확충과 생산물량 확대를 유도하는 데 한계가 있음. 아울러 수도권에 집중된 산업구조를 개선하기 위해？비수도권 생산활동에는 기본 공제율보다 높은 공제율을 적용하여 생산거점의 지방 이전과 신규 투자를 유도할 필요가 있음.",
-      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_4C998737186E45D1AFF06EFBF2F811",
+      "summary": "일정 요건을 갖춘 성실사업자 등에 대해서도 2026년 12월 31일이 속하는 과세연도까지 같은 수준의 월세액 세액공제를 적용하고 있음. 참고사항 이 법률안은 「국회법」 제85조의3제4항에 따라 2027년도 세입예산안 부수 법률안으로 지정될 필요가 있음.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_A70A4FBF8855454F9CE498AA146BC1",
       "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
+      "dailyChangedDate": "2026-10-27",
       "dailyChangeFields": [
         "신규 확인"
       ],
@@ -99162,35 +100834,35 @@
         {
           "label": "신규 확인",
           "before": "",
-          "after": "의안번호 2222047"
+          "after": "의안번호 2222071"
         }
       ]
     },
     {
       "month": "2026-10",
-      "billId": "PRC_0305023DEB8F4ABB84CAA3599A8828",
+      "billId": "PRC_8AE29A9C5D7744BFB6C340A5CE9103",
       "title": "조세특례제한법 일부개정법률안",
-      "billNo": "의안번호 2222043",
+      "billNo": "의안번호 2222070",
       "agency": "기획재정부",
       "committee": "위원회 배정 전",
-      "proposer": "오기형의원 등 10인",
-      "proposeDate": "2026-10-23",
+      "proposer": "윤영석의원 등 12인",
+      "proposeDate": "2026-10-26",
       "relatedCommitteeReviews": [],
       "officialDetailCheckedAt": "",
       "officialDetailCheck": "",
       "stage": "접수",
       "previousStage": "-",
       "changed": true,
-      "changedDate": "2026-10-26",
-      "stageDate": "2026-10-23",
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
       "committeeDate": "",
       "committeePresentDate": "",
       "change": "이번 달 신규 확인",
       "processingResult": "",
-      "summary": "한국투자공사에 설치하는 전략형 국부펀드의 글로벌 투자 경쟁력을 제고하고 빠른 안착을 지원하기 위하여 「한국투자공사법」에 따른 전략투자계정에서 발생하는 소득에 대하여 법인세를 과세하지 아니하려는 것임(안 제104조의37 신설). 참고사항 이 법률안은 오기형의원이 대표발의한 「한국투자공사법 일부개정법률안」(의안번호 제21855호)의 의결을 전제로 하므로, 해당 법률안이 의결되지 아니하거나 수정의결되는 경우에는 이에 맞추어 조정되어야 할 것임.",
-      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_0305023DEB8F4ABB84CAA3599A8828",
+      "summary": "현행법은 기회발전특구에서 창업하거나 사업장을 신설하는 기업에 소득세 또는 법인세를 감면하여 지방투자를 지원하고 있음. 한편, 해외진출기업의 국내복귀에 대한 세액감면과 기회발전특구에 대한 지방세 감면은 사업장 신설뿐만 아니라 증설도 지원하고 있어 제도 간 형평성과 일관성을 확보할 필요가 있음.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_8AE29A9C5D7744BFB6C340A5CE9103",
       "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
+      "dailyChangedDate": "2026-10-27",
       "dailyChangeFields": [
         "신규 확인"
       ],
@@ -99198,107 +100870,35 @@
         {
           "label": "신규 확인",
           "before": "",
-          "after": "의안번호 2222043"
+          "after": "의안번호 2222070"
         }
       ]
     },
     {
       "month": "2026-10",
-      "billId": "PRC_3E4BEEA9832944169E80FDEB1BC0AB",
-      "title": "조세특례제한법 일부개정법률안",
-      "billNo": "의안번호 2222041",
-      "agency": "기획재정부",
-      "committee": "위원회 배정 전",
-      "proposer": "문진석의원 등 11인",
-      "proposeDate": "2026-10-23",
-      "relatedCommitteeReviews": [],
-      "officialDetailCheckedAt": "",
-      "officialDetailCheck": "",
-      "stage": "접수",
-      "previousStage": "-",
-      "changed": true,
-      "changedDate": "2026-10-26",
-      "stageDate": "2026-10-23",
-      "committeeDate": "",
-      "committeePresentDate": "",
-      "change": "이번 달 신규 확인",
-      "processingResult": "",
-      "summary": "「법인세법」 및 「소득세법」은 이월결손금의 공제기간을 각각 15년으로 정하고 있는바, 세액공제의 이월공제기간이 이보다 짧아 결손금의 이월공제 체계와 연계되지 못한다는 지적이 있음. 참고사항 이 법률안은 「국회법」 제85조의3제4항에 따라 2027년도 세입예산안 부수 법률안으로 지정될 필요가 있음.",
-      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_3E4BEEA9832944169E80FDEB1BC0AB",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222041"
-        }
-      ]
-    },
-    {
-      "month": "2026-10",
-      "billId": "PRC_50F621DFD83D48849F2A12EB185EE1",
-      "title": "조세특례제한법 일부개정법률안",
-      "billNo": "의안번호 2222038",
-      "agency": "기획재정부",
-      "committee": "위원회 배정 전",
-      "proposer": "안상훈의원 등 11인",
-      "proposeDate": "2026-10-23",
-      "relatedCommitteeReviews": [],
-      "officialDetailCheckedAt": "",
-      "officialDetailCheck": "",
-      "stage": "접수",
-      "previousStage": "-",
-      "changed": true,
-      "changedDate": "2026-10-26",
-      "stageDate": "2026-10-23",
-      "committeeDate": "",
-      "committeePresentDate": "",
-      "change": "이번 달 신규 확인",
-      "processingResult": "",
-      "summary": "전기자동차는 중국산 전기차의 점유율 확대와 주요국의 자국 생산 우대 정책으로 국내 생산물량의 해외 이전 우려가 커지고 있음. 철강은 주력산업에 핵심 소재를 공급하는 국가 기간산업이나, 세계적 공급과잉과 탄소규제 강화로 생산기반 위축이 우려되어 저탄소철강으로의 전환을 통한 경쟁력 확보가 시급함.",
-      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_50F621DFD83D48849F2A12EB185EE1",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222038"
-        }
-      ]
-    },
-    {
-      "month": "2026-10",
-      "billId": "PRC_7C590A1AA6F54E168CE126CA2A2E85",
-      "title": "종합부동산세법 일부개정법률안",
-      "billNo": "의안번호 2222056",
+      "billId": "PRC_2F21631E14414B35816F34080596DC",
+      "title": "지방세법 일부개정법률안",
+      "billNo": "의안번호 2222090",
       "agency": "위원회 배정 전",
       "committee": "위원회 배정 전",
-      "proposer": "오기형의원 등 10인",
-      "proposeDate": "2026-10-23",
+      "proposer": "권영진의원 등 12인",
+      "proposeDate": "2026-10-26",
       "relatedCommitteeReviews": [],
       "officialDetailCheckedAt": "",
       "officialDetailCheck": "",
       "stage": "접수",
       "previousStage": "-",
       "changed": true,
-      "changedDate": "2026-10-26",
-      "stageDate": "2026-10-23",
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
       "committeeDate": "",
       "committeePresentDate": "",
       "change": "이번 달 신규 확인",
       "processingResult": "",
-      "summary": "현행은 공동명의 1주택자의 경우 주택의 공시가격, 지분율, 납세자의 연령 및 보유기간 등에 따라 부부가 각각 납세의무를 부담하는 경우와 1세대 1주택자 특례를 적용받는 경우의 유불리가 달라질 수 있어 납세자가 매년 두 가지 과세방식에 따른 세액을 직접 비교하여 유리한 과세방식을 선택하여야 하는 불편이 있음. 공동명의 1주택자가 일정 기간 내에 신청하는 경우 부부가 각각 납세의무를 부담하는 경우의 종합부동산세액 합산액과 1세대 1주택자 특례를 적용하는 경우의 종합부동산세액을 비교하여 그 중 적은 금액으로 과세관청이 고지할 수 있도록 함으로써 납세자의 세액 계산 및 특례 선택에 따른 불편을 완화하고 납세편의를 제고하려는 것임(안 제10조의2).",
-      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_7C590A1AA6F54E168CE126CA2A2E85",
+      "summary": "현행법은 취득세 및 재산세의 과세대상을 법률에 열거하여 규정하고 있고, 등록면허세는 일정한 등기ㆍ등록 등을 과세대상으로 하고 있어, 일반적인 제조ㆍ생산용 기계ㆍ설비는 별도의 과세대상 또는 등기ㆍ등록 대상에 해당하지 않는 한 취득세ㆍ재산세 및 등록면허세가 부과되지 아니함. 조세심판원도 생산공정에 필수 불가결하게 사용되어 생산설비의 일부로 볼 수 있는 기계장치에 대해서는 과세대상이 아니라고 판단하고 있음 그런데 선박의 건조ㆍ수리 등에 직접 사용되는 해상크레인은 실질적으로 선박의 제조ㆍ생산을 위한 필수 설비임에도 그 구조와 형태에 따라 선박으로 분류ㆍ과세되어 다른 제조업 생산설비와 과세상 형평성 문제가 제기되고 있으며, 생산설비 해당 여부를 다투는 불필요한 조세분쟁과 이에 따른 사회적ㆍ행정적 비용을 초래할 우려마저 있는 실정임 이에 선박의 건조ㆍ수리에 필수적으로 사용되는 생산설비인 해상크레인에 대한 취득세ㆍ등록면허세ㆍ재산세를 비과세로 하는 등 지방세 과세체계를 합리적으로 정비함으로써 다른 제조업의 생산설비와의 과세형평을 제고하고 조선산업의 설비투자 부담을 완화하려는 것임(안 제6조제10호 및 제26조제2항제3호의2 신설).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_2F21631E14414B35816F34080596DC",
       "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
+      "dailyChangedDate": "2026-10-27",
       "dailyChangeFields": [
         "신규 확인"
       ],
@@ -99306,35 +100906,35 @@
         {
           "label": "신규 확인",
           "before": "",
-          "after": "의안번호 2222056"
+          "after": "의안번호 2222090"
         }
       ]
     },
     {
       "month": "2026-10",
-      "billId": "PRC_G2H6F0G9E1C5D1K8L1K6K5J2H6I8P3",
-      "title": "지방공무원법 일부개정법률안",
-      "billNo": "의안번호 2222061",
+      "billId": "PRC_F180E8DD9F2B48D0A95864C9CAC553",
+      "title": "지방세특례제한법 일부개정법률안",
+      "billNo": "의안번호 2222102",
       "agency": "위원회 배정 전",
       "committee": "위원회 배정 전",
-      "proposer": "이해식의원 등 11인",
-      "proposeDate": "2026-10-23",
+      "proposer": "주진우의원 등 10인",
+      "proposeDate": "2026-10-26",
       "relatedCommitteeReviews": [],
       "officialDetailCheckedAt": "",
       "officialDetailCheck": "",
       "stage": "접수",
       "previousStage": "-",
       "changed": true,
-      "changedDate": "2026-10-26",
-      "stageDate": "2026-10-23",
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
       "committeeDate": "",
       "committeePresentDate": "",
       "change": "이번 달 신규 확인",
       "processingResult": "",
-      "summary": "현행법은 공무상 질병휴직 기간을 3년 이내로 하되 2년의 범위에서 연장할 수 있도록 하고 있으나, 위험직무 수행에 따른 질병ㆍ부상으로 장기간 치료가 필요한 경우에는 현행 휴직기간으로는 충분한 치료를 받기 어렵고, 휴직기간 내에 복귀하지 못하면 직권면직 대상이 될 수 있는 문제가 있음. 위험직무를 수행하다 재해를 입은 공무원을 적극적으로 보호하기 위하여 위험직무 수행 중 공무상 질병 또는 부상을 입은 공무원의 질병휴직 기간을 5년 이내로, 연장기간을 3년의 범위로 확대하는 근거를 마련하려는 것임(안 제64조제1호의2 신설 등).",
-      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_G2H6F0G9E1C5D1K8L1K6K5J2H6I8P3",
+      "summary": "현행법은 수도권 외에 준공 후 미분양된 아파트에 대하여 일정 요건을 갖춘 사업주체 또는 최초 취득자에게 취득세의 100분의 25를 경감하고 있으며, 관련 특례는 2026년 12월 31일 종료될 예정임. 수도권 외에서 준공 후 미분양된 아파트의 증가가 건설경기와 지역경제의 부담으로 이어지는 상황에서 현행 특례의 지속이 필요함.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_F180E8DD9F2B48D0A95864C9CAC553",
       "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
+      "dailyChangedDate": "2026-10-27",
       "dailyChangeFields": [
         "신규 확인"
       ],
@@ -99342,7 +100942,7 @@
         {
           "label": "신규 확인",
           "before": "",
-          "after": "의안번호 2222061"
+          "after": "의안번호 2222102"
         }
       ]
     },
@@ -99404,29 +101004,29 @@
     },
     {
       "month": "2026-10",
-      "billId": "PRC_92D91D15C64D4749BF297E147F7847",
-      "title": "한국국방연구원법 일부개정법률안",
-      "billNo": "의안번호 2222045",
+      "billId": "PRC_8125F11624414A8996CF1BB9E322DE",
+      "title": "철도사업법 일부개정법률안",
+      "billNo": "의안번호 2222107",
       "agency": "위원회 배정 전",
       "committee": "위원회 배정 전",
-      "proposer": "황명선의원 등 17인",
-      "proposeDate": "2026-10-23",
+      "proposer": "윤종군의원 등 12인",
+      "proposeDate": "2026-10-26",
       "relatedCommitteeReviews": [],
       "officialDetailCheckedAt": "",
       "officialDetailCheck": "",
       "stage": "접수",
       "previousStage": "-",
       "changed": true,
-      "changedDate": "2026-10-26",
-      "stageDate": "2026-10-23",
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
       "committeeDate": "",
       "committeePresentDate": "",
       "change": "이번 달 신규 확인",
       "processingResult": "",
-      "summary": "현행법상 한국국방연구원 원장 및 감사의 궐위 시 후임자의 임기를 전임자 임기의 남은 기간으로 규정하고 있어, 유능한 안보·국방 정책 전문가 유치에 제약이 발생하고 직무대행 체제 장기화로 인한 기관 운영 및 안보 정책 연구의 지속성 저해할 우려가 있음. 궐위 시 잔임기간 승계 규정을 삭제하여 원장 및 감사의 임기를 3년으로 새로 부여함으로써 책임경영을 강화하고 안정적인 국방 정책 연구 환경을 조성하려는 것임(안 제8조 제4항).",
-      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_92D91D15C64D4749BF297E147F7847",
+      "summary": "현행법은 철도사업자 또는 승차권 판매를 위탁받은 자가 아닌 자가 승차권 등을 상습 또는 영업으로 자신이 구입한 가격을 초과하여 판매하거나 이를 알선하는 행위를 금지하고, 이를 위반한 경우 과태료를 부과하고 있다. 행정처분인 과태료만으로는 행정기관의 조사 권한에 한계가 있어 실효성 있는 암표 단속이 어려운 실정이다.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_8125F11624414A8996CF1BB9E322DE",
       "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
+      "dailyChangedDate": "2026-10-27",
       "dailyChangeFields": [
         "신규 확인"
       ],
@@ -99434,35 +101034,35 @@
         {
           "label": "신규 확인",
           "before": "",
-          "after": "의안번호 2222045"
+          "after": "의안번호 2222107"
         }
       ]
     },
     {
       "month": "2026-10",
-      "billId": "PRC_5C96C8016BB84E9BBAF4FD6F46D1D3",
-      "title": "희귀질환관리법 일부개정법률안",
-      "billNo": "의안번호 2222051",
+      "billId": "PRC_02A9E353C84E4152B8EFF5EE2FE5CC",
+      "title": "철도사업법 일부개정법률안",
+      "billNo": "의안번호 2222089",
       "agency": "위원회 배정 전",
       "committee": "위원회 배정 전",
-      "proposer": "박용갑의원 등 14인",
-      "proposeDate": "2026-10-23",
+      "proposer": "황희의원 등 11인",
+      "proposeDate": "2026-10-26",
       "relatedCommitteeReviews": [],
       "officialDetailCheckedAt": "",
       "officialDetailCheck": "",
       "stage": "접수",
       "previousStage": "-",
       "changed": true,
-      "changedDate": "2026-10-26",
-      "stageDate": "2026-10-23",
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
       "committeeDate": "",
       "committeePresentDate": "",
       "change": "이번 달 신규 확인",
       "processingResult": "",
-      "summary": "현행법은 음식물의 섭취ㆍ소화ㆍ흡수ㆍ대사능력이 제한되거나 영양성분의 제한 또는 보충이 요구되는 희귀질환자를 위한 식품을 생산하거나 판매하는 자에 대해 필요한 행정적ㆍ재정적 지원을 할 수 있도록 정하고 있음. 매년 특수식품 생산실적에 대한 보고를 받고, 의약품이나 의료기기 공급 관리를 소관하는 식품의약품안전처가 희귀질환자의 생명유지에 필수적인 ‘공급안전관리대상’ 특수식을 지정하고, 이에 대한 수요조사 및 공급중단 대처 방안 마련 등 공급관리 체계를 구축하도록 하려는 것임(안 제18조제6항 신설 등).",
-      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_5C96C8016BB84E9BBAF4FD6F46D1D3",
+      "summary": "현행법은 승차권등의 부정판매 행위와 관련하여 정상적인 가격을 초과하여 타인에게 판매하거나 알선하는 행위만을 금지하고 있을 뿐, 정보통신망에서 매크로 프로그램 등 기술적 조치를 우회하여 승차권을 부당하게 선점ㆍ구매하는 행위 자체를 금지하는 직접적인 규정이 없음. 정보통신망에서 보안조치를 우회하는 등 철도사업자가 정한 공정한 구입 과정을 방해하여 승차권을 구매하는 행위를 금지하고, 철도사업자 및 통신판매중개업자에게 부정구매ㆍ부정판매 방지 조치 의무를 부여하는 한편, 부정구매 및 부정판매를 한 자에 대한 벌칙 조항을 신설함으로써 공정한 승차권 구매 질서를 확립하고 실수요자의 철도 이용 권리를 보호하려는 것임(안 제10조의2 등).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_02A9E353C84E4152B8EFF5EE2FE5CC",
       "dailyChanged": true,
-      "dailyChangedDate": "2026-10-26",
+      "dailyChangedDate": "2026-10-27",
       "dailyChangeFields": [
         "신규 확인"
       ],
@@ -99470,7 +101070,115 @@
         {
           "label": "신규 확인",
           "before": "",
-          "after": "의안번호 2222051"
+          "after": "의안번호 2222089"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_779A2B853BC04E7F9BD60891379A1A",
+      "title": "축산물 위생관리법 일부개정법률안",
+      "billNo": "의안번호 2222074",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "서미화의원 등 15인",
+      "proposeDate": "2026-10-26",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "식품의약품안전처장은 안전관리인증작업장등의 인증 등에 관한 업무를 한국식품안전관리인증원 등에 위탁할 수 있도록 되어 있으나, 위탁 업무에서 징수한 수수료를 수탁기관이 직접 활용할 수 있는 법적 근거가 미비하여 해당 기관에서 업무를 수행하는 데 어려움이 있는 실정임. 식품의약품안전처장이 법령에 따라 위탁한 업무를 수행하는 수탁기관 등의 효율적인 업무 수행을 위해 해당 기관이 직접 식품의약품안전처장의 승인을 받아 수수료를 정하여 징수하고 이를 자체 수입으로 활용할 수 있는 법적 근거를 마련하고자 하는 것임(안 제41조).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_779A2B853BC04E7F9BD60891379A1A",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222074"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_D642E99B2F2D4BD7BF4F0637B5E5E9",
+      "title": "출판문화산업 진흥법 일부개정법률안",
+      "billNo": "의안번호 2222110",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "이정문의원 등 13인",
+      "proposeDate": "2026-10-26",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "현행법은 계약의 당사자가 대등한 입장에서 출판 관련 계약을 공정하게 체결할 수 있도록 표준계약서를 마련ㆍ보급하도록 규정하고 있으나 출판종사자의 근로환경 개선 및 권익 보호 등에 관하여는 별도의 규정을 두고 있지 않음. 출판문화산업은 저임금 등으로 숙련된 전문인력이 지속적으로 이탈하고 있고, 영세 출판사가 많은 산업 구조상 출판종사자의 근로조건을 개선할 수 있는 기반이 미흡한 실정임.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_D642E99B2F2D4BD7BF4F0637B5E5E9",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222110"
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
+      "billId": "PRC_B2EA63812CCC47F5AF7DA3E3C8D354",
+      "title": "해외건설 촉진법 일부개정법률안",
+      "billNo": "의안번호 2222099",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "엄태영의원 등 14인",
+      "proposeDate": "2026-10-26",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-10-27",
+      "stageDate": "2026-10-26",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "아울러 최근 해외건설산업이 활성화됨에 따라 능동적인 실태 파악이 필요함에도 현행법상 한계가 있어 법 개정을 통해 해외건설 관련 실태조사가 가능하도록 하고자 함. 이를 통해 해외 건설시장에서의 불공정 하도급 거래 관행을 개선하고 중소ㆍ중견기업의 해외 진출을 유도하고자 함(안 제30조 및 제32조 신설 등).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_B2EA63812CCC47F5AF7DA3E3C8D354",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-10-27",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222099"
         }
       ]
     }
