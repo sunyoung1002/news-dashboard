@@ -226,7 +226,7 @@
 
   function nominalEnding(sentence) {
     let value = String(sentence || "").replace(/[.!?]+$/, "").trim();
-    if (value.length > 125) {
+    if (value.length > 125 && itemSummaryNeedsClauseReduction(value)) {
       const parts = value.split(/[,;]|\s+(?:및|또는|하며|하거나|하고)\s+/)
         .map(part => part.trim()).filter(part => part.length >= 15);
       const policy = parts.filter(part => /개정|신설|도입|확대|강화|완화|개선|보호|지원|의무|금지|부과|마련|규정/.test(part));
@@ -249,6 +249,11 @@
       .replace(/(?:됩니다|된다|되었다|되었습니다)$/g, "됨");
     if (!/[음함임됨]$/.test(value)) value = `${value} 내용임`;
     return `${value}.`;
+  }
+
+  // Preserve the conditions and actions of official policy sentences together.
+  function itemSummaryNeedsClauseReduction(value) {
+    return !/하도록|하려는|하고자|경우|이내|의무화|개정/.test(value);
   }
 
   function shortBillSummary(item, bullets = false) {
@@ -311,10 +316,11 @@
   }
 
   function updateMainCard(card, item) {
+    card.querySelector(".previous-stage")?.remove();
     const summary = card.querySelector(".summary");
     if (summary) {
       const content = cleanBillSummary(item);
-      const missing = !content || /확인\s*중|내용.*없습니다|조회.*실패/.test(content);
+      const missing = !content || /확인\s*중|미수집|미확보|원문\s*확인\s*필요|내용.*없습니다|조회.*실패/.test(content);
       summary.textContent = missing ? "주요내용 미수집 · 법안 제목을 눌러 공식 원문 확인" : shortBillSummary(item).replace(/\s+/g, " ").trim();
       summary.title = missing ? "" : content;
       summary.style.cssText += ";display:block;-webkit-line-clamp:unset;line-clamp:unset;white-space:nowrap;overflow-x:auto;overflow-y:hidden;max-width:100%;min-width:0;text-overflow:clip";
