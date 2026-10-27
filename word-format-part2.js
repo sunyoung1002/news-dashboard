@@ -9,18 +9,29 @@
     return String(item.title || "법안명 확인 중").replace(/\s*일부\s*개정\s*법률안/g, "").replace(/\s+/g, " ").trim();
   }
   function compactSummaryLines(item, limit) {
-    const terms = coreKeywords(item).filter(term => textUnits(term) <= limit - 8);
-    let summary = favoriteSummary(item);
-    if (textUnits(summary) > limit) {
-      let topic = terms.slice(0, 2).join("·");
-      if (textUnits(topic + " 규정 정비함.") > limit) topic = terms[0] || "";
-      summary = topic ? `${topic} 규정 정비함.` : "주요내용 확인 중.";
+    const budget = limit * 2 - 1;
+    const original = sourceSummary(item).replace(/\(안[^)]*\)/g, "").replace(/\s+/g, " ").trim();
+    const compact = original.replace(/하기\s*위하여/g, "위해").replace(/할\s*수\s*있도록\s*함/g, "하도록 함").replace(/하고자\s*하는\s*것임/g, "하고자 함");
+    const candidates = [original, compact];
+    const clauses = compact.split(/[,;]\s*|(?<=[.!?])\s+/).filter(Boolean);
+    candidates.push(...clauses.filter(text => /개정|신설|도입|확대|강화|완화|개선|보호|지원|의무|금지|마련|규정/.test(text) && /(?:[.!?]|함|됨|임|음)$/.test(text)));
+    // Do not turn a list of background words into an invented amendment claim.
+    const keywords = coreKeywords(item).filter(term => textUnits(term) <= limit &&
+      !/^(?:이로|인해|현행법|따르면|이미|주요|선진국|우리나라|최근|지난|이른바|해당|있는|나이에)/.test(term));
+    if (keywords.length && !/확인\s*중|내용.*없습니다/.test(original)) {
+      candidates.push(`${keywords.slice(0, 2).join("·")} 관련 내용임.`);
     }
-    const selected = [];
-    terms.forEach(term => {
-      if (selected.length < 3 && textUnits("핵심키워드: " + [...selected, term].join("·")) <= limit) selected.push(term);
-    });
-    return [summary, `핵심키워드: ${selected.join("·") || "확인 중"}`];
+    let summary = candidates.find(text => text && textUnits(text) <= budget) || "주요내용 원문 확인 필요.";
+    if (textUnits(summary) <= limit) return [summary];
+    let width = 0, cut = 0;
+    for (const char of summary) {
+      if (width + textUnits(char) > limit) break;
+      width += textUnits(char); cut += char.length;
+    }
+    // Prefer a word boundary if both resulting lines fit.
+    const space = summary.lastIndexOf(" ", cut);
+    if (space > 0 && textUnits(summary.slice(space + 1)) <= limit) cut = space;
+    return [summary.slice(0, cut).trim(), summary.slice(cut).trim()].filter(Boolean);
   }
   function compactDate(item) {
     const valid = value => /^\d{4}-\d{2}-\d{2}$/.test(String(value || ""));
