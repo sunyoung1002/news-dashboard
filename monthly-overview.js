@@ -25,7 +25,7 @@
       !/폐기|철회|부결|가결|의결/.test(item.processingResult || "");
   }
   function relatedReview(item) {
-    return pendingCommittee(item) && reviews(item).some(row => validDate(row.presentDate) && !validDate(row.processDate) && !/가결|의결|부결|완료|종결|폐기|철회/.test(row.result || ""));
+    return item.stage === "법사위";
   }
   function committeeLabel(item) {
     const name = String(item.committee || "").replace(/\s+/g, "");
@@ -93,7 +93,7 @@
       card.querySelector("small")?.remove();
       number.setAttribute("aria-label", `${label} ${counts[id]}건 보기`);
       if (id === "statTotal") number.title = window.AssemblyScope?.active() ? "선택 대수의 전체 의안 중 공식 발의·접수일이 조회 월인 의안 수. 법률안 외 의안과 처리의안도 포함합니다." : "공식 발의일이 조회 월에 해당하는 수집 법안 수. 발의일 미확인 자료는 집계에서 제외됩니다.";
-      if (id === "statCommittee") number.title = "소관위 법안 중 공식 관련위 심사정보에 상정일이 있고 처리가 완료되지 않은 법안";
+      if (id === "statCommittee") number.title = "조회 범위의 의안 중 현재 진행단계가 법사위인 의안";
     });
     let panel = document.getElementById("committeeOverview");
     if (!panel) {
@@ -139,7 +139,7 @@
     monthItems, proposedItems, latestItem, matches, committeeDatesMarkup, progressMarkup, validDate };
   const scopeScript = document.createElement("script");
   const scopeUrl = new URL("assembly-browser.js", document.currentScript?.src || document.baseURI);
-  scopeUrl.searchParams.set("v", "20261022-assembly1");
+  scopeUrl.searchParams.set("v", "20261027-card1");
   scopeScript.src = scopeUrl.href;
   scopeScript.onerror = () => console.warn("assembly-browser.js를 불러오지 못해 기존 월별 화면을 유지합니다.");
   document.head.appendChild(scopeScript);
