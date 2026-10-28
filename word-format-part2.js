@@ -9,19 +9,28 @@
     return String(item.title || "법안명 확인 중").replace(/\s*일부\s*개정\s*법률안/g, "").replace(/\s+/g, " ").trim();
   }
   function compactSummaryLines(item, limit) {
-    const budget = limit * 2 - 1;
-    const original = sourceSummary(item).replace(/\(안[^)]*\)/g, "").replace(/\s+/g, " ").trim();
-    const compact = original.replace(/하기\s*위하여/g, "위해").replace(/할\s*수\s*있도록\s*함/g, "하도록 함").replace(/하고자\s*하는\s*것임/g, "하고자 함");
-    const candidates = [original, compact];
-    const clauses = compact.split(/[,;]\s*|(?<=[.!?])\s+/).filter(Boolean);
-    candidates.push(...clauses.filter(text => /개정|신설|도입|확대|강화|완화|개선|보호|지원|의무|금지|마련|규정/.test(text) && /(?:[.!?]|함|됨|임|음)$/.test(text)));
-    // Do not turn a list of background words into an invented amendment claim.
-    const keywords = coreKeywords(item).filter(term => textUnits(term) <= limit &&
-      !/^(?:이로|인해|현행법|따르면|이미|주요|선진국|우리나라|최근|지난|이른바|해당|있는|나이에)/.test(term));
-    if (keywords.length && !/확인\s*중|내용.*없습니다/.test(original)) {
-      candidates.push(`${keywords.slice(0, 2).join("·")} 관련 내용임.`);
+    const number = String(item.billNo || "").match(/\d{7}/)?.[0];
+    const verified = W.reviewedWordSummaries?.[number];
+    const normalize = value => String(value || "").replace(/[\s·ㆍ]/g, "");
+    if (verified && normalize(item.title) === normalize(verified[0]) &&
+        (!item.proposeDate || item.proposeDate === verified[1])) {
+      return [...verified[2]];
     }
-    let summary = candidates.find(text => text && textUnits(text) <= budget) || "주요내용 원문 확인 필요.";
+    const budget = limit * 2 - 1;
+    // Prefer stored official content over the screen's shortened summary.
+    const original = String(item.summary || "").replace(/제안이유\s*및\s*주요내용/g, "").replace(/\(안[^)]*\)/g, "").trim();
+    if (!original || /미수집|확인\s*중|원문\s*확인\s*필요/.test(original)) return ["공식 주요내용 확인 필요."];
+    const sentences = original.split(/(?<=[.!?])\s+|[\r\n]+/).map(text => text
+      .replace(/^\s*(?:[가-힣]|\d+)[.)]\s*/, "")
+      .replace(/^(?:이에|그러나|따라서|그런데|또한|하지만|그래서|이미|이와\s*같이|이와\s*관련해서)\s*[,，]?\s*/, "")
+      .replace(/하기\s*위하여/g, "위해").replace(/하고자\s*하는\s*것임/g, "하고자 함")
+      .replace(/하려는\s*것임/g, "하려는 내용임").replace(/\s+/g, " ").trim())
+      .filter(text => text.length >= 12 && /개정|신설|도입|확대|강화|완화|개선|보호|지원|의무|금지|마련|규정|하도록|기간|기한/.test(text) &&
+        !/^(?:현행|최근|지난)/.test(text) && /(?:[.!?]|함|됨|임|음)$/.test(text));
+    const candidates = sentences.sort((a,b) => Number(/하도록|하고자|하려는/.test(b)) - Number(/하도록|하고자|하려는/.test(a)));
+    const summary = candidates.find(text => textUnits(text) <= budget);
+    // Never invent an amendment by joining isolated keywords or clip a condition.
+    if (!summary) return ["공식 원문에 따른 개정내용의", "추가 요약·대조가 필요함."];
     if (textUnits(summary) <= limit) return [summary];
     let width = 0, cut = 0;
     for (const char of summary) {
