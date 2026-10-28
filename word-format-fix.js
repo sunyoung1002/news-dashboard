@@ -1,17 +1,17 @@
 /* Small loader. Upload word-format-part1.js through part6.js first. */
 (function () {
   "use strict";
-  const release = "20261027-word8-standard";
+  const release = "20261028-word-summary2";
   const base = document.currentScript?.src || new URL("word-format-fix.js", document.baseURI).href;
   const buttons = "#downloadReport,#downloadSelected,#downloadFavorites,#downloadFavoriteCategoryDialog,#downloadFavoriteDetail,#downloadComparison";
   const queued = new WeakSet();
   let loaded = false;
   let failed = false;
   let missing = "";
-  function loadPart(number) {
+  function loadPart(number, summary = false) {
     return new Promise((resolve, reject) => {
       const script = document.createElement("script");
-      const name = `word-format-part${number}.js`;
+      const name = summary ? `word-summary-part${number}.js` : `word-format-part${number}.js`;
       const url = new URL(name, base);
       url.searchParams.set("v", release);
       script.src = url.href;
@@ -23,6 +23,7 @@
   }
   const ready = (async () => {
     try {
+      for (let number = 1; number <= 2; number++) await loadPart(number, true);
       for (let number = 1; number <= 6; number++) await loadPart(number);
       loaded = true;
     } catch (_) { failed = true; }
