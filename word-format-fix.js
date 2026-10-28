@@ -1,7 +1,7 @@
 /* Small loader. Upload word-format-part1.js through part6.js first. */
 (function () {
   "use strict";
-  const release = "20261028b-stable";
+  const release = "20261028c-links-cards";
   const base = document.currentScript?.src || new URL("word-format-fix.js", document.baseURI).href;
   const buttons = "#downloadReport,#downloadSelected,#downloadFavorites,#downloadFavoriteCategoryDialog,#downloadFavoriteDetail,#downloadComparison";
   const queued = new WeakSet();
@@ -25,7 +25,9 @@
       for (let number = 1; number <= 6; number++) await loadFile(`word-format-part${number}.js`);
       for (let number = 1; number <= 2; number++) await loadFile(`word-reviewed-20261028b-${number}.js`);
       await loadFile("word-export-20261028b.js");
-      if (window.LegislationWordParts?.stableRelease !== "20261028b") throw new Error("Word module");
+      await loadFile("bill-word-links-20261028c.js");
+      await loadFile("bill-card-summary-20261028c.js");
+      if (window.LegislationWordParts?.stableRelease !== "20261028c" || !window.LegislationCardSummary) throw new Error("Word module");
       loaded = true;
     } catch (_) { failed = true; }
   })();
