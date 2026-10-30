@@ -1,7 +1,7 @@
 /* Small loader. Upload word-format-part1.js through part6.js first. */
 (function () {
   "use strict";
-  const release = "20261029-dedup-v1";
+  const release = "20261030-duplicate-audit";
   const base = document.currentScript?.src || new URL("word-format-fix.js", document.baseURI).href;
   const buttons = "#downloadReport,#downloadSelected,#downloadFavorites,#downloadFavoriteCategoryDialog,#downloadFavoriteDetail,#downloadComparison";
   const queued = new WeakSet();
@@ -30,6 +30,7 @@
       if ((window.LegislationWordParts?.stableRelease !== "20261028c" || window.LegislationWordParts?.reviewedEffectsRelease !== "20261029") || !window.LegislationCardSummary) throw new Error("Word module");
       await loadFile("word-dedup-20261029.js");
       if (window.LegislationWordParts?.dedupRelease !== "20261029") throw new Error("Word dedup");
+      await loadFile("favorite-duplicate-audit.js");
       loaded = true;
     } catch (_) { failed = true; }
   })();
