@@ -1,6 +1,6 @@
 {
   "mode": "official",
-  "updatedAt": "2026-11-01 21:58",
+  "updatedAt": "2026-11-02 09:54",
   "items": [
     {
       "month": "2026-08",
@@ -109519,18 +109519,10 @@
       "processingResult": "",
       "summary": "「상법」상 가맹계약의 해지에 관한 규정을 구체화하여 가맹점사업자의 귀책사유 없이 영업을 지속하기 현저히 곤란한 부득이한 사정이 발생하는 경우 등에 가맹점사업자가 가맹본부에 가맹계약의 해지를 요청할 수 있도록 하고, 계약해지에 따른 과도한 위약금 부과를 제한함으로써 가맹점사업자의 계약해지권을 실질적으로 보장하려는 것임. 한편, 현행법상 묵시적 계약갱신 제도는 가맹점사업자의 계약갱신 권한 보호를 위한 것이나, 계약갱신을 원하지 않는 가맹점사업자의 의사에 반하여 계약이 갱신되는 경우가 발생할 수 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_A4C45244337A4BC8B41881C3F4BD7D",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -111375,18 +111367,10 @@
       "processingResult": "",
       "summary": "현행법은 국토교통부장관 또는 지방자치단체의 장이 필요한 경우 공인회계사, 세무사 또는 국토교통부령으로 정하는 요건을 갖춘 전문경영진단기관으로 하여금 건설사업자의 재무관리상태를 진단하게 할 수 있도록 규정하고 있음. 아울러 진단자 선택권을 넓히고 진단 서비스 경쟁을 촉진하여 중소건설사업자의 진단 비용과 시간 부담을 덜려는 것임(안 제49조제2항).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_DB7A8B08B3464B33868142E7F931EC",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -111411,18 +111395,10 @@
       "processingResult": "",
       "summary": "그럼에도 불구하고, 현행법상 종합건설업체의 4억 3천만원 미만 공사 수주를 제한하는 영세 전문건설업체 보호조치는, 법률조항에 기준 금액이 구체적으로 명시돼(제16조제1항제4호 단서) 변화된 업계 상황 등을 반영하지 못한 채 경직적으로 운영되는 문제가 있으며, 위 조치는 2026. 위원회에서 건설공사비지수 등을 고려하여 3년마다 의제부대공사의 범위를 정하도록 하여, 전문건설업체의 경쟁력 회복에 도움을 주기 위한 것임(안 제16조 및 제16조의2 신설 등).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_6518A8B797AB4F7CAAFEE2896B206D",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -111447,18 +111423,10 @@
       "processingResult": "",
       "summary": "문제를 개선하기 위해서는 직접 시공하는 전문건설사업자가 하도급업체가 아닌 공동계약의 당사자로 참여할 수 있도록 할 필요가 있음. 다단계 하도급 구조 개선과 건설사업자 간 상생협력에 앞장서야 할 공공기관에서도 제도의 활용이 저조하여, 공공부문의 주계약자 공동도급을 활성화할 필요가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_AA3A82DA13244856B5AA6FC25A0A58",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -111483,18 +111451,10 @@
       "processingResult": "",
       "summary": "정부는 업역 칸막이 규제가 경쟁을 차단하고 다단계 하도급 병폐를 고착시킨다는 지적에 따라 2018년 「건설산업 혁신방안」과 노ㆍ사ㆍ정 대타협을 거쳐 법률 제16136호로 현행법을 개정, 2021년 공공공사ㆍ2022년 민간공사부터 종합ㆍ전문 간 상호시장 진출을 허용하고 2030년 단일 업종 전환 로드맵을 확정하였음. 당초 합의는 공사예정금액 2억원 미만 전문공사만 2023년 말까지 한시 보호하고 2024년부터 전면 개방하는 것이었음에도, 전문업계의 반복된 요구로 보호구간이 3억 5천만원을 거쳐 4억 3천만원 미만으로 두 차례 확대ㆍ연장되어 2026년 12월 31일까지 유지되고 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_G2G6E0F8N0O4M1M9L1J8K0F0G3F4F4",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -111519,18 +111479,10 @@
       "processingResult": "",
       "summary": "현행법에서는 전문건설 사업자는 발주자 서면 승낙 시에만 도급받은 업종과 같은 업종의 하도급이 가능하나(제29조제2항제1호), 종합건설사업자 간에는 도급받은 업종과 같은 업종의 하도급의 경우 발주자에게 통보만 하면 제한 없이 가능하도록 규정하고 있음(제29조제6항).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_6447BFE8BDDE42558F97B3342BAF4E",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -111555,18 +111507,10 @@
       "processingResult": "",
       "summary": "현행법은 원수급인이 발주자로부터 공사의 준공금, 기성금 또는 선급금을 지급받은 경우, 받은 날(선급금의 경우 계약체결일 포함)부터 15일 이내에 하수급인에게 해당 대금을 지급하도록 규정하고 있음. 이는 하도급 현장의 자금난을 심화시키고, 2ㆍ3차 하수급인 및 건설근로자에 대한 임금ㆍ자재대금 체불로 이어지는 주요 원인이 됨.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_F6998013E70742D1BF5DA5A1707DF9",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -112795,18 +112739,10 @@
       "processingResult": "",
       "summary": "고용보험 및 산업재해보상보험의 보험료징수 등에 관한 법률 일부개정법률안 안호영의원 등 14인 제안이유 현행법상 문화예술산업종사자는 문화예술활동 중 업무상 재해 위험에 노출되어 있음에도 불구하고, 단기 계약 및 프리랜서 중심의 프로젝트 참여 등 고용 형태의 특수성으로 인해 산재보험의 사각지대에 놓여있음. 중소기업사업주 산재보험에 임의가입하는 형태로 운영되고 있어 낮은 가입률 등 실효성이 떨어진다는 지적이 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_B96EEFCC4B0547469F2E40DB229F81",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -112831,18 +112767,10 @@
       "processingResult": "",
       "summary": "해당 의안 정보를 찾을 수 없습니다.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_615FAE08011845AFB2722ED41383D9",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -113287,18 +113215,10 @@
       "processingResult": "",
       "summary": "현행 고용보험제도는 ‘실업급여 계정’ 안에서 실직자의 생활안정을 위한 실업급여와 저출생 극복을 위한 모성보호 급여(출산전후휴가 급여 및 육아휴직 급여 등)를 함께 운영하고 있음. 한편, 구직급여는 실업 인정을 받은 날에 지급하도록 하면서 주 7일을 모두 지급하고 있는데, 1995년 구직급여 제도 도입 당시에는 주 6일 근무가 보편적이어서 임금과 구직급여 지급기준이 주 7일로 일치했으나, 2004년 주 5일 근무제 도입 이후에는 임금(주 6일 지급)과 구직급여 지급기준(주 7일 지급)의 불일치가 계속되어 왔음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_6FDB4432486A477284595713485084",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -114975,18 +114895,10 @@
       "processingResult": "",
       "summary": "기업의 인력 감축은 요건과 절차가 엄격한 경영상 해고보다 희망퇴직 등의 방식으로 이루어지는 경우가 많아, 「근로기준법」에 따른 해고계획 신고만으로는 인공지능 등 신기술 도입에 따른 고용 변동을 충분히 파악하기 어려움. 현행 신고 사항에는 고용량 변동의 원인이 인공지능 등 신기술의 도입에 따른 것인지가 포함되어 있지 않음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_BE3B7744E9ED427AAD1E4ABF4CE60E",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -115487,18 +115399,10 @@
       "processingResult": "",
       "summary": "현행법은 공무원이 공무상 사유로 사망한 경우 순직유족급여 또는 위험직무순직유족급여를 지급하도록 규정하고 있음. 순직유족급여 또는 위험직무순직유족급여를 청구한 유족에게 해당 급여의 지급 여부가 결정되기 전에 긴급생계지원금을 지급할 수 있도록 하여 유족의 생활안정을 도모하려는 것임(안 제59조의2 신설).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_8A940D63662F472898926D6557556B",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -115859,18 +115763,10 @@
       "processingResult": "",
       "summary": "동일한 사고에 대하여 「군인사법」상 전상 인정기준과 「군인 재해보상법」상 전상에 관한 보상기준이 서로 달리 적용되어 불합리한 결과가 발생하지 않도록 할 필요가 있음. 이를 통하여 국가를 위한 희생에 대한 인정과 보상이 일관되게 이루어지도록 하고, 법률이 정한 지급요건을 충족하는 군인이 사고 원인에 관한 입증의 어려움으로 정당한 재해보상에서 배제되는 문제를 개선하려는 것임(안 제33조제1항제1호).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_057F921830B144A6A2760F624143CD",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -116063,18 +115959,10 @@
       "processingResult": "",
       "summary": "최근 저고도 운항 항공기의 활용이 확대되고 도심항공교통(UAM) 등 새로운 항공교통체계의 도입이 추진됨에 따라 다양한 고도와 운항환경에서 항공기의 안전한 운항을 지원하기 위한 맞춤형 기상정보 제공의 필요성이 높아지고 있음. 현행법은 항공 기상업무를 수행하는 기관의 장이 항공 기상정보 이용자로부터 사용료를 징수할 수 있도록 하고 있으나, 사용료 체납에 따른 연체금의 부과 및 이율 등에 관한 법률상 근거가 명확하지 않아 이를 개선할 필요가 있다는 지적이 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_E0D43DE6EC4244438903F5923454A3",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -116379,18 +116267,10 @@
       "processingResult": "",
       "summary": "기후시민회의의 숙의를 통해 도출된 의견이 관계 중앙행정기관 또는 지방자치단체의 정책과 관련되는 경우에는 해당 기관이 이를 검토하고 이에 대한 이행계획을 제출하고 그 이행 결과를 보고하도록 하는 의무와 기한에 관한 규정이 없어, 시민의 숙의 결과가 실제 정책으로 연계되고 그 결과가 다시 시민에게 환류되는 데 한계가 있음. 국가기후위기대응위원회가 기후시민회의에서 제안된 의견에 관하여 심의ㆍ의결한 사항을 관계 중앙행정기관의 장 및 관계 지방자치단체의 장에게 통보하도록 하고, 통보받은 관계 기관의 장은 3개월 이내에 해당 사항에 대한 이행계획을 위원회에 제출하도록 함으로써, 시민 숙의 결과가 정책에 실질적으로 반영될 수 있는 제도적 환류체계를 마련하고 기후정책에 대한 시민참여의 실효성과 행정의 책임성을 강화하려는 것임(안 제19조의2제5항부터 제7항까지 신설).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_6B00ADEF85C243E584D12DF9C4C151",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -117367,18 +117247,10 @@
       "processingResult": "",
       "summary": "현행법은 사업주, 상급자 또는 근로자의 직장 내 성희롱을 금지하고, 사업주에게 직장 내 성희롱 발생 시 조사, 피해근로자 보호 및 행위자에 대한 조치 등의 의무를 부과하고 있음. 도급관계에 있어 관계수급인 또는 관계수급인의 근로자가 도급인 또는 도급인의 근로자로부터 성희롱을 당하는 경우에는 직장 내 성희롱 규정의 적용에 한계가 있어 개선이 필요하다는 지적이 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_2ED08C5D59BF4209BE835A759C0E78",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -117403,18 +117275,10 @@
       "processingResult": "",
       "summary": "현행법에 따르면 남성 근로자는 출산 전에는 배우자가 유산ㆍ조산 등의 위험이 있는 산모인 경우 육아휴직을 사용할 수 있고, 출산 후에는 만 8세 이하 또는 초등학교 2학년 이하의 자녀를 양육하기 위하여 육아휴직을 사용할 수 있음. 출산 전에는 유산ㆍ조산 등의 위험이 확인되지 않은 경우에도 임신에 따른 신체적 부담과 건강상 이유로 배우자의 돌봄이 필요할 수 있으나, 현행법은 고위험 산모일 경우에만 남성 근로자의 육아휴직이 가능하도록 되어 있어, 출산 전 산모 보호에 실질적 도움이 되지 않는다는 지적이 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_M2L6M0T9U0T8T1R9S0Q7Y2Z3X2Y6W6",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -117439,18 +117303,10 @@
       "processingResult": "",
       "summary": "현행법은 근로자가 만 8세 이하 또는 초등학교 2학년 이하의 자녀를 양육하기 위하여 육아휴직을 신청하는 경우 사업주가 이를 허용하도록 하고 있음. 초등학교 고학년의 경우에도 부모의 돌봄이 필요한 경우가 있고, 맞벌이 가구의 증가 등으로 자녀의 학령기 전반에 걸쳐 일ㆍ가정 양립을 지원할 필요성이 커짐에 따라, 최근 「국가공무원법」 및 「지방공무원법」을 개정하여 국가공무원ㆍ지방공무원의 육아휴직 대상 자녀의 연령을 만 12세 이하 또는 초등학교 6학년 이하로 확대하였음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_295E51FFC4FF43FF9D75B517406715",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -119519,18 +119375,10 @@
       "processingResult": "",
       "summary": "“대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다”라는 「대한민국헌법」 제1조제2항의 정신에 따르면 법률의 주인은 국민이며, 누구나 이해하기 쉬운 법률을 만드는 것은 국민을 대표하는 입법기관인 국회의 의무라 할 수 있음. 개정안은 훈민정음 반포 580주년이자 한글날 기념 100주년을 맞아, 어려운 한자어, 외래어ㆍ외국어, 지나치게 축약된 표현 등 어렵거나 불명확한 법률용어를 알기 쉬운 우리말로 정비함으로써 법률에 대한 국민의 가독성과 접근성을 높이려는 것임(안 제10조).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_162BDCB0EF80430C834DA9DBAD84F7",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -119639,18 +119487,10 @@
       "processingResult": "",
       "summary": "현행법은 수탁ㆍ위탁거래에서 원재료 비용이 납품대금의 10% 이상인 주요 원재료의 가격 변동을 납품대금에 반영하도록 하는 납품대금 연동제를 규정하고 있음. 세 가지 이하의 원재료 비용의 합계가 납품대금의 20% 이상인 경우도 납품대금 연동 대상에 포함시킴으로써 납품대금 연동제의 확산 및 정착에 기여하려는 것임(안 제2조).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_FBD0FEF6C902443B9B3EDB48FBCDBA",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -119675,18 +119515,10 @@
       "processingResult": "",
       "summary": "현행법은 위탁기업이 수탁기업으로부터 약정품을 수령한 날부터 60일 이내의 기간으로 정한 지급기일까지 납품대금을 지급하도록 규정하고 있음. 60일이라는 납품대금 지급 기한은 자금력이 취약한 중소 수탁기업에 과도한 금융 비용 부담과 유동성 압박을 유발하는 주요 원인으로 작용하고 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_02738F6C27504E10A89ADAF8BB7EA7",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -121363,18 +121195,10 @@
       "processingResult": "",
       "summary": "현행법은 사업자의 가격을 결정ㆍ유지하는 등의 부당한 공동행위를 금지하면서, 부당한 공동행위 적발을 위하여 자진신고자에 대한 시정조치나 과징금의 감면 규정을 두고 있음. 교육청이 발주한 교육용 태블릿 PC 가격의 담합 등 민생과 밀접한 분야에서 반복적인 담합 사례가 지속적으로 발생하고 있어 담합 억지력을 강화하고 경쟁을 회복하도록 하는 조치를 강화할 필요성이 커지고 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_3004DD3B5F0C42F7897A68BFFA63A1",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -121399,18 +121223,10 @@
       "processingResult": "",
       "summary": "현행법은 사업자 간 부당한 공동행위를 금지하고, 이를 위반한 경우 시정조치 및 과징금 부과 등의 제재를 할 수 있도록 하여 사업자 간 부당한 공동행위를 방지하려고 하고 있음. 다만, 부당한 공동행위로 제재처분을 받은 사업자가 유사 또는 동일한 공동행위를 반복하는 경우가 존재하여 부당한 공동행위의 재발을 방지할 필요가 있으며, 이에 따라 제도 개선이 요구되는 실정임.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_2F82FC77D2304992B40F18CAB2EAE4",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -121435,18 +121251,10 @@
       "processingResult": "",
       "summary": "제안이유 현행법은 사업자 간 부당한 공동행위를 금지하고, 이를 위반한 경우 시정조치 및 과징금 부과 등의 제재 처분을 할 수 있도록 하여 시장에서의 공정한 경쟁질서를 확립하고 있음. 사업자가 부당한 공동행위로 제재 처분을 받은 이후에도 동일 또는 유사한 공동행위를 반복하는 경우가 발생하는 한편, 자진신고 사업자에 대해 시정조치를 감면함으로써 시정조치의 효과가 저해되어 이를 개선해야 한다는 지적이 제기되고 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_9D27703F6A97479F9166F3206A9D11",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -121471,18 +121279,10 @@
       "processingResult": "",
       "summary": "현행법은 공공부문 입찰과 관련된 부당한 공동행위를 효과적으로 적발ㆍ방지하기 위하여 공정거래위원회가 중앙행정기관, 지방자치단체, 공공기관 및 지방공기업의 장에게 입찰 관련 자료의 제출과 그 밖의 협조를 요청할 수 있도록 하고 있음. 공정거래위원회는 이를 토대로 입찰내용을 분석하는 입찰담합징후분석시스템(BRIAS)을 운영하여 공공입찰 과정에서 발생할 수 있는 담합 징후를 감시하고 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_1CEC2CFEE9874A28BF5790D8A85F56",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -121507,18 +121307,10 @@
       "processingResult": "",
       "summary": "독점규제 및 공정거래에 관한 법률 일부개정법률안 이강일의원 등 11인 제안이유 현행법은 사업자 간 부당한 공동행위를 금지하고, 이를 위반한 경우 시정조치 및 과징금 부과 등의 제재를 할 수 있도록 하여 사업자 간 부당한 공동행위를 방지하려고 하고 있음. 부당한 공동행위로 형성된 가격을 경쟁이 회복되는 수준으로 재결정하도록 하는 가격재결정 명령을 명시적으로 도입하려고 함.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_9DCD75E9C9C842F7B3307DB8456A6A",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -121543,18 +121335,10 @@
       "processingResult": "",
       "summary": "독점규제 및 공정거래에 관한 법률 일부개정법률안 윤준병의원 등 12인 제안이유 현행법은 부당한 공동행위인 담합을 엄격히 금지하고, 이에 대해 시정조치, 과징금 및 자진신고 감면제도 등을 규정하고 있음. 특히, 과징금 부과 등 금전적 제재에도 불구하고 거액의 기대이익으로 인해 5년 이내에 담합을 반복하는 사례가 빈발하고 있으나, 등록취소나 영업정지와 같은 강력한 제재 조치를 요청할 수 있는 법적 근거가 없어 이에 대한 개선이 필요함.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_6F27301521624A2C9378B1558C5DD2",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -123287,18 +123071,10 @@
       "processingResult": "",
       "summary": "현행 「민사소송법」에 따른 개인정보 비공개 보호조치는 당사자의 개별 신청과 엄격한 소명을 전제로 하고 있어 소송 당사자가 법률 지식이 부족하거나 소명자료를 충분히 구비하지 못할 경우 보호의 사각지대에 방치되는 실정이므로, 소송 상대방에 대한 서류 송달 및 판결서 등 재판서 작성 시 피해자의 실제 주소를 대체할 안전한 송달 장치의 마련이 필요하다는 지적이 제기되고 있음. 당사자의 생명 또는 신체에 대한 위해의 우려가 있다고 인정하는 경우에는 당사자의 신청이 없더라도 법원이 직권으로 소송기록의 송달 등에 앞서 개인정보에 대한 비공개 보호조치를 할 수 있게 하고, 피해자의 개인정보를 안전하게 보호하기 위하여 송달전용주소를 지정할 수 있도록 함으로써 민사소송 절차 과정에서 피해자의 생명과 신체의 안전을 실효적으로 보호하려는 것임(안 제184조의2 신설 등).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_FECEED70611C4D7BAD4781F52FC1D2",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -123323,18 +123099,10 @@
       "processingResult": "",
       "summary": "현행법은 소송관계인의 생명 또는 신체에 대한 위해의 우려가 있다는 소명이 있는 경우 해당 소송관계인의 신청에 따라 법원이 주소 등 개인정보에 대한 보호조치를 할 수 있도록 하고 있음. 가정폭력·스토킹 등의 피해자가 보호제도를 알지 못하거나 급박한 상황에서 신청하지 못하는 경우에는 소송기록의 열람·복사·송달 과정에서 실제 거주지 등이 상대방에게 노출될 수 있다는 한계가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_328790B5F21B42A89B3320427E428B",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -123359,18 +123127,10 @@
       "processingResult": "",
       "summary": "현행법은 소송관계인의 생명 또는 신체에 위해를 입을 우려가 있는 경우 해당 소송관계인의 신청에 따라 주소 등 개인정보가 당사자를 포함한 제3자에게 공개되지 아니하도록 법원이 보호조치를 할 수 있도록 규정하고 있음. 특히 최근 가정폭력을 피해 거주지를 옮긴 피해자의 주소가 이혼소송 과정에서 배우자에게 노출된 이후 피해자가 살해되는 사건이 발생하였으나, 현행법은 소송관계인의 신청이 있어야만 보호조치를 할 수 있어 위해의 우려가 확인되더라도 법원이 직권으로 개인정보를 보호하기 어려운 한계가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_B9D83BC48CC94361B7C29B78DEC7F3",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -124319,18 +124079,10 @@
       "processingResult": "",
       "summary": "산재와의 업무관련성을 입증할 자료는 그 자체로 사업주의 경영상의 책임을 묻고, 중대재해 수사와 산재보상 행정을 진행함에 있어 중요한 근거가 되나 현행법상으로 이를 고의로 훼손하는 행위를 하더라도 법적 근거가 없어 처벌하기 어려운 실정임. 사업주가 산업재해 발생 사실을 은폐하는 행위 외에 그 산업재해와 업무의 관련성 입증에 필요한 증거를 인멸ㆍ은닉ㆍ위조 또는 변조하는 행위를 금지하고, 이를 위반한 자를 처벌하려는 것임(안 제57조제1항 및 제170조제3호).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_6D300F80858C49B6B48EF0B4B057B7",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -124355,18 +124107,10 @@
       "processingResult": "",
       "summary": "현행법은 정부의 산업재해 예방 시스템과 연계하여 인공지능 등 디지털 기술로 사업장 또는 작업의 산업재해 발생 위험을 예측하는 체계의 개발 및 지원에 대한 근거가 부족하다는 지적이 있음. 고용노동부장관은 인공지능 등 디지털 기술로 분석하여 사업장 또는 작업의 산업재해 발생 위험을 예측하는 체계를 개발ㆍ운영하고 산업재해 예방 활동 보조ㆍ지원 대상 선정에 활용할 수 있도록 하며, 정부는 사업주, 사업주단체, 근로자단체 또는 산업재해 예방 관련 전문단체 등이 인공지능 등 디지털 기술을 활용하여 사업장 또는 작업의 산업재해 발생 위험을 예측하는 체계를 개발ㆍ운영하는 경우 그에 필요한 지원을 할 수 있도록 함으로써 인공지능을 활용한 효율적인 산업재해 예방을 도모하려는 것임(안 제9조).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_J2J6I0G9H1O6P1O4O1M4N2M8T9U9S2",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -128283,18 +128027,10 @@
       "processingResult": "",
       "summary": "노선버스가 국민에게 제공되는 기초생활교통수단인만큼 노선버스 운송사업을 경영하는 기업은 전국에 걸쳐 있어, 가업상속공제 적용업종에서 원천적으로 제외될 경우 막대한 상속세 재원 마련 과정에서 노선버스 운송업체의 노선운행 축소 또는 승계 포기, 폐업 등으로 인해 대중교통 운송서비스 기반이 약화되고, 국민의 이동권 제약으로 교통불편이 발생할 것으로 우려됨. 참고사항 이 법률안은 「국회법」 제85조의3제4항에 따라 2027년도 세입예산안 부수 법률안으로 지정될 필요가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_0852D11AA03847208E8FEB5A933172",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -128319,18 +128055,10 @@
       "processingResult": "",
       "summary": "제안이유 정부에서 추진 중인 2026년 세제개편안은 가업상속공제의 적용 요건을 강화하고 적용 대상 업종을 축소하는 내용을 포함하고 있어, 기업의 경영 여건과 가업승계 실태를 충분히 고려할 필요가 있다는 의견이 제기되고 있음. 정부 개편안에 따라 피상속인의 가업경영기간 요건이 현행 10년 이상에서 20년 이상으로 강화되면 공제 대상에서 제외되는 기업은 상속세 납부에 따른 자금 부담과 유동성 제약으로 기업의 존속을 위협받게 되고, 이는 결국 국가 경제적 손실로 이어질 우려가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_04BE93641AB84720984C9DA3B7611E",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -128355,18 +128083,10 @@
       "processingResult": "",
       "summary": "가업상속공제는 중소ㆍ중견기업의 원활한 승계를 지원하여 기업의 지속 성장, 고용 유지 및 기술ㆍ경영 노하우의 전수를 도모하는 제도로서, 역대 정부는 그 대상과 폭을 꾸준히 넓혀 왔음. 최근 7년간 가업상속공제를 받은 기업의 70.1%가 경영기간 30년 미만인 점을 고려하면, 기존 제도를 믿고 승계를 준비해 온 다수 기업이 지원에서 배제될 우려가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_1B4C9C07463745AC8ACE21A18F8BDD",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -128391,18 +128111,10 @@
       "processingResult": "",
       "summary": "현행법상 가업상속공제 제도와 영농상속공제 제도는 장기간 축적된 기술과 노하우의 원활한 승계를 지원함으로써 기업과 영농의 연속성과 고용을 유지하기 위한 제도임. 농업분야 중 대부분의 업종은 영농상속공제 제도를 통하여 상속이 이루어지고 있는 반면, 축사 및 악취저감시설, 분뇨처리시설, 스마트설비 등의 시설ㆍ장비가 필요한 장치산업인 양돈업은 현행 영농상속공제 제도를 통해서는 승계를 위한 세제 적용을 받기에는 턱없이 부족한 실정임.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_90663065FBBB43078914C091946B47",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -128427,18 +128139,10 @@
       "processingResult": "",
       "summary": "현재(’26년 6월 기준) 개인 병원이 전국 병원의 절반 이상을 차지(57.2%)하며 지역 보건의료체계에 기여하고 있는데 가업상속공제 적용업종에서 원천적으로 제외될 경우 막대한 상속세 재원 마련 과정에서의 병원 폐업 등으로 인해 응급ㆍ중증ㆍ분만ㆍ소아 등 지역 필수의료 기능 수행이 중단되는 등 국민건강과 안전에 위해를 미칠 것으로 우려됨. 참고사항 이 법률안은 「국회법」 제85조의3제4항에 따라 2027년도 세입예산안 부수 법률안으로 지정될 필요가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_C571F2E1DD7F4AF08453625C0FAA63",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -128463,18 +128167,10 @@
       "processingResult": "",
       "summary": "현행법은 가업이 원활히 상속될 수 있도록 가업상속에 대한 공제 규정을 두어 피상속인이 생전에 10년 이상 경영한 기업 중 매출액 평균금액이 5천억원 이하의 기업을 상속인에게 상속하는 경우 피상속인의 경영 기간에 따라 상속 재산가액에서 300억원 이상 600억원 이하의 금액을 차등적으로 공제하고 있음. 최근 정부는 가업의 상속공제 기준을 강화하려고 하고 있어 수도권권 인구집중과 지방소멸 위기가 심화되고 있는 상황에서 가업상속공제 기준마저 강화될 경우 지방에 소재한 기업은 그 존립마저 위태로운 상황에 처할 수 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_DC5268631F1A4C38892F82AB28B1BF",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -128499,18 +128195,10 @@
       "processingResult": "",
       "summary": "상속세 및 증여세법 일부개정법률안 김상훈의원 등 10인 제안이유 현행 상속세는 피상속인이 남긴 유산총액의 이전을 과세물건으로 하여 피상속인을 기준으로 과세하는 이른바 ‘유산세’ 방식을 채택하고 있음. 방식은 상속인이 실제로 취득하는 재산의 크기가 아니라 피상속인의 유산 전체 규모를 기준으로 세율이 정해지므로, 동일한 금액을 상속받더라도 상속인의 수나 상속재산의 분할 형태에 따라 세부담이 크게 달라지는 등 담세력에 따라 공평하게 과세되어야 한다는 응능부담원칙에 부합하지 않는 근본적인 한계가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_5480446623004CD5956E78C4AE45C0",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -128535,18 +128223,10 @@
       "processingResult": "",
       "summary": "현행법은 상속세 및 증여세에 대하여 과세표준 구간에 따라 최고 50퍼센트에 이르는 누진세율을 적용하고 있으며, 상속ㆍ증여재산을 평가할 때 최대주주 등이 보유하는 주식 또는 출자지분에 대해서는 그 평가액에 100분의 20을 할증하여 평가하도록 규정하고 있음. 우리나라 상속세 및 증여세 최고세율은 OECD 회원국 중 높은 수준에 속하며 과세표준 구간과 세율이 장기간 개정되지 않아 그동안의 물가 및 자산가격 상승 등 경제ㆍ사회적 변화를 반영하지 못하고 있고, 최대주주 등이 보유하는 주식 등에 대한 할증평가는 기업 승계 과정에서 과도한 부담을 초래한다는 지적이 제기되고 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_1A25866E1CE845EE9BD8449319EE94",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -130419,18 +130099,10 @@
       "processingResult": "",
       "summary": "소비자분쟁조정위원회는 소비자와 사업자 간 분쟁의 해결을 위하여 소비자원에 설치된 준사법적 기구로, 사건의 성격에 따라 분쟁조정회의 또는 조정부회의로 구분하여 운영되고 있음. 최근 분쟁조정 신청의 증가 및 사건 적체 심화로 인하여 신속한 사건 처리를 위한 회의 개최 횟수 확대의 필요성이 증대되고 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_B591F7F29A1D4C3480FCD8920C4940",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -131631,18 +131303,10 @@
       "processingResult": "",
       "summary": "최근 자본시장 내 금융투자상품의 종류가 다양해지고 구조가 복잡해짐에 따라, 개별 금융투자상품이 자본시장 전체의 변동성에 미치는 영향력이 확대되고 있음. 금융위원회가 금융투자상품이 자본시장의 변동성에 중대한 영향을 미치거나 미칠 우려가 있어 투자자 보호 및 건전한 거래질서 유지를 위하여 긴급하다고 인정되는 경우, 해당 금융투자상품에 관하여 필요한 조치를 명할 수 있도록 그 법적 근거를 마련하려는 것임(안 제416조).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_O2P6N0O9M1U6V1T0T4S9T5R0R3I8G0",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -131667,18 +131331,10 @@
       "processingResult": "",
       "summary": "사업보고서에 기업 가치에 영향을 미칠 수 있는 회사의 지속가능성에 관한 사항을 포함하도록 함(안 제159조제2항제5호 신설). 지속가능성 공시기준은 금융위원회가 의결을 거쳐 정하도록 함(안 제159조의2 신설).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_DEA7E3104120422BB223E2CD96F1A7",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -131703,18 +131359,10 @@
       "processingResult": "",
       "summary": "현행법은 자본시장의 공정한 가격 형성을 저해하고 시세를 왜곡하는 행위를 방지하기 위하여 시세조종행위 및 시장질서교란행위를 금지하고 하위 규정을 통해 유동성 공급자에게 호가 제출 의무를 부여하고 있음. 최근 유동성 공급자의 장 시작ㆍ마감 전 등 호가 제출 의무가 면제되는 시간대를 이용하여 대량의 매매주문을 제출함으로써 시장가격이 순자산가치와 90% 이상 괴리되는 사건이 발생하였음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_D2B6C0K9I1J0H1I7G2H5C0B8C6A4B7",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -131739,18 +131387,10 @@
       "processingResult": "",
       "summary": "ETN(상장지수증권)과 ETF(상장지수펀드) 증권은 투자자들이 소액으로 다양한 자산에 투자할 기회를 제공하는 대표적인 금융상품으로, 현행법상 분할 및 병합이 불가능하여 개별 종목이 지나치게 고가화되거나 저가화되는 경우에도 이를 유연하게 조정할 수 없어 소액 투자자의 접근성을 저해하거나 유동성을 위축시키는 문제가 발생하고 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_223B568F116844FFB4D93D94D559C8",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -131775,18 +131415,10 @@
       "processingResult": "",
       "summary": "통상 정상적인 경영활동을 하고 있는 기업의 PBR이 1 미만일 경우 주가누르기를 하고 있는 것으로 평가되어 투자를 하고 있는 연기금이나 기관투자자들은 주가누르기를 해소하고 주식가치 내지 기업가치를 제고할 것을 요구하게 되는데, 연기금이나 기관투자자의 지분이 개별적으로는 5% 미만으로 낮다는 점을 의식하여 투자대상 기업들은 이러한 주식가치(기업가치) 제고 요구에 소극적으로 대응하고 있음. 이렇다 보니, 60% 이상의 코스피 상장 회사 PBR이 1 미만일 정도로 우리 상장기업의 대다수에서 주가누르기가 이루어지고 있고, 이것이 우리 주식시장 “코리아 디스카운트”의 핵심 원인이 되고 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_DE85C8A3928F4770B17FFA91BAF354",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -134779,18 +134411,10 @@
       "processingResult": "",
       "summary": "국가와 지방자치단체의 장은 이러한 법적 의무를 이행하기 위한 실질적인 노력을 전혀 하지 않고 있는 상황임. 장애인 고용의무의 취지를 실현하기 위해서는 예외 직군에 대해서도 국가와 지방자치단체가 적극적으로 직무 개발에 나서는 등 장애인 고용 촉진을 위한 노력을 다할 필요가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_00B15C814093498582ABCD6B66F14E",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -134815,18 +134439,10 @@
       "processingResult": "",
       "summary": "장애인 표준사업장의 공공조달 참여를 지원하는 근거가 충분치 않을 뿐 아니라 「국가를 당사자로 하는 계약에 관한 법률 시행령」에 따라 수의계약을 위해서는 대상물품의 장애인 표준사업장 직접생산여부를 확인하여야 함에도 불구하고 현행법에는 해당 절차에 대한 명시적인 근거가 없는 상황임. 고용노동부장관이 장애인 표준사업장의 납품 계약 대행을 원활하게 수행할 수 있도록 근거를 마련하고, 고용노동부장관이 직접생산여부의 확인 등 수의계약에 필요한 절차를 지원함으로써 장애인 표준사업장 생산품의 우선구매를 활성화하려는 것임(안 제22조의4).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_5859CB2F0CE04203B8DE132B32B0FC",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -135467,18 +135083,10 @@
       "processingResult": "",
       "summary": "플랫폼 시장이 급성장하면서 플랫폼이 소비자의 거래 요청을 입점업체에 전달하여 거래를 중개하는 통신판매 방식이 보편화되고 있음. 통신판매중개 과정에서 플랫폼은 고객 데이터를 수집ㆍ활용하는 반면, 실질적 거래 주체인 입점업체는 고객에 대한 정보에 접근하기 어려워 독자적인 고객 관리나 마케팅 등 영업활동을 수행하는 데 제약이 있는 등 플랫폼과 입점업체 간 정보비대칭이 발생하고 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_931530ED8E4043978F70EFB59DBFF3",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -136651,18 +136259,10 @@
       "processingResult": "",
       "summary": "현행법은 중소기업 및 중견기업의 원활한 사업승계를 지원하기 위한 가업승계 관련 조세특례를 두고 있으나, 일정한 요건을 갖춘 제3자에게 기업을 승계하거나 근로자들이 우리사주조합을 통하여 기업의 지배지분을 공동으로 인수하는 경우에 적용할 수 있는 별도의 과세특례는 두고 있지 않음. 일정한 요건을 갖춘 제3자가 중소기업 또는 중견기업을 승계하는 경우 양도인의 양도소득세를 감면하고 승계기업의 소득세 또는 법인세를 일정 기간 감면하는 한편, 근로자기업인수에 대해서는 주된 양도자 및 공동양도자의 양도소득세의 감면ㆍ분할납부를 허용하고, 장기근속 우리사주조합원이 근로자기업인수를 위하여 출자하는 경우 소득공제 한도를 확대함으로써 원활한 사업승계와 고용의 계속성을 지원하려는 것임(안 제30조의8 및 제30조의9 신설 등).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_6C91C9A0C59449B68A8FB074053635",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -136687,18 +136287,10 @@
       "processingResult": "",
       "summary": "에너지 분야의 경우 수소에 한정되어 있어, 수소 외의 미래형 에너지 분야 핵심기술 개발에 대한 세제지원이 충분하지 못하다는 지적이 있음. 참고사항 이 법률안은 「국회법」 제85조의3제4항에 따라 2027년도 세입예산안 부수 법률안으로 지정될 필요가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_62B696FAC8074FB489F5DBB8B96650",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -136723,18 +136315,10 @@
       "processingResult": "",
       "summary": "현행법은 영상콘텐츠와 웹툰콘텐츠의 제작비용에 대하여 세액공제 제도를 두고 있으나, 간행물과 전자출판물의 제작을 지원하는 별도의 세액공제 규정은 두고 있지 않음. 출판 분야의 지속적인 창작과 제작을 촉진하기 위해서는 제작비 부담을 완화하고, 국내 창작 기반에 대한 투자가 이어질 수 있도록 세제상 지원을 마련할 필요가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_60498D6AA0024FF9A442C311BD8AED",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -136759,18 +136343,10 @@
       "processingResult": "",
       "summary": "현행 감면한도는 연구개발 인력의 확보나 연구ㆍ인력개발에 대한 투자를 별도로 고려하는 기준이 마련되어 있지 않아 국가식품클러스터 입주기업의 연구개발 역량 강화를 유도하는 데 한계가 있다는 의견이 있음. 국가식품클러스터 입주기업의 연구개발 우수인력에 대해서는 감면한도 산정 시 적용하는 금액을 상향하고, 해당 사업장에서 발생한 연구ㆍ인력개발비의 일정 금액을 감면한도에 추가하도록 함으로써 연구개발 인력의 확보와 연구ㆍ인력개발 투자를 지원하려는 것임(안 제121조의22제3항 등).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_F6F39CB507EF47A2970A7D31302A86",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -136795,18 +136371,10 @@
       "processingResult": "",
       "summary": "현행법은 외국인투자, 기회발전특구 입주기업 등 다양한 조세특례를 두고 있으나 글로벌 통상분쟁으로 피해를 입은 기업, 특히 수출기업에 부품ㆍ소재ㆍ장비를 공급하거나 생산 협력 관계에 있는 중소ㆍ중견 협력업체를 직접 지원하기 위한 세제특례는 마련되어 있지 아니함. 「대외무역법」에 따라 통상위기대응 협력기업으로 지정된 기업에 대하여 2028년 12월 31일까지 소득세 또는 법인세의 100분의 50에 상당하는 세액을 감면하고, 외국의 통상조치에 따른 공급망 차단에 대응하기 위한 투자에 대하여 세액공제 특례를 적용함으로써, 피해기업의 경영 회복을 돕고 공급망 안정을 도모하려는 것임(안 제121조의36 및 제121조의37 신설 등).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_C2A6I0J8H2I4G1G0F0N1N1M8M4L0L6",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -136831,18 +136399,10 @@
       "processingResult": "",
       "summary": "현행법은 사업자가 사업장의 안전 및 보건과 관련하여 지출하는 비용 중 물적시설의 투자에만 통합투자세액공제를 허용하여 세제지원을 하고 있음. 산업현장에서의 안전사고 예방은 안전지침의 준수 및 안전사고 발생 가능성에 대한 사전 진단 등을 수행하는 인적 자원의 확보, 안전보건에 대한 사전 진단, 근로자의 건강장해 예방활동 및 본사의 전담조직 확충 등이 선결 요소이며, 안전사고 예방을 위한 선제적 투자를 보다 적극적으로 지원할 필요성이 그 어느 때보다 높음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_EAC8375ABC3F44A4869CEB6576420A",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -136867,18 +136427,10 @@
       "processingResult": "",
       "summary": "생성형 인공지능의 확산과 첨단반도체 수요 증가에 따라 세계적으로 반도체 생산시설에 대한 투자가 확대되고 있으며, 주요국 간 첨단 반도체 생산거점 유치경쟁도 심화되고 있음. 주요 경쟁국은 반도체 생산시설 투자에 대하여 개별 생산장비뿐만 아니라 생산환경을 구성하는 시설까지 폭넓게 지원하고 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_EF5CDBB2FD4A4D9E89DCADAE177E25",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -136903,18 +136455,10 @@
       "processingResult": "",
       "summary": "최근 특정 지역에 편중된 원유 공급망의 불안정성이 커지면서 원유 공급원 다변화의 필요성이 증대되고 있음. 대체 공급원의 원유는 기존 원유와 성상이 다를 수 있어 이를 처리하기 위한 설비 보강 및 공정 개선 투자가 필요함에도, 해당 시설은 현행법상 일반 시설로 분류되어 낮은 공제율이 적용되고 있어 관련 투자를 유도하기 위한 세제지원이 필요하다는 지적이 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_F8E0D89529AF4000AB5FBC580E2C7D",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -136939,18 +136483,10 @@
       "processingResult": "",
       "summary": "청년 인구와 일자리가 수도권으로 집중되면서 비수도권에 소재한 중소기업은 필요한 인력을 확보함에 있어 어려움을 겪고 있으며, 현행 제도는 근무지역에 따른 감면상 차등을 두고 있지 않아 청년의 비수도권 취업과 지역 정착을 유인하는 정책 수단으로 기능하기에는 한계가 있다는 지적이 제기되고 있음. 중소기업 취업자에 대한 소득세 감면의 신규취업 적용기한을 2029년 12월 31일까지 3년 연장하고, 청년이 수도권 밖의 지역에 소재하는 중소기업체로부터 받은 근로소득에 대해서는 과세기간별 감면한도를 200만원에서 300만원으로 상향함으로써, 지역 중소기업의 인력난을 완화하고 청년의 지역 정착을 지원하려는 것임(안 제30조제1항).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_8D5F61F326094DCC98476D1FC2A3BE",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -136975,18 +136511,10 @@
       "processingResult": "",
       "summary": "현행 세제지원은 투자 단계에 집중되어 있어 투자금액에 비해 생산 규모가 큰 산업은 실제 국내 생산활동에 상응하는 지원을 받지 못하는 한계가 있음. 특히 자동차 등 생산집약적 산업은 대규모 시설투자보다 고용을 기반으로 생산이 이루어지는 특성상 투자 중심의 현행 세액공제 혜택을 충분히 받기 어려우나, 국내에서 이루어진 생산 그 자체에 연계하여 지원하는 수단이 마련되어 있지 아니함.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_1E3B8E6E7C204DFDBF8546C5575BAD",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -137011,18 +136539,10 @@
       "processingResult": "",
       "summary": "현행법은 수도권 밖에서 전문 이스포츠대회를 개최하는 내국법인에 대하여 이스포츠대회운영비용의 100분의 10을 법인세에서 공제하고 있으며, 해당 특례는 2026년 12월 31일 종료될 예정임. 현행 제도는 대회의 규모와 국제성에 관계없이 동일한 공제율을 적용하고 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_D94177BBF39B4D3C85F59D522CFA9D",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -137047,18 +136567,10 @@
       "processingResult": "",
       "summary": "최근 글로벌 온라인 동영상 서비스(OTT)의 확산과 함께 국내 영상콘텐츠의 해외 진출이 확대되고 있으나, 글로벌 플랫폼의 영향력 강화 등으로 국내 영상콘텐츠 제작ㆍ유통업계의 경쟁 여건은 어려워지고 있는 상황임. 영상콘텐츠 산업의 경쟁력을 높이기 위해서는 제작 단계뿐만 아니라 제작에 대한 민간투자를 활성화하고 온라인 유통 과정에서 발생하는 비용 부담을 완화할 필요가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_86C06173DF614BB1AB32CBA59F136F",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -137083,18 +136595,10 @@
       "processingResult": "",
       "summary": "일정 요건을 갖춘 성실사업자 등에 대해서도 2026년 12월 31일이 속하는 과세연도까지 같은 수준의 월세액 세액공제를 적용하고 있음. 참고사항 이 법률안은 「국회법」 제85조의3제4항에 따라 2027년도 세입예산안 부수 법률안으로 지정될 필요가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_A70A4FBF8855454F9CE498AA146BC1",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -137119,18 +136623,10 @@
       "processingResult": "",
       "summary": "현행법은 기회발전특구에서 창업하거나 사업장을 신설하는 기업에 소득세 또는 법인세를 감면하여 지방투자를 지원하고 있음. 한편, 해외진출기업의 국내복귀에 대한 세액감면과 기회발전특구에 대한 지방세 감면은 사업장 신설뿐만 아니라 증설도 지원하고 있어 제도 간 형평성과 일관성을 확보할 필요가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_8AE29A9C5D7744BFB6C340A5CE9103",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -137155,18 +136651,10 @@
       "processingResult": "",
       "summary": "고향사랑 기부제도는 지역 간 재정 격차를 완화하고 지역 균형발전을 도모하려는 제도임에도 지역별 여건 차이를 반영하지 못하고 있으며, 특히 「접경지역 지원 특별법」에 따른 접경지역은 각종 규제로 개발이 제한되기에 행정구역상 수도권에 속하더라도 지역경제 침체가 지속되고 있다는 지적이 있음. 경제ㆍ사회여건을 고려하여 우대할 필요가 있는 지역을 우대지역으로 정의하고, 10만원을 초과하는 기부금에 대한 공제율을 기부 대상 지방자치단체의 소재 지역에 따라 차등 적용하며, 접경지역은 수도권 소재 여부와 관계없이 가장 높은 수준의 공제율을 적용하여 접경지역에 대한 기부를 유도하고 지역 균형발전을 도모하려는 것임(안 제2조제1항제10호의4 신설 및 제58조제1항).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_70C5005694444F39BB3432EFA9EE3F",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -137191,18 +136679,10 @@
       "processingResult": "",
       "summary": "육아휴직 후 원활한 직장 복귀와 경력단절 방지를 위해서는 육아휴직 복귀자에 대한 현행 세액공제를 지속할 필요가 있는 한편, 복직 이후에도 일정 기간 고용을 유지하는 기업에 추가적인 세제상 지원을 함으로써 안정적인 고용유지를 유도할 필요가 있다는 의견이 있음. 육아휴직 복귀자에 대한 세액공제의 적용기한을 2029년 12월 31일까지 연장하고, 육아휴직 복귀자를 복직일부터 3년간 계속 고용한 경우 1명당 중소기업은 300만원, 중견기업은 200만원을 추가로 세액공제하도록 함으로써 육아휴직 복귀자의 지속적인 고용 안정을 지원하려는 것임(안 제29조의8제5항 및 제6항 등).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_BBBCF1CAB547425E9BC63FA6A3AF58",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -137227,18 +136707,10 @@
       "processingResult": "",
       "summary": "영상콘텐츠 간 세제지원의 형평성을 제고하고 문화역량 강화를 통한 관광활성화를 위하여 영상콘텐츠 제작비용 세액공제 대상에 음악영상물을 추가하려는 것임(안 제25조의6제1항제1호라목 신설). 참고사항 이 법률안은 「국회법」 제85조의3제4항에 따라 2027년도 세입예산안 부수 법률안으로 지정될 필요가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_7E4CCBA86505416581883FA6F430F8",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -137263,18 +136735,10 @@
       "processingResult": "",
       "summary": "기존의 시설투자 중심 세제지원만으로는 국내 생산기반의 지속적인 유지ㆍ확충과 생산물량 확대를 유도하는 데 한계가 있음. 아울러 수도권에 집중된 산업구조를 개선하기 위해？비수도권 생산활동에는 기본 공제율보다 높은 공제율을 적용하여 생산거점의 지방 이전과 신규 투자를 유도할 필요가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_4C998737186E45D1AFF06EFBF2F811",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -137299,18 +136763,10 @@
       "processingResult": "",
       "summary": "한국투자공사에 설치하는 전략형 국부펀드의 글로벌 투자 경쟁력을 제고하고 빠른 안착을 지원하기 위하여 「한국투자공사법」에 따른 전략투자계정에서 발생하는 소득에 대하여 법인세를 과세하지 아니하려는 것임(안 제104조의37 신설). 참고사항 이 법률안은 오기형의원이 대표발의한 「한국투자공사법 일부개정법률안」(의안번호 제21855호)의 의결을 전제로 하므로, 해당 법률안이 의결되지 아니하거나 수정의결되는 경우에는 이에 맞추어 조정되어야 할 것임.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_0305023DEB8F4ABB84CAA3599A8828",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -137335,18 +136791,10 @@
       "processingResult": "",
       "summary": "「법인세법」 및 「소득세법」은 이월결손금의 공제기간을 각각 15년으로 정하고 있는바, 세액공제의 이월공제기간이 이보다 짧아 결손금의 이월공제 체계와 연계되지 못한다는 지적이 있음. 참고사항 이 법률안은 「국회법」 제85조의3제4항에 따라 2027년도 세입예산안 부수 법률안으로 지정될 필요가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_3E4BEEA9832944169E80FDEB1BC0AB",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -137371,18 +136819,10 @@
       "processingResult": "",
       "summary": "전기자동차는 중국산 전기차의 점유율 확대와 주요국의 자국 생산 우대 정책으로 국내 생산물량의 해외 이전 우려가 커지고 있음. 철강은 주력산업에 핵심 소재를 공급하는 국가 기간산업이나, 세계적 공급과잉과 탄소규제 강화로 생산기반 위축이 우려되어 저탄소철강으로의 전환을 통한 경쟁력 확보가 시급함.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_50F621DFD83D48849F2A12EB185EE1",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -137407,18 +136847,10 @@
       "processingResult": "",
       "summary": "제안이유 현재는 청년층의 자산 형성을 지원하기 위하여 일정 소득요건을 갖춘 청년이 ‘청년미래적금’에 가입하는 경우 그 이자소득에 대하여 소득세를 비과세하는 특례를 규정하고 있음. 참고사항 이 법률안은 「국회법」 제85조의3제4항에 따라 2027년도 세입예산안 부수 법률안으로 지정될 필요가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_1E43CE255A084EBC9DCC72EABD54E9",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -137443,18 +136875,10 @@
       "processingResult": "",
       "summary": "현행법은 문화예술단체 등에 대하여 고유목적사업준비금의 손금산입 특례를 인정하는 등 문화예술 분야에 대한 조세지원 제도를 규정하고 있음. 국제문화행사의 준비 및 운영을 위하여 금전ㆍ재화 또는 용역을 제공하는 경우에는 별도의 세액공제 특례가 마련되어 있지 않아 국제문화행사에 대한 민간 후원을 활성화하는 데 한계가 있다는 의견이 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_BCAE6723DFC94A0CB6298622C0D4F6",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -137479,18 +136903,10 @@
       "processingResult": "",
       "summary": "법인이 법인의 의사와 관계없이 토지등을 수용당하였음에도 그 양도차익에 대하여 법인세를 납부하도록 하는 것은 과도한 측면이 있으므로 법인의 경제적 부담을 완화하여 줄 필요가 있음. 「산업입지 및 개발에 관한 법률」에 따라 산업단지 조성을 위하여 사업용으로 직접 사용하던 토지등을 수용당한 내국법인에 대하여 토지등 양도차익의 익금불산입 특례를 신설하려는 것임(안 제77조의4 신설).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_Z2X6Y0G2G2E7F0D9C0C4Y4Y4X3X9W2",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -137515,18 +136931,10 @@
       "processingResult": "",
       "summary": "현행법은 재활용폐자원 및 중고자동차를 수집하는 사업자가 세금계산서를 발급할 수 없는 자 등으로부터 이를 취득하여 제조ㆍ가공하거나 공급하는 경우 일정 금액을 부가가치세 매입세액으로 공제하도록 규정하고 있음. 중고 이동통신단말장치를 개인 등으로부터 매입하여 재판매하는 거래가 활발함에도 현행 매입세액 공제특례의 대상에 포함되어 있지 않아 중고 유통시장의 활성화를 제약할 수 있고, 개인 간 거래가 많은 중고거래의 특성을 고려하여 거래 투명성을 확보할 필요가 있다는 의견이 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_EA8F73C153134E2B94E670EBC3F1E7",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -137551,18 +136959,10 @@
       "processingResult": "",
       "summary": "민간임대주택의 유형과 임대기간이 다양화되고 있음에도 현행 과세특례는 민간건설임대주택을 중심으로 규정되어 있어 민간매입임대주택과 새로 도입된 단기민간임대주택에는 적용되지 않고 있으며, 등록기한도 2027년 말로 예정되어 있어 임대주택의 공급 방식과 임대기간 등을 고려하여 과세특례를 정비할 필요가 있다는 의견이 있음. 민간건설임대주택의 등록기한을 2031년 12월 31일까지 연장하고 민간임대주택의 유형 및 임대기간에 따라 장기보유 특별공제율을 차등 적용하도록 함으로써 민간임대주택의 유형과 임대기간에 따른 세제지원 체계를 마련하려는 것임(안 제97조의3).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_K2L6J0K9I2Q2R1P6P1O8O5N5N4J5H5",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -137587,18 +136987,10 @@
       "processingResult": "",
       "summary": "현행법은 농업회사법인이 출자한 거주자에 대해 지급하는 배당소득에 대해 소득세 면제 및 분리과세하고 있음. 참고사항 이 법률안은 「국회법」 제85조의3제4항에 따라 2027년도 세입예산안 부수 법률안으로 지정될 필요가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_2AD0064DE2A8473EAAF061F0A98C4A",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -137623,18 +137015,10 @@
       "processingResult": "",
       "summary": "현행법은 농어민의 경영 부담을 완화하고 농림ㆍ어업의 경쟁력을 제고하기 위하여 농어업경영 및 농어작업 대행용역에 대한 부가가치세 면제, 농협 및 수협 중앙회의 전산용역과 명칭사용용역에 대한 부가가치세 감면 등 다양한 조세특례를 두고 있으나, 해당 특례는 2026년 12월 31일 종료될 예정임. 특히 영농조합법인과 영어조합법인 등이 제공하는 농어업경영 및 농어작업 대행용역은 고령 농어민의 노동력 부족을 보완하는 한편, 농어업의 규모화와 협업적 경영을 촉진하는 데 중요한 역할을 하고 있어 지속적인 세제지원이 필요한 상황임.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_P2O6P0N9N1W8U1U1S3U5S5S6A9Z7Z3",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -137659,18 +137043,10 @@
       "processingResult": "",
       "summary": "최근 기업의 주주환원 확대와 자본시장 선진화를 위해 배당 확대뿐만 아니라 자기주식의 취득ㆍ소각을 통한 주주가치 제고의 중요성이 높아지고 있음. 참고사항 이 법률안은 「국회법」 제85조의3제4항에 따라 2027년도 세입예산안 부수 법률안으로 지정될 필요가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_E7E6D1C13B1E48BCBBAA29BC98CA2D",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -137695,18 +137071,10 @@
       "processingResult": "",
       "summary": "특히 영농조합법인ㆍ영어조합법인 및 농업회사법인은 개별 농어가의 한계를 보완하고 생산ㆍ가공ㆍ유통의 규모화와 공동경영을 촉진하는 등 농어업의 경쟁력 강화와 농어촌 경제 활성화에 중요한 역할을 담당하고 있음. 어업자가 감척에 참여하면서 지급받는 폐업지원금은 현행 세법상 과세대상이 되어, 생업수단인 어선ㆍ어구를 감척하고 어업에서 퇴출하는 어업자에게 세부담이 발생하고 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_T2S6T0R9R1Q8Y1Y1W4X6W3W7U1C4D6",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -137731,18 +137099,10 @@
       "processingResult": "",
       "summary": "현행법은 농협 및 수협이 공급하는 전산용역의 부가가치세를 면제하고 있으며, 일몰기간은 2026년 12월 31일로 되어있음. 참고사항 이 법률안은 「국회법」 제85조의3제4항에 따라 2027년도 세입예산안 부수 법률안으로 지정될 필요가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_3926E0FE707648C29B176FBC7479CE",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -137767,18 +137127,10 @@
       "processingResult": "",
       "summary": "청년들이 사회에 진입할 때 학자금ㆍ주거ㆍ취업 준비 등 용도로 사용할 수 있는 최소한의 자산을 가지고 시작할 수 있는 여건을 조성해 줄 필요성이 있음. 참고사항 이 법률안은 「국회법」 제85조의3제4항에 따라 2027년도 세입예산안 부수 법률안으로 지정될 필요가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_FBB7EE998A424B0CA952D64DA90CE5",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -137803,18 +137155,10 @@
       "processingResult": "",
       "summary": "현행 제도는 임대용 자산에 대한 투자를 제외하고 있는데, 전력ㆍ냉각ㆍ네트워크ㆍ보안 등 인공지능 연산에 필요한 인프라를 제공하여 인공지능 서비스 수행을 지원하는 코로케이션(Colocation) 방식의 인공지능 데이터센터는 복합적ㆍ전문적 인프라 서비스를 제공한다는 점에서 본질적으로 임대와 구별됨에도 공제대상 여부가 불명확함. 참고사항 이 법률안은 「국회법」 제85조의3제4항에 따라 2027년도 세입예산안 부수 법률안으로 지정될 필요가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_340F112B47774357B1B47563ADBC57",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -137839,18 +137183,10 @@
       "processingResult": "",
       "summary": "농업용 유류 면세제도는 농산물 생산기반 유지 및 농작업 기계화와 시설농업화 등 농가고령화 대응을 위해 필수적인 지원이며, 농작업 대행용역 부가가치세 면제 역시 농업법인이 농업경영 및 농작업 대행에 적극 참여할 수 있도록 유인하는 등 두 사업 모두 농업경쟁력 강화에 필요한 사업임. 참고사항 이 법률안은 「국회법」 제85조의3제4항에 따라 2027년도 세입예산안 부수 법률안으로 지정될 필요가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_165F7DCC00EF48F4B5C8CB33F38EB1",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -137875,18 +137211,10 @@
       "processingResult": "",
       "summary": "정부는 5극3특, 메가프로젝트 등 지역균형발전과 첨단산업의 육성을 위해 연구개발 및 기술개발 등을 지원하고 있으며, 기업 역시 국내 비수도권 지역으로 산업 생태계를 넓히며 사업확장 및 우수인력 유치를 위해 노력하고 있음. 참고사항 이 법률안은 「국회법」 제85조의3제4항에 따라 2027년도 세입예산안 부수 법률안으로 지정될 필요가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_9BAC4C1E3337470B95D4573DA3FC7C",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -137911,18 +137239,10 @@
       "processingResult": "",
       "summary": "반도체 소재ㆍ부품ㆍ장비 기업이 개발한 제품을 실제 양산에 적용하기 위해서는 양산공정시설과 동일하거나 유사한 환경에서 충분한 성능ㆍ신뢰성 검증이 이루어질 필요가 있음. 개별 중소ㆍ중견기업이 이러한 시설을 자체적으로 구축하거나 기존 반도체 생산기업의 양산설비를 이용하여 검증을 수행하기에는 비용, 생산일정 및 보안 등의 측면에서 현실적인 제약이 큼.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_DA4CF05B2C9A452289F64CAF1D1401",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -137947,18 +137267,10 @@
       "processingResult": "",
       "summary": "전략산업의 국내생산 기반을 유지ㆍ확대하는 것은 국가경제의 성장잠재력과 경제안보를 좌우하는 중요한 과제임. 그동안 전략산업에 대한 세제지원은 연구개발과 설비투자를 중심으로 이루어지다보니, 국내에 생산설비와 공급망을 갖추었으나 외국산의 저가 공세로 인해 국내 생산을 유지ㆍ확대하는 데에는 한계가 있어 왔음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_9FD425427EFA490A97CEEB4137B09C",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -137983,18 +137295,10 @@
       "processingResult": "",
       "summary": "SOC 사업은 초기에 막대한 투자가 선행되는 반면 자본 회수에 오랜 기간이 소요되어 PF 금융 활용 및 CI의 자금 보충약정이 대출조건에 포함됨. 「법인세법」 제42조제1항 및 제2항은 주식 평가손실ㆍ손상차손 인식을 허용하지 않아, 30년 이상 장기간 진행되는 SOC 사업 특성상 기업회계기준의 회계상 손실과 세법상 손실 인정에 큰 시차가 발생함.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_60586CE1EF4A438399712564E717E5",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -138019,18 +137323,10 @@
       "processingResult": "",
       "summary": "반도체 소재⋅부품⋅장비 산업의 경쟁력을 높이고 국내 반도체 공급망을 강화하기 위해서는 개발한 제품의 성능과 신뢰성을 실제 양산과 유사한 환경에서 검증할 수 있는 실증 기반이 필요함. 참여기업과 테스트베드 운영법인이 특수관계에 해당하는 경우 시설⋅인력 등의 무상지원에 대하여 부당행위계산 부인 규정이 적용되어 시가 상당액이 익금에 산입될 수 있고, 무상지원에 실제 소요된 비용도 세법상 손금으로 인정받는 데 제약이 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_AA0669715A1A4D12AD7C3CF732860A",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -138055,18 +137351,10 @@
       "processingResult": "",
       "summary": "현행 법령은 「고등교육법」에 따른 학교법인이 토지 및 건물(이하 ‘토지등’)에 해당하는 수익용 기본재산을 양도하고 1년 이내에 다른 토지등에 해당하는 수익용 기본재산을 대체취득하는 경우 양도차익을 해당 사업연도의 익금에 산입하지 아니하고 3년간 거치한 후 3년간 균분하여 익금에 산입할 수 있도록 하고, 유가증권 등 대통령령으로 정하는 수익용 기본재산을 양도하고 1년 이내에 다른 유가증권 등 수익용 기본재산을 대체취득하는 경우에는 그 양도차익을 해당 사업연도의 익금에 산입하지 않을 수 있도록 과세이연의 특례를 두고 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_26F966796D844E759452A275BC8FF8",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -138091,18 +137379,10 @@
       "processingResult": "",
       "summary": "반도체 소재ㆍ부품ㆍ장비 기업이 개발한 제품을 실제 양산에 적용하기 위해서는 양산공정시설과 동일하거나 유사한 환경에서 충분한 성능ㆍ신뢰성 검증이 이루어질 필요가 있음. 정부는 반도체ㆍ첨단소자 기업과 소재ㆍ부품ㆍ장비 기업이 공동으로 활용할 수 있는 양산 연계형 실증 테스트베드인 트리니티팹을 구축하고 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_703E122BC6B04B73A90CD18FA7C1C7",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -138127,18 +137407,10 @@
       "processingResult": "",
       "summary": "벤처기업은 혁신기술의 사업화와 새로운 일자리 창출을 이끌어 우리 경제의 역동성을 높이는 핵심 주체인 만큼, 민간의 벤처투자를 지속적으로 확대할 수 있는 세제상 유인이 필요함. 특히 인구감소지역 등 비수도권 지역은 수도권에 비해 벤처투자 유치 여건이 상대적으로 열악한 만큼, 지역 소재 벤처기업 등에 대한 투자를 촉진하고 지역의 혁신생태계를 활성화하기 위한 보다 적극적인 지원이 필요함.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_8B29EC3F789F479FB90BF3E7D7BAF3",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -138163,18 +137435,10 @@
       "processingResult": "",
       "summary": "현행법은 K-콘텐츠의 글로벌 경쟁력 강화를 위해 텔레비전 방송, 영화, OTT(온라인동영상서비스) 등 영상콘텐츠 제작비용에 대해 세액공제를 적용하고 있으나, K-콘텐츠의 핵심 장르인 콘서트 등의 공연콘텐츠 제작비용은 세액공제 적용 대상에서 제외되고 있음. 화면이라는 매개체를 통해 관객에게 간접적으로 전달되는 영상콘텐츠와 달리, 공연콘텐츠는 아티스트와 관객이 동일한 공간에서 직접 대면하고 실시간으로 호흡ㆍ소통하며 유대감을 형성하는 독보적인 현장성과 즉흥성을 지니고 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_583E3EEA7A0140F29B1E02ADBB3039",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -138199,18 +137463,10 @@
       "processingResult": "",
       "summary": "정부는 탄소중립 실현과 에너지 안보 강화를 위하여 해상풍력 보급 확대를 적극 추진하고 있으며, 2030년까지 10.5GW의 해상풍력 발전설비를 보급ㆍ착공하고 2035년까지 누적 25GW 이상을 보급하는 것을 목표로 관련 산업 생태계와 기반시설 확충을 추진하고 있음. 지난 7월 착공한 390MW 규모의 신안우이 해상풍력사업에서도 국내 조선사가 약 8천억원 규모의 풍력터빈설치선(WTIV)을 건조하여 사업에 활용할 예정으로 알려졌는데, 해당 사업은 해상풍력 보급 확대와 국내 해상풍력 공급망 육성에 기여할 것으로 전망되고 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_1813790628284C999A15EE954F6C1D",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -138235,18 +137491,10 @@
       "processingResult": "",
       "summary": "현행법은 내국인이 산업안전을 위한 설비 자산에 투자하는 경우 소득세 또는 법인세를 공제하여주고 있으나, 산업안전과 보건을 위해 지출한 인건비에 대하여는 별도의 공제 규정이 없음. 「산업안전보건법」 및 「중대재해 처벌 등에 관한 법률」은 산업재해 발생을 예방하기 위하여 사업주로 하여금 산업 현장에 안전관리자, 보건관리자 등을 의무적으로 두도록 규정하고 있는데, 10대 건설사 및 조선업의 안전보건 전문 인력의 인건비 지출액 합계가 연간 3천억원을 상회하는 것으로 추정되는 등 기업의 산업안전보건 관련 비용 부담이 큰 실정임.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_3597719C4848420296956A1EE5550C",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -138271,18 +137519,10 @@
       "processingResult": "",
       "summary": "주요국들이 대규모 세제지원과 보조금을 통해 자국 내 제조업 생산기반을 경쟁적으로 구축하는 상황에서, 설비투자 단계에 치우친 현행 세액공제 지원 방식만으로는 실제 제품 생산을 지속적으로 뒷받침하는 데 한계가 있음. 국내에서 실제로 제품을 생산하고 판매하는 단계에 직접 세제혜택을 부여하는 생산비용 세액공제 제도를 신설하여 기업의 온쇼어링(On-shoring) 및 국내 복귀를 촉진하고 공급망 안정성을 공고히 하고자 함.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_810E579C19AD42428613C0A34029F7",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -138307,18 +137547,10 @@
       "processingResult": "",
       "summary": "현행법은 지역균형발전과 지역경제 활성화를 위하여 1세대 1주택자가 인구감소지역 및 인구감소관심지역에 소재하는 주택 1채를 취득한 경우 해당 주택을 1세대의 소유주택 수에서 제외하여 양도소득세 및 종합부동산세에 관한 1세대 1주택 과세특례를 적용하고 있으나, 해당 특례는 2026년 12월 31일 일몰이 도래할 예정임. 인구감소지역은 지속적인 인구 유출과 고령화, 지방 주택시장 침체 등으로 지역소멸 우려가 심화되고 있으며, 정부도 생활인구 확대와 지방 정주여건 개선을 위해 다양한 지원정책을 추진하고 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_E2E6M0N9L0M3K1K7J1R1R2P9R5P1P9",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -138343,18 +137575,10 @@
       "processingResult": "",
       "summary": "현행 제도는 투자금액을 기준으로 공제가 이루어져, 막대한 투자를 하더라도 이익이 발생하기 전까지는 기업이 공제 혜택을 받지 못하고, 생산과 판매라는 실질적 성과 단계에 대한 지원은 미비하다는 지적이 있음. 특히 철강산업의 경우 주요국의 보호무역 조치 확대와 저탄소 생산체제로의 전환에 따른 투자비용 증가로 국내 생산기반이 위축될 우려가 크나, 이를 뒷받침할 생산연계형 지원제도가 미비함.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_AF7D88E881EF4628A615A3FAEFB718",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -138379,18 +137603,10 @@
       "processingResult": "",
       "summary": "주택가격과 청약저축 납입금액이 상승하는 등 주택 마련을 위한 가계의 부담이 커지고 있어, 무주택 근로자의 내집마련을 지원하기 위해 주택청약종합저축 소득공제 혜택을 확대할 필요가 있음. 주택청약종합저축 소득공제 대상 납입한도를 연 300만원에서 연 400만원으로 상향하여 무주택 근로자의 주택 마련을 지원하려는 것임(안 제87조제2항).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_E2E6M0M8L2M8K1K8I5R9R1Q7Q2P7N3",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -138415,18 +137631,10 @@
       "processingResult": "",
       "summary": "현행법은 농협중앙회ㆍ수협중앙회가 사업구조개편에 따라 분리된 법인 등에 공급하는 전산용역에 대하여 부가가치세를 면제하고, 농어민등이 농ㆍ수협으로부터 받는 자금융자와 예금ㆍ적금 등에 대하여 인지세를 면제하고 있으나, 해당 특례는 2026년 12월 31일 일몰이 도래할 예정임. 농ㆍ수협 전산용역에 대한 부가가치세 면제는 농ㆍ수협의 고유목적사업과 경제사업의 원활한 수행을 지원하고, 인지세 면제는 영농ㆍ영어 및 생활자금 조달에 따른 농어민의 금융비용 부담을 경감하여 실질적인 소득보전에 기여하고 있어 지속적인 지원이 필요함.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_D2B6C0A9B2Z3A1I7G4H0F5F7E4F1A8",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -138451,18 +137659,10 @@
       "processingResult": "",
       "summary": "최근 고율 관세, 수입규제, 무역구제조치의 확대 등 보호무역주의와 자국 우선주의로의 글로벌 통상 환경이 변화하면서 비우호적인 무역 환경이 조성되고 있음. 세계적인 철강 공급과잉과 에너지 가격 상승, 탄소배출 규제 강화 등으로 국내 철강산업의 생산 및 수출 경쟁력이 약화될 우려가 커지고 있으며, 이에 따라 국내 철강 생산기반이 위축되거나 생산시설이 해외로 이전할 가능성도 증가하고 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_P2P6O0M9N1L4M1U1U3S7R5S9Q3Q2M2",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -138487,18 +137687,10 @@
       "processingResult": "",
       "summary": "현행법은 연구ㆍ인력개발비 세액공제를 허용하면서도 대기업의 경우 세액공제액 전부를 최저한세 적용대상에 포함하고 있음. 따라 연구개발 투자 규모가 큰 대기업은 다른 공제만으로 이미 최저한세 하한에 도달하여, 석ㆍ박사급 연구인력 인건비를 추가로 지출하더라도 그에 상응하는 세액공제를 당기에 실현하지 못하는 구조적 한계가 있고, 그 결과 고급 연구인력의 채용 확대와 처우 개선에 대한 세제상 유인이 사실상 작동하지 않고 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_V2T6U0P9Q1P8N1N5L2M7U3V0T6R9S6",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -138523,18 +137715,10 @@
       "processingResult": "",
       "summary": "현행법은 도서지역의 자가발전용 석유류, 구내식당ㆍ학교급식 등의 음식용역, 농어업 경영 및 작업 대행용역, 영구임대주택에 공급하는 난방용역, 농업ㆍ임업용 목재펠릿 등에 대하여 부가가치세를 면제하고 있음. 농어업인의 경영비 부담을 완화하고, 도서지역 주민과 영구임대주택 입주자 등 취약계층의 생활 안정을 지원하는 한편, 근로자ㆍ학생의 복지와 연안교통의 공공성을 지속적으로 뒷받침하기 위해서는 해당 조세특례를 계속 유지할 필요가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_N2O6M0K9L0J3J1S7S1Q0P2Q7O5P5K7",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -138559,18 +137743,10 @@
       "processingResult": "",
       "summary": "현행법은 상시근로자 수가 증가한 기업에 통합고용세액공제를 적용하되, 대기업에 대해서는 청년 정규직, 장애인, 60세 이상, 경력단절 근로자 등의 증가 인원에 한정하여 공제를 인정하고 있음. 대기업에 대한 통합고용세액공제는 청년ㆍ장애인 등 취약계층의 고용 증대라는 정책 목적과 대기업이 실제 고용 증대를 상당 부분 주도하고 있다는 현실을 함께 고려하여 설계되었으나, 공제대상 한정, 공제금액 차등, 공제금액 계산기간 단축, 최저한세 적용 등 여러 제한을 받고 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_Q2O6P0N9O1A8B1Z5X2Y6W4X1F5F2E3",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -138595,18 +137771,10 @@
       "processingResult": "",
       "summary": "현행 「소득세법」 및 「법인세법」은 중소기업을 경영하는 개인사업자 또는 중소기업에 해당하는 내국법인에 결손금이 발생한 경우 그 결손금을 직전 과세연도의 소득에 소급하여 공제하고, 이미 납부한 소득세 또는 법인세의 일정 금액을 환급받을 수 있도록 하고 있음. 현행법은 2021년 12월 31일이 속하는 과세연도에 발생한 중소기업의 결손금에 대해서는 특례를 두어 직전 2개 과세연도의 소득까지 소급하여 공제할 수 있도록 한 바 있으나, 해당 특례는 현재 적용대상이 없는 상태임.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_Z2A6Y0Z9Y1F7G1E4F0D6E5C4C2L5J9",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -138631,18 +137799,10 @@
       "processingResult": "",
       "summary": "수송부문 탄소중립 실현과 온실가스 감축을 위해 환경친화적 자동차의 보급을 지속적으로 확대할 필요가 있으며, 친환경차 산업의 경쟁력 강화를 위한 정책적 지원도 계속 요구되고 있음. 특히 정부는 전기차 전환지원금 신설 등 친환경차 보급 확대 정책을 추진하고 있으나, 개별소비세 감면 특례가 종료될 경우 소비자의 차량 구매 부담이 증가하여 친환경차 보급 확산과 자동차 산업의 친환경 전환이 위축될 우려가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_I2E6E0D9B0C3A1B7I1J2I4I5G8F1G2",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -138667,18 +137827,10 @@
       "processingResult": "",
       "summary": "현행법은 공공기관이나 기업 및 법인이 수도권 밖의 지역으로 본사 또는 주사무소, 공장을 이전하는 경우 종전부동산의 양도소득세에 대하여 과세특례를 부여하고, 법인세 등을 감면하여 주고 있음. 이는 국토의 균형 발전을 위하여 수도권에 위치한 공공기관, 기업 및 법인을 수도권 밖으로 원활하게 이전하기 위하여 부여하는 과세특례이나, 해당 공공기관 등과 함께 이전하여야 하는 소속 근로자에 대하여는 별도의 조세혜택이 주어지지 않고 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_T2T6R0S9R0P4P1X0Y3W2X5V1U7U8Q4",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -138703,18 +137855,10 @@
       "processingResult": "",
       "summary": "현행법은 「해외자원개발 사업법」에 따른 해외자원개발사업자가 광업권ㆍ조광권 취득 등 해외자원개발을 위한 투자ㆍ출자를 하는 경우 그 금액의 100분의 3을 법인세 또는 소득세에서 공제하도록 하고, 그 적용기한을 2026년 12월 31일까지로 규정하고 있음. 현행 공제율은 대규모 투자를 유인하기에 낮은 수준이고, 공제대상도 광업권ㆍ조광권 취득 등에 한정되어 자원의 안정적 확보에 필수적인 사업용 자산이나 제련(製鍊)ㆍ정련(精鍊) 시설 투자는 지원받지 못하고 있다는 지적이 제기되었음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_O2W6X0V9V2U2V1T6T1C9A5A2Z7Z8Y5",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -138739,18 +137883,10 @@
       "processingResult": "",
       "summary": "현행법은 중소기업과 근로자 간 성과공유를 촉진하기 위하여 성과공유 중소기업이 상시근로자에게 경영성과급을 지급하는 경우 그 지급액의 10퍼센트에 상당하는 금액을 소득세 또는 법인세에서 공제하고, 해당 경영성과급을 지급받은 근로자에 대해서는 경영성과급에 대한 소득세의 50퍼센트에 상당하는 세액을 감면하도록 하고 있음. 성과공유 중소기업에 대한 세액공제의 대상이 되는 상시근로자는 총급여액이 8천만원 미만인 근로자를 기준으로 하는 반면, 경영성과급을 지급받은 근로자에 대한 소득세 감면은 총급여액이 7천만원을 초과하는 근로자를 제외하고 있어 기업에 대한 세액공제와 근로자에 대한 소득세 감면 간 적용기준에 차이가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_X2X6W0W9V1V7T1C4C0A2B3Z2A5Y6Z4",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -138775,18 +137911,10 @@
       "processingResult": "",
       "summary": "현행법은 청년, 60세 이상인 사람, 장애인 및 경력단절 근로자가 일정 기간 내에 중소기업체에 취업하는 경우 취업일부터 3년(청년의 경우 5년)간 받는 근로소득에 대하여 소득세의 100분의 70(청년의 경우 100분의 90)을 연 200만원을 한도로 감면하고 있음. 중소기업 취업자에 대한 소득세 감면 제도는 중소기업과 대기업 취업자 간의 소득 격차를 완화하고 중소기업의 구인난을 해소하기 위한 정책적 수단으로 활용되어 왔으나, 그 적용기한은 2026년 12월 31일까지로 제도의 지속성이 불확실하고, 감면기간 및 감면한도 확대 필요성도 지속적으로 제기되고 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_J2R6S0Q9Q2P2N1O6W1W7V1V6T4S3T6",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -138811,18 +137939,10 @@
       "processingResult": "",
       "summary": "현행법은 지역의 일자리 창출과 대규모 기업투자 유치를 촉진하기 위하여 기회발전특구를 두고, 규제 특례와 정주 여건 개선 등을 제도적으로 지원하고 있음. 기업의 입지 이전과 설비투자는 중장기적인 검토와 준비가 필요하므로, 정책의 예측 가능성을 높이고 기회발전특구에 기업을 지속적으로 유치하여 안정적인 정착을 지원하기 위해서는 해당 과세특례를 계속 유지할 필요가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_Q2M6M0K9L0J3K1I7J0R9P4Q4O5P2N3",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -154163,18 +153283,10 @@
       "processingResult": "",
       "summary": "현행법은 철강산업의 탄소중립 전환을 통한 철강산업의 지속가능한 성장기반 구축을 위하여 저탄소철강의 인증, 수요 창출, 재생철자원 가공전문기업 육성 등 다양한 지원시책을 규정하고 있음. 철강산업의 생산공정에서 발생하는 철강슬래그 등 철강부산물은 상당 부분이 단순 토목용 등 저부가가치 용도로 활용되고 있는 실정임에도 현행법상 철강부산물의 재활용 촉진 및 재활용제품의 수요 확대를 위한 명시적인 근거가 없어 고부가가치 재활용과 공공부문의 활용 확대에 한계가 있다는 의견이 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_U2S6T0P9P0N9O1M4L2L8T2T1S5T9R7",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -154227,18 +153339,10 @@
       "processingResult": "",
       "summary": "현행법은 청년을 대상으로 하는 기업 또는 민간 직업훈련기관의 직업능력훈련과 중소기업체 등이 실시하는 직업능력훈련을 정부가 지원할 수 있게 하고 정부가 지원하는 직업능력개발훈련 계획 및 실시결과를 보고할 수 있도록 하고 있음. 청년 미취업자 고용 촉진을 위한 보고 및 검사에 계획, 실시결과 외에 평가결과를 추가로 관리하도록 하며, 청년 미취업자의 고용 촉진, 청년 재직자의 전문성 증진 등의 결과가 우수한 직업능력개발훈련에 대하여는 추가적인 지원 근거를 마련함으로써 청년 미취업자의 직업훈련을 실효성을 확보하려는 것임(안 제11조의2 신설 및 제18조제1항).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_2A3BE292995243798B6A56C064721C",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -155215,18 +154319,10 @@
       "processingResult": "",
       "summary": "현행법은 하도급대금 연동의 확산을 위하여 공정거래위원회가 하도급대금 연동 우수기업 등을 선정하여 포상하는 등 지원시책을 수립ㆍ추진할 수 있도록 규정하고 있음. 하도급대금 연동 우수기업 등에 대해 공정거래위원회가 관계 행정기관의 장과 협의하여 정부 지원 대상자 선정 시 우대, 정책자금의 융자 등에 대한 지원방안을 마련할 수 있도록 함으로써 하도급대금 연동제의 자발적인 참여와 확산을 촉진하려는 것임(안 제3조의6제2항 신설 등).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_3ADA30B172634499B7EB62780610E3",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -155251,18 +154347,10 @@
       "processingResult": "",
       "summary": "현행 60일의 대금 지급 기한은 자금력이 취약한 중소 수급사업자에게 과도한 금융 비용 부담과 유동성 압박을 유발하는 주요 요인으로 작용하고 있음. 특히 고금리ㆍ고물가 장기화 등 대내외 경제 여건 악화 속에서 대금 회수 지연은 재하도급 업체 및 현장 근로자에 대한 대금ㆍ임금 체불로 이어지는 악순환을 초래함.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_033ED77813EC4A3C9E1C676BC657B9",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "접수 → 소관위",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -156659,18 +155747,10 @@
       "processingResult": "",
       "summary": "현행법은 근로자가 가족의 질병ㆍ사고ㆍ노령 또는 자녀의 양육으로 인하여 긴급하게 가족을 돌볼 필요가 있는 경우 연간 최장 10일의 가족돌봄휴가를 사용할 수 있도록 하고, 대규모 재난 등이 발생한 경우에는 고용정책심의회를 거쳐 기간을 연장할 수 있도록 하고 있음. 자연재난으로 인하여 긴급하게 자녀를 돌볼 필요가 있는 경우 근로자가 시간 단위로도 가족돌봄휴가를 사용할 수 있도록 하되 필요한 경우 돌봄 기간을 연장하여 사용할 수 있도록 하여 근로자의 일ㆍ가정 양립을 적극적으로 지원하고자 함(안 제22조의2).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_B2J6H0I9G1H6F1F4B1A0A5Y1Z7X2Y7",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -156695,18 +155775,10 @@
       "processingResult": "",
       "summary": "해당 의안 정보를 찾을 수 없습니다.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_48B81CEE9729434880C43C655CDA00",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -156731,18 +155803,10 @@
       "processingResult": "",
       "summary": "인구감소지역 등에 대한 주택 취득을 촉진하여 생활인구의 유입을 지원하기 위해서는 해당 과세특례를 지속할 필요가 있고, 지역별 인구감소 상황과 주택시장 여건을 적절히 반영할 수 있도록 주택의 소재지 및 가액 요건 등을 법률에 직접 규정할 필요가 있다는 의견이 있음. 과세특례의 적용기한을 2031년 12월 31일까지 연장하고 특례 대상이 되는 지역 및 주택가액 요건을 법률에 직접 규정하되, 지역에 따라 가액기준을 달리 정하도록 함으로써 인구감소지역 등에 대한 주택 취득을 지원하고 과세특례의 적용기준을 명확히 하려는 것임(안 제71조의2제1항 및 제2항).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_725B741E70B242FA91EF67AEE402DD",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-01",
-      "dailyChangeFields": [
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "이번 달 변동 없음"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     }
   ]
 }
