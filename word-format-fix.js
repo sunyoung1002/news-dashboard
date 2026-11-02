@@ -1,7 +1,7 @@
 /* Small loader. Upload word-format-part1.js through part6.js first. */
 (function () {
   "use strict";
-  const release = "20261102-selected-word";
+  const release = "20261102-official-word-content";
   // Keep nodes available for existing render handlers while removing the controls
   // from the screen, keyboard navigation, and accessibility tree.
   const style = document.createElement("style");
@@ -35,6 +35,7 @@
     try {
       for (let number = 1; number <= 6; number++) await loadFile(`word-format-part${number}.js`);
       for (let number = 1; number <= 2; number++) await loadFile(`word-reviewed-20261029-${number}.js`);
+      await loadFile("word-official-20261102.js");
       await loadFile("word-export-20261029.js");
       await loadFile("bill-word-links-20261028c.js");
       await loadFile("bill-card-summary-20261028c.js");

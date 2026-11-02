@@ -15,28 +15,27 @@ if (verified && normalize(item.title) === normalize(verified[0]) &&
 (!item.proposeDate || item.proposeDate === verified[1])) {
 return [...verified[2]];
 }
-const budget = limit * 2 - 1;
-const original = String(item.summary || "").replace(/제안이유\s*및\s*주요내용/g, "").replace(/\(안[^)]*\)/g, "").trim();
-if (!original || /미수집|확인\s*중|원문\s*확인\s*필요/.test(original)) return ["공식 주요내용 확인 필요."];
-const sentences = original.split(/(?<=[.!?])\s+|[\r\n]+/).map(text => text
-.replace(/^\s*(?:[가-힣]|\d+)[.)]\s*/, "")
-.replace(/^(?:이에|그러나|따라서|그런데|또한|하지만|그래서|이미|이와\s*같이|이와\s*관련해서)\s*[,，]?\s*/, "")
-.replace(/하기\s*위하여/g, "위해").replace(/하고자\s*하는\s*것임/g, "하고자 함")
-.replace(/하려는\s*것임/g, "하려는 내용임").replace(/\s+/g, " ").trim())
-.filter(text => text.length >= 12 && /개정|신설|도입|확대|강화|완화|개선|보호|지원|의무|금지|마련|규정|하도록|기간|기한/.test(text) &&
-!/^(?:현행|최근|지난)/.test(text) && /(?:[.!?]|함|됨|임|음)$/.test(text));
-const candidates = sentences.sort((a,b) => Number(/하도록|하고자|하려는/.test(b)) - Number(/하도록|하고자|하려는/.test(a)));
-const summary = candidates.find(text => textUnits(text) <= budget);
-if (!summary) return ["공식 원문에 따른 개정내용의", "추가 요약·대조가 필요함."];
-if (textUnits(summary) <= limit) return [summary];
+// Match the dashboard's summary source. A long policy sentence is content,
+// not a collection failure: never replace it just because it exceeds a budget.
+const usable = value => String(value || "").trim() &&
+!/미수집|미확보|확인\s*중|원문\s*확인\s*필요|추가\s*요약|대조가\s*필요/.test(String(value));
+const screen = window.LegislationCardSummary?.shortSummary?.(item);
+const original = usable(screen) ? screen : item.summary;
+if (!usable(original)) return ["공식 주요내용 미수집."];
+const text = String(original).replace(/\r/g, "").trim();
+const lines = text.split(/\n+/).map(line => line.trim()).filter(Boolean);
+if (lines.length === 2) return lines;
+const joined = lines.join(" ").replace(/\s+/g, " ");
+if (textUnits(joined) <= limit) return [joined];
 let width = 0, cut = 0;
-for (const char of summary) {
+for (const char of joined) {
 if (width + textUnits(char) > limit) break;
 width += textUnits(char); cut += char.length;
 }
-const space = summary.lastIndexOf(" ", cut);
-if (space > 0 && textUnits(summary.slice(space + 1)) <= limit) cut = space;
-return [summary.slice(0, cut).trim(), summary.slice(cut).trim()].filter(Boolean);
+const space = joined.lastIndexOf(" ", cut);
+if (space > 0) cut = space;
+// Preserve every character, including sentences longer than two printed lines.
+return [joined.slice(0, cut).trim(), joined.slice(cut).trim()].filter(Boolean);
 }
 function compactDate(item) {
 const valid = value => /^\d{4}-\d{2}-\d{2}$/.test(String(value || ""));
@@ -59,7 +58,19 @@ return entry&&norm(entry[0])===norm(item.title)&&(!item.proposeDate||item.propos
 }
 function compactEffects(item) {
 const reviewed=reviewedFor(item);
-return reviewed?.[4]?[...reviewed[4]]:["개정취지 대조 필요,", "사회적 영향 추가 검토."];
+if (reviewed?.[4]) return [...reviewed[4]];
+// Use existing bill-specific analysis when supplied by the dashboard data.
+const explicit = [item.impactSummary, item.socialImpact, item.effectsSummary, item.effects]
+.find(value => typeof value === "string" && value.trim() && !/추가 검토|대조 필요/.test(value));
+const effects = explicit || [item.positiveEffects, item.negativeEffects]
+.filter(value => typeof value === "string" && value.trim()).join(", ");
+if (effects) {
+const text = String(effects).replace(/<br\s*\/?\s*>/gi, "\n").replace(/<[^>]*>/g, "").trim();
+const lines = text.split(/\n+/).filter(Boolean);
+if (lines.length === 2) return lines;
+return [lines.join(" ")];
+}
+return ["영향·효과 분석자료 없음."];
 }
 Object.assign(W, { textUnits, compactTitle, compactSummaryLines, compactDate, compactState, compactEffects, reviewedFor });
 })(window.LegislationWordParts = window.LegislationWordParts || {});
@@ -169,7 +180,7 @@ downloadItemsWordReport=function(items,title,filename,filter="",group=false){
 if(/주요법안현황|즐겨찾기/.test(`${title} ${filter}`))return exportFavorites(items,title,filename,group);
 return previous(items,title,filename,filter,group);
 };
-if(Object.keys(W.reviewedWordSummaries||{}).length!==97||typeof W.compactZip!=="function")throw new Error("Word 필수 파일 확인 필요");
+if(Object.keys(W.reviewedWordSummaries||{}).length<97||typeof W.compactZip!=="function")throw new Error("Word 필수 파일 확인 필요");
 W.stableRelease="20261029";
 W.reviewedEffectsRelease="20261029";
 })(window.LegislationWordParts);
