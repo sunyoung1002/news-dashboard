@@ -1,6 +1,6 @@
 {
   "mode": "official",
-  "updatedAt": "2026-11-03 00:19",
+  "updatedAt": "2026-11-03 11:57",
   "items": [
     {
       "month": "2026-08",
@@ -117226,6 +117226,54 @@
     },
     {
       "month": "2026-11",
+      "billId": "PRC_B2J6H0I9G1H6F1F4B1A0A5Y1Z7X2Y7",
+      "title": "남녀고용평등과 일·가정 양립 지원에 관한 법률 일부개정법률안",
+      "billNo": "의안번호 2222327",
+      "agency": "고용노동부",
+      "committee": "기후에너지환경노동위원회",
+      "proposer": "이종배의원 등 11인",
+      "proposeDate": "2026-10-30",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "소관위",
+      "previousStage": "접수",
+      "changed": true,
+      "changedDate": "2026-11-03",
+      "stageDate": "2026-11-02",
+      "committeeDate": "2026-11-02",
+      "committeePresentDate": "",
+      "change": "접수 → 소관위",
+      "processingResult": "",
+      "summary": "현행법은 근로자가 가족의 질병ㆍ사고ㆍ노령 또는 자녀의 양육으로 인하여 긴급하게 가족을 돌볼 필요가 있는 경우 연간 최장 10일의 가족돌봄휴가를 사용할 수 있도록 하고, 대규모 재난 등이 발생한 경우에는 고용정책심의회를 거쳐 기간을 연장할 수 있도록 하고 있음. 자연재난으로 인하여 긴급하게 자녀를 돌볼 필요가 있는 경우 근로자가 시간 단위로도 가족돌봄휴가를 사용할 수 있도록 하되 필요한 경우 돌봄 기간을 연장하여 사용할 수 있도록 하여 근로자의 일ㆍ가정 양립을 적극적으로 지원하고자 함(안 제22조의2).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_B2J6H0I9G1H6F1F4B1A0A5Y1Z7X2Y7",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-11-03",
+      "dailyChangeFields": [
+        "진행단계",
+        "소관위원회",
+        "처리내용"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "진행단계",
+          "before": "접수",
+          "after": "소관위"
+        },
+        {
+          "label": "소관위원회",
+          "before": "위원회 배정 전",
+          "after": "기후에너지환경노동위원회"
+        },
+        {
+          "label": "처리내용",
+          "before": "이번 달 변동 없음",
+          "after": "접수 → 소관위"
+        }
+      ]
+    },
+    {
+      "month": "2026-11",
       "billId": "PRC_2ED08C5D59BF4209BE835A759C0E78",
       "title": "남녀고용평등과 일·가정 양립 지원에 관한 법률 일부개정법률안",
       "billNo": "의안번호 2221963",
@@ -136235,6 +136283,102 @@
       "dailyChangedDate": "",
       "dailyChangeFields": [],
       "dailyChangeDetails": []
+    },
+    {
+      "month": "2026-11",
+      "billId": "PRC_48B81CEE9729434880C43C655CDA00",
+      "title": "조세특례제한법 일부개정법률안",
+      "billNo": "의안번호 2222351",
+      "agency": "기획재정부",
+      "committee": "재정경제기획위원회",
+      "proposer": "김성원의원 등 11인",
+      "proposeDate": "2026-10-30",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "소관위",
+      "previousStage": "접수",
+      "changed": true,
+      "changedDate": "2026-11-03",
+      "stageDate": "2026-11-02",
+      "committeeDate": "2026-11-02",
+      "committeePresentDate": "",
+      "change": "접수 → 소관위",
+      "processingResult": "",
+      "summary": "해당 의안 정보를 찾을 수 없습니다.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_48B81CEE9729434880C43C655CDA00",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-11-03",
+      "dailyChangeFields": [
+        "진행단계",
+        "소관위원회",
+        "처리내용"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "진행단계",
+          "before": "접수",
+          "after": "소관위"
+        },
+        {
+          "label": "소관위원회",
+          "before": "위원회 배정 전",
+          "after": "재정경제기획위원회"
+        },
+        {
+          "label": "처리내용",
+          "before": "이번 달 변동 없음",
+          "after": "접수 → 소관위"
+        }
+      ]
+    },
+    {
+      "month": "2026-11",
+      "billId": "PRC_725B741E70B242FA91EF67AEE402DD",
+      "title": "조세특례제한법 일부개정법률안",
+      "billNo": "의안번호 2222333",
+      "agency": "기획재정부",
+      "committee": "재정경제기획위원회",
+      "proposer": "김상훈의원 등 12인",
+      "proposeDate": "2026-10-30",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "소관위",
+      "previousStage": "접수",
+      "changed": true,
+      "changedDate": "2026-11-03",
+      "stageDate": "2026-11-02",
+      "committeeDate": "2026-11-02",
+      "committeePresentDate": "",
+      "change": "접수 → 소관위",
+      "processingResult": "",
+      "summary": "인구감소지역 등에 대한 주택 취득을 촉진하여 생활인구의 유입을 지원하기 위해서는 해당 과세특례를 지속할 필요가 있고, 지역별 인구감소 상황과 주택시장 여건을 적절히 반영할 수 있도록 주택의 소재지 및 가액 요건 등을 법률에 직접 규정할 필요가 있다는 의견이 있음. 과세특례의 적용기한을 2031년 12월 31일까지 연장하고 특례 대상이 되는 지역 및 주택가액 요건을 법률에 직접 규정하되, 지역에 따라 가액기준을 달리 정하도록 함으로써 인구감소지역 등에 대한 주택 취득을 지원하고 과세특례의 적용기준을 명확히 하려는 것임(안 제71조의2제1항 및 제2항).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_725B741E70B242FA91EF67AEE402DD",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-11-03",
+      "dailyChangeFields": [
+        "진행단계",
+        "소관위원회",
+        "처리내용"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "진행단계",
+          "before": "접수",
+          "after": "소관위"
+        },
+        {
+          "label": "소관위원회",
+          "before": "위원회 배정 전",
+          "after": "재정경제기획위원회"
+        },
+        {
+          "label": "처리내용",
+          "before": "이번 달 변동 없음",
+          "after": "접수 → 소관위"
+        }
+      ]
     },
     {
       "month": "2026-11",
@@ -155726,87 +155870,1047 @@
     },
     {
       "month": "2026-11",
-      "billId": "PRC_B2J6H0I9G1H6F1F4B1A0A5Y1Z7X2Y7",
-      "title": "남녀고용평등과 일·가정 양립 지원에 관한 법률 일부개정법률안",
-      "billNo": "의안번호 2222327",
-      "agency": "고용노동부",
+      "billId": "PRC_7906DF42426E4182B232FD7071515E",
+      "title": "가족관계의 등록 등에 관한 법률 일부개정법률안",
+      "billNo": "의안번호 2222383",
+      "agency": "위원회 배정 전",
       "committee": "위원회 배정 전",
-      "proposer": "이종배의원 등 11인",
-      "proposeDate": "2026-10-30",
+      "proposer": "서영교의원 등 12인",
+      "proposeDate": "2026-11-02",
       "relatedCommitteeReviews": [],
       "officialDetailCheckedAt": "",
       "officialDetailCheck": "",
       "stage": "접수",
-      "previousStage": "접수",
-      "changed": false,
-      "changedDate": "2026-11-01",
-      "stageDate": "2026-10-30",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-11-03",
+      "stageDate": "2026-11-02",
       "committeeDate": "",
       "committeePresentDate": "",
-      "change": "이번 달 변동 없음",
+      "change": "이번 달 신규 확인",
       "processingResult": "",
-      "summary": "현행법은 근로자가 가족의 질병ㆍ사고ㆍ노령 또는 자녀의 양육으로 인하여 긴급하게 가족을 돌볼 필요가 있는 경우 연간 최장 10일의 가족돌봄휴가를 사용할 수 있도록 하고, 대규모 재난 등이 발생한 경우에는 고용정책심의회를 거쳐 기간을 연장할 수 있도록 하고 있음. 자연재난으로 인하여 긴급하게 자녀를 돌볼 필요가 있는 경우 근로자가 시간 단위로도 가족돌봄휴가를 사용할 수 있도록 하되 필요한 경우 돌봄 기간을 연장하여 사용할 수 있도록 하여 근로자의 일ㆍ가정 양립을 적극적으로 지원하고자 함(안 제22조의2).",
-      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_B2J6H0I9G1H6F1F4B1A0A5Y1Z7X2Y7",
-      "dailyChanged": false,
-      "dailyChangedDate": "",
-      "dailyChangeFields": [],
-      "dailyChangeDetails": []
+      "summary": "“대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다.”는 헌법 제1조제2항의 정신에 따르면 법률의 주인은 국민이며, 누구나 이해하기 쉬운 법률을 만드는 것은 국민을 대표하는 입법기관인 국회의 의무라 할 수 있음. 개정안은 훈민정음 반포 580주년이자 한글날 기념 100주년을 맞아, 어려운 한자어, 외래어ㆍ외국어, 지나치게 축약된 표현 등 어렵거나 불명확한 법률용어를 알기 쉬운 우리말로 정비함으로써 법률에 대한 국민의 가독성과 접근성을 높이려는 것임(안 제14조 등).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_7906DF42426E4182B232FD7071515E",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-11-03",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222383"
+        }
+      ]
     },
     {
       "month": "2026-11",
-      "billId": "PRC_48B81CEE9729434880C43C655CDA00",
-      "title": "조세특례제한법 일부개정법률안",
-      "billNo": "의안번호 2222351",
-      "agency": "기획재정부",
+      "billId": "PRC_490A14FACC0D4547A962BB98F30F57",
+      "title": "공무원범죄에 관한 몰수 특례법 일부개정법률안",
+      "billNo": "의안번호 2222379",
+      "agency": "위원회 배정 전",
       "committee": "위원회 배정 전",
-      "proposer": "김성원의원 등 11인",
-      "proposeDate": "2026-10-30",
+      "proposer": "박지원의원 등 11인",
+      "proposeDate": "2026-11-02",
       "relatedCommitteeReviews": [],
       "officialDetailCheckedAt": "",
       "officialDetailCheck": "",
       "stage": "접수",
-      "previousStage": "접수",
-      "changed": false,
-      "changedDate": "2026-11-01",
-      "stageDate": "2026-10-30",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-11-03",
+      "stageDate": "2026-11-02",
       "committeeDate": "",
       "committeePresentDate": "",
-      "change": "이번 달 변동 없음",
+      "change": "이번 달 신규 확인",
       "processingResult": "",
-      "summary": "해당 의안 정보를 찾을 수 없습니다.",
-      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_48B81CEE9729434880C43C655CDA00",
-      "dailyChanged": false,
-      "dailyChangedDate": "",
-      "dailyChangeFields": [],
-      "dailyChangeDetails": []
+      "summary": "“대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다.”는 헌법 제1조제2항의 정신에 따르면 법률의 주인은 국민이며, 누구나 이해하기 쉬운 법률을 만드는 것은 국민을 대표하는 입법기관인 국회의 의무라 할 수 있음. 개정안은 훈민정음 반포 580주년이자 한글날 기념 100주년을 맞아, 어려운 한자어, 외래어ㆍ외국어, 지나치게 축약된 표현 등 어렵거나 불명확한 법률용어를 알기 쉬운 우리말로 정비함으로써 법률에 대한 국민의 가독성과 접근성을 높이려는 것임(안 제40조제1항제2호).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_490A14FACC0D4547A962BB98F30F57",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-11-03",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222379"
+        }
+      ]
     },
     {
       "month": "2026-11",
-      "billId": "PRC_725B741E70B242FA91EF67AEE402DD",
-      "title": "조세특례제한법 일부개정법률안",
-      "billNo": "의안번호 2222333",
-      "agency": "기획재정부",
+      "billId": "PRC_4C70B37B0CAD4B608397DA4982D1CF",
+      "title": "공소청법 일부개정법률안",
+      "billNo": "의안번호 2222382",
+      "agency": "위원회 배정 전",
       "committee": "위원회 배정 전",
-      "proposer": "김상훈의원 등 12인",
-      "proposeDate": "2026-10-30",
+      "proposer": "서영교의원 등 11인",
+      "proposeDate": "2026-11-02",
       "relatedCommitteeReviews": [],
       "officialDetailCheckedAt": "",
       "officialDetailCheck": "",
       "stage": "접수",
-      "previousStage": "접수",
-      "changed": false,
-      "changedDate": "2026-11-01",
-      "stageDate": "2026-10-30",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-11-03",
+      "stageDate": "2026-11-02",
       "committeeDate": "",
       "committeePresentDate": "",
-      "change": "이번 달 변동 없음",
+      "change": "이번 달 신규 확인",
       "processingResult": "",
-      "summary": "인구감소지역 등에 대한 주택 취득을 촉진하여 생활인구의 유입을 지원하기 위해서는 해당 과세특례를 지속할 필요가 있고, 지역별 인구감소 상황과 주택시장 여건을 적절히 반영할 수 있도록 주택의 소재지 및 가액 요건 등을 법률에 직접 규정할 필요가 있다는 의견이 있음. 과세특례의 적용기한을 2031년 12월 31일까지 연장하고 특례 대상이 되는 지역 및 주택가액 요건을 법률에 직접 규정하되, 지역에 따라 가액기준을 달리 정하도록 함으로써 인구감소지역 등에 대한 주택 취득을 지원하고 과세특례의 적용기준을 명확히 하려는 것임(안 제71조의2제1항 및 제2항).",
-      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_725B741E70B242FA91EF67AEE402DD",
-      "dailyChanged": false,
-      "dailyChangedDate": "",
-      "dailyChangeFields": [],
-      "dailyChangeDetails": []
+      "summary": "“대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다.”는 헌법 제1조제2항의 정신에 따르면 법률의 주인은 국민이며, 누구나 이해하기 쉬운 법률을 만드는 것은 국민을 대표하는 입법기관인 국회의 의무라 할 수 있음. 개정안은 훈민정음 반포 580주년이자 한글날 기념 100주년을 맞아, 어려운 한자어, 외래어ㆍ외국어, 지나치게 축약된 표현 등 어렵거나 불명확한 법률용어를 알기 쉬운 우리말로 정비함으로써 법률에 대한 국민의 가독성과 접근성을 높이려는 것임(안 제57조제4항).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_4C70B37B0CAD4B608397DA4982D1CF",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-11-03",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222382"
+        }
+      ]
+    },
+    {
+      "month": "2026-11",
+      "billId": "PRC_BD0FB67AAEB145B6AE7C7817FDDF45",
+      "title": "공익법무관에 관한 법률 일부개정법률안",
+      "billNo": "의안번호 2222384",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "서영교의원 등 12인",
+      "proposeDate": "2026-11-02",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-11-03",
+      "stageDate": "2026-11-02",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "“대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다.”는 헌법 제1조제2항의 정신에 따르면 법률의 주인은 국민이며, 누구나 이해하기 쉬운 법률을 만드는 것은 국민을 대표하는 입법기관인 국회의 의무라 할 수 있음. 개정안은 훈민정음 반포 580주년이자 한글날 기념 100주년을 맞아, 어려운 한자어, 외래어ㆍ외국어, 지나치게 축약된 표현 등 어렵거나 불명확한 법률용어를 알기 쉬운 우리말로 정비함으로써 법률에 대한 국민의 가독성과 접근성을 높이려는 것임(안 제16조제3호 및 제17조제2항 단서).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_BD0FB67AAEB145B6AE7C7817FDDF45",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-11-03",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222384"
+        }
+      ]
+    },
+    {
+      "month": "2026-11",
+      "billId": "PRC_34BE896598F24F87B68005E4C38211",
+      "title": "공익법인의 설립·운영에 관한 법률 일부개정법률안",
+      "billNo": "의안번호 2222385",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "서영교의원 등 12인",
+      "proposeDate": "2026-11-02",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-11-03",
+      "stageDate": "2026-11-02",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "“대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다.”는 헌법 제1조제2항의 정신에 따르면 법률의 주인은 국민이며, 누구나 이해하기 쉬운 법률을 만드는 것은 국민을 대표하는 입법기관인 국회의 의무라 할 수 있음. 개정안은 훈민정음 반포 580주년이자 한글날 기념 100주년을 맞아, 어려운 한자어, 외래어ㆍ외국어, 지나치게 축약된 표현 등 어렵거나 불명확한 법률용어를 알기 쉬운 우리말로 정비함으로써 법률에 대한 국민의 가독성과 접근성을 높이려는 것임(안 제8조제4항 전단 및 제17조제1항).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_34BE896598F24F87B68005E4C38211",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-11-03",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222385"
+        }
+      ]
+    },
+    {
+      "month": "2026-11",
+      "billId": "PRC_A2Y6Z0Y4Y2G1F1F0D4E8D3D2L3L1J1",
+      "title": "국민건강보험법 일부개정법률안",
+      "billNo": "의안번호 2222369",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "최수진의원 등 10인",
+      "proposeDate": "2026-11-02",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-11-03",
+      "stageDate": "2026-11-02",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "최근 정부의 약가제도 개편안과 관련하여 산업계, 노동계, 시민단체 등 각계에서 우려가 제기되고 있음. 특히 국내 제약사들은 제네릭 의약품 수익을 기반으로 신약 및 개량신약 연구개발에 투자해 왔다는 점에서, 급격한 약가 인하는 산업 전반의 연구개발 역량을 위축시킬 우려가 있음.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_A2Y6Z0Y4Y2G1F1F0D4E8D3D2L3L1J1",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-11-03",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222369"
+        }
+      ]
+    },
+    {
+      "month": "2026-11",
+      "billId": "PRC_8107517D822D47B2B57FBFA2672612",
+      "title": "금융소비자 보호에 관한 법률 일부개정법률안",
+      "billNo": "의안번호 2222377",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "민병덕의원 등 18인",
+      "proposeDate": "2026-11-02",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-11-03",
+      "stageDate": "2026-11-02",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "현행법은 금융상품판매업자등이 우월적 지위를 이용하여 금융소비자의 권익을 침해하는 불공정영업행위를 금지하고 있으며, 대출성 상품의 계약과 관련하여 대통령령으로 정하는 경우 외에는 제3자에게 연대보증을 요구하지 못하도록 하고 있음. 금융상품판매업자등이 이러한 금지규정을 위반하여 제3자와 연대보증계약을 체결한 경우에도 현행법에는 해당 연대보증계약의 사법상 효력을 부정하는 명시적인 규정이 없어, 금융회사에 대한 제재와 별개로 연대보증인이 계속 보증채무를 부담할 수 있는 문제가 있음.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_8107517D822D47B2B57FBFA2672612",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-11-03",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222377"
+        }
+      ]
+    },
+    {
+      "month": "2026-11",
+      "billId": "PRC_76906B05D9BF477899FAD1D984D4DD",
+      "title": "기간제 및 단시간근로자 보호 등에 관한 법률 일부개정법률안",
+      "billNo": "의안번호 2222365",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "김주영의원 등 10인",
+      "proposeDate": "2026-11-02",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-11-03",
+      "stageDate": "2026-11-02",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "현행법은 기간제근로자 및 단시간근로자에 대한 불합리한 차별을 시정하고 근로조건 보호를 강화하기 위하여 차별적 처우의 금지와 시정절차 등을 규정하고 있음. 법률의 목적에 차별예방을 명시하고, 국가와 지방자치단체가 차별예방ㆍ시정 및 근로조건 보호를 위한 시책을 수립ㆍ시행하도록 하려는 것임.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_76906B05D9BF477899FAD1D984D4DD",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-11-03",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222365"
+        }
+      ]
+    },
+    {
+      "month": "2026-11",
+      "billId": "PRC_13D13E5C1AC146229BE09AA0DE44EB",
+      "title": "독점규제 및 공정거래에 관한 법률 일부개정법률안",
+      "billNo": "의안번호 2222368",
+      "agency": "공정거래위원회",
+      "committee": "위원회 배정 전",
+      "proposer": "조승환의원 등 11인",
+      "proposeDate": "2026-11-02",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-11-03",
+      "stageDate": "2026-11-02",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "하나의 위반행위에 대해 행정적 제재(과징금)와 형벌을 병과하는 나라는 거의 없고, 둘 중 하나를 부과하고 있음. 불공정거래행위에 대한 형벌 삭제 안 제125조제4호 삭제 및 제124조제1항제10호 개정.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_13D13E5C1AC146229BE09AA0DE44EB",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-11-03",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222368"
+        }
+      ]
+    },
+    {
+      "month": "2026-11",
+      "billId": "PRC_5F25976A2C1740D4B570ED9F4B7216",
+      "title": "산업 디지털 전환 및 인공지능 활용 촉진법 일부개정법률안",
+      "billNo": "의안번호 2222374",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "최수진의원 등 10인",
+      "proposeDate": "2026-11-02",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-11-03",
+      "stageDate": "2026-11-02",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "현행법에 따르면 산업인공지능이란 인공지능 중 산업데이터를 기반으로 산업환경 분석, 공정 관리, 시스템 자동화 및 제어, 품질 관리, 유지보수, 연구개발 등 산업 분야의 생산성, 효율성, 안전성 향상 또는 산업 경쟁력 강화를 위하여 활용되는 것을 의미함. 최근 산업 현장에서 산업인공지능을 개발ㆍ활용하는 사례들이 확대되고 있는데, 외부의 해킹 공격에 대한 대응 미흡, 학습용데이터의 부적절한 이용, 산업인공지능의 자율성 통제 장치 미비 등 산업인공지능의 안전성ㆍ신뢰성에 대한 지적이 제기됨.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_5F25976A2C1740D4B570ED9F4B7216",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-11-03",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222374"
+        }
+      ]
+    },
+    {
+      "month": "2026-11",
+      "billId": "PRC_E3C58D5B149E4817AC479773A483FF",
+      "title": "생명공학육성법 일부개정법률안",
+      "billNo": "의안번호 2222372",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "김남국의원 등 12인",
+      "proposeDate": "2026-11-02",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-11-03",
+      "stageDate": "2026-11-02",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "따라 생명공학 기술ㆍ산업의 전략적 지원 및 체계적인 육성을 위해서는 생명공학 육성 관련 범부처 기본계획 등 중요 정책 수립 시 규제ㆍ예산ㆍ벤처 등 관련 정책과의 연계가 강화되어야 하며, 산ㆍ학ㆍ연 등 민간 전문가 참여의 중요성이 커지고 있음. 생명공학 기술개발 및 산업 육성에 관한 주요 정책을 심의ㆍ조정하는 생명공학종합정책심의회의 정원을 확대하여 관계부처 및 민간의 참여를 확대함으로서, 우리나라 생명공학 기술ㆍ산업 발전 기반을 공고히 하고자 함(안 제7조제3항).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_E3C58D5B149E4817AC479773A483FF",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-11-03",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222372"
+        }
+      ]
+    },
+    {
+      "month": "2026-11",
+      "billId": "PRC_D5B89317CEDA4EE9A6CF1372B102CB",
+      "title": "양성평등기본법 일부개정법률안",
+      "billNo": "의안번호 2222360",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "전은수의원 등 10인",
+      "proposeDate": "2026-11-02",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-11-03",
+      "stageDate": "2026-11-02",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "현재 성폭력 사건의 경우에는 사건 발생 시 사건통보 및 재발방지대책 제출 의무를 이행하지 않을 경우 시정명령 및 과태료를 부과(「성폭력방지 및 피해자보호 등에 관한 법률」제22조 및 제38조)할 수 있도록 규정하고 있는 것에 반하여, 성희롱 사건통보 등 의무 미이행 시에는 이러한 제재 수단이 없어 제도 보완 필요성이 있음. 성희롱 사건통보 및 재발방지대책 제출 의무 미이행 시 제재부과 근거를 마련(안 제31조의4 및 제55조)하여, 사건통보 및 재발방지대책 제출 실효성을 제고하고, 기관의 책임성을 강화하고자 함.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_D5B89317CEDA4EE9A6CF1372B102CB",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-11-03",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222360"
+        }
+      ]
+    },
+    {
+      "month": "2026-11",
+      "billId": "PRC_O2M6N0D8B2C8A1B6Z3A9H3G3H8F7F8",
+      "title": "음악산업진흥에 관한 법률 일부개정법률안",
+      "billNo": "의안번호 2222386",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "최보윤의원 등 10인",
+      "proposeDate": "2026-11-02",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-11-03",
+      "stageDate": "2026-11-02",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "외식업, 미용업 등 타 직종의 법정의무교육이 식품의약품안전처장과 보건복지부장관 등 소관 중앙행정기관의 장이 관장하여 체계적으로 관리ㆍ운영되는 것과 달리, 노래연습장업자 교육은 지자체별 재량과 위탁 기관에 의존하고 있어 교육 내용의 통일성과 실효성이 부족하다는 지적이 있음. 노래연습장업자에 대한 교육 주관 주체를 문화체육관광부장관으로 일원화하고, 관련 제도 변경 시 매년 정기적인 교육을 의무화함으로써 교육의 책임성과 통일성을 높이고 다중이용시설의 안전관리를 강화하려는 것임(안 제11조, 제16조 및 제36조).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_O2M6N0D8B2C8A1B6Z3A9H3G3H8F7F8",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-11-03",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222386"
+        }
+      ]
+    },
+    {
+      "month": "2026-11",
+      "billId": "PRC_05C21C79DDEF489ABF677F6AA6B937",
+      "title": "의료사고 피해구제 및 의료분쟁 조정 등에 관한 법률 일부개정법률안",
+      "billNo": "의안번호 2222363",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "이소희의원 등 12인",
+      "proposeDate": "2026-11-02",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-11-03",
+      "stageDate": "2026-11-02",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "최근 개정된 「의료사고 피해구제 및 의료분쟁 조정 등에 관한 법률 일부개정법률」(법률 제21694호, ‘27. 책임보험 가입 의무가 있는 보건의료기관개설자의 범위를 대통령령으로 정하도록 하고 있어 책임보험의 보장 대상에 한계가 있을 수 있음.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_05C21C79DDEF489ABF677F6AA6B937",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-11-03",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222363"
+        }
+      ]
+    },
+    {
+      "month": "2026-11",
+      "billId": "PRC_T2U6T0O9P0N8N1M4N4L5L0U0S4S6Q8",
+      "title": "인공지능 및 데이터 기반 행정 활성화에 관한 법률 일부개정법률안",
+      "billNo": "의안번호 2222388",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "허영의원 등 10인",
+      "proposeDate": "2026-11-02",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-11-03",
+      "stageDate": "2026-11-02",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "인공지능 및 데이터를 기반으로 한 행정의 활성화와 인공지능의 안전한 활용에 필요한 신뢰 기반 조성에 관한 사항을 정하고 있는 현행법이 2026년 8월 28일부터 시행됨으로써 공공부문에서 인공지능 활용을 위한 법적 기반이 마련되었음. 부정확하거나 편향된 데이터가 활용될 경우 기존의 오류와 차별이 확대될 수 있고, 인공지능을 활용한 행정결정의 과정과 책임이 불분명할 경우 국민의 권익과 행정에 대한 신뢰가 훼손될 우려가 있다는 지적이 있음.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_T2U6T0O9P0N8N1M4N4L5L0U0S4S6Q8",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-11-03",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222388"
+        }
+      ]
+    },
+    {
+      "month": "2026-11",
+      "billId": "PRC_72908590D19448ED8CEA83FBA23616",
+      "title": "재외국민보호를 위한 영사조력법 일부개정법률안",
+      "billNo": "의안번호 2222387",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "박성준의원 등 15인",
+      "proposeDate": "2026-11-02",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-11-03",
+      "stageDate": "2026-11-02",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "영사조력은 사건ㆍ사고 상황에서 국가가 국민에게 제공하는 안전서비스임에도 불구하고 영사조력 요청의 접수부터 종료까지의 처리과정을 기록ㆍ관리할 근거가 없어, 영사조력이 신속하고 적정하게 제공되었는지 객관적으로 평가하고 개선하는 데 한계가 있음. 영사조력의 처리과정을 기록ㆍ관리하도록 하고, 영사조력을 제공받은 재외국민 등을 대상으로 만족도 조사를 실시하여 그 결과를 제도 개선에 반영할 수 있도록 함으로써 영사조력의 품질을 높이려는 것임(안 제19조의2 신설).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_72908590D19448ED8CEA83FBA23616",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-11-03",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222387"
+        }
+      ]
+    },
+    {
+      "month": "2026-11",
+      "billId": "PRC_3F65E871A6874156932819F950AA73",
+      "title": "전통시장 및 상점가 육성을 위한 특별법 일부개정법률안",
+      "billNo": "의안번호 2222373",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "최수진의원 등 11인",
+      "proposeDate": "2026-11-02",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-11-03",
+      "stageDate": "2026-11-02",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "현행법은 전통시장 등의 상인이 거래비용 절감 및 매출 증대를 위하여 공동판매장을 설치하거나 물류, 배송에 필요한 공동시설 및 시스템을 설치하는 사업에 대하여 정부지원 근거를 마련하고 있으며, 이에 따라 온라인 주문 및 판매가 가능한 전통시장이 늘어나고 있음. 전통시장 온라인 주문ㆍ공동물류ㆍ공동배송 체계 구축, 공동배송센터, 냉동ㆍ냉장 시설 설치ㆍ운영 및 관련 상인교육에 대한 지원근거를 마련하고, 당일배송특화시장을 지정하여 집중 지원할 수 있도록 하여 전통시장의 배송 경쟁력을 강화하고 디지털 전환의 실효성을 제고하려는 것임(안 제13조의3 신설 및 제26조 등).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_3F65E871A6874156932819F950AA73",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-11-03",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222373"
+        }
+      ]
+    },
+    {
+      "month": "2026-11",
+      "billId": "PRC_9FABDAF66B724B40835153C4290125",
+      "title": "제대군인지원에 관한 법률 일부개정법률안",
+      "billNo": "의안번호 2222366",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "김재섭의원 등 10인",
+      "proposeDate": "2026-11-02",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-11-03",
+      "stageDate": "2026-11-02",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "국가수호를 위한 병역의무가 청년들이 짊어진 책무라면, 전역 후 건강한 사회복귀 지원은 국가의 당연한 책무라고 볼 수 있음. 청년 제대군인을 대상으로 한 ‘단체 실손보험’을 도입하여, 청년들이 병역의무를 마치고 건강하게 사회로 복귀하고 의료비에 대한 경제적 부담을 완화하려는 것임(안 제20조의5 신설).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_9FABDAF66B724B40835153C4290125",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-11-03",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222366"
+        }
+      ]
+    },
+    {
+      "month": "2026-11",
+      "billId": "PRC_CECEA288D5FC416E9056CBD4B54511",
+      "title": "조세특례제한법 일부개정법률안",
+      "billNo": "의안번호 2222375",
+      "agency": "기획재정부",
+      "committee": "위원회 배정 전",
+      "proposer": "오기형의원 등 10인",
+      "proposeDate": "2026-11-02",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-11-03",
+      "stageDate": "2026-11-02",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "2020년 「민간임대주택에 관한 특별법」개정에 따라 아파트에 대한 매입임대(장기일반민간임대주택 및 단기민간임대주택) 제도가 폐지됨에 따라 의무임대기간이 경과한 후 등록말소되는 주택에 대해 다주택자 양도소득세 중과배제 및 장기보유특별공제 우대(8년 등록임대 시 100분의 50)를 영구히 적용하는 것이 과도한 혜택이라는 지적이 있었음. 따른 급격한 세 부담 변동을 완화하기 위해 2028년 1월 1일부터 2028년 12월 31일까지 양도분에 대해서는 다주택자 양도소득세 중과 및 법인세 추가 과세 세율을 경감하여 적용할 필요가 있음.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_CECEA288D5FC416E9056CBD4B54511",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-11-03",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222375"
+        }
+      ]
+    },
+    {
+      "month": "2026-11",
+      "billId": "PRC_974F5E9BB1444132804E4850332AD9",
+      "title": "조세특례제한법 일부개정법률안",
+      "billNo": "의안번호 2222371",
+      "agency": "기획재정부",
+      "committee": "위원회 배정 전",
+      "proposer": "김영환의원 등 11인",
+      "proposeDate": "2026-11-02",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-11-03",
+      "stageDate": "2026-11-02",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "현행법에서는 영세개인사업자를 지원하기 위하여 사업자가 폐업한 후 사업을 재개하여 1개월 이상 사업을 계속하거나 3개월 이상 취업 또는 노무를 제공하는 경우 징수가 곤란한 체납액의 납부지연가산세를 면제하고 5년의 범위에서 해당 체납액을 분할납부할 수 있도록 하고 있음. 현행 체납액 징수특례 제도를 2026년도에 폐업한 영세개인사업자에 대해서도 적용할 수 있도록 하려는 것임(안 제99조의10).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_974F5E9BB1444132804E4850332AD9",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-11-03",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222371"
+        }
+      ]
+    },
+    {
+      "month": "2026-11",
+      "billId": "PRC_B13249EE9E27483E96C9B12CAB06A4",
+      "title": "중소기업진흥에 관한 법률 일부개정법률안",
+      "billNo": "의안번호 2222364",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "김동아의원 등 13인",
+      "proposeDate": "2026-11-02",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-11-03",
+      "stageDate": "2026-11-02",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "현행법은 중소기업의 경영기반 확충을 위하여 협업지원, 입지지원, 사회적책임경영 지원 등 여러 분야에 걸친 시책을 규정하고 있음. 최근 중소기업이 기술력 부족으로 인공지능의 도입ㆍ활용에 어려움을 겪고 있음에도 중소기업에 대한 인공지능기술 관련 지원 계획ㆍ추진체계나 수단의 법적 근거가 미비하여, 지속적ㆍ체계적인 정부지원의 한계로 인해 대기업과 중소기업의 인공지능 격차가 초래된다는 지적이 있음.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_B13249EE9E27483E96C9B12CAB06A4",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-11-03",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222364"
+        }
+      ]
+    },
+    {
+      "month": "2026-11",
+      "billId": "PRC_541FEA35A8B645CBA722DDFBFE046D",
+      "title": "중재법 일부개정법률안",
+      "billNo": "의안번호 2222380",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "박지원의원 등 11인",
+      "proposeDate": "2026-11-02",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-11-03",
+      "stageDate": "2026-11-02",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "“대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다.”는 헌법 제1조제2항의 정신에 따르면 법률의 주인은 국민이며, 누구나 이해하기 쉬운 법률을 만드는 것은 국민을 대표하는 입법기관인 국회의 의무라 할 수 있음. 개정안은 훈민정음 반포 580주년이자 한글날 기념 100주년을 맞아, 어려운 한자어, 외래어ㆍ외국어, 지나치게 축약된 표현 등 어렵거나 불명확한 법률용어를 알기 쉬운 우리말로 정비함으로써 법률에 대한 국민의 가독성과 접근성을 높이려는 것임(안 제29조제4항).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_541FEA35A8B645CBA722DDFBFE046D",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-11-03",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222380"
+        }
+      ]
+    },
+    {
+      "month": "2026-11",
+      "billId": "PRC_DAFD5F622B8743A59B540D3A040E63",
+      "title": "즉결심판에 관한 절차법 일부개정법률안",
+      "billNo": "의안번호 2222376",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "박지원의원 등 11인",
+      "proposeDate": "2026-11-02",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-11-03",
+      "stageDate": "2026-11-02",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "“대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다.”는 헌법 제1조제2항의 정신에 따르면 법률의 주인은 국민이며, 누구나 이해하기 쉬운 법률을 만드는 것은 국민을 대표하는 입법기관인 국회의 의무라 할 수 있음. 개정안은 훈민정음 반포 580주년이자 한글날 기념 100주년을 맞아, 어려운 한자어, 외래어ㆍ외국어, 지나치게 축약된 표현 등 어렵거나 불명확한 법률용어를 알기 쉬운 우리말로 정비함으로써 법률에 대한 국민의 가독성과 접근성을 높이려는 것임(안 제17조제2항).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_DAFD5F622B8743A59B540D3A040E63",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-11-03",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222376"
+        }
+      ]
+    },
+    {
+      "month": "2026-11",
+      "billId": "PRC_39D3FD59FBE349719AA52EF1D130A9",
+      "title": "질서위반행위규제법 일부개정법률안",
+      "billNo": "의안번호 2222381",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "박지원의원 등 11인",
+      "proposeDate": "2026-11-02",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-11-03",
+      "stageDate": "2026-11-02",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "“대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다.”는 헌법 제1조제2항의 정신에 따르면 법률의 주인은 국민이며, 누구나 이해하기 쉬운 법률을 만드는 것은 국민을 대표하는 입법기관인 국회의 의무라 할 수 있음. 개정안은 훈민정음 반포 580주년이자 한글날 기념 100주년을 맞아, 어려운 한자어, 외래어ㆍ외국어, 지나치게 축약된 표현 등 어렵거나 불명확한 법률용어를 알기 쉬운 우리말로 정비함으로써 법률에 대한 국민의 가독성과 접근성을 높이려는 것임(안 제13조, 제22조제3항, 제41조제1항, 제43조제2항, 제52조제1항ㆍ제2항 및 제54조제4항).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_39D3FD59FBE349719AA52EF1D130A9",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-11-03",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222381"
+        }
+      ]
+    },
+    {
+      "month": "2026-11",
+      "billId": "PRC_BC41BCAEA1C64683BD5E8EA79B6575",
+      "title": "집합건물의 소유 및 관리에 관한 법률 일부개정법률안",
+      "billNo": "의안번호 2222378",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "박지원의원 등 11인",
+      "proposeDate": "2026-11-02",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-11-03",
+      "stageDate": "2026-11-02",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "“대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다.”는 헌법 제1조제2항의 정신에 따르면 법률의 주인은 국민이며, 누구나 이해하기 쉬운 법률을 만드는 것은 국민을 대표하는 입법기관인 국회의 의무라 할 수 있음. 개정안은 훈민정음 반포 580주년이자 한글날 기념 100주년을 맞아, 어려운 한자어, 외래어ㆍ외국어, 지나치게 축약된 표현 등 어렵거나 불명확한 법률용어를 알기 쉬운 우리말로 정비함으로써 법률에 대한 국민의 가독성과 접근성을 높이려는 것임(안 제9조의2제1항제2호, 제17조의2제4항제3호, 제25조제1항제2호, 제26조제2항, 제48조제6항ㆍ제7항, 제50조제1항 및 제53조제4항ㆍ제5항).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_BC41BCAEA1C64683BD5E8EA79B6575",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-11-03",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222378"
+        }
+      ]
+    },
+    {
+      "month": "2026-11",
+      "billId": "PRC_G2E6F0E3M1L9J1K6P2N7O0N4V8U7S9",
+      "title": "집합건물의 소유 및 관리에 관한 법률 일부개정법률안",
+      "billNo": "의안번호 2222370",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "최수진의원 등 12인",
+      "proposeDate": "2026-11-02",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-11-03",
+      "stageDate": "2026-11-02",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "온라인 유통 활성화 및 코로나19 팬데믹 이후 오프라인 상권 침체로 집합 상가건물의 공실률이 급증하고 있음에도 불구하고 현행 법령상 구분점포의 용도를 판매시설 및 운수시설로 제한하고 있고, 권리변동이 있는 공용부분 변경 시 구분소유자 및 의결권의 5분의 4 이상의 동의를 요구하고 있어 집합 상가건물의 리모델링 추진이 현실적으로 어려운 실정임. 구분점포의 허용 용도를 문화 및 집회시설, 업무시설 등으로 확대하고, 집합 상가건물의 용도변경 또는 리모델링을 목적으로 하는 권리변동 있는 공용부분 변경의 경우 동의율을 구분소유자 및 의결권의 3분의 2 이상으로 완화함으로써 집합 상가건물의 활용성을 제고하고 지역 상권 활성화에 기여하려는 것임(안 제1조의2 및 제15조의2).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_G2E6F0E3M1L9J1K6P2N7O0N4V8U7S9",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-11-03",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222370"
+        }
+      ]
+    },
+    {
+      "month": "2026-11",
+      "billId": "PRC_D2E6C0B9B2Z1A1I7J1H7H1G5G4F3T8",
+      "title": "특별감찰관법 일부개정법률안",
+      "billNo": "의안번호 2222361",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "주호영의원 등 12인",
+      "proposeDate": "2026-11-02",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-11-03",
+      "stageDate": "2026-11-02",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "현행법은 대통령과 특수한 관계에 있는 사람의 비위행위에 대한 감찰을 담당하는 특별감찰관의 임명과 직무 등에 관해 규정하고 있음. 감찰대상 대통령 친인척의 범위를 대통령의 배우자 및 6촌 이내의 친족으로, 감찰대상 공무원의 범위를 비서관급 이상 공무원으로 확대하고, 특별감찰관의 임기가 끝나더라도 후임자가 올 때까지 그 직을 유지하도록 하여, 대통령 특수관계인의 비위를 근절하고 안정적인 감찰이 이루어질 수 있도록 하고자 함(안 제5조제1호, 제2호 및 안 제8조제2항).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_D2E6C0B9B2Z1A1I7J1H7H1G5G4F3T8",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-11-03",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222361"
+        }
+      ]
+    },
+    {
+      "month": "2026-11",
+      "billId": "PRC_G2F6D0E9C1C6L1L5J0K6J1H5H2P7Q2",
+      "title": "한국해양과학기술원법 일부개정법률안",
+      "billNo": "의안번호 2222367",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "조승환의원 등 12인",
+      "proposeDate": "2026-11-02",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-11-03",
+      "stageDate": "2026-11-02",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "현행법은 한국해양과학기술원의 설립ㆍ운영에 관한 사항을 규정하고 있으며, 한국해양과학기술원은 「기술의 이전 및 사업화 촉진에 관한 법률」에 따른 공공연구기관에 해당함. 한국해양과학기술원이 보유한 기술의 이전 및 사업화 촉진에 관한 사항을 법률에 명시하고, 소속 임직원이 해당 기술을 이전받은 기업 또는 해당 기술을 활용하여 창업한 기업에 유상 노무ㆍ조언ㆍ자문 또는 지식ㆍ정보를 제공하거나 그 기업의 직위에 취임할 수 있도록 함으로써 연구성과의 활용 및 창업을 활성화하려는 것임(안 제12조의2 신설).",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_G2F6D0E9C1C6L1L5J0K6J1H5H2P7Q2",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-11-03",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222367"
+        }
+      ]
+    },
+    {
+      "month": "2026-11",
+      "billId": "PRC_C8756565EFB043F683575F6817938C",
+      "title": "환자기본법 일부개정법률안",
+      "billNo": "의안번호 2222362",
+      "agency": "위원회 배정 전",
+      "committee": "위원회 배정 전",
+      "proposer": "이소희의원 등 12인",
+      "proposeDate": "2026-11-02",
+      "relatedCommitteeReviews": [],
+      "officialDetailCheckedAt": "",
+      "officialDetailCheck": "",
+      "stage": "접수",
+      "previousStage": "-",
+      "changed": true,
+      "changedDate": "2026-11-03",
+      "stageDate": "2026-11-02",
+      "committeeDate": "",
+      "committeePresentDate": "",
+      "change": "이번 달 신규 확인",
+      "processingResult": "",
+      "summary": "「환자기본법」은 의료기관에서 예정과 다른 수술, 수혈 등으로 환자가 사망하거나 심각한 신체적ㆍ정신적 손상을 입는 등의 환자안전사고가 발생한 경우 보건복지부령으로 정하는 일정 규모 이상의 병원급 의료기관에 한하여 보건복지부장관에 대한 보고 의무를 부과하고 있음. 따라 환자가 사망한 중대한 환자안전사고의 경우에도 의원급 의료기관과 소규모의 병원급 의료기관의 사망사고는 체계적으로 파악하기 어려워 사망사고의 원인 분석 및 예방대책 마련에 한계가 있고 유사한 사망사고의 재발을 방지하기 어렵다는 문제가 있음.",
+      "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_C8756565EFB043F683575F6817938C",
+      "dailyChanged": true,
+      "dailyChangedDate": "2026-11-03",
+      "dailyChangeFields": [
+        "신규 확인"
+      ],
+      "dailyChangeDetails": [
+        {
+          "label": "신규 확인",
+          "before": "",
+          "after": "의안번호 2222362"
+        }
+      ]
     }
   ]
 }
