@@ -1,18 +1,12 @@
 /* Small loader. Upload word-format-part1.js through part6.js first. */
 (function () {
   "use strict";
-  const release = "20261102-official-word-content";
+  const release = "20261111-selected-monthly-format";
   // Keep nodes available for existing render handlers while removing the controls
   // from the screen, keyboard navigation, and accessibility tree.
   const style = document.createElement("style");
-  style.textContent = "#favoritesShortcut,.bill-heading-row .favorite-toggle,.favorite-item .favorite-remove{display:none!important}";
+  style.textContent = "#downloadReport,#monthlyReportUpload,#favoritesShortcut,.bill-heading-row .favorite-toggle,.favorite-item .favorite-remove{display:none!important}";
   document.head.appendChild(style);
-  function updateMonthlyLabel() {
-    const button = document.getElementById("downloadReport");
-    if (button) button.textContent = "월별 Word";
-  }
-  updateMonthlyLabel();
-  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", updateMonthlyLabel, { once: true });
   const base = document.currentScript?.src || new URL("word-format-fix.js", document.baseURI).href;
   const buttons = "#downloadReport,#downloadSelected,#downloadFavorites,#downloadFavoriteCategoryDialog,#downloadFavoriteDetail,#downloadComparison";
   const queued = new WeakSet();
@@ -44,7 +38,7 @@
       if (window.LegislationWordParts?.dedupRelease !== "20261029") throw new Error("Word dedup");
       await loadFile("favorite-duplicate-audit.js");
       await loadFile("selected-word-20261102.js");
-      if (window.LegislationWordParts?.selectedWordRelease !== "20261102") throw new Error("Selected Word module");
+      if (window.LegislationWordParts?.selectedWordRelease !== "20261111") throw new Error("Selected Word module");
       loaded = true;
     } catch (_) { failed = true; }
   })();

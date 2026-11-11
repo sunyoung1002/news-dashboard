@@ -1,14 +1,14 @@
-/* Use the existing favorite report formatter for the selected bill report only. */
+/* Selected bills use the same landscape five-column formatter as monthly Word. */
 (function (W) {
   "use strict";
-  if (W.selectedWordRelease === "20261102") return;
-  if (typeof W.downloadCompactFavorites !== "function") throw new Error("Compact Word formatter unavailable");
+  if (W.selectedWordRelease === "20261111") return;
   const previous = downloadItemsWordReport;
   downloadItemsWordReport = function (items, title, filename, filter = "", group = false) {
     if (/선택 법안 보고서$/.test(String(title)) && /_선택법안보고서\.docx?$/i.test(String(filename))) {
-      return W.downloadCompactFavorites(items, title, filename, true);
+      const rows = typeof W.uniqueFavoriteBills === "function" ? W.uniqueFavoriteBills(items) : items;
+      return previous.call(this, rows, title, filename, filter, group);
     }
     return previous.apply(this, arguments);
   };
-  W.selectedWordRelease = "20261102";
+  W.selectedWordRelease = "20261111";
 })(window.LegislationWordParts);
