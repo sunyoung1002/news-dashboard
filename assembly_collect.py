@@ -10,8 +10,9 @@ from collections import Counter
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from assembly_api import CollectionError, atomic_json, fetch_all, reconcile, related_procedure_pair
+from assembly_api import CollectionError, atomic_json, fetch_all, reconcile, related_procedure_pair, bill_number, term_of
 from assembly_records import index_existing, normalize
+from official_receipts import load_reference, supplement, coverage
 
 ROOT = Path(__file__).resolve().parent
 KST = timezone(timedelta(hours=9))
@@ -37,6 +38,7 @@ def collect(force_history=False, root=ROOT):
     try:
         old_index = read_json(root / "assembly-index.json", {"terms": {}})
         existing = read_json(root / "sample-bills.json", {"items": []}).get("items", [])
+        reference = load_reference(root)
         for term in ("21", "22"):
             record = {"status": "running", "sources": {}}
             audit["terms"][term] = record
@@ -49,7 +51,7 @@ def collect(force_history=False, root=ROOT):
             cache_ok = (previous.get("schemaVersion") == VERSION and previous.get("assemblyTerm") == term
                         and prior_audit.get("verified") and prior_audit.get("count") == len(cache_rows)
                         and len(set(cached_numbers)) == len(cache_rows)
-                        and all(len(number) == 7 and number.isdigit() and number.startswith(term) for number in cached_numbers)
+                        and all(term_of({"BILL_NO": number}) == term for number in cached_numbers)
                         and previous.get("updatedAt") == prior_audit.get("checkedAt"))
             if term == "21" and not force_history and cache_ok and cache_rows:
                 staged[term] = previous
@@ -96,6 +98,26 @@ def collect(force_history=False, root=ROOT):
                 else:
                     item.pop("officialSourceVariants", None)
                 items.append(item)
+            # A third, existing service can expose recent proposals earlier than
+            # ALLBILLV2/BILLRCP. It supplements identities, never replaces results
+            # or erases final outcomes. Its failure is recorded and shown.
+            if term == "22":
+                pending_report = record["sources"]["pending"] = {}
+                try:
+                    pending = fetch_all("nwbqublzajtcqpdae", term, pending_report)
+                    known = {bill_number({"BILL_NO": i["billNo"]}) for i in items}
+                    added = []
+                    for number, row in pending.items():
+                        if number not in known:
+                            item = normalize(row, old.get(number, {}), term, now)
+                            item["receiptSource"] = "국회 계류의안 API 보완"
+                            items.append(item)
+                            added.append(number)
+                    pending_report.update(status="success", addedBillNumbers=sorted(added), addedCount=len(added))
+                except CollectionError as error:
+                    pending_report.update(status="failed", error=str(error))
+            record["apiLatestProposalDate"] = max((i.get("proposeDate", "") for i in items), default="")
+            items = supplement(items, previous.get("items", []), reference, term, now, record)
             processed = sum(item["isCompleted"] for item in items)
             missing_dates = [item["billNo"] for item in items if not item["proposeDate"]]
             # List completeness and availability of final outcomes are distinct.
@@ -117,6 +139,7 @@ def collect(force_history=False, root=ROOT):
                 "checkedAt": payload["updatedAt"], "reused": record["status"] == "cached",
                 "months": dict(sorted(by_month.items())), "lawMonths": dict(sorted(laws_by_month.items())),
                 "unknownProposalDateCount": sum(not item.get("proposeDate") for item in payload["items"]),
+                **coverage(payload["items"], record),
             }
         # All network requests, scope checks and both-term reconciliation have
         # finished before touching any published catalog. Workflow commits once.

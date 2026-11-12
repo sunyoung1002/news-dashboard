@@ -31,7 +31,7 @@
     const name = String(item.committee || "").replace(/\s+/g, "");
     return committees.find(([label, pattern]) => label === name || (pattern && new RegExp(pattern).test(name)))?.[0] || "기타 및 미정";
   }
-  const key = item => String(item.billNo || "").match(/\d{7}/)?.[0] || item.billId || itemKey(item);
+  const key = item => String(item.billNo || "").match(/(?:\d{7}|ZZ\d{5})/)?.[0] || item.billId || itemKey(item);
   function unique(items) {
     const rows = new Map();
     items.forEach(item => rows.set(key(item), item));

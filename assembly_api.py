@@ -26,19 +26,20 @@ def first(row, *names):
 
 def bill_number(row):
     value = first(row, "BILL_NO", "BILL_NUMBER", "의안번호")
-    match = re.fullmatch(r"(?:의안번호\s*)?(\d{7})", value)
+    match = re.fullmatch(r"(?:의안번호\s*)?(\d{7}|ZZ\d{5})", value, re.I)
     if not match:
-        raise CollectionError("공식 목록에서 7자리 의안번호를 확인하지 못했습니다. 응답 명세 확인 필요")
-    return match[1]
+        raise CollectionError("공식 목록에서 의안번호(숫자 7자리 또는 ZZ+숫자 5자리)를 확인하지 못했습니다.")
+    return match[1].upper()
 
 
 def term_of(row):
     number = bill_number(row)
     declared = first(row, "AGE", "ERACO", "DAESU", "대수")
     digits = re.sub(r"\D", "", declared)
-    if digits and digits != number[:2]:
+    number_term = number[2:4] if number.startswith("ZZ") else number[:2]
+    if digits and digits != number_term:
         raise CollectionError("응답 대수와 의안번호가 다릅니다.")
-    return number[:2]
+    return number_term
 
 
 def related_procedure_pair(left, right):

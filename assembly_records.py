@@ -107,7 +107,7 @@ def normalize(row, old, term, now):
 def index_existing(items):
     result = {}
     for item in sorted(items, key=lambda r: (r.get("month", ""), r.get("catalogCheckedAt", ""))):
-        number = re.search(r"\d{7}", str(item.get("billNo", "")))
+        number = re.search(r"\d{7}|ZZ\d{5}", str(item.get("billNo", "")))
         if number:
             previous = result.get(number[0], {})
             # Missing values in list responses must not erase previously collected detail.
