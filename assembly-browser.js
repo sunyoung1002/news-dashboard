@@ -66,18 +66,12 @@
     let content = notice;
     if (active() && !busy && !notice) {
       const record = manifest.terms[selectedTerm];
-      const all = proposedItems().length;
-      const laws = proposedItems().filter(item => item.isLaw).length;
       const undated = record.unknownProposalDateCount || 0;
-      content = `${selectedTerm}대 수록 ${record.count.toLocaleString()}건 · API 확인 시각 ${record.checkedAt} · 선택 월 접수의안 ${all.toLocaleString()}건 / 법률안 ${laws.toLocaleString()}건`;
-      if (record.apiLatestProposalDate) content += ` · API 수록 최신 제안일 ${record.apiLatestProposalDate}`;
-      const reference = record.websiteReference;
-      if (reference?.matched && reference.from.startsWith(state.month)) content += ` · 첨부 공식목록 ${reference.from}~${reference.through}: ${reference.matchedCount}건 대조 일치 (확인 ${reference.observedOn})`;
+      content = `${selectedTerm}대 수록 ${record.count.toLocaleString()}건 · API 확인 시각 ${record.checkedAt}`;
       if (record.retainedPreviousCount) content += ` · API 미반환 기존 의안 ${record.retainedPreviousCount}건 유지(상태 재확인 필요)`;
       if (record.supplementarySource?.status === "failed") content += " · 최신 계류의안 보완 API 실패";
       if (undated) content += ` · 접수일 미확인 ${undated}건은 월 집계에서 제외`;
       if (selectedTerm === "21" || state.month !== currentMonth()) content += " · 과거 월은 해당 월 발의·접수 의안의 최종 확인 상태입니다.";
-      else content += " · API 확인 시각은 해당 날짜까지 전체 접수 완료를 뜻하지 않습니다. 국회 웹 실시간 전체목록은 별도 대조가 필요합니다.";
     }
     node.textContent = content;
     node.hidden = !content;
