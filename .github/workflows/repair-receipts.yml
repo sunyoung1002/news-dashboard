@@ -1,0 +1,31 @@
+name: repair-receipts
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-official-bills
+  cancel-in-progress: false
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: 첨부 공식목록으로 접수 누락 보완
+        run: python repair_receipts.py
+      - name: 수정 자료 저장
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- assembly-22.json assembly-index.json assembly-audit.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Reconcile receipts with official website export"
+            git push
+          fi

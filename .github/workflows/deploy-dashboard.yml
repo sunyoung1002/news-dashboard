@@ -5,7 +5,7 @@ on:
     branches: [main]
   workflow_dispatch:
   workflow_run:
-    workflows: [update-official-bills, repair-bill-summaries]
+    workflows: [update-official-bills, repair-bill-summaries, repair-receipts]
     types: [completed]
     branches: [main]
 
