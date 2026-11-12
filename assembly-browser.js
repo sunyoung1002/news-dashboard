@@ -133,7 +133,7 @@
       state.assemblyTerm = term;
       const updated = document.getElementById("updatedAt");
       if (updated) {
-        updated.textContent = `API 확인 ${record.checkedAt}`;
+        updated.textContent = `기준일 ${record.checkedAt}`;
         updated.style.visibility = "visible";
         updated.title = "API 응답을 확인한 시각입니다. 해당 시각까지 국회 웹의 모든 의안이 반영됐다는 뜻은 아닙니다.";
       }
