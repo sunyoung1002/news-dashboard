@@ -1,6 +1,6 @@
 {
   "mode": "official",
-  "updatedAt": "2026-11-14 22:16",
+  "updatedAt": "2026-11-15 10:08",
   "items": [
     {
       "month": "2026-08",
@@ -111759,36 +111759,10 @@
       "processingResult": "",
       "summary": "현행법은 건설사업관리를 수행하는 건설엔지니어링사업자와 공사감독자가 설계도서 등과 맞지 아니한 시공 등이 있는 경우 공사중지 명령이나 그 밖에 필요한 조치를 할 수 있도록 하고, 그 조치를 한 경우 발주청에 보고하도록 규정하고 있음. 건설공사에서 구조적 안전을 현저히 저해하는 상황이 발생할 경우 건설엔지니어링사업자 또는 공사감독자가 의무적으로 공사중지 명령 등 필요한 조치를 하도록 하고, 이러한 조치를 보고받은 발주청이 국토교통부장관에게 보고하도록 함으로써 공사중지 명령의 실효성을 제고하는데 기여하려는 것임(안 제40조제1항 단서 및 제5항 신설 등).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_55703ECC24C94AC1B958A0517AB12A",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "국토교통위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "국토교통위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -111897,30 +111871,10 @@
       "processingResult": "",
       "summary": "현재, 수급인은 하수급인에게 하도급계약을 체결한 날로부터 30일 이내에 하도급대금 지급보증서를 교부하도록 규정하고 있으며(제34조제2항), 공사대금 또는 공사기간 등이 변경될 경우 수급인은 변경된 내용을 반영하여 하도급대금 지급보증서를 추가로 교부해야 하나, 이를 위반하는 사례가 빈번하게 발생하고 있음. 하도급계약 변경 시 이를 반영하여 하도급대금 지급보증서를 추가로 발급하도록 규정하여 하수급인을 두텁게 보호하기 위한 것임(안 제34조제2항 본문 개정).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_B3069E49DC6F415683327E17AFD79A",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "국토교통위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -113317,36 +113271,10 @@
       "processingResult": "",
       "summary": "현행과 같이 감리자가 건축주의 이해관계에 종속될 수 있는 구조에서는 감리 기능의 독립적인 수행을 담보할 수 없어 건축 안전을 확보하는 데 한계가 있다는 지적이 제기됨. 일정 규모 이상의 오피스텔에 대하여 건축주가 아닌 허가권자가 설계에 참여하지 않은 자를 감리자로 지정할 수 있도록 함으로써 감리의 독립성과 책임성 확보를 통해 주거용 건축물의 안전을 강화하려는 것임(안 제25조제2항).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_P2X6X0W9W2V1V1U7U5C9B5B0Z2A8Y1",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "국토교통위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "국토교통위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -116311,36 +116239,10 @@
       "processingResult": "",
       "summary": "공공기관의 직접 부담액을 예비타당성조사 대상 기준 미만으로 정하면서 국가 또는 공공기관이 출자ㆍ출연하여 조성한 기금이나 집합투자기구를 통한 간접투자, 대출 또는 채무보증 등의 방식으로 사업비를 조달하는 경우에는 실질적인 공공부문의 부담에도 불구하고 예비타당성조사 대상에서 제외될 우려가 있음. 공기업ㆍ준정부기관의 예비타당성조사 대상 기준인 총사업비 2천억원 이상 및 국가의 재정지원금액과 공공기관 부담금액의 합계액 1천억원 이상을 법률에 직접 규정하고, 국가 또는 공공기관이 출자ㆍ출연하여 조성한 기금이나 「자본시장과 금융투자업에 관한 법률」에 따른 집합투자기구를 통한 해당 사업에 대한 간접투자액, 대출액 및 채무보증액으로서 대통령령으로 정하는 방법에 따라 산정한 금액을 공공기관 부담금액에 포함함으로써 예비타당성조사를 통한 재정통제를 강화하려는 것임(안 제40조제3항).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_84F08203FC644F1998E30FB423F533",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "재정경제기획위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "재정경제기획위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -116897,36 +116799,10 @@
       "processingResult": "",
       "summary": "제안이유 현행법은 공익신고자등에 대한 해고ㆍ징계ㆍ전보 등의 불이익조치를 금지하고, 불이익조치를 받은 공익신고자등이 국민권익위원회에 보호조치를 신청할 수 있도록 규정하고 있음. 공익신고자등의 배우자나 직계존비속이 공익신고등을 이유로 불이익조치를 받는 경우에는 불이익조치 금지 및 보호조치 신청 등 실질적인 구제수단의 적용에 한계가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_AA9D8896011E4A62B0CFE9B508DFB5",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "정무위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "정무위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -117147,36 +117023,10 @@
       "processingResult": "",
       "summary": "현행법은 고위공직자 재산 형성과정의 투명성을 확보하기 위하여 정기 재산변동신고 시 보유 주식 및 가상자산의 거래내역을 제출하도록 규정하고 있음. 재산공개대상자의 부동산 거래내역 신고를 의무화함으로써 공직 수행의 공정성을 제고하고 공직 사회에 대한 국민 신뢰를 확보하려는 것임(안 제6조의2).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_8F503181BB4044078A40A2EBAB7E9F",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "행정안전위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "행정안전위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -117313,36 +117163,10 @@
       "processingResult": "",
       "summary": "현행법은 교원의 정당한 교육활동과 관련된 각종 분쟁이나 소송 등으로부터 교원을 보호하기 위하여 민사상 또는 형사상 소송비용 지원 등의 교원보호공제사업을 운영ㆍ관리할 수 있도록 규정하고 있음. 최근 교원의 교육활동과 관련하여 무고성ㆍ보복성 고소 또는 고발이 제기되어 교원이 상당한 정신적ㆍ경제적 부담을 겪을 수 있고, 이는 교원의 교육활동을 위축시키는 요인이 될 수 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_2D5B55C5B5024ECB9EA6FEA4635D0D",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "교육위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "교육위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -117423,36 +117247,10 @@
       "processingResult": "",
       "summary": "현행법은 학생의 보건ㆍ위생, 안전, 학습과 교육환경을 보호하기 위하여 학교경계등으로부터 직선거리 200미터의 범위에 교육환경보호구역을 설정하고, 해당 구역에서 제한상영관, 숙박업, 노래연습장업 등의 행위 및 시설을 금지하고 있음. 교육감은 이러한 시설의 설치ㆍ운영 실태를 확인할 수 있는 자료 확보 수단을 갖추고 있지 아니하여 관리에 한계가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_4B2B9B4046554F4B8D98571C2074B2",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "교육위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "교육위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -117897,36 +117695,10 @@
       "processingResult": "",
       "summary": "제안이유 정부는 경기변동에 따른 세수 변동성을 완화하고 미래대응투자를 지원하기 위한 미래대응기금의 설치에 맞추어 「국가재정법 일부개정법률안」을 제출하였음. 현행법은 기금의 지출 변경 내역을 분기별로 국회에 제출하도록 하고 있어, 새로 설치되는 미래대응기금의 운용 상황을 국회가 적시에 확인할 수 있도록 보고 의무를 강화할 필요가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_16F8DE0B14334CC98643A8C3E7894F",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "재정경제기획위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "재정경제기획위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -117951,36 +117723,10 @@
       "processingResult": "",
       "summary": "정부는 「미래대응기금 설치 및 운용에 관한 법률」을 제정하여 미래대응기금을 설치하고, 이를 관리ㆍ운용하겠다는 계획을 발표하였음. 이 법률안은 「국회법」 제85조의3제4항에 따라 2027년도 세입예산안 부수 법률안으로 지정될 필요가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_FC79D898E5D8439EA5FB1D92AAC1B1",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "재정경제기획위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "재정경제기획위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -118425,36 +118171,10 @@
       "processingResult": "",
       "summary": "현행법은 군인등의 건강을 보호하고 질병과 부상을 예방ㆍ치료하기 위하여 국가의 책무와 보건의료접근권의 보장 등에 관한 사항을 규정하고 있음. 군인등이 부상 또는 질병으로 인하여 장기간 치료나 재활을 받는 경우 간병이 필요할 수 있으나, 이에 대한 지원근거가 명확하지 않아 간병에 따른 경제적 부담이 군인등과 그 가족에게 발생하고 있다는 지적이 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_45CC8F305BA449CABB2C6C505A6DDE",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "국방위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "국방위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -118479,36 +118199,10 @@
       "processingResult": "",
       "summary": "현행법은 군사기지 및 군사시설을 보호하고 군사작전을 원활히 수행하기 위하여 보호구역을 지정하고, 보호구역 안에서 군사기지 또는 군사시설을 촬영ㆍ묘사ㆍ녹취ㆍ측량하거나 이에 관한 문서나 도서 등을 발간ㆍ복제하는 행위를 금지하고 있음. 최근 고배율 카메라 등을 이용하여 보호구역 밖에서 군사기지 또는 군사시설을 촬영하는 사례가 발생하고 있으나, 현행법은 촬영 장소가 보호구역 안인 경우에만 해당 행위를 금지하고 있어 보호구역 밖에서 이루어지는 촬영행위에 대해서는 제재하기 어렵다는 지적이 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_3BC569F72904472DACD39D4DE01AEE",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "국방위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "국방위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -120381,36 +120075,10 @@
       "processingResult": "",
       "summary": "「재난 및 안전관리 기본법」 제76조의2에서는 재난안전의무보험이 갖추어야 할 기준으로 보험회사 등이 정당한 사유 없이 보험에 가입 요청 또는 계약 체결을 거부하는 것을 제한하도록 하고, 피해자를 보호하기 위해 보험금 청구권에 대한 압류금지 등의 조치를 마련하도록 하고 있으나, 현행 법률에서는 관련 사항을 규정하고 있지 않음. 낚시터업자 및 낚시어선업자가 가입해야 하는 배상책임보험에도 이러한 기준을 마련하여 낚시터 및 낚시어선 이용으로 인해 생명ㆍ재산에 손해를 입은 피해자를 적극적으로 보호하고 지원하고자 함(안 제48조 및 제55조제1항제23호의2).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_170B26C896FA40E683A74340E1D907",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "농림축산식품해양수산위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "농림축산식품해양수산위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -120463,30 +120131,10 @@
       "processingResult": "",
       "summary": "현재 육아휴직은 법률상 근로자의 권리이자 사업주의 허용 의무가 명시된 제도임에도 불구하고, 사업주가 근로자의 신청에 대해 무응답하거나 회신을 지연하는 경우 근로자가 육아휴직 개시 여부를 확신하기 어려워 제도 사용에 현실적인 부담을 느끼는 사례가 발생하고 있음. 정부는 이를 해결하고자 2025년 1월부터 시행령 개정을 통해 사업주의 허용 사실 통지의무 및 미통지 시 허용으로 간주하는 규정을 도입하여 시행 중임.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_455DC3A315824160B133149967A347",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "기후에너지환경노동위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -122947,36 +122595,10 @@
       "processingResult": "",
       "summary": "「도시 및 주거환경정비법」의 경우에는 광역자치단체의 장이 도시ㆍ주거환경정비기본계획 수립과 관련하여 독자적인 수립 권한을 부여받고 있으나, 현행법은 정부의 승인 및 협의 절차를 규정하고 있어 지역 실정을 반영한 신속한 사업추진에 한계가 있다는 지적이 제기됨. 인구 50만 이상의 대도시 시장의 경우 「지방자치법」의 취지에 따라 광역자치단체의 장에 준하는 자치권을 부여할 필요가 있다는 의견이 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_B760F90FD6D04F5C9B826EE06AB1FD",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "국토교통위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "국토교통위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -123197,42 +122819,10 @@
       "processingResult": "",
       "summary": "품목조합이 농협중앙회의 회원조합으로 가입할 때에는 「농업협동조합의 구조개선에 관한 법률」에 따른 부실조합 혹은 부실우려조합의 기준에 해당하지 않는지를 평가하게 되는데, 이 평가 기준은 신용사업을 하는 조합을 기준으로 삼고 있음. 농협중앙회 회원가입을 위한 조합 평가 기준에 신용사업을 하지 않는 조합에 대한 기준을 추가하여 신생 품목조합이 원활하게 농협중앙회 회원으로 가입하여 회원으로서 의무와 권리를 다하게 하고자 함(안 제115조).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_D41B18411C574C4FA1FF3F043655A5",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용",
-        "주요내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "농림축산식품해양수산위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "농림축산식품해양수산위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        },
-        {
-          "label": "주요내용",
-          "before": "품목조합이 농협중앙회의 회원조합으로 가입할 때에는 「농업협동조합의 구조개선에 관한 법률」에 따른 부실조합 혹은 부실우려조합의 기준에 해당하지 않는지를 평가하게 되는데, 이 평가 기준은 신용사업을 하는 조합을 기준으로 삼고 있음. 농협중앙회 회원가입을 위한 조합 평가 기준에 신용사업을 하지 않는 조합에 대한 기준을 추가하여 신생 품목조합이 원활하게 농협중앙회 회원으로 가입하여 회원으로서 의무와 권리를 다하게 하고자 함(안 제 115조).",
-          "after": "품목조합이 농협중앙회의 회원조합으로 가입할 때에는 「농업협동조합의 구조개선에 관한 법률」에 따른 부실조합 혹은 부실우려조합의 기준에 해당하지 않는지를 평가하게 되는데, 이 평가 기준은 신용사업을 하는 조합을 기준으로 삼고 있음. 농협중앙회 회원가입을 위한 조합 평가 기준에 신용사업을 하지 않는 조합에 대한 기준을 추가하여 신생 품목조합이 원활하게 농협중앙회 회원으로 가입하여 회원으로서 의무와 권리를 다하게 하고자 함(안 제115조)."
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -127345,36 +126935,10 @@
       "processingResult": "",
       "summary": "「재난 및 안전관리 기본법」 제76조의2에서는 재난안전의무보험이 갖추어야 할 기준으로 손해를 적절히 보상하도록 보상한도를 정하고, 보험회사 등이 정당한 사유 없이 보험에 가입 요청 또는 계약 체결을 거부하는 것을 제한하도록 하며, 피해자를 보호하기 위해 보험금 청구권에 대한 압류금지 등의 조치를 마련하도록 하고 있으나, 현행 법률에서는 관련 사항을 규정하고 있지 않음. 승마시설 운영자가 가입해야 하는 보험에도 이러한 기준을 마련하여 승마시설에서 발생한 피해로 인해 생명？신체에 손해를 입은 피해자를 적극적으로 보호하고 지원하고자 함(안 제15조제5항부터 제7항까지 및 제31조제1항제5호 등).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_5C46870785D14106886FB097CD916E",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "농림축산식품해양수산위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "농림축산식품해양수산위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -127427,36 +126991,10 @@
       "processingResult": "",
       "summary": "현행법은 물순환을 자연계의 순환을 중심으로 규정하고 있는데, 도시화와 물 이용의 다변화로 상수도ㆍ하수도ㆍ물 재이용시설 등을 통한 물의 공급ㆍ이용ㆍ배수 및 재이용이 물순환에 미치는 영향이 커지고 있어, 이러한 인공적인 물의 흐름을 물순환의 개념에 명확히 포함할 필요가 있음. 물순환의 정의를 자연계의 순환뿐만 아니라 급수ㆍ배수 및 이용시설 등에 의한 인공계의 순환까지 포괄하도록 확대하여, 자연적인 물의 흐름과 인간의 물 이용을 연계한 통합적인 물관리의 기반을 마련하려는 것임(안 제3조제1호).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_1D720F283DBA4EA892D27D57F6425F",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "기후에너지환경노동위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "기후에너지환경노동위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -127565,36 +127103,10 @@
       "processingResult": "",
       "summary": "기금이 국민생활의 안정과 국가의 균형있는 발전에 기여하기 위해서는 불평등과 양극화 해소를 위한 투자 기반을 명확히 마련하고, 재원 조성과 사용에 대한 국회의 검토와 정보공개를 강화할 필요가 있음. 불평등ㆍ양극화 해소계정을 통하여 소득ㆍ자산 및 임금ㆍ노동조건의 격차를 완화하고, 주거ㆍ돌봄ㆍ의료 등 기본서비스에 대한 접근 격차를 줄이는 사업을 지원하도록 함(안 제7조).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_5AA86C11CE5C4FE1B0CF6B63EEB1C1",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "재정경제기획위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "재정경제기획위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -127619,36 +127131,10 @@
       "processingResult": "",
       "summary": "“대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다.”는 헌법 제1조제2항의 정신에 따르면 법률의 주인은 국민이며, 누구나 이해하기 쉬운 법률을 만드는 것은 국민을 대표하는 입법기관인 국회의 의무라 할 수 있음. 개정안은 훈민정음 반포 580주년이자 한글날 기념 100주년을 맞아, 어려운 한자어, 외래어·외국어, 지나치게 축약된 표현 등 어렵거나 불명확한 법률용어를 알기 쉬운 우리말로 정비함으로써 법률에 대한 국민의 가독성과 접근성을 높이려는 것임(안 제18조제4항제3호, 제25조제3항제3호 및 같은 조 제5항).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_033699BCFACD4CF8AE36E33EAADB79",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "문화체육관광위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "문화체육관광위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -127673,36 +127159,10 @@
       "processingResult": "",
       "summary": "“대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다.”는 헌법 제1조제2항의 정신에 따르면 법률의 주인은 국민이며, 누구나 이해하기 쉬운 법률을 만드는 것은 국민을 대표하는 입법기관인 국회의 의무라 할 수 있음. 개정안은 훈민정음 반포 580주년이자 한글날 기념 100주년을 맞아, 어려운 한자어, 외래어ㆍ외국어, 지나치게 축약된 표현 등 어렵거나 불명확한 법률용어를 알기 쉬운 우리말로 정비함으로써 법률에 대한 국민의 가독성과 접근성을 높이려는 것임(안 제97조).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_FB3F89EDE6E44B7D87D4B855B0C684",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "법제사법위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "법제사법위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -127727,36 +127187,10 @@
       "processingResult": "",
       "summary": "“대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다.”는 헌법 제1조제2항의 정신에 따르면 법률의 주인은 국민이며, 누구나 이해하기 쉬운 법률을 만드는 것은 국민을 대표하는 입법기관인 국회의 의무라 할 수 있음. 개정안은 훈민정음 반포 580주년이자 한글날 기념 100주년을 맞아, 어려운 한자어, 외래어ㆍ외국어, 지나치게 축약된 표현 등 어렵거나 불명확한 법률용어를 알기 쉬운 우리말로 정비함으로써 법률에 대한 국민의 가독성과 접근성을 높이려는 것임(안 제11조제5항).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_28A617D7E4D54BE0B4621E549058B1",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "법제사법위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "법제사법위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -127781,30 +127215,10 @@
       "processingResult": "",
       "summary": "“대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다.”는 헌법 제1조제2항의 정신에 따르면 법률의 주인은 국민이며, 누구나 이해하기 쉬운 법률을 만드는 것은 국민을 대표하는 입법기관인 국회의 의무라 할 수 있음. 개정안은 훈민정음 반포 580주년이자 한글날 기념 100주년을 맞아, 어려운 한자어, 외래어ㆍ외국어, 지나치게 축약된 표현 등 어렵거나 불명확한 법률용어를 알기 쉬운 우리말로 정비함으로써 법률에 대한 국민의 가독성과 접근성을 높이려는 것임(안 제219조의2 등).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_8862D12F4D1F4522BA0DB2D17DECE1",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "법제사법위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -128809,36 +128223,10 @@
       "processingResult": "",
       "summary": "“대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다.”는 헌법 제1조제2항의 정신에 따르면 법률의 주인은 국민이며, 누구나 이해하기 쉬운 법률을 만드는 것은 국민을 대표하는 입법기관인 국회의 의무라 할 수 있음. 개정안은 훈민정음 반포 580주년이자 한글날 기념 100주년을 맞아, 어려운 한자어, 외래어·외국어, 지나치게 축약된 표현 등 어렵거나 불명확한 법률용어를 알기 쉬운 우리말로 정비함으로써 법률에 대한 국민의 가독성과 접근성을 높이려는 것임(안 제4조, 제5조제1항, 제7조 및 제12조).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_88C3FDC3342741EE830F79F1069988",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "법제사법위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "법제사법위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -129087,18 +128475,10 @@
       "processingResult": "",
       "summary": "“대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다.”는 헌법 제1조제2항의 정신에 따르면 법률의 주인은 국민이며, 누구나 이해하기 쉬운 법률을 만드는 것은 국민을 대표하는 입법기관인 국회의 의무라 할 수 있음. 그동안 국회 차원에서 어려운 법률용어를 정비하려는 노력이 있었으나, 여전히 법률에 어려운 한자어나 일상생활에서 잘 사용하지 않는 용어가 많이 남아 있어 법률이 국민에게 쉽게 읽히지 않는다는 지적이 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_A230670EB11F46A5B8D84E8241856C",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222758"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -129123,18 +128503,10 @@
       "processingResult": "",
       "summary": "“대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다.”는 헌법 제1조제2항의 정신에 따르면 법률의 주인은 국민이며, 누구나 이해하기 쉬운 법률을 만드는 것은 국민을 대표하는 입법기관인 국회의 의무라 할 수 있음. 그동안 국회 차원에서 어려운 법률용어를 정비하려는 노력이 있었으나, 여전히 법률에 어려운 한자어나 일상생활에서 잘 사용하지 않는 용어가 많이 남아 있어 법률이 국민에게 쉽게 읽히지 않는다는 지적이 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_A9F0ED7447AC4D00B61BBEE715860A",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222759"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -129383,36 +128755,10 @@
       "processingResult": "",
       "summary": "“대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다.”는 헌법 제1조제2항의 정신에 따르면 법률의 주인은 국민이며, 누구나 이해하기 쉬운 법률을 만드는 것은 국민을 대표하는 입법기관인 국회의 의무라 할 수 있음. 개정안은 훈민정음 반포 580주년이자 한글날 기념 100주년을 맞아, 어려운 한자어, 외래어ㆍ외국어, 지나치게 축약된 표현 등 어렵거나 불명확한 법률용어를 알기 쉬운 우리말로 정비함으로써 법률에 대한 국민의 가독성과 접근성을 높이려는 것임(안 제4조제2항, 제6조제1항ㆍ제3항, 제12조제7항, 제25조제1항ㆍ제2항 및 제27조제7항).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_1AE36E431022425681967556327AC5",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "법제사법위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "법제사법위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -129437,36 +128783,10 @@
       "processingResult": "",
       "summary": "“대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다.”는 헌법 제1조제2항의 정신에 따르면 법률의 주인은 국민이며, 누구나 이해하기 쉬운 법률을 만드는 것은 국민을 대표하는 입법기관인 국회의 의무라 할 수 있음. 개정안은 훈민정음 반포 580주년이자 한글날 기념 100주년을 맞아, 어려운 한자어, 외래어ㆍ외국어, 지나치게 축약된 표현 등 어렵거나 불명확한 법률용어를 알기 쉬운 우리말로 정비함으로써 법률에 대한 국민의 가독성과 접근성을 높이려는 것임(안 제6조제1항).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_10F381D3E8B246C0BC6C6F6F93BEE4",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "법제사법위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "법제사법위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -129491,36 +128811,10 @@
       "processingResult": "",
       "summary": "“대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다.”는 헌법 제1조제2항의 정신에 따르면 법률의 주인은 국민이며, 누구나 이해하기 쉬운 법률을 만드는 것은 국민을 대표하는 입법기관인 국회의 의무라 할 수 있음. 개정안은 훈민정음 반포 580주년이자 한글날 기념 100주년을 맞아, 어려운 한자어, 외래어ㆍ외국어, 지나치게 축약된 표현 등 어렵거나 불명확한 법률용어를 알기 쉬운 우리말로 정비함으로써 법률에 대한 국민의 가독성과 접근성을 높이려는 것임(안 제3조제2항 및 제10조).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_8C3A54518A2846498F4E8410372470",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "법제사법위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "법제사법위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -129601,36 +128895,10 @@
       "processingResult": "",
       "summary": "“대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다.”는 헌법 제1조제2항의 정신에 따르면 법률의 주인은 국민이며, 누구나 이해하기 쉬운 법률을 만드는 것은 국민을 대표하는 입법기관인 국회의 의무라 할 수 있음. 개정안은 훈민정음 반포 580주년이자 한글날 기념 100주년을 맞아, 어려운 한자어, 외래어ㆍ외국어, 지나치게 축약된 표현 등 어렵거나 불명확한 법률용어를 알기 쉬운 우리말로 정비함으로써 법률에 대한 국민의 가독성과 접근성을 높이려는 것임(안 제11조제1항 및 제12조제7항).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_2BCDA08FE1F64D899DDF609E0A1C54",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "법제사법위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "법제사법위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -137243,36 +136511,10 @@
       "processingResult": "",
       "summary": "「재난 및 안전관리 기본법」 제76조의2에서는 재난안전의무보험이 갖추어야 할 기준으로 보험사업자가 정당한 사유 없이 보험에 가입 요청 또는 계약 체결을 거부하거나 보험계약 등을 해제ㆍ해지하는 것을 제한하고 피해자를 보호하기 위해 보험금 청구권에 대한 압류금지 등의 조치를 마련하도록 하고 있으나, 현행 법률에서는 관련 사항을 규정하고 있지 않음. 등록 대상 동력수상레저기구의 소유자와 수상레저업자가 가입해야 하는 재난안전의무보험에도 이러한 기준을 마련해 동력수상레저기구 사용으로 인한 사망이나 부상에 대하여 피해자를 적극적으로 보호하고 지원하고자 함(안 제54조의2부터 제54조의4까지 등).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_56CBC6AD2566436E993BEC6D7DD2CA",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "농림축산식품해양수산위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "농림축산식품해양수산위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -137325,36 +136567,10 @@
       "processingResult": "",
       "summary": "현행 물관리 업무는 기후에너지환경부 뿐만 아니라 행정안전부, 국토교통부, 농림축산식품부 등 여러 중앙행정기관에 분산되어 있어 통합적인 정책 수립과 재난 대응의 필요성이 제기됨. 참고사항 이 법률안은 이헌승의원이 대표발의한 「물관리기본법 일부개정법률안」(의안번호 제22707호)의 의결을 전제로 하는 것이므로 같은 법률안이 의결되지 아니하거나 수정의결되는 경우에는 이에 맞추어 조정되어야 할 것임.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_6FB84D222613455EB2F4DA3EB10B3F",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "기후에너지환경노동위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "기후에너지환경노동위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -138163,36 +137379,10 @@
       "processingResult": "",
       "summary": "「재난 및 안전관리 기본법」 제76조의2에서는 재난안전의무보험이 갖추어야 할 기준으로 보험사업자가 정당한 사유 없이 보험에 가입 요청 또는 계약 체결을 거부하는 것을 제한하도록 하고, 피해자를 보호하기 위해 보험금 청구권에 대한 압류금지 등의 조치를 마련하도록 하고 있으나, 현행 법률에서는 관련 사항을 규정하고 있지 않음. 연안체험활동 운영자가 가입해야 하는 배상책임보험 등에도 이러한 기준을 마련하여 생명？신체의 손해를 입은 연안체험활동 참가자 및 안전관리요원을 적극적으로 보호하고 지원하고자 함(안 제13조제3항ㆍ제4항 및 제25조제1항제5호 등).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_23D3B75CA5F54543AA6ED958A5F5C2",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "농림축산식품해양수산위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "농림축산식품해양수산위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -138889,36 +138079,10 @@
       "processingResult": "",
       "summary": "원도심의 쇠퇴는 개별 건축물의 정비나 노후시설의 개선만으로 해결하기 어려운 문제로서 주거환경 개선과 기반시설 확충, 지역경제 활성화, 생활편의시설 정비 등을 유기적으로 연계하는 종합적인 접근이 필요함. 아울러 원도심은 지역마다 형성 과정과 도시구조, 산업ㆍ상업 기능 및 기반시설 여건 등이 서로 다르므로, 획일적인 정비 방식에서 벗어나 지역별 특성과 주민의 생활환경을 고려한 정비 및 지원체계를 마련할 필요가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_360EC965B0F54F25A431B281D30F0E",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "국토교통위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "국토교통위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -138999,36 +138163,10 @@
       "processingResult": "",
       "summary": "「재난 및 안전관리 기본법」 제76조의2에서는 재난안전의무보험이 갖추어야 할 기준으로 피해자를 보호하기 위해 보험금 청구권에 대한 압류금지 등의 조치를 마련하도록 하고 있으나, 현행 법률에서는 관련 사항을 규정하고 있지 않음. 유조선 및 일반선박의 선박소유자가 가입해야 하는 유류오염 손해배상 보장계약 제도 등에도 이러한 기준을 마련하여 유조선 및 일반선박의 유류오염 사고로 손해를 입은 피해자를 적극적으로 보호하고 지원하고자 함(안 제52조의2 신설).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_0D9F54FDC9EF4620BE2B8F53781CC5",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "농림축산식품해양수산위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "농림축산식품해양수산위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -139053,36 +138191,10 @@
       "processingResult": "",
       "summary": "유치원 교사가 질병으로 인한 건강 악화에도 불구하고 대체인력 확보의 어려움 등으로 출근을 지속하다 사망하는 사건이 발생하면서 유치원 교직원의 휴가ㆍ병가 사용 보장과 대체인력 지원체계 마련의 필요성이 제기되고 있음. 현행 「영유아보육법」은 보육 교직원의 업무 공백 발생 시 대체인력을 지원할 수 있는 근거를 두고 있으나, 「유아교육법」에는 유치원 교직원의 대체인력 확보ㆍ배치 및 지원에 관한 명확한 근거가 미비한 실정임.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_2BA275E3DA24439C9B4B91CC39C6D8",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "교육위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "교육위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -139163,36 +138275,10 @@
       "processingResult": "",
       "summary": "입법 당시에 개정된 기준을 충족하는 차량의 완성차판매업체가 생산ㆍ판매 중단을 결정함에 따라 해당 기준에 적합한 대체 차량의 확보가 필요한 상황임. 그 시행일을 3년 연기하여 새로운 기준에 적합한 구급차량의 개발ㆍ검증 및 보급에 필요한 기간을 확보하고, 구급차 운영의 연속성과 응급환자 이송체계의 안정성을 확보하려는 것임(안 법률 제20887호 응급의료에 관한 법률 일부개정법률 부칙 제1조 및 제2조).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_6103188BF88E414E84CD88E556630C",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "보건복지위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "보건복지위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -139217,36 +138303,10 @@
       "processingResult": "",
       "summary": "따라 응급의료기관의 수용 의무를 강화하는 입법적 논의가 이뤄지고 있으나, 이는 당장의 환자 이송 공백을 막기 위한 단기적ㆍ임시방편적 조치에 그칠 우려가 큼. 일선 의료기관에만 응급ㆍ외상환자 수용에 대한 책임을 강요할 것이 아니라, 국가와 지방자치단체 역시 필수 의료 인프라 확충에 걸맞은 책임을 분담해야 할 필요가 있음 특히 중증 외상환자 진료의 중추적 역할을 하는 권역외상센터 및 지역외상센터에 대한 정부의 행정적ㆍ재정적 지원이 현행법상 임의규정에 그쳐 필수 인력 확충 및 안정적인 센터 운영에 한계가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_43184D39F0F445519894F4ED8B99CD",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "보건복지위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "보건복지위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -143667,36 +142727,10 @@
       "processingResult": "",
       "summary": "최근 노후 풍력발전기 등 재생에너지 설비의 화재 및 붕괴 사고로 인명과 재산 피해가 잇따르고 있어, 일정 기간 이상 운영되어 위험성이 높은 노후 설비에 대한 안전관리 강화 필요성이 지속적으로 제기되고 있습니다. 참고사항 이 법률안은 김태선의원이 대표발의한 「전기안전관리법 일부개정법률안」(의안번호 제22735호)의 의결을 전제로 하는 것이므로 같은 법률안이 의결되지 아니하거나 수정의결되는 경우에는 이에 맞추어 조정되어야 할 것입니다.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_373CCF9E539A4834B8AA96EA49B27B",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "기후에너지환경노동위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "기후에너지환경노동위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -143749,36 +142783,10 @@
       "processingResult": "",
       "summary": "최근 장기 운영된 노후 풍력발전기 등에서 화재, 붕괴 사고가 발생하여 인명 및 재산 피해가 초래되는 등 노후 발전설비의 안전관리 강화 필요성이 지속적으로 제기되고 있습니다. 기후에너지환경부령으로 정하는 전기설비를 운영하는 발전사업자에 대하여 해당 전기설비에 대해 정기적으로 정밀안전진단 및 안전성 평가를 받도록 하고, 평가 결과에 따라 안전등급 지정 및 수리ㆍ개조ㆍ사용정지 등 필요한 조치를 명할 수 있도록 함으로써 노후 전기설비로 인한 안전사고를 선제적으로 예방하고 국민의 생명과 안전을 보호하려는 것입니다(안 제2조제3호의2 신설, 제11조의2 신설, 제18조, 제26조 등).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_072602CE386848BE9EDCCDE4A8EC58",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "기후에너지환경노동위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "기후에너지환경노동위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -145343,36 +144351,10 @@
       "processingResult": "",
       "summary": "제안이유 제주4ㆍ3사건의 진상규명과 희생자 및 유족의 명예회복을 위한 법적ㆍ제도적 기반이 마련되어 왔으나, 피해 치유와 역사적 사실에 대한 교육ㆍ홍보, 희생자 및 유족의 권익 보호 등을 위한 제도적 보완이 필요한 상황임. 법무부장관이 직권재심 청구 권고의 취지에 따라 청구사실을 피고인 및 유족 등에게 서면으로 통지하는 등 필요한 조치를 하도록 의무화함(안 제15조제2항).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_BAA06BB2B2B04D51BDD8D239AFC684",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "행정안전위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "행정안전위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -145425,36 +144407,10 @@
       "processingResult": "",
       "summary": "미국ㆍ프랑스 등 세계 각국은 공급망 안정 및 산업경쟁력 확보를 위하여 자국 내 생산기반을 강화하고 있으며, 이를 위해 설비투자 지원뿐 아니라 실제 생산활동에 대한 지원을 확대하고 있음. 특히 투자금액 대비 생산비용이 상대적으로 큰 품목을 지원대상으로 정하고 있음에도 총 공제한도를 투자금액에 연동함에 따라, 조기에 공제한도에 도달하여 지속적인 생산유인을 제공하기 어려울 수 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_FBC0E2FEB8D44D829A9FBC3076BE77",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "진행단계",
-        "소관위원회",
-        "처리내용",
-        "주요내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "재정경제기획위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        },
-        {
-          "label": "주요내용",
-          "before": "미국·프랑스 등 세계 각국은 공급망 안정 및 산업경쟁력 확보를 위하여 자국 내 생산기반을 강화하고 있으며, 이를 위해 설비투자 지원뿐 아니라 실제 생산활동에 대한 지원을 확대하고 있음. 특히 투자금액 대비 생산비용이 상대적으로 큰 품목을 지원대상으로 정하고 있음에도 총 공제한도를 투자금액에 연동함에 따라, 조기에 공제한도에 도달하여 지속적인 생산유인을 제공하기 어려울 수 있음.",
-          "after": "미국ㆍ프랑스 등 세계 각국은 공급망 안정 및 산업경쟁력 확보를 위하여 자국 내 생산기반을 강화하고 있으며, 이를 위해 설비투자 지원뿐 아니라 실제 생산활동에 대한 지원을 확대하고 있음. 특히 투자금액 대비 생산비용이 상대적으로 큰 품목을 지원대상으로 정하고 있음에도 총 공제한도를 투자금액에 연동함에 따라, 조기에 공제한도에 도달하여 지속적인 생산유인을 제공하기 어려울 수 있음."
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -145479,30 +144435,10 @@
       "processingResult": "",
       "summary": "따라 상당수 임대사업자는 정부 정책을 신뢰하여 장기간 임대의무를 부담하고 임대보증금 또는 임대료의 증액 제한 등 각종 공적 의무를 이행하여 왔음. 등록임대의무를 장기간 이행한 임대사업자는 해당 주택에 실제 거주하기 어려워 같은 항 단서의 1세대 1주택자에 관한 거주기간 요건 등을 충족하기 어려운 경우가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_I2H6F0F8E2F4M1L1L1K9L4J1R3R5P7",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "재정경제기획위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -145527,30 +144463,10 @@
       "processingResult": "",
       "summary": "현행법은 비수도권에서 개최되는 이스포츠대회에 대하여 2026년 12월 31일까지 관련 비용의 100분의 10을 법인세에서 공제하도록 하고 있음. 이스포츠대회는 경기 자체뿐만 아니라 관광ㆍ숙박 등 관련 산업에도 경제적 효과를 미칠 수 있는 산업으로서, 국내 이스포츠대회의 개최를 활성화하기 위하여 세제지원의 적용기한을 연장하고 지원 수준을 확대할 필요가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_BF1DB928CD7E4B44BBFABE337D3213",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "재정경제기획위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -162375,36 +161291,10 @@
       "processingResult": "",
       "summary": "현행법은 기계식주차장의 관리자가 안전검사 또는 정밀안전검사를 받도록 규정하고 있으나 시장ㆍ군수 또는 구청장이 해당 검사에 대하여 안내를 할 수 있는 근거가 미비하여 기계식주차장의 관리자가 검사를 받지 못하는 경우가 있어 검사에 관한 안내를 강화해야한다는 의견이 있음. 시장ㆍ군수 또는 구청장이 기계식주차장 관리자에게 안전검사 또는 정밀안전검사의 실시시기, 항목 및 방법 등을 알려 주도록 함으로써 기계식주차장에 대한 안전관리를 강화하려는 것임(안 제19조의9제3항 및 제19조의23제4항 신설 등).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_107E9D407B824E58B7EE814272A278",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "국토교통위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "국토교통위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -163101,36 +161991,10 @@
       "processingResult": "",
       "summary": "현행법은 소방 및 안전시설 확충, 안전관리 강화 등을 위한 재원을 확보하기 위해 담배에 부과하는 개별소비세의 일정 비율을 소방안전교부세로 지방자치단체에 교부하도록 규정하고 있음. 최근 흡연인구 감소와 담배 소비구조 변화 등에 따라 담배에 부과되는 개별소비세 수입이 감소하면서 소방안전교부세 재원 또한 축소되고 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_0EB9ED01079247178BB55D126BE007",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "행정안전위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "행정안전위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -163239,36 +162103,10 @@
       "processingResult": "",
       "summary": "해당 의안 정보를 찾을 수 없습니다.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_4936A5C31EE64424AE7CD8BA455349",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "행정안전위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "행정안전위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -163293,36 +162131,10 @@
       "processingResult": "",
       "summary": "현행법은 취득세 및 재산세의 면제 특례를 제한하는 규정을 두어 취득세 및 재산세가 면제되는 경우에도 100분의 85에 해당하는 감면율을 적용하도록 지방세 감면 특례 제한 규정을 두고 있는데, 이는 면제대상자에게도 일정 부분의 조세부담을 부과함으로써 조세형평성을 확보하고 최소한의 수익자 부담 원칙을 반영하려는 것임. 취득세 및 재산세를 면제받는 사회복지법인도 지방세 감면 특례 제한 규정을 적용받지 아니하도록 하여 사회복지법인의 부담을 완화하려는 것임(안 제177조의2제1항제2호).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_0DA742AFA5994426AC3C5FFFC8315D",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "행정안전위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "행정안전위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -163403,36 +162215,10 @@
       "processingResult": "",
       "summary": "현행법은 풀뿌리자치의 활성화와 민주적 참여의식 고양을 위하여 읍ㆍ면ㆍ동에 해당 행정구역의 주민으로 구성되는 주민자치회를 둘 수 있도록 규정하고 있음. 주민자치회의 주민 중심 구성 원칙을 유지하면서 해당 지역에 소재한 사업장을 운영하거나 그 사업장에서 근무하는 사람 또는 학교ㆍ기관ㆍ단체 등에 소속된 사람으로서 해당 지역에서 1년 이상 사업을 영위하거나 근무 또는 활동한 사람 등도 주민자치회 위원이 될 수 있도록 하되, 해당 행정구역에 주소를 둔 주민이 위원 정수의 과반수를 차지하도록 함으로써 주민대표성을 확보하고 지역사회 구성원의 다양한 참여를 확대하려는 것임(안 제17조의2제1항).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_8996A7C3E36346A7B4D8320459339D",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "행정안전위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "행정안전위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -163653,36 +162439,10 @@
       "processingResult": "",
       "summary": "현행법은 국토교통부장관으로 하여금 지하정보에 기반하여 지하공간통합지도를 구축하도록 규정하고 있음. 지하정보기관이 장이 갱신된 지하정보를 지하정보통합체계에 반영하지 않는 경우 과태료를 부과할 수 있는 근거를 신설하는 한편 매년 지하시설물 데이터베이스 구축에 관한 계획을 국토교통부장관 및 관계 중앙행정기관의 장에게 제출하도록 함으로써 갱신되거나 개선된 지하정보가 지하공간통합지도에 신속ㆍ정확하게 반영되도록 하려는 것임(안 제42조제2항 등).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_BE20546D08DA4BEA9D1A0E64701006",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "국토교통위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "국토교통위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -164267,36 +163027,10 @@
       "processingResult": "",
       "summary": "이 경우 교육비를 보건복지부가 전액 지원하여 왔으나, 첨단재생의료 치료제도가 도입되어 의료기관 등의 수익 창출이 가능하게 된 현재의 시점에서는 교육 이수로 수익을 창출할 수 있는 교육생 또는 소속기관이 비용을 부담하는 것이 수혜자 부담의 원칙에 부합하다고 할 수 있음. 첨단재생의료를 실시하는 재생의료기관 인력을 대상으로 하는 법정의무교육의 교육비를 교육 대상자 또는 소속기관이 부담할 수 있도록 하여, 수혜자 부담의 원칙을 실현하고 양질의 교육 서비스를 제공하려는 것임(안 제10조제11항ㆍ제12항).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_9621349D35464790976E4EC9BB2E5D",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "보건복지위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "보건복지위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -164853,36 +163587,10 @@
       "processingResult": "",
       "summary": "현행법은 학교의 장이 학습지원 소프트웨어를 교육 자료로 선정하려는 경우 개인정보 보호 등에 관한 기준을 따르고 학교운영위원회의 심의를 거치도록 하고 있음. 심의가 면제된 학습지원 소프트웨어가 면제 이후 개인정보 보호, 보안ㆍ안전성 또는 교육적 적합성에 관한 기준을 충족하지 아니하게 된 경우 교육감이 사용을 중지하거나 심의 면제 대상에서 제외하는 등 필요한 조치를 할 수 있도록 함으로써 학교의 행정적 부담을 완화하면서도 학습지원 소프트웨어의 안전성과 교육적 품질을 지속적으로 확보하려는 것임(안 제29조의2제2항 단서 및 제3항 신설).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_0978B6EF112D4EF08CC6314DA19356",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "교육위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "교육위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -164991,36 +163699,10 @@
       "processingResult": "",
       "summary": "“대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다.”는 헌법 제1조제2항의 정신에 따르면 법률의 주인은 국민이며, 누구나 이해하기 쉬운 법률을 만드는 것은 국민을 대표하는 입법기관인 국회의 의무라 할 수 있음. 개정안은 훈민정음 반포 580주년이자 한글날 기념 100주년을 맞아, 어려운 한자어, 외래어ㆍ외국어, 지나치게 축약된 표현 등 어렵거나 불명확한 법률용어를 알기 쉬운 우리말로 정비함으로써 법률에 대한 국민의 가독성과 접근성을 높이려는 것임(안 제11조제2항제1호 및 제2호).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_5B28ED18D261470F8C7FE191A999BA",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "문화체육관광위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "문화체육관광위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -165409,36 +164091,10 @@
       "processingResult": "",
       "summary": "농지ㆍ산지 등의 보전과 환경오염 예방을 위하여 이들 토지에서의 폐기물 사용 제한 등에 대한 필요성도 제기됐습니다. 아울러 농지ㆍ산지 및 환경오염 우려가 큰 토지에 대해서는 폐기물을 복토재ㆍ성토재 등으로 사용하는 것을 원칙적으로 금지하되, 법령에서 정한 경우에 한해 예외적으로 허용하여 재활용을 가장한 불법 성토ㆍ복토 행위자의 경우 불법 매립 행위자와 동등한 벌칙을 적용하도록 하려는 것입니다(안 제13조의2, 제13조의7, 제18조, 제38조의2, 제63조 등).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_284FAF29B35040FDA43E8129226692",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "기후에너지환경노동위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "기후에너지환경노동위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -167255,36 +165911,10 @@
       "processingResult": "",
       "summary": "현행법은 첨단전략산업의 경쟁력을 강화하기 위해 한국산업은행에 첨단전략산업기금을 두고 관련 기업에 자금을 지원하도록 하고 있음. 기금의 운용에 관한 구체적인 방향과 지침이 일절 공개되지 않고 있어 공공자금으로 운용되는 기금 운용의 견제와 감시가 적절히 이루어지지 못하고 있다는 지적이 제기되고 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_478BCCBAC8684462B3248EB8DA6B0A",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "정무위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "정무위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -167309,36 +165939,10 @@
       "processingResult": "",
       "summary": "한국은행이 운용하는 외화표시 자산은 대외지급 수요에 대응하고 외환시장의 안정을 도모하는 중요한 국가적 자산임에도, 그 운용 규모와 수익률, 위험관리 현황 등에 관하여 국회에 보고하도록 하는 근거가 없어 국회가 외화표시 자산 운용의 적정성과 위험관리 실태를 체계적으로 점검하는 데에 한계가 있다는 지적이 있음. 한국은행으로 하여금 반기마다 외화표시 자산의 운용 규모와 수익률, 위험관리 현황 등을 포함한 운용보고서를 작성 후 국회 소관 상임위원회에 보고하도록 하려는 것임(안 제96조의2 신설).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_2FE7A8418FF74395B77FCC313C571B",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "재정경제기획위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "재정경제기획위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -167363,36 +165967,10 @@
       "processingResult": "",
       "summary": "한편, 「공공기관의 운영에 관한 법률」의 개정으로 공공기관 결산서 제출기한이 다음 해 3월 15일까지로 연장되었으나 현행법에는 2월 말일까지 제출하도록 되어 있어 상충되는 문제가 있음. 재단은 기한의 이익이 상실된 학자금대출 채권 및 구상채권을 한국자산관리공사에 매각할 수 있도록 함으로써 청년의 신용회복과 경제적 자립을 도모하는 한편, 결산서 제출 시기를 공공기관 운영 관련 법령에 따르도록 함으로써 법령 간 정합성을 확보하려는 것임(안 제22조, 제49조의8 삭제 및 제49조의9 신설).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_ED58F84717A64423B91914B7BED8E3",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "교육위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "교육위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -167417,36 +165995,10 @@
       "processingResult": "",
       "summary": "유사 입법례인 「주택도시기금법」은 이미 준주택 관련 주택금융 공급을 허용하고 있는 점 등을 고려할 때, 한국주택금융공사도 준주택에 대하여 정책대출, 신용보증 등 주택금융 공급을 허용하여 청년ㆍ서민 실수요자의 주거안정을 위한 금융지원 체계를 확대ㆍ보완할 필요가 있음. 주택저당채권의 담보로 제공될 수 있는 대상 범위를 주택뿐 아니라 준주택까지 확대하고, 이와 관련된 규정을 정비하고자 함(안 제2조제3호, 같은 조 제8호나목, 제9조제3항, 제34조의2 및 제64조제1항제5호).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_4F58159012D342F0B82FA0068F2847",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "정무위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "정무위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -167555,36 +166107,10 @@
       "processingResult": "",
       "summary": "「재난 및 안전관리 기본법」 제76조의2에서는 재난안전의무보험이 갖추어야 할 기준으로 보험회사 등이 정당한 사유 없이 보험에 가입 요청 또는 계약 체결을 거부하는 것을 제한하도록 하고, 피해자를 보호하기 위해 보험금 청구권에 대한 압류금지 등의 조치를 마련하도록 하고 있으나, 현행 법률에서는 관련 사항을 규정하고 있지 않음. 해상여객운송사업자가 가입해야 하는 배상책임보험에도 이러한 기준을 마련하여 여객선 이용으로 인해 생명ㆍ재산에 손해를 입은 피해자를 적극적으로 보호하고 지원하고자 함(안 제4조의3제1항 및 제2항).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_EA3B1BB0B9174D4B87BAF82379AFE1",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "농림축산식품해양수산위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "농림축산식품해양수산위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -168085,36 +166611,10 @@
       "processingResult": "",
       "summary": "최근 의약품으로 눈에 점안해 사용하는 인공눈물과 유사한 형태로 제조된 화장품이 유통되어 소비자가 이를 인공눈물로 오인해 안구에 넣은 사례가 발생하였음 이에 누구든지 용기나 포장이 그 화장품의 사용방법을 오인하게 하는 화장품을 판매하거나 판매할 목적으로 제조ㆍ수입ㆍ보관 또는 진열하지 말도록 함으로써 화장품의 올바른 사용을 유도하여 소비자를 보호하려는 것임(안 제15조제11호 신설 등).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_28ADFE23B53E49B5A61AF700C67571",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "보건복지위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "보건복지위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -168223,36 +166723,10 @@
       "processingResult": "",
       "summary": "“환경피해개선사업\" 및 “환경피해개선구역\"에 대한 정의를 규정함(안 제2조제10호 및 제11호 신설). 국가와 지방자치단체가 환경피해개선구역 지정 및 시행에 필요한 행정적ㆍ재정적 사항을 지원할 수 있도록 함(안 제22조의4 신설).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_92CBB2AEBCE74335B0AF44B713F72A",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "기후에너지환경노동위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "기후에너지환경노동위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -168361,18 +166835,10 @@
       "processingResult": "",
       "summary": "현행법은 가정폭력범죄의 피해자에 대하여 일정한 절차적 권리를 보장하고 있으나, 수사단계부터 형사절차 및 가정보호사건의 조사ㆍ심리에 이르기까지 피해자가 변호사의 조력을 받을 수 있도록 하는 제도는 충분히 마련되어 있지 않음. 특히 가정폭력범죄는 가해자와 피해자가 가족관계 등 밀접한 관계에 있어 피해자가 자신의 권리를 적극적으로 행사하기 어려운 경우가 있고, 사건이 형사절차 또는 가정보호사건으로 처리될 수 있으므로 사건의 처리 과정 전반에서 피해자에 대한 법률적 조력이 필요함.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_A61411D6741F4CA7959343B9694A54",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222803"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -168397,18 +166863,10 @@
       "processingResult": "",
       "summary": "국가 및 지방자치단체는 사회적 고립 위험자에게 필요한 지원이 제공될 수 있도록 환경을 조성하고, 조기발견, 상담 및 치료 등 필요한 조치를 하여야 함(안 제14조). 보건복지부장관을 위원장으로 하는 사회적 고립 예방 위원회를 구성하여 범정부 협업체계를 마련함(안 제15조).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_0D8B1F81F8F1405691B407B3BD23AB",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222762"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -168433,18 +166891,10 @@
       "processingResult": "",
       "summary": "공공분양주택은 무주택자의 주거안정과 주택 구입 부담 완화를 목적으로 공급되지만, 법정 분양가상한금액 이하에서 실제 분양가격을 결정하는 과정에서 이러한 공공적 목적을 구체적으로 고려하도록 하는 기준은 미흡함. 공공주택사업자가 실제 분양가격을 결정할 때 주변 시세와 해당 지역의 소득 대비 주택가격 비율(PIR) 등 무주택자의 부담능력을 나타내는 지표를 고려하고, 최종 가격 결정의 근거를 공개하도록 하여 공공분양주택의 가격 결정에 관한 책임성과 투명성을 높이고자 함(안 제49조의11 신설).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_385D85B8036A45378C7A3C2A5A31F6",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222789"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -168469,18 +166919,10 @@
       "processingResult": "",
       "summary": "이는, 개발사업 주체에 대한 승인조건등이 신축 공동주택 ‘입주자등’, 관리주체에게 효력이 미치지 않아 발생하는 문제로 「공동주택관리법」 및 개별 개발법률(「도시 및 주거환경정비법」 등)에 승인조건등의 효력 승계 규정을 명시하여 개발사업 단계에서의 인ㆍ허가 조건의 실효성을 확보하고, 사업주체로 하여금 위와 같은 승인조건등이 있는 경우 이를 입주자등에게 통지하도록 할 필요가 있음(안 제2조제1항제22호ㆍ제4조의2 신설 및 제11조제1항 개정). 다만, 시장ㆍ군수ㆍ구청장은 공공보행통로 및 외부 개방 복리시설 등의 유지ㆍ관리 비용 중 일부를 지원하여 위와 같은 승인조건등 효력 승계로 인한 공동주택 ‘입주자등’, 관리주체의 부담을 경감시켜주는 것이 바람직할 것임(안 제85조제1항 개정).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_9C583C9283954A41A09E1D4C5D13D4",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222769"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -168505,18 +166947,10 @@
       "processingResult": "",
       "summary": "법인인 개업공인중개사의 업무로 토지에 대한 분양대행 업무를 규정하고 있지 않아 업무범위가 축소되어 있다는 의견이 있으며, 공인중개사자격은 취득하였으나 장기간 중개사무소 개설등록을 하지 아니한 공인중개사의 경우 부동산 관계 법령의 개정사항 미숙지, 중개 실무에 관한 경험 부족 등으로 중개 관련 사고가 빈번하게 발생하는 문제가 있다는 지적이 있음. 법인인 개업공인중개사가 토지의 분양대행 업무를 할 수 있도록 하고, 5년 이상 계속하여 중개사무소를 개설등록하지 아니한 공인중개사가 중개사무소 개설등록을 하려는 경우 개설등록 신청일 전 1년 이내에 시ㆍ도지사가 실시하는 특별실무교육을 받도록 함으로써 법인인 공인중개사의 업무 범위를 확대하고 공인중개사에 대한 교육 강화를 통하여 중개 사고를 예방하는데 기여하려는 것임(안 제14조제1항제4호, 제34조제2항 신설 등).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_C2A6Y0Z9H1I5G0G9F2D4E2L1M7L7L9",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222804"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -168541,18 +166975,10 @@
       "processingResult": "",
       "summary": "현행법은 국가안전보장에 뚜렷한 공을 세워 보국훈장을 받은 보국수훈자를 국가유공자로 규정하여 교육ㆍ취업ㆍ의료ㆍ대부 등의 예우와 지원을 실시하고 있음. 보국수훈자는 군 복무 등 장기간 국가안전보장에 기여한 사람으로서 고령화에 따라 의료서비스 이용 필요성이 높아지고 있으며, 특히 보훈병원과 거리가 먼 지역에 거주하는 고령 보국수훈자의 경우 의료지원의 실질적인 접근성을 높일 필요가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_U2V6T0U9S0T9A0B9A1Y3Y0W6Y9F8G9",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222787"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -168577,18 +167003,10 @@
       "processingResult": "",
       "summary": "과학기술을 활용한 국제관계 협력을 국가 외교안보전략 차원에서 종합적으로 기획ㆍ조정하는 과학기술외교의 추진체계를 마련함으로써 국가이익 증진과 국가경쟁력 강화에 기여하려는 것임. 과학기술외교는 국가 간 협력을 통한 인류 공동번영 기여, 국제연대 강화, 과학기술인의 자율성 존중, 과학기술 윤리 및 국제규범 준수, 과학기술주권 확립 등의 원칙에 따라 추진되어야 하며, 국가는 과학기술외교를 체계적으로 추진하기 위하여 필요한 종합적인 전략 또는 시책을 세우고 이에 필요한 행정적ㆍ재정적 지원방안을 마련하여야 함(안 제3조 및 제4조).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_6430AC318FF24691AF547E078BA24B",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222783"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -168613,18 +167031,10 @@
       "processingResult": "",
       "summary": "지난 2005년 근로자의 도산 시 퇴직금 체불 방지와 안정적인 노후소득 보장을 위해 퇴직연금제도가 도입되었으나, 현행 계약형 중심의 퇴직연금제도는 원리금 보장 상품 쏠림과 운용 전문성 부족 등으로 인해 오랜 기간 저조한 수익률을 기록하며 실질적 노후 자산 증식 수단으로서의 역할을 다하지 못하고 있다는 지적이 지속되고 있음. 지난 법 개정에서 가입 대상이 기존 30명 이하에서 상시 100명 미만 사업장으로 확대되는 데 그쳐, 100명 이상 사업장을 포함해 기금형 제도를 도입하고자 하는 다수 기업과 근로자의 참여 기회가 여전히 제도적으로 차단되어 있는 실정임.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_A433D21256E04712AA62F585A1893A",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222791"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -168649,18 +167059,10 @@
       "processingResult": "",
       "summary": "현행법령은 65세 이상인 사람으로서 소득인정액이 선정기준액 이하인 사람에게 기초연금을 지급하도록 함. 가상자산과 해외금융자산을 소득인정액 산정의 기초가 되는 재산의 범위에 추가하고, 기초연금의 지급 신청 시 이에 관한 자료 제공 동의서를 제출하고 해외금융자산을 스스로 신고하도록 하도록 하며, 가상자산사업자와 국세청장에게 관련 정보를 요청할 수 있는 근거를 마련하되 외국과의 조약 또는 협정에 따라 취득한 정보는 해당 조약 또는 협정이 허용하는 범위에서 활용하도록 함으로써 재산의 형태에 따라 수급권이 달라지는 문제를 해소하고 기초연금 재정의 공정한 집행을 도모하려는 것임(안 제2조, 제10조, 제11조 및 제12조).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_C31304A04AA14C7C9A59B8C439224C",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222802"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -168685,18 +167087,10 @@
       "processingResult": "",
       "summary": "현행법은 통일부장관이 북한주민접촉 신고를 받은 때에는 남북교류ㆍ협력을 해칠 명백한 우려가 있거나 국가안전보장, 질서유지 또는 공공복리를 해칠 명백한 우려가 있는 경우에만 신고의 수리를 거부할 수 있도록 하고 있음. 수리 거부 기준이 추상적이고 포괄적이어서 정부의 판단에 따라 법 적용이 달라진다는 지적이 지속적으로 제기되어 왔고, 특히 수리 거부의 구체적 기준을 정하고 있던 행정 지침이 폐지되면서 국가안전보장을 해칠 우려가 있는 인사와의 접촉신고까지 수리되는 등 관리에 공백이 발생하고 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_CB836B2270A046B780A96329D0EEF0",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222782"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -168721,18 +167115,10 @@
       "processingResult": "",
       "summary": "노인학대관련범죄는 피해노인의 신체적ㆍ정신적 건강과 인간으로서의 존엄을 심각하게 침해할 수 있는 범죄행위로서, 피해노인의 권리를 보호하고 적절한 법률적 조력을 제공할 필요성이 큼. 경제적 사정으로 변호사를 선임하기 어려운 피해노인의 경우에는 변호인의 조력을 받을 기회가 제한되어 형사절차에서의 권리 보호에 공백이 발생할 우려가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_A9F2DEA777804CD2B190532D298327",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222805"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -168757,18 +167143,10 @@
       "processingResult": "",
       "summary": "현행법은 장기요양기관이 정당한 사유 없이 수급자에 대한 장기요양급여의 제공을 거부하지 못하도록 하는 등 장기요양급여 제공에 관한 의무를 규정하고 있음. 장기요양기관의 장에게 수급자에게 응급증상이 발생하거나 의료기관의 진료 또는 입원이 필요한 경우 필요한 조치를 하도록 하고, 장기요양급여비용 등의 감소를 이유로 이를 지연하거나 거부하지 못하도록 함으로써 수급자의 권익을 보호하고 적절한 의료서비스 이용을 보장하려는 것임(안 제35조의6 신설 등).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_5234DC1C1D6D4E1A98BE6DB14EFA35",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222814"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -168793,18 +167171,10 @@
       "processingResult": "",
       "summary": "장기요양인정 신청인에 대한 의료ㆍ요양ㆍ돌봄 서비스의 원활한 연계를 위해 장기요양 인정조사 시 의료적 욕구에 대한 평가를 강화하고, 등급판정위원회 구성 시 의료인의 비중을 확대하여 평가의 전문성을 제고하는 한편, 수급자별 권장 서비스(요양병원, 지역사회 돌봄서비스 등)에 대한 적절한 의견을 제시할 수 있도록 조사ㆍ판정 체계를 개편하려는 것임. 아울러, 기능적 호전 가능성이 낮은 등급에 대한 유효기간을 정하지 아니하여 수급자 편의를 증진하는 한편, 장기요양 및 통합지원 서비스 간 원활한 연계를 위해 건강보험공단이 지방자치단체에 장기요양 관련 정보를 제공하고 통합지원 관련 정보를 요청할 수 있도록 근거를 마련하고자 하는 것임(안 제14조제1항제1호 등).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_3D4C537687354022AF4AE5C3238F56",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222812"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -168829,18 +167199,10 @@
       "processingResult": "",
       "summary": "광역교통시설 부담금은 개발사업으로 발생하는 교통수요에 대응할 광역교통시설의 재원이나, 2025년 말 전국 체납액 약 2,705억 원 가운데 경기도 체납액이 약 1,807억 원에 이르는 등 징수실적 관리의 필요성이 제기되고 있음. 시ㆍ도지사의 체납관리계획 및 실적 제출 의무를 규정하고, 국토교통부장관이 관리실태를 점검해 필요한 개선을 요구하며 이행 결과를 확인할 수 있도록 함으로써 부담금 징수의 실효성을 높이려는 것임(안 제11조의5 신설).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_BF414E0A3B604E8095E48C6E52481B",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222785"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -168865,18 +167227,10 @@
       "processingResult": "",
       "summary": "현행법은 대한적십자사의 임원과 고문을 중앙위원회에서 선출하도록 하되, 회장에 대해서는 선출 후 대통령의 인준을 받도록 규정하고 있음. 회장 선출에 대한 대통령의 인준 요건을 삭제하여 대한적십자사의 자율성과 독립성을 강화하고, 인준 지연에 따른 회장 취임의 지연을 방지하려는 것임(안 제15조제3항 단서 삭제).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_959F6C7A349749A4A22C9696163CCA",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222772"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -168901,18 +167255,10 @@
       "processingResult": "",
       "summary": "현행법은 모든 차의 운전자에게 운전 중 적재물이 떨어지지 아니하도록 덮개를 씌우거나 묶는 등 적재물을 확실하게 고정하기 위하여 필요한 조치를 하도록 규정하고 있으나, 적재물의 종류와 성질, 차량의 구조 및 적재방법 등에 따른 구체적인 기준과 방법은 마련되어 있지 않아 적재물의 낙하·비산을 방지하기 위한 조치가 일관되게 이루어지기 어려운 실정임. 적재물을 확실하게 고정하기 위한 구체적인 기준과 방법을 행정안전부령으로 정하도록 함으로써 적재물의 낙하·비산으로 인한 교통사고를 예방하고 도로교통의 안전을 확보하려는 것임(안 제39조제4항).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_6FC542211DB145B4A75486BE4AC483",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222771"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -168937,18 +167283,10 @@
       "processingResult": "",
       "summary": "정비사업 시행 시 인ㆍ허가 조건으로 공공보행통로, 개방형 주민공동시설 등 일반인이 통행ㆍ이용할 수 있는 시설을 설치하도록 하는 경우가 있으나, 이러한 개방의무는 사업시행자에게 부과될 뿐 계획에 명시되지 않는 경우가 많아, 준공 이후 단지를 관리하는 자는 개방의무의 내용과 범위를 분명히 파악하기 어려운 실정임. 정비계획 및 사업시행계획에 일정 복리시설의 설치계획과 일반인의 통행ㆍ이용에 관한 사항을 포함하도록 함으로써, 개방의무를 계획의 내용으로 명확히 하여 준공 이후 그 이행을 확보할 수 있는 기준을 마련하려는 것임(안 제9조제1항제4호의2ㆍ제5호의2 및 제52조제1항제2호의2ㆍ제9호의2 신설).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_FC0D02099DFF40909DB78E3E4A0737",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222768"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -168973,18 +167311,10 @@
       "processingResult": "",
       "summary": "현행법은 규격ㆍ품질 기준이 고시된 목재제품에 대하여 판매ㆍ유통 전 규격ㆍ품질검사를 의무화하고, 검사 미실시 또는 기준 부적합 목재제품을 판매ㆍ유통 또는 통관한 자를 3년 이하의 징역 또는 3천만원 이하의 벌금에 처하도록 규정하고 있음. 위반행위로 얻는 경제적 이익에 비하여 현행 처벌규정만으로는 그 이익을 충분히 박탈하기 어려워 위반행위를 억제하는 데 한계가 있다는 지적이 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_24850DC9B3284552A39C6E5A7E043B",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222799"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -169009,18 +167339,10 @@
       "processingResult": "",
       "summary": "이를 개선하기 위한 근본적인 대책 마련이 필요함. 아울러 해외 작가의 미술작품을 설치하는 사례가 증가하는 경우 국내 작가를 지원하기 위한 정책적 취지가 충분히 구현되지 못하게 될 우려가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_60EA805AABE24F48AB48F3C63A84E4",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222815"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -169045,18 +167367,10 @@
       "processingResult": "",
       "summary": "현재 주택도시기금 출자 등 공적 지원을 받아 조성된 공공지원민간임대주택은 임대의무기간이 종료되면 매각 등으로 임차인의 주거안정과 공동체 유지가 불확실해질 수 있음. 공적 지원을 받은 주택에 한하여 임대기간 종료 전 운영계획 수립과 임차인 의견수렴을 의무화하고, 불이행 시 시정명령과 과태료를 부과하여 절차의 실효성을 확보하려는 것임(안 제43조의3 및 제67조제3항제9호 신설).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_3F1B3537D9264C8D816DC49F334343",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222792"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -169081,18 +167395,10 @@
       "processingResult": "",
       "summary": "제안이유 최근 온라인플랫폼을 통한 전자상거래가 급격히 확대되면서 디자인을 모방한 상품의 유통도 증가하고 있으나, 디자인 유사 여부 판단에 수반되는 전문성ㆍ복잡성으로 인해 플랫폼사업자는 침해신고에 따른 신속한 판매차단조치나 정당한 판매자의 소명자료 검토를 통한 판매재개 여부 결정에 어려움을 겪고 있음. 소상공인 보호를 위하여 디자인권 침해 여부 등에 대해 신속하고 공신력 있는 판단을 제공할 수 있도록 제도를 개선할 필요가 있다는 의견이 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_6C8CF3DDA7A9448A94902909D064E5",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222774"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -169145,18 +167451,10 @@
       "processingResult": "",
       "summary": "현행법은 국가와 지방자치단체가 필요한 지원을 하는 사회연대경제기업의 범위에 「사회적기업 육성법」 제2조제1호에 따른 사회적기업 등을 열거하고 있음. 장애인들의 안정적인 직업 생활을 위하여 장애인 사업장을 운영하는 장애인직업재활시설 및 단체도 현행법에 따른 지원이 이루어질 수 있도록 하여야 한다는 지적이 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_3EEACDAAC22948BBA5604CEAFCA6EE",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222760"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -169181,18 +167479,10 @@
       "processingResult": "",
       "summary": "최근 화재가 발생한 대형 물류창고는 이러한 적용 특례에 해당하지 않아, 준공 후 강화된 화재안전기준이 적용되지 않았으며 화재 진화에 어려움을 겪음. 물류창고도 강화된 소방시설 기준을 적용하도록 하여야 한다는 지적이 제기됨.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_I2I6H0H8F1G2O1M1N1M8M3K5L8H9F6",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222766"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -169217,18 +167507,10 @@
       "processingResult": "",
       "summary": "현행법은 외국 수산물을 수입하는 자와 수입수산물을 국내에서 거래하는 자에게 국민보건을 해칠 우려가 있어 해양수산부장관이 지정하여 고시하는 수입수산물에 대하여 수입유통이력을 신고하도록 하고, 이를 신고하지 아니하거나 거짓으로 신고한 경우 500만원 이하의 과태료를 부과하도록 규정하고 있음. 수입유통이력을 거짓으로 신고하는 행위는 유통경로의 추적을 어렵게 하여 유해물질 검출 등 안전상 문제가 발생한 경우 신속한 추적과 차단에 지장을 줄 우려가 있음에도, 현행법은 미신고와 거짓 신고를 모두 500만원 이하의 과태료 부과 대상으로 규정하고 있어 거짓 신고에 대한 제재를 강화할 필요가 있다는 지적이 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_FB255368D36E44FCB694DBCC446C4E",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222800"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -169253,18 +167535,10 @@
       "processingResult": "",
       "summary": "따라 관계성 범죄에 대한 사전 예방 체제를 강화하여 피해자 보호를 충실히 하고, 재범 위험이 큰 가해자 관리와 대응을 강화해야 할 필요성이 제기되고 있음. 경찰의 초동조치 단계부터 스토킹행위의 재발과 피해자의 생명ㆍ신체에 대한 위험성을 평가하고 그 결과에 따라 필요한 보호조치를 취하도록 할 필요가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_C0E22242A7CF406998D8253C178DC3",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222798"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -169289,18 +167563,10 @@
       "processingResult": "",
       "summary": "독자가 기사형 광고 여부를 명확하게 인식하기 위해서는 기사형 광고에 적합한 표시 의무를 부과해야 한다는 의견도 있음. 한편 현행법상 신문ㆍ인터넷신문의 자율적 편집을 보장하기 위한 법적 근거가 부족하다는 지적도 제기됨.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_644ACBD1058842ED845A544199F87A",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222808"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -169325,18 +167591,10 @@
       "processingResult": "",
       "summary": "최근 아동ㆍ청소년성착취물의 제작ㆍ유포ㆍ판매 등을 목적으로 운영되는 불법사이트는 운영자 신원, 성착취물 유통경로 및 범죄수익 관련 자료 등이 외부에 공개되지 아니하고 해외 서버 등 정보기술시스템 내부에 저장되어 있는 경우가 많아 신분위장수사 및 기존 압수수색 등의 방법만으로 범죄의 실체를 규명하거나 핵심 수사단서를 확보하기 어려운 실정임. 「청소년성보호법」에 신분비공개수사, 신분위장수사 및 다른 방법으로는 디지털성범죄의 실행을 저지하거나 범인의 체포 또는 증거의 수집이 어려운 경우에 한정하여 수사 목적을 달성하기 위하여 부득이한 때에는 검사의 청구에 의한 법원의 사전 허가를 받아 정보기술시스템에 원격으로 접근하여 아동ㆍ청소년성착취물 또는 그 복제물을 삭제하거나 사이트를 폐쇄, 운영자 신원을 확보하는 등 원격접근수사 도입을 위한 근거규정을 마련하여 디지털성범죄 피해자를 보호하고 수사의 실효성을 확보하려는 것임(안 제25조의2제3항부터 제5항까지 및 제25조의3제9항 및 제25조의6 신설 등).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_B99D2BE165E3436F8B9C768BA1AA07",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222813"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -169361,18 +167619,10 @@
       "processingResult": "",
       "summary": "아이돌봄서비스제공기관에서 제공하는 아이돌봄서비스의 내용ㆍ품질에 대한 관리ㆍ감독 체계가 충분히 마련되어 있지 않다는 지적이 있음. 아이돌봄서비스의 내용ㆍ품질이 부실해지는 문제를 방지하기 위하여는 정부로 하여금 평가 기준을 확립하여 아이돌봄서비스의 내용ㆍ품질을 정기적으로 평가하고, 그 평가 결과를 국민에게 공개할 수 있도록 할 필요가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_K2I6I0G7H2P3Q1O0N2N1L1M6I6I4H5",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222761"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -169397,18 +167647,10 @@
       "processingResult": "",
       "summary": "막대한 초기 투자 비용과 장기간의 수익 회수 기간이 소요되는 우주산업의 특수성을 충분히 반영하기에는 한계가 있는 현행 기술료 징수 체계와 기술이전 방식은 기업의 초기 기술 도입 및 투자 부담을 가중시키고 있어 대학 및 연구기관 등이 보유한 우주 분야 연구개발성과가 상용화되지 못하고 장기 미실시 상태로 사장되는 문제가 발생하고 있음. 우주항공청장은 장기 미실시 연구개발성과의 활용을 촉진하기 위한 시책을 마련하도록 하고, 우주 분야 연구개발성과소유기관에 대한 정부납부기술료 면제 또는 납부 기한의 유예, 매출액 기준 기술료 징수에 관한 사항을 규정함으로써 우주산업 육성에 이바지하려는 것임(안 제18조의10 및 제18조의11 신설).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_014BD2A3246D40C4B68DD5D0D250DF",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222765"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -169433,18 +167675,10 @@
       "processingResult": "",
       "summary": "최근 선박이나 부유식 해상 구조물에 원자로를 설치하여 활용하려는 사례가 늘어나고 있음. 선박 또는 부유식 해상 구조물에 설치된 발전용원자로 및 관계시설에 대하여 주기적 안전성평가를 하는 경우 해양환경의 위험요인, 원자로와 선체 간 상호 영향, 비상냉각 및 비상전원의 확보 여부를 포함하여 평가하도록 함으로써 해양환경에 부합하는 안전관리 체계를 마련하고 해상 설치 원자로의 안전성을 확보하려는 것임(안 제23조제3항 신설).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_D38EF8EBA71840AC97FAD71CC10022",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222786"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -169469,18 +167703,10 @@
       "processingResult": "",
       "summary": "그간 수입 위생용품은 통관단계에서 실시하는 수입 검사를 중심으로한 안전관리 체계를 운영 중이나, 구강관리용품과 문신용 염료의 위생용품 편입 등 위생용품 종류가 늘어남에 따라 수입 물량도 지속적으로 증가하는 추세이며, 수입검사로는 확인할 수 없는 국내외 위해정보 등 위해사례가 발생하고 있어 수입 위생용품의 사전 안전관리 강화를 위해 수입 신고 사전에 해외제조업소 등록을 의무화하고, 거짓이나 그 밖의 부정한 방법으로 등록된 경우 취소할 수 있도록 근거를 마련하고자 함. 위해방지 및 위해정보에 대한 사실 확인 등을 위해 필요한 경우 해외제조업소에 대한 현지실사를 실시하고, 현지실사를 거부ㆍ방해 또는 기피하거나 현지실사 결과 위해발생 우려가 있는 경우 수입 중단 조치를 할 수 있는 근거를 마련하는 등 현행 제도 운영상 나타난 일부 미비점을 수정ㆍ보완하려는 것임(안 제2조 및 제7조의2부터 제7조의4까지 신설 등).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_32E2DBBD188647A9B0F459583D424C",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222773"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -169505,18 +167731,10 @@
       "processingResult": "",
       "summary": "이송처치료의 할인은 업체 간 과당 경쟁 유발, 수입 보전을 위한 과속ㆍ난폭 운전, 처치 부실 등 응급의료서비스의 질을 저하시키고 및 환자 안전을 위협할 수 있으므로 이에 대한 제도적 관리 방안을 개선할 필요성이 있음. 비영리법인이 양질의 이송서비스를 지속 제공할 수 있도록 응급환자 이송사업을 수행려는 주사무소 또는 분사무소가 일정 기준을 충족한 경우에만 법인 설립 허가 또는 정관변경을 인가하고, 구급차등의 운용자 위법행위에 대한 신고 포상금 지급을 통해 실효성 있는 단속 수단을 마련하며, 이송처치료의 할인에 대한 관리 방안을 개선하고, 허가지역 외에서의 응급환자이송업체 영업행위에 대한 행정처분 기준을 정비하여 제재의 실효적 공백을 개선하려는 것임.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_622A03060576470D9B4E99F451066F",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222777"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -169541,18 +167759,10 @@
       "processingResult": "",
       "summary": "아울러 구매자가 자동차의 상태를 확인하기 위하여 운행하는 경우는 임시운행허가의 대상으로 명시되어 있지 않아 제도를 활용하는 데에도 한계가 있음. 자동차제작ㆍ판매자등이 자동차를 판매할 때 임시운행허가에 관한 사항을 구매자에게 고지하고, 구매자의 요청이 있으면 그 허가를 대신 신청하도록 하는 한편, 구매자가 자동차의 상태를 확인하기 위하여 운행하는 경우도 임시운행허가의 대상임을 명시함으로써, 구매자가 신규등록 전에 자동차의 상태를 확인할 수 있도록 하려는 것임(안 제8조의2제3항 및 제27조의2 신설 등).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_37C854D890104BFD9ADB1EF0F6DEDD",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222779"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -169577,18 +167787,10 @@
       "processingResult": "",
       "summary": "현행법 제20조는 혼자서 일상생활과 사회생활을 하기 어려운 장애인에게 활동보조, 방문목욕, 방문간호 등의 서비스를 제공하는 기관으로서 활동지원기관 지정에 관한 내용을 정하고 있음. 활동지원기관 지정의 유효기간에 관한 근거를 마련하여 양질의 서비스를 담보하는 등 제도의 내실을 기하려는 것임(안 제20조).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_695F25880AEE4B08986F9ABEEA8DBF",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222767"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -169613,18 +167815,10 @@
       "processingResult": "",
       "summary": "재외동포정책 관련 사업은 교육ㆍ연수, 인재육성, 교류ㆍ협력 등 다양한 분야에 걸쳐 있어 민간의 전문성을 활용할 필요가 있고, 특히 재외동포협력센터가 2026년 10월 1일 해산되어 그 업무가 재외동포청으로 통합됨에 따라 일부 업무를 전문성 있는 법인ㆍ단체에 맡겨 효율적으로 수행할 필요성이 커졌으나, 현행법에는 업무의 위탁에 관한 근거가 마련되어 있지 아니함. 재외동포청장이 이 법에 따른 업무의 일부를 법인 또는 단체에 위탁할 수 있도록 근거를 마련함으로써 재외동포정책 추진의 전문성과 효율성을 높이려는 것임(안 제17조 신설).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_C2B58D9FA4EC4C56BC97FBEC2C4CC4",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222778"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -169649,18 +167843,10 @@
       "processingResult": "",
       "summary": "현행법은 공사업자가 영업정지 처분에 갈음하여 대체 과징금을 부과할 수 있도록 하고 있음. 한편 현행법은 부정청탁으로 인한 재물 등의 취득, 제공금지 조항이 없어, 감사원이 시행한 한전 감사(2018년 7월에서 2021년 3월)에서 하수급자로부터 뇌물 등을 제공받은 한전 직원이 법령의 미비로 행정처분을 받지 않은 사례가 확인되기도 함.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_1DCC95B8ABA7434BB232578770D638",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222810"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -169685,18 +167871,10 @@
       "processingResult": "",
       "summary": "이 법은 전기통신을 이용한 다중피해사기범죄의 예방, 수사 및 처벌에 관한 사항과 피해 방지를 위한 국가 등의 책무를 규정함으로써 다중피해사기범죄를 근절하고 국민의 재산을 보호하며 사회적 신뢰를 증진하는 데 이바지함을 목적으로 함(안 제1조). 국가가 다중피해사기범죄의 예방·수사·단속·처벌 및 피해 방지에 필요한 제도와 대책을 마련하고, 다른 국가 및 국제기구와 협력하도록 함(안 제3조).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_D0E2EE0A4C16480BBB3F2110FCB2CD",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222795"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -169721,18 +167899,10 @@
       "processingResult": "",
       "summary": "현행법은 피고인의 출석을 담보하기 위한 보석조건으로 위치추적 전자장치 부착 명령제도를 도입하고 있으나, 실무상 강력범죄·스토킹·가정폭력·성폭력 등 피해자 특정성이 뚜렷한 범죄의 경우 피고인의 대한 2차 가해나 보복범죄를 원천적으로 차단하기 어렵다는 한계가 지적되어 왔음. 피고인이 보석조건으로 부과된 ‘피해자 등에 대한 위해행위 및 접근 금지’를 위반하여 피해자에게 급박한 위해 우려가 예상되는 비상 상황에도 현행법은 그 위반 사실을 법원과 검사에게만 통지하도록 규정하고 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_17DD55711AE54A1D9D32D516513306",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222807"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -169757,18 +167927,10 @@
       "processingResult": "",
       "summary": "특히, 이재명 정부는 2025년 9월 29일부터 중국 단체관광객에 대한 한시적 무사증 입국을 허용하는 등 무사증 입국 정책을 확대하였음. 따라 외국인 입국자에 대한 체류관리와 범죄 예방은 물론, 공중도덕 및 기초질서 확립을 위한 출입국 관리체계 강화의 필요성이 더욱 커지고 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_EF4A658CA79B4A509DC96D3AD6B886",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222797"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -169793,18 +167955,10 @@
       "processingResult": "",
       "summary": "주요 도시철도 건설사업 등의 사업성을 악화시켜 자금 조달, 개통 지연, 나아가 민간투자 사업의 경우 증가된 비용을 국민의 부담으로 전가하는 등 국민의 편익을 현저하게 저해할 우려가 있음. 국가ㆍ지방자치단체 등에 직접 공급하는 도시철도건설용역 등에 대한 부가가치세 영세율 적용기한을 2026년 12월 31일에서 2031년 12월 31일까지 5년간 연장함으로써, 주요 철도망 구축 사업을 원활하고 안정적으로 추진하고 지방재정 부담을 완화하며 국민의 교통편의를 제고하려는 것임(안 제105조제1항).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_C51A79A53EDE4C2D8AEB1CD1C163FB",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222801"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -169829,18 +167983,10 @@
       "processingResult": "",
       "summary": "현행법은 내국인이 사업용 자산에 투자하는 경우 통합투자세액공제를 적용하고 상시근로자 수가 증가한 경우 통합고용세액공제를 적용하는 등 기업의 투자와 고용을 지원하기 위한 조세특례를 규정하고 있음. 정보보호 관련 자산에 대해서는 별도의 세액공제율이 마련되어 있지 않고 정보보호전담인력의 채용에 대한 별도의 지원 규정도 없어 기업의 정보보호 투자와 전문인력 확보를 촉진하는 데 한계가 있다는 의견이 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_ACDF6AD0CC9C49AC82144E1DBD06A9",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222796"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -169865,18 +168011,10 @@
       "processingResult": "",
       "summary": "주택도시보증공사는 주택공급을 뒷받침하기 위하여 주택건설 관련 보증사업을 수행하고 있으나, 보증공급 확대와 보증조건 완화가 동시에 이루어지는 경우 주택가격 하락, 미분양 증가, 부동산 프로젝트파이낸싱(PF) 부실 및 보증채권 회수율 저하 등의 위험이 중첩될 수 있음. 복합 스트레스테스트 및 중요 보증정책 변경에 따른 사전 영향평가, PF보증의 위험기반 승인조건 결정과 그 사유 기록, 기준ㆍ부정적 시나리오의 중장기재무관리계획 반영 의무를 신설하여 공사의 재무건전성과 보증사업의 지속가능성을 제고하려는 것임(안 제27조의2부터 제27조의4까지 신설).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_59BF42D3D13949D591A873679E61EA",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222788"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -169901,18 +168039,10 @@
       "processingResult": "",
       "summary": "현행법은 분양가상한제 적용 지역의 지정 및 해제에 관한 심의와 공고 절차를 정하고 있으나, 해제 이후 실제 분양가격과 주택가격의 변화를 지속적으로 조사하고 그 결과를 공개하도록 하는 의무는 명시하고 있지 않음. 분양가상한제 적용 지역의 지정을 해제한 경우 국토교통부장관이 해당 지역의 분양가격 등 주택시장 변화를 조사ㆍ분석하고 결과를 공개하도록 하며, 향후 적용 지역 지정 여부를 검토할 때 그 결과를 고려하도록 하려는 것임(안 제58조제8항 및 제9항 신설).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_2022B20D9EFC4AB0AFEB8E6702AA56",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222781"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -169937,18 +168067,10 @@
       "processingResult": "",
       "summary": "현행 「주한미군 공여구역주변지역 등 지원 특별법」은 주한미군의 주둔으로 인하여 국가안보를 위해 장기간 지역발전의 정체를 감수해 온 공여구역 및 반환공여구역 주변지역 등의 경제 진흥과 주민 복리 증진을 도모하고 국가 균형발전에 기여함을 목적으로 제정되었음. 현행 「초ㆍ중등교육법」상 내국인의 외국인학교 입학에 대한 획일적이고 엄격한 제한 규정으로 인해, 주변지역 내 글로벌 교육환경 구축과 외국인 정주 여건 개선에 근본적인 제약을 받고 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_O2P6N0O9W0U7V1T8U2S8T5A0Z9A5Y0",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222763"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -169973,18 +168095,10 @@
       "processingResult": "",
       "summary": "현행법은 경제자유구역 내 기업의 투자와 산업활동을 촉진하기 위한 지방세 감면제도를 운영하고 있으나, 대규모 문화ㆍ체육복합시설에 대한 별도의 세제지원 근거는 마련되어 있지 않음. 문화ㆍ체육복합시설은 국제행사 유치와 문화ㆍ체육 교류 확대, 관광산업 활성화 등에 기여하는 핵심 기반시설이지만, 대규모 초기 투자비용과 지속적인 운영 부담으로 인해 민간투자 유치에 어려움이 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_FABC8D90CC1241E8BD30A764E3B40C",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222780"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -170065,18 +168179,10 @@
       "processingResult": "",
       "summary": "따라 안정적인 전력공급 기반을 확충하고, 재생에너지 확대와 발전산업의 구조적 전환에 체계적으로 대응할 필요성이 커지고 있습니다. 특히 재생에너지 확대와 석탄화력발전의 단계적 감축에 대응하기 위해서는 발전공기업 간 역량을 결집하고, 발전사업의 통합적 운영체계를 구축할 필요가 있습니다.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_7E4E0AADAD1C46A58F08F3D7A373C8",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222811"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -170101,18 +168207,10 @@
       "processingResult": "",
       "summary": "아울러 통합에 필요한 인가와 「상법」상 합병 절차, 재원 조달과 사채 발행, 발전회사의 재산과 권리ㆍ의무 및 고용관계의 승계에 관한 사항을 정하고, 근로자의 재교육과 인력 재배치를 지원하여 통합과 사업구조 전환이 안정적으로 이루어지도록 하려는 것임. 5개 발전회사를 「상법」에 따른 신설합병 방식으로 통합하여 주식회사 한국발전을 설립하고, 본점을 부산광역시에 두도록 함(안 제2조 및 제4조).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_32359648FF5C46ACAD41417394CC50",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222793"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -170137,18 +168235,10 @@
       "processingResult": "",
       "summary": "제안이유 정부는 2050년 탄소중립 달성을 위하여 석탄화력 등 화석연료 발전을 단계적으로 감축하고 재생에너지 중심으로 전원구성을 전환하고 있으나 2001년 전력산업 구조개편으로 형성된 「분할ㆍ경쟁」 체제는 발전 부문이 다수의 공기업으로 분할된 채 실질적 경쟁은 이루어지지 아니하여 규모의 비효율이 지속되고, 전력계통 운영의 통합적 지휘가 어려워 재생에너지 확대에 따른 간헐성(間歇性)ㆍ계통혼잡 문제에 효과적으로 대응하지 못하고 있음. 이 법은 탄소중립을 촉진하기 위하여 전력산업의 구조를 공공성과 통합적 거버넌스를 강화하는 방향으로 개편하는 데 필요한 사항을 정함으로써, 재생에너지 중심의 전원 전환을 안정적으로 뒷받침하고 전력의 공공적ㆍ보편적 공급을 보장하며 화석연료 발전산업 종사 노동자의 정의로운 전환을 실현함을 목적으로 함(안 제1조).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_8AAB37DA5A534CC7A2C4EB3EAF36DD",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222770"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -170173,18 +168263,10 @@
       "processingResult": "",
       "summary": "현행법은 가상자산사업자에 대하여 고객확인, 의심거래보고, 가상자산 이전 시 정보제공 및 사업자 신고 등의 의무를 부과하여 금융거래 등을 이용한 자금세탁행위와 공중협박자금조달행위를 방지하고 있음. 가상자산 이전 시 필요한 정보의 제공 및 처리에 관한 기준을 명확히 하는 한편, 가상자산사업자의 요건을 강화하고, 가상자산사업자가 다른 가상자산사업자 및 가상자산사업자 이외의 자와 신규 거래 시 위험평가ㆍ확인체계를 구축하여 자금세탁 및 불법자금 이전에 대한 대응력을 강화하려는 것임(안 제6조의2 및 제8조의2 신설 등).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_S2T6A0B9A1F2G1E6F0D8E0C2K0K9J5",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222764"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -170209,18 +168291,10 @@
       "processingResult": "",
       "summary": "평화ㆍ통일정책에 대하여 국민적 관심을 높이고 일반 시민의 숙고를 통한 공론을 형성하여 상호 이해를 촉진할 수 있는 제도적 기반을 마련하고자 함. 이 법은 한반도 평화와 통일 문제에 시민의 참여를 보장하고 지속가능한 소통의 장을 마련함으로써 한반도 평화와 통일에 관한 미래지향적 기반을 구축하는 것을 목적으로 함(안 제1조).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_FCE0C9EAE7F047448F079737DED5E0",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222794"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -170245,18 +168319,10 @@
       "processingResult": "",
       "summary": "평화통일은 장기간에 걸쳐 지속적으로 추진하여야 하는 국가적 과제인 만큼, 정세와 정책 환경의 변화에도 불구하고 헌법의 기본이념에 따라 평화통일정책을 일관되고 체계적으로 추진할 수 있는 법적 기반을 마련할 필요가 있음. 이 법은 「대한민국헌법」이 정한 평화적 통일을 달성하기 위한 기반을 조성하는 데 필요한 사항을 규정함으로써 한반도의 평화통일 달성에 이바지하려는 것임(안 제1조).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_0B27E551C4BB40058E72D52FC037F4",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222776"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -170281,18 +168347,10 @@
       "processingResult": "",
       "summary": "한편, 재단은 기금을 마련하기 위하여 필요하다고 인정하면 외교부장관의 승인을 받아 여권을 발급받는 사람 등으로부터 국제교류기여금을 받을 수 있음. 모금액 한도를 40,000원으로 상향하여 국제교류기여금의 유지ㆍ확보를 원활하게 하고 공공외교 활성화를 지원하고자 함(안 제16조제2항).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_363C34CF9207472C91593F5A281E5E",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222784"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -170317,18 +168375,10 @@
       "processingResult": "",
       "summary": "이와 동시에 재생에너지 발전 부문은 공공의 적극적 역할 부재 속에서 민간 및 해외 자본 중심(2023년 기준 태양광 98%, 풍력 91% 민간 소유)으로 편중되어, 향후 공공성 훼손 우려가 제기되고 있음. 5개 발전회사 합병에 필요한 절차와 지원을 정함으로써 발전설비의 효율적 운영과 전력수급의 안정 및 정의로운 전환을 도모하고, 석탄화력발전소 폐지지역 근로자의 고용 안정 및 전직 지원 등 전력산업의 건전한 발전에 이바지하도록 함(안 제1조).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_7BAF5E7D457E4AA2BB1AD1CF7F020A",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222790"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -170353,18 +168403,10 @@
       "processingResult": "",
       "summary": "한국예술종합학교 설치법안을 마련하여 한국예술종합학교의 법적지위를 강화하고 예술전문교육을 강화하여 예술전문 교육기관으로서 역할을 확고하게 하려는 것임. 이미 동일한 내용으로 과학기술분야 정부출연연구기관들과 한국해양과학기술원, 특정연구기관의 국공유재산 무상대부기간 및 대부기간 종료 후 분할납부에 관하여 「과학기술분야 정부출연연구기관 등의 설립ㆍ운영 및 육성에 관한 법률」 개정안과 「한국해양과학기술원법」 개정안, 그리고「특정연구기관 육성법」개정안이 각각 ’21.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_1A7ED9E899E541B895471FD59C353B",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222775"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -170389,18 +168431,10 @@
       "processingResult": "",
       "summary": "보석조건으로 피해자ㆍ참고인 등에 대한 위해 방지 및 접근금지에 관한 사항은 현행법 제98조제4호에 별도로 규정되어 있는바, 법원이 피해자 위해 우려가 있는 사건에서 보석조건으로 피고인에게 피해자등에 대한 접근금지와 전자장치 부착을 병과하더라도 현행법 체계상 전자장치는 원칙적으로 피고인의 도주 방지를 위한 도구일 뿐이므로, 피해자 접근금지 명령의 실시간 준수 여부를 감시하기 위한 실효적인 통제수단으로서의 한계가 있다는 지적이 제기됨. 피고인에게 전자장치를 부착할 수 있는 보석조건으로 ‘피고인의 재범방지 및 피해자 보호’의 요건을 추가함으로서, 피고인에게 불구속 재판의 기회를 확대함과 동시에 피해자에게 실질적인 신변 안전망을 제공하려는 것임(안 제98조제9호).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_D3263CEABC9042228AACE072190602",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222809"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -170425,18 +168459,10 @@
       "processingResult": "",
       "summary": "현행법은 초동 수사 단계에서 강력범죄 피의자의 음주 여부 및 정도를 객관적으로 측정기록할 수 있는 명시적인 절차가 마련되어 있지 않아 사후에 피고인이 법정에서 허위의 주취 주장을 펼치더라도 이를 즉각 제지하기 어렵거나 불필요한 입증 부담이 발생하는 한계가 있어 개선이 필요하다는 지적이 제기됨. 특정강력범죄 피의자가 음주상태에서 범행하였다고 인정할 만한 상당한 이유가 있거나 음주로 인한 심신장애를 주장하는 경우 사법경찰관이 초동 수사 단계에서 음주측정을 실시할 수 있도록 함으로써 허위 심신미약 주장을 통한 처벌 감경 시도를 원천 차단하고 실체적 진실 발견과 사법 정의 실현에 이바지하려는 것임(제244조의7 신설).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_5845E3ED151A4DB7A9C89005A2E049",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-14",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2222806"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     }
   ]
 }
