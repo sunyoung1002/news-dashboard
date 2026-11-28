@@ -1,6 +1,6 @@
 {
   "mode": "official",
-  "updatedAt": "2026-11-28 12:22",
+  "updatedAt": "2026-11-29 00:19",
   "items": [
     {
       "month": "2026-08",
@@ -109827,36 +109827,10 @@
       "processingResult": "",
       "summary": "특히 중동 지역의 전쟁에 따른 국제유가 상승과 공급망 불안이 건설자재 가격에 영향을 미치면서 공사의 원활한 추진과 안전ㆍ품질 확보에 대한 우려가 제기되고 있음. 설계ㆍ시공 일괄입찰이 유찰되어 수의계약으로 전환된 공사에 한정하여 계약체결일 이전에 천재ㆍ지변, 전쟁 등 불가항력의 사유로 인하여 최초 계약금액을 조정할 필요가 있을 때에는 불가항력의 사유가 발생한 날을 기준일로 하여 국토교통부장관과의 협의를 거쳐 계약금액을 조정하도록 관련 근거를 명확히 하고자 함(안 제18조의2 신설).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_D3F0EDD0F7894084BE1E27B1C812EE",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "국토교통위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "국토교통위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -111505,18 +111479,10 @@
       "processingResult": "대안반영폐기",
       "summary": "현행법은 법원이 미성년 자녀를 적합한 양육자에 인도하도록 명하더라도 그 의무 불이행에 대한 간접적인 제재 수단만을 규정하고 있을 뿐, 미성년 자녀의 복리를 고려한 구체적인 인도집행 절차를 규율하고 있지 않음. 미성년 자녀 인도청구의 집행은 전문성과 후견적 기능을 갖춘 가정법원이 전담하도록 하고, 가정법원이 미성년 자녀의 연령, 의사, 심리상태, 양육상황 등을 종합적으로 고려하여 직접강제 집행의 허가결정을 하도록 하며, 허가결정 전 특별한 사정이 없으면 미리 당사자와 미성년 자녀를 심문하고 인도의무의 임의 이행을 권고하도록 의무화 하는 한편, 집행관의 세심한 주의의무와 불복절차 및 대법원규칙의 위임 근거를 명확히 함으로써 미성년 자녀의 인도집행 절차를 확보함과 동시에 그 자녀의 인격과 복리를 최우선으로 보호하려는 것임(안 제 64조의2 신설 등).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_563DF610698A4E0DB5A1ECAE6354E2",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "처리결과"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리결과",
-          "before": "",
-          "after": "대안반영폐기"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -111541,18 +111507,10 @@
       "processingResult": "대안반영폐기",
       "summary": "현행법에 따르면 가사소송 절차에 관하여 특별한 규정이 없는 경우 「민사소송법」이 적용되므로, 소송관계인의 생명 또는 신체에 대한 위해의 우려가 있다는 소명이 있는 경우 당사자의 신청에 따라 주소 등 개인정보가 상대방을 포함한 제3자에게 공개되지 아니하도록 하는 「민사소송법」상의 개인정보 보호조치가 가사소송에서도 적용됨. 특히 가사사건은 당사자 사이에 혼인ㆍ혈연 등 밀접한 관계가 존재하거나 존재하였던 경우가 많고, 가정폭력이나 스토킹 등으로 인한 위해의 위험이 소송 과정에서도 계속되거나 심화될 수 있으므로 당사자의 생명ㆍ신체를 보호하기 위한 보다 적극적인 개인정보 보호조치가 필요함.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_521485BC464842FFAAFDA9D06D6C62",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "처리결과"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리결과",
-          "before": "",
-          "after": "대안반영폐기"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -111577,36 +111535,10 @@
       "processingResult": "",
       "summary": "제안이유 고위험 가정폭력 사건에 대응하기 위해 경찰관서와 상담소 간 재발위험성 정보 공유를 실시하고 있으나, 현행법상 ‘피해자 동의’가 필수 전제조건으로 되어 있어 동의를 얻기 어려운 긴급 상황이나 피해자의 심리적 위축 상황에서 전문기관의 신속한 법률ㆍ의료ㆍ주거 지원이 차단되는 한계가 있음. 피해자 보호를 강화하기 위해 정보 공유의 법적 근거를 명확히 정립하려는 것임.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_A3F5D4B8D3F84163A0C63DC4C926CC",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "성평등가족위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "성평등가족위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -111687,36 +111619,10 @@
       "processingResult": "",
       "summary": "현행법상 접근금지 등 임시조치의 기간은 2개월에 2회 연장 가능하여 최대 6개월로, 스토킹범죄(잠정조치 최대 9개월)에 비해 피해자 보호 기간이 짧아 반복·지속되는 가정폭력 피해로부터 피해자를 충분히 보호하지 못하고 있음. 가해자의 이동 경로를 실시간으로 감시·차단할 수 있는 위치추적 전자장치 부착에 관한 규정이 없어, 접근금지 임시조치 위반을 사전에 차단할 실질적 수단이 결여되어 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_F247D8AEFA8541309BD3F287D4D603",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "법제사법위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "법제사법위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -112077,36 +111983,10 @@
       "processingResult": "",
       "summary": "최근 인공지능 기술이 발전하고 전자기기가 소형화되면서 시험문제를 촬영하여 인공지능에 전송하고 답안을 제공받는 등 새로운 유형의 부정행위가 등장하고 있음. 특히 이러한 부정행위에 쓰이는 기기 중에는 안경 등 신체에 착용하는 것도 있어 적발하기가 어려운 실정임.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_5F4D5E9145874D989764FAFBAC0023",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "국토교통위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "국토교통위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -114315,42 +114195,10 @@
       "processingResult": "",
       "summary": "국가 균형발전과 국민의 복리 증진에 기여하기 위하여 종전의 전라남도와 광주광역시를 각각 폐지하고, 전남광주통합특별시를 설치하는 등의 내용으로 「전남광주통합특별시 설치를 위한 특별법」이 제정ㆍ시행(2026. 시행)됨에 따라, 지방자치단체 및 지방자치단체의 장의 범위에 각각 ‘통합특별시’ 및 ‘통합특별시장’을 명시하는 등 통합특별시의 출범에 따른 지방행정체제 개편 사항을 「게임산업진흥에 관한 법률」에 반영하려는 것임(안 제31조제2항).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_0CC2C6DEB2124AB8AC4F4393D8B77C",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용",
-        "주요내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "문화체육관광위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "문화체육관광위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        },
-        {
-          "label": "주요내용",
-          "before": "해당 의안 정보를 찾을 수 없습니다.",
-          "after": "국가 균형발전과 국민의 복리 증진에 기여하기 위하여 종전의 전라남도와 광주광역시를 각각 폐지하고, 전남광주통합특별시를 설치하는 등의 내용으로 「전남광주통합특별시 설치를 위한 특별법」이 제정ㆍ시행(2026. 시행)됨에 따라, 지방자치단체 및 지방자치단체의 장의 범위에 각각 ‘통합특별시’ 및 ‘통합특별시장’을 명시하는 등 통합특별시의 출범에 따른 지방행정체제 개편 사항을 「게임산업진흥에 관한 법률」에 반영하려는 것임(안 제31조제2항)."
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -114599,42 +114447,10 @@
       "processingResult": "",
       "summary": "국가 균형발전과 국민의 복리 증진에 기여하기 위하여 종전의 전라남도와 광주광역시를 각각 폐지하고, 전남광주통합특별시를 설치하는 등의 내용으로 「전남광주통합특별시 설치를 위한 특별법」이 제정ㆍ시행(2026. 시행)됨에 따라, 지방자치단체 및 지방자치단체의 장의 범위에 각각 ‘통합특별시’ 및 ‘통합특별시장’을 명시하는 등 통합특별시의 출범에 따른 지방행정체제 개편 사항을 「고도 보존 및 육성에 관한 특별법」에 반영하려는 것임(안 제6조제1항).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_D9E3D420AB174156ABB871ED4E45E6",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용",
-        "주요내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "문화체육관광위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "문화체육관광위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        },
-        {
-          "label": "주요내용",
-          "before": "해당 의안 정보를 찾을 수 없습니다.",
-          "after": "국가 균형발전과 국민의 복리 증진에 기여하기 위하여 종전의 전라남도와 광주광역시를 각각 폐지하고, 전남광주통합특별시를 설치하는 등의 내용으로 「전남광주통합특별시 설치를 위한 특별법」이 제정ㆍ시행(2026. 시행)됨에 따라, 지방자치단체 및 지방자치단체의 장의 범위에 각각 ‘통합특별시’ 및 ‘통합특별시장’을 명시하는 등 통합특별시의 출범에 따른 지방행정체제 개편 사항을 「고도 보존 및 육성에 관한 특별법」에 반영하려는 것임(안 제6조제1항)."
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -119279,36 +119095,10 @@
       "processingResult": "",
       "summary": "특히 기존의 전자기기 반입 및 사용 금지 조치만으로는 인공지능 기술을 활용한 은밀하고 지능적인 부정행위를 효과적으로 방지하는 데 한계가 있음. 국가전문자격시험은 국민의 생명ㆍ안전 및 재산과 직결되는 전문성을 검증하는 중요한 제도인 만큼, 시험의 공정성과 자격제도의 신뢰성을 확보하기 위한 실효성 있는 제재 수단을 마련할 필요가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_9F904FCAE2F04361BEAAD92CC37B2B",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "기후에너지환경노동위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "기후에너지환경노동위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -119473,36 +119263,10 @@
       "processingResult": "",
       "summary": "최근 인공지능 기술의 급속한 발전으로 안경, 시계 등 일상적으로 사용하는 전자기기에 인공지능 기술이 활용되고 있으며, 이러한 기기를 사용하여 시험문제의 풀이 또는 답안에 관한 정보를 실시간으로 제공받는 형태의 부정행위가 발생할 가능성이 커지고 있음. 시험시간 중 인공지능기술을 활용한 전자기기 등을 이용하여 시험문제 또는 답안에 관한 정보를 처리ㆍ전송하거나 외부로부터 시험문제의 풀이 또는 답안에 관한 정보를 제공받은 경우의 응시 제한을 10년으로 확대함으로써 시험의 공정성과 자격제도의 신뢰성을 확보하기 위한 실효성 있는 제재 수단을 마련하려는 것임(안 제5조의2제3항 신설).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_EC45ED9794914CB6B98CE83E89C2FC",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "정무위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "정무위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -120087,36 +119851,10 @@
       "processingResult": "",
       "summary": "특히 기존의 전자기기 반입 및 사용 금지 조치만으로는 인공지능 기술을 활용한 은밀하고 지능적인 부정행위를 효과적으로 방지하는 데 한계가 있음. 국가전문자격시험은 국민의 생명ㆍ안전 및 재산과 직결되는 전문성을 검증하는 중요한 제도인 만큼, 시험의 공정성과 자격제도의 신뢰성을 확보하기 위한 실효성 있는 제재 수단을 마련할 필요가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_D4F5F54501774AA5BEDE2976BF7B55",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "재정경제기획위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "재정경제기획위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -121233,42 +120971,10 @@
       "processingResult": "",
       "summary": "국가 균형발전과 국민의 복리 증진에 기여하기 위하여 종전의 전라남도와 광주광역시를 각각 폐지하고, 전남광주통합특별시를 설치하는 등의 내용으로 「전남광주통합특별시 설치를 위한 특별법」이 제정ㆍ시행(2026. 시행)됨에 따라, 지방자치단체 및 지방자치단체의 장의 범위에 각각 ‘통합특별시’ 및 ‘통합특별시장’을 명시하는 등 통합특별시의 출범에 따른 지방행정체제 개편 사항을 「국가유산기본법」에 반영하려는 것임(안 제9조의3제1항).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_973CEC93F2EB4CD2A67ECFD0669231",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용",
-        "주요내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "문화체육관광위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "문화체육관광위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        },
-        {
-          "label": "주요내용",
-          "before": "해당 의안 정보를 찾을 수 없습니다.",
-          "after": "국가 균형발전과 국민의 복리 증진에 기여하기 위하여 종전의 전라남도와 광주광역시를 각각 폐지하고, 전남광주통합특별시를 설치하는 등의 내용으로 「전남광주통합특별시 설치를 위한 특별법」이 제정ㆍ시행(2026. 시행)됨에 따라, 지방자치단체 및 지방자치단체의 장의 범위에 각각 ‘통합특별시’ 및 ‘통합특별시장’을 명시하는 등 통합특별시의 출범에 따른 지방행정체제 개편 사항을 「국가유산기본법」에 반영하려는 것임(안 제9조의3제1항)."
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -121293,42 +120999,10 @@
       "processingResult": "",
       "summary": "국가 균형발전과 국민의 복리 증진에 기여하기 위하여 종전의 전라남도와 광주광역시를 각각 폐지하고, 전남광주통합특별시를 설치하는 등의 내용으로 「전남광주통합특별시 설치를 위한 특별법」이 제정ㆍ시행(2026. 시행)됨에 따라, 지방자치단체 및 지방자치단체의 장의 범위에 각각 ‘통합특별시’ 및 ‘통합특별시장’을 명시하는 등 통합특별시의 출범에 따른 지방행정체제 개편 사항을 「국가유산수리 등에 관한 법률」에 반영하려는 것임(안 제4조 및 제4조의3).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_27BF66CB87CF4E41B8602658B34863",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용",
-        "주요내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "문화체육관광위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "문화체육관광위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        },
-        {
-          "label": "주요내용",
-          "before": "해당 의안 정보를 찾을 수 없습니다.",
-          "after": "국가 균형발전과 국민의 복리 증진에 기여하기 위하여 종전의 전라남도와 광주광역시를 각각 폐지하고, 전남광주통합특별시를 설치하는 등의 내용으로 「전남광주통합특별시 설치를 위한 특별법」이 제정ㆍ시행(2026. 시행)됨에 따라, 지방자치단체 및 지방자치단체의 장의 범위에 각각 ‘통합특별시’ 및 ‘통합특별시장’을 명시하는 등 통합특별시의 출범에 따른 지방행정체제 개편 사항을 「국가유산수리 등에 관한 법률」에 반영하려는 것임(안 제4조 및 제4조의3)."
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -121353,42 +121027,10 @@
       "processingResult": "",
       "summary": "국가 균형발전과 국민의 복리 증진에 기여하기 위하여 종전의 전라남도와 광주광역시를 각각 폐지하고, 전남광주통합특별시를 설치하는 등의 내용으로 「전남광주통합특별시 설치를 위한 특별법」이 제정ㆍ시행(2026. 시행)됨에 따라, 지방자치단체 및 지방자치단체의 장의 범위에 각각 ‘통합특별시’ 및 ‘통합특별시장’을 명시하는 등 통합특별시의 출범에 따른 지방행정체제 개편 사항을 「국가유산영향진단법」에 반영하려는 것임(안 제18조제2항).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_9BDE7419B04949A790EBDD0345F9F2",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용",
-        "주요내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "문화체육관광위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "문화체육관광위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        },
-        {
-          "label": "주요내용",
-          "before": "해당 의안 정보를 찾을 수 없습니다.",
-          "after": "국가 균형발전과 국민의 복리 증진에 기여하기 위하여 종전의 전라남도와 광주광역시를 각각 폐지하고, 전남광주통합특별시를 설치하는 등의 내용으로 「전남광주통합특별시 설치를 위한 특별법」이 제정ㆍ시행(2026. 시행)됨에 따라, 지방자치단체 및 지방자치단체의 장의 범위에 각각 ‘통합특별시’ 및 ‘통합특별시장’을 명시하는 등 통합특별시의 출범에 따른 지방행정체제 개편 사항을 「국가유산영향진단법」에 반영하려는 것임(안 제18조제2항)."
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -123429,42 +123071,10 @@
       "processingResult": "",
       "summary": "국가 균형발전과 국민의 복리 증진에 기여하기 위하여 종전의 전라남도와 광주광역시를 각각 폐지하고, 전남광주통합특별시를 설치하는 등의 내용으로 「전남광주통합특별시 설치를 위한 특별법」이 제정ㆍ시행(2026. 시행)됨에 따라, 지방자치단체 및 지방자치단체의 장의 범위에 각각 ‘통합특별시’ 및 ‘통합특별시장’을 명시하는 등 통합특별시의 출범에 따른 지방행정체제 개편 사항을 「근현대문화유산의 보존 및 활용에 관한 법률」에 반영하려는 것임(안 제2조제2호나목 및 제39조제3항).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_CBA5A3622FE947D4A19A82774C7CB5",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용",
-        "주요내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "문화체육관광위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "문화체육관광위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        },
-        {
-          "label": "주요내용",
-          "before": "해당 의안 정보를 찾을 수 없습니다.",
-          "after": "국가 균형발전과 국민의 복리 증진에 기여하기 위하여 종전의 전라남도와 광주광역시를 각각 폐지하고, 전남광주통합특별시를 설치하는 등의 내용으로 「전남광주통합특별시 설치를 위한 특별법」이 제정ㆍ시행(2026. 시행)됨에 따라, 지방자치단체 및 지방자치단체의 장의 범위에 각각 ‘통합특별시’ 및 ‘통합특별시장’을 명시하는 등 통합특별시의 출범에 따른 지방행정체제 개편 사항을 「근현대문화유산의 보존 및 활용에 관한 법률」에 반영하려는 것임(안 제2조제2호나목 및 제39조제3항)."
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -125057,36 +124667,10 @@
       "processingResult": "",
       "summary": "출입항 신고 및 승선자명부 제출 등을 지원하는 정보시스템이 운영되고 있음에도 2026년 8월 기준 해당 시스템을 통한 승선자명부 제출 비율은 1.6퍼센트에 불과하고, 작성된 명부를 촬영하여 문자메시지로 전송하는 비율은 87.1퍼센트에 달하는 것으로 나타남. 방식은 승선자의 개인정보가 개인 휴대전화 등에 저장되거나 유출될 우려가 있어 승선자명부의 제출방식을 개선하고 개인정보 보호를 강화할 필요가 있다는 지적이 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_E098DD5DC025473EAD895985673CF4",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "농림축산식품해양수산위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "농림축산식품해양수산위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -129647,36 +129231,10 @@
       "processingResult": "",
       "summary": "국가기관 등의 저공해자동차 보유 의무 준수율이 낮고, 의무 불이행에 대한 과태료는 최대 300만원으로 해당 규정의 실효성을 강화할 필요가 있다는 의견이 제기됨. 국가기관 등이 저공해자동차 구매 및 임차 의무를 위반할 경우 위반사실을 공표하고, 과태료를 1천만원으로 상향하여 저공해자동차 구매ㆍ임차 의무 이행을 촉구하고자 함(안 제58조의7 및 제94조 등).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_6C008D25DA2A4245870B1B3C5FDE68",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "기후에너지환경노동위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "기후에너지환경노동위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -130317,36 +129875,10 @@
       "processingResult": "",
       "summary": "현행법 제3조제3항은 국가안보 또는 공급망 안정 등 불가피한 사유로 상업적 합리성이 확보되지 아니한 대미투자를 추진하는 경우, 제12조제1항 후단 또는 같은 조 제2항 후단에 따라 대미투자 대상으로 제안할 사업의 선정 또는 대미투자 후보 사업에 대한 사업 추진 의사에 대하여 한미전략투자운영위원회의 심의ㆍ의결을 거친 후 “같은 조 제3항”에 따라 미국과 협의를 개시하기 전에 국회 소관 상임위원회의 동의를 받도록 규정하고 있음. 제3조제3항 후단의 “같은 조 제3항”을 “제12조제3항”으로 바로잡아 상업적 합리성이 확보되지 아니한 대미투자에 대한 국회 소관 상임위원회의 동의 시점을 명확히 함으로써 법령 적용상의 혼란을 방지하려는 것임(안 제3조제3항).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_5729F8B4112B48ABA45B1891C1BADF",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "재정경제기획위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "재정경제기획위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -133059,36 +132591,10 @@
       "processingResult": "",
       "summary": "특히 블록체인 기술의 발전에 따라 분산원장과 스마트계약 등에 기반한 금융서비스가 등장하면서 기존 금융시장과의 접점도 점차 확대되고 있음. 두 법률에 나누어 규정되어 있던 내용을 통합하여 규제 불확실성을 해소하고 디지털자산 생태계의 산업ㆍ시장ㆍ이용자 측면을 아우르는 보다 완비된 규율체계를 마련하려는 것임.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_D5BD6C07B5484BB0989ED8EB04B59B",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "정무위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "정무위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -133253,42 +132759,10 @@
       "processingResult": "",
       "summary": "국가 균형발전과 국민의 복리 증진에 기여하기 위하여 종전의 전라남도와 광주광역시를 각각 폐지하고, 전남광주통합특별시를 설치하는 등의 내용으로 「전남광주통합특별시 설치를 위한 특별법」이 제정ㆍ시행(2026. 시행)됨에 따라, 지방자치단체 및 지방자치단체의 장의 범위에 각각 ‘통합특별시’ 및 ‘통합특별시장’을 명시하는 등 통합특별시의 출범에 따른 지방행정체제 개편 사항을 「매장유산 보호 및 조사에 관한 법률」에 반영하려는 것임(안 제29조제1항).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_ACAA2BB3B54B4EBA8F184CF95134A5",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용",
-        "주요내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "문화체육관광위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "문화체육관광위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        },
-        {
-          "label": "주요내용",
-          "before": "해당 의안 정보를 찾을 수 없습니다.",
-          "after": "국가 균형발전과 국민의 복리 증진에 기여하기 위하여 종전의 전라남도와 광주광역시를 각각 폐지하고, 전남광주통합특별시를 설치하는 등의 내용으로 「전남광주통합특별시 설치를 위한 특별법」이 제정ㆍ시행(2026. 시행)됨에 따라, 지방자치단체 및 지방자치단체의 장의 범위에 각각 ‘통합특별시’ 및 ‘통합특별시장’을 명시하는 등 통합특별시의 출범에 따른 지방행정체제 개편 사항을 「매장유산 보호 및 조사에 관한 법률」에 반영하려는 것임(안 제29조제1항)."
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -133397,42 +132871,10 @@
       "processingResult": "",
       "summary": "국가 균형발전과 국민의 복리 증진에 기여하기 위하여 종전의 전라남도와 광주광역시를 각각 폐지하고, 전남광주통합특별시를 설치하는 등의 내용으로 「전남광주통합특별시 설치를 위한 특별법」이 제정ㆍ시행(2026. 시행)됨에 따라, 지방자치단체 및 지방자치단체의 장의 범위에 각각 ‘통합특별시’ 및 ‘통합특별시장’을 명시하는 등 통합특별시의 출범에 따른 지방행정체제 개편 사항을 「무형유산의 보전 및 진흥에 관한 법률」에 반영하려는 것임(안 제7조제1항).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_86230B7EF1884942857DC90FB63F2A",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용",
-        "주요내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "문화체육관광위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "문화체육관광위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        },
-        {
-          "label": "주요내용",
-          "before": "해당 의안 정보를 찾을 수 없습니다.",
-          "after": "국가 균형발전과 국민의 복리 증진에 기여하기 위하여 종전의 전라남도와 광주광역시를 각각 폐지하고, 전남광주통합특별시를 설치하는 등의 내용으로 「전남광주통합특별시 설치를 위한 특별법」이 제정ㆍ시행(2026. 시행)됨에 따라, 지방자치단체 및 지방자치단체의 장의 범위에 각각 ‘통합특별시’ 및 ‘통합특별시장’을 명시하는 등 통합특별시의 출범에 따른 지방행정체제 개편 사항을 「무형유산의 보전 및 진흥에 관한 법률」에 반영하려는 것임(안 제7조제1항)."
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -133485,36 +132927,10 @@
       "processingResult": "",
       "summary": "2027년 10월 29일 시행예정인 「문신사법」 부칙 제2조는 문신업소의 개설등록 등에 관한 특례를 규정하여 기존 종사자들이 「문신사법」에 따른 자격요건을 갖추기까지 일정기간 영업을 유지할 수 있도록 하여 영업 중단으로 인한 경제적 피해를 방지하고 있음. 특례에 따라 임시로 문신업소를 개설등록하려는 사람과 임시로 개설등록한 문신업소에서 문신행위를 할 수 있는 사람을 이 법 시행 당시 문신행위를 하는 사업장을 운영 중인 사람과 문신행위를 업으로 하는 사람으로 한정하여, 기존 업자를 보호하고 신규 업자는 「문신사법」에 따른 절차를 거쳐 진입하게 함으로써 경력이 없는 신규 진입자의 편법 영업을 방지하려는 것임(안 법률 제21070호 문신사법 부칙 제2조).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_9240482FE4634BD6BDC001A18BEEDD",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "보건복지위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "보건복지위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -133567,36 +132983,10 @@
       "processingResult": "",
       "summary": "국가 균형발전과 국민의 복리 증진에 기여하기 위하여 종전의 전라남도와 광주광역시를 각각 폐지하고, 전남광주통합특별시를 설치하는 등의 내용으로 「전남광주통합특별시 설치를 위한 특별법」이 제정ㆍ시행(2026. 시행)됨에 따라, 지방자치단체 및 지방자치단체의 장의 범위에 각각 ‘통합특별시’ 및 ‘통합특별시장’을 명시하는 등 통합특별시의 출범에 따른 지방행정체제 개편 사항을 「문화다양성의 보호와 증진에 관한 법률」에 반영하려는 것임(안 제11조제2항).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_B42F06E06EFE4CD5A458D87C9D9911",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "문화체육관광위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "문화체육관광위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -133621,36 +133011,10 @@
       "processingResult": "",
       "summary": "국가 균형발전과 국민의 복리 증진에 기여하기 위하여 종전의 전라남도와 광주광역시를 각각 폐지하고, 전남광주통합특별시를 설치하는 등의 내용으로 「전남광주통합특별시 설치를 위한 특별법」이 제정ㆍ시행(2026. 시행)됨에 따라, 지방자치단체 및 지방자치단체의 장의 범위에 각각 ‘통합특별시’ 및 ‘통합특별시장’을 명시하는 등 통합특별시의 출범에 따른 지방행정체제 개편 사항을 「문화산업진흥 기본법」에 반영하려는 것임(안 제2조제15호).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_F45D1328C90146E190A48952F93476",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "문화체육관광위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "문화체육관광위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -133675,36 +133039,10 @@
       "processingResult": "",
       "summary": "국가 균형발전과 국민의 복리 증진에 기여하기 위하여 종전의 전라남도와 광주광역시를 각각 폐지하고, 전남광주통합특별시를 설치하는 등의 내용으로 「전남광주통합특별시 설치를 위한 특별법」이 제정ㆍ시행(2026. 시행)됨에 따라, 지방자치단체 및 지방자치단체의 장의 범위에 각각 ‘통합특별시’ 및 ‘통합특별시장’을 명시하는 등 통합특별시의 출범에 따른 지방행정체제 개편 사항을 「문화예술교육 지원법」에 반영하려는 것임(안 제5조의2제2항 및 제6조제4항).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_BEBF257618DB4B3C98F581F4AB3444",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "문화체육관광위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "문화체육관광위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -133729,36 +133067,10 @@
       "processingResult": "",
       "summary": "국가 균형발전과 국민의 복리 증진에 기여하기 위하여 종전의 전라남도와 광주광역시를 각각 폐지하고, 전남광주통합특별시를 설치하는 등의 내용으로 「전남광주통합특별시 설치를 위한 특별법」이 제정ㆍ시행(2026. 시행)됨에 따라, 지방자치단체 및 지방자치단체의 장의 범위에 각각 ‘통합특별시’ 및 ‘통합특별시장’을 명시하는 등 통합특별시의 출범에 따른 지방행정체제 개편 사항을 「문화예술진흥법」에 반영하려는 것임(안 제7조제3항 및 제9조의2제3항).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_EC1617D7408640FD9C44AB2EF83430",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "문화체육관광위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "문화체육관광위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -133811,42 +133123,10 @@
       "processingResult": "",
       "summary": "국가 균형발전과 국민의 복리 증진에 기여하기 위하여 종전의 전라남도와 광주광역시를 각각 폐지하고, 전남광주통합특별시를 설치하는 등의 내용으로 「전남광주통합특별시 설치를 위한 특별법」이 제정ㆍ시행(2026. 시행)됨에 따라, 지방자치단체 및 지방자치단체의 장의 범위에 각각 ‘통합특별시’ 및 ‘통합특별시장’을 명시하는 등 통합특별시의 출범에 따른 지방행정체제 개편 사항을 「문화유산과 자연환경자산에 관한 국민신탁법」에 반영하려는 것임(안 제20조의2제3항제4호).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_007F1B9BDC9D4C55845DD6619C1A31",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용",
-        "주요내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "기후에너지환경노동위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "기후에너지환경노동위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        },
-        {
-          "label": "주요내용",
-          "before": "해당 의안 정보를 찾을 수 없습니다.",
-          "after": "국가 균형발전과 국민의 복리 증진에 기여하기 위하여 종전의 전라남도와 광주광역시를 각각 폐지하고, 전남광주통합특별시를 설치하는 등의 내용으로 「전남광주통합특별시 설치를 위한 특별법」이 제정ㆍ시행(2026. 시행)됨에 따라, 지방자치단체 및 지방자치단체의 장의 범위에 각각 ‘통합특별시’ 및 ‘통합특별시장’을 명시하는 등 통합특별시의 출범에 따른 지방행정체제 개편 사항을 「문화유산과 자연환경자산에 관한 국민신탁법」에 반영하려는 것임(안 제20조의2제3항제4호)."
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -133871,42 +133151,10 @@
       "processingResult": "",
       "summary": "국가 균형발전과 국민의 복리 증진에 기여하기 위하여 종전의 전라남도와 광주광역시를 각각 폐지하고, 전남광주통합특별시를 설치하는 등의 내용으로 「전남광주통합특별시 설치를 위한 특별법」이 제정ㆍ시행(2026. 시행)됨에 따라, 지방자치단체 및 지방자치단체의 장의 범위에 각각 ‘통합특별시’ 및 ‘통합특별시장’을 명시하는 등 통합특별시의 출범에 따른 지방행정체제 개편 사항을 「문화유산의 보존 및 활용에 관한 법률」에 반영하려는 것임(안 제2조제3항제2호 등).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_3752C639830F4062B745C904E4D2E3",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용",
-        "주요내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "문화체육관광위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "문화체육관광위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        },
-        {
-          "label": "주요내용",
-          "before": "해당 의안 정보를 찾을 수 없습니다.",
-          "after": "국가 균형발전과 국민의 복리 증진에 기여하기 위하여 종전의 전라남도와 광주광역시를 각각 폐지하고, 전남광주통합특별시를 설치하는 등의 내용으로 「전남광주통합특별시 설치를 위한 특별법」이 제정ㆍ시행(2026. 시행)됨에 따라, 지방자치단체 및 지방자치단체의 장의 범위에 각각 ‘통합특별시’ 및 ‘통합특별시장’을 명시하는 등 통합특별시의 출범에 따른 지방행정체제 개편 사항을 「문화유산의 보존 및 활용에 관한 법률」에 반영하려는 것임(안 제2조제3항제2호 등)."
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -136143,36 +135391,10 @@
       "processingResult": "",
       "summary": "현행법은 시험에서 부정행위를 한 사람에 대하여 해당 시험의 정지 또는 합격결정을 취소하고, 그 처분을 한 날부터 3년간 시험응시자격을 정지하도록 규정하고 있음. 최근 인공지능기술의 발전으로 안경ㆍ시계ㆍ이어폰 등 착용형 전자기기를 이용하여 시험문제를 인식하고 외부 정보처리시스템으로부터 실시간으로 답변을 제공받는 등 새로운 유형의 시험 부정행위가 발생할 가능성이 커지고 있어 이에 대한 제재방안이 조속히 마련될 필요가 있다는 의견이 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_E6BBA9818840409C920295A45C9EA5",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "산업통상자원중소벤처기업위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "산업통상자원중소벤처기업위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -136253,36 +135475,10 @@
       "processingResult": "",
       "summary": "특히 인공지능 기술을 이용한 부정행위는 기존의 전자기기 반입 및 사용 금지 조치만으로는 효과적으로 방지하기 어렵고, 은밀하고 지능적인 방식으로 이루어질 수 있어 기존의 제재 수준만으로는 부정행위를 예방하는 데 한계가 있음. 시험에서 인공지능 기술을 이용하여 시험문제 또는 답안에 관한 정보를 수집ㆍ처리ㆍ생성하거나 송수신하는 부정행위를 한 사람을 응시결격 사유에 추가하여 응시자격을 박탈하도록 하여, 인공지능 기술을 이용한 시험 부정행위에 대한 제재를 강화하고 변호사시험의 공정성과 자격제도의 신뢰성을 확보하려는 것임(안 제6조제9호 신설).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_831AB1E086DC445C80CF73E64D2578",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "법제사법위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "법제사법위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -136699,36 +135895,10 @@
       "processingResult": "",
       "summary": "위원회의 심의ㆍ의결 사항은 대통령령에서 명시적으로 정하고 있어, 위원회의 권한 범위가 법률에 명확히 드러나지 않는 문제가 있음. 그럼에도 현행법은 이를 정하는 훈령ㆍ예규 등 행정규칙을 제정ㆍ개정하거나 폐지할 때 위원회의 심의ㆍ의결을 거치도록 규정하고 있지 않음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_9D94676747CE4565BE403CA6D9A00C",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "정무위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "정무위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -137033,36 +136203,10 @@
       "processingResult": "",
       "summary": "현행법은 사회복지현장실습의 주요 사항을 시행규칙 및 고시 등 하위 법령에 위임하고 있어, 실습기관 선정 및 취소 권한의 법적 근거가 불명확하고 부정 실습에 대한 제재 및 실습생의 권익 보호 등에 관한 사항이 법률에 충분히 규정되어 있지 아니한 문제가 있음. 사회복지현장실습의 법적 근거를 현행법에 명확히 규정하고 실습기관의 지정 및 취소, 실습생의 권익 보호 및 부정 실습에 대한 제재 등을 체계적으로 규율함으로써 사회복지현장실습의 교육적 책무성을 강화하고 사회복지사 자격제도의 신뢰성과 전문성을 제고하여 궁극적으로 국민에게 제공되는 사회복지서비스의 질 향상에 기여하려는 것임(안 제11조의2 신설 등).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_D367D23028094647BE5387CC2D6DF4",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "보건복지위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "보건복지위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -137311,30 +136455,10 @@
       "processingResult": "",
       "summary": "최근 국가전문자격시험에서 인공지능(AI)이 탑재된 초소형 무선통신기기 등 첨단 전자기기를 악용한 부정행위가 적발되는 등 자격제도의 공정성 훼손 우려가 커지고 있음. 고용노동부장관에게 부정행위 예방을 위한 전파 탐지 및 소지품 검색 권한과 관계 기관 등에 대한 자료 제출 요청 권한을 명시적으로 부여하고, 거짓이나 부정한 방법으로 지도사 자격을 취득하거나 첨단기기를 이용해 부정행위를 한 자 등에 대한 벌칙을 신설함으로써 지도사 자격시험의 공정성과 신뢰성을 확보하려는 것임(안 제144조 등).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_257BB909E11A49FCB3EF1F59E09973",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "기후에너지환경노동위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -139571,30 +138695,10 @@
       "processingResult": "",
       "summary": "제안이유 현행법은 고용노동부장관이 산업전환에 따른 고용안정 지원 기본계획수립ㆍ변경 시 「고용정책 기본법」 제10조 및 동법 시행령 제7조에 따른 ‘산업전환고용안정전문위원회’의 심의를 거치도록 하고 있으나, 산업전환의 파급이 전 산업ㆍ업종에 걸쳐 나타난다는 점을 고려했을 때, 보다 폭넓은 논의가 필요하다는 지적이 있음. 산업전환에 따라 지원이 시급한 산업ㆍ업종에 대해 산업전환고용안정위원회의 심의를 통해 결정하는 것으로 변경함(안 제9조제2항).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_059A06EA1B534EFC985772EAC73425",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "기후에너지환경노동위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -143987,36 +143091,10 @@
       "processingResult": "",
       "summary": "국가 균형발전과 국민의 복리 증진에 기여하기 위하여 종전의 전라남도와 광주광역시를 각각 폐지하고, 전남광주통합특별시를 설치하는 등의 내용으로 「전남광주통합특별시 설치를 위한 특별법」이 제정ㆍ시행(2026. 시행)됨에 따라, 지방자치단체 및 지방자치단체의 장의 범위에 각각 ‘통합특별시’ 및 ‘통합특별시장’을 명시하는 등 통합특별시의 출범에 따른 지방행정체제 개편 사항을 「서예진흥에 관한 법률」에 반영하려는 것임(안 제4조제3항).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_AE49697C1B424DAB914C1272EFA4FE",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "문화체육관광위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "문화체육관광위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -144349,36 +143427,10 @@
       "processingResult": "",
       "summary": "이는 개별 범죄행위에 가담하는 수준을 넘어 딥페이크 성범죄의 대량 생산과 확산을 가능하게 한다는 점에서 그 책임에 상응하는 처벌이 필요함. 현행법상 이러한 플랫폼 운영자는 허위영상물 제작ㆍ반포 등 범죄의 방조범으로만 처벌할 수 있는 한계가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_CB87F1F1AE6B44C6A894A26494533A",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "법제사법위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "법제사법위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -144487,42 +143539,10 @@
       "processingResult": "",
       "summary": "국가 균형발전과 국민의 복리 증진에 기여하기 위하여 종전의 전라남도와 광주광역시를 각각 폐지하고, 전남광주통합특별시를 설치하는 등의 내용으로 「전남광주통합특별시 설치를 위한 특별법」이 제정ㆍ시행(2026. 시행)됨에 따라, 지방자치단체 및 지방자치단체의 장의 범위에 각각 ‘통합특별시’ 및 ‘통합특별시장’을 명시하는 등 통합특별시의 출범에 따른 지방행정체제 개편 사항을 「세계유산의 보존ㆍ관리 및 활용에 관한 특별법」에 반영하려는 것임(안 제6조제1항 및 제13조제4항).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_E4F14F68937A464ABCD52A91612B69",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용",
-        "주요내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "문화체육관광위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "문화체육관광위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        },
-        {
-          "label": "주요내용",
-          "before": "해당 의안 정보를 찾을 수 없습니다.",
-          "after": "국가 균형발전과 국민의 복리 증진에 기여하기 위하여 종전의 전라남도와 광주광역시를 각각 폐지하고, 전남광주통합특별시를 설치하는 등의 내용으로 「전남광주통합특별시 설치를 위한 특별법」이 제정ㆍ시행(2026. 시행)됨에 따라, 지방자치단체 및 지방자치단체의 장의 범위에 각각 ‘통합특별시’ 및 ‘통합특별시장’을 명시하는 등 통합특별시의 출범에 따른 지방행정체제 개편 사항을 「세계유산의 보존ㆍ관리 및 활용에 관한 특별법」에 반영하려는 것임(안 제6조제1항 및 제13조제4항)."
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -144547,36 +143567,10 @@
       "processingResult": "",
       "summary": "특히 기존의 전자기기 반입 및 사용 금지 조치만으로는 인공지능 기술을 활용한 은밀하고 지능적인 부정행위를 효과적으로 방지하는 데 한계가 있음. 국가전문자격시험은 국민의 생명ㆍ안전 및 재산과 직결되는 전문성을 검증하는 중요한 제도인 만큼, 시험의 공정성과 자격제도의 신뢰성을 확보하기 위한 실효성 있는 제재 수단을 마련할 필요가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_21E0558400704B958D73B86D16050D",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "재정경제기획위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "재정경제기획위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -144657,36 +143651,10 @@
       "processingResult": "",
       "summary": "국립공원 내 소나무재선충병 발생목은 2022년 7,883본에서 2025년 3만 3,586본으로 3년 만에 약 4.3배 증가하는 등 피해가 급격히 확대되고 있음. 국립공원 구역에서 긴급방제가 필요한 경우 공원관리청도 직접 방제ㆍ예방사업을 시행할 수 있도록 하여, 소나무재선충병에 대한 신속한 대응체계를 구축하고 국립공원의 산림생태계와 자연경관을 보호하려는 것임(안 제8조제1항).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_5052FB5EC92349A69BAFB68AB542C0",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "농림축산식품해양수산위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "농림축산식품해양수산위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -144711,36 +143679,10 @@
       "processingResult": "",
       "summary": "현행법은 소년에 대한 법원 소년부의 통고권자를 보호자와 학교ㆍ사회복리시설ㆍ보호관찰소(보호관찰지소를 포함한다)의 장으로 규정하고 있음. 학생들과 교사들의 권익을 보호하는 교육기관의 책임자인 선출직 교육감에 대해서는 통고권이 인정되지 않고 있어서, 소년에 대한 통고권을 교육감에게도 부여하는 것이 타당함.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_EA85F4FD06D14A70AA50DC236BC93D",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "법제사법위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "법제사법위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -145857,36 +144799,10 @@
       "processingResult": "",
       "summary": "지구별 수산업협동조합의 내부통제 기능을 강화하고 조합 경영에 대한 임원의 책임성을 높이기 위하여 자산 규모가 해양수산부령으로 정하는 규모를 초과하는 지구별 수산업협동조합은 감사 1명을 상임으로 하되, 그 감사는 조합원이 아닌 사람 중에서 조합 인사추천위원회의 추천을 거쳐 총회에서 선출하도록 하고, 상임이사의 임기를 4년에서 2년으로 단축하는 등 현행 제도의 운영상 나타난 일부 미비점을 개선ㆍ보완하려는 것임(안 제46조 및 제50조).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_4272233062704D5CAAA0E5603EAC55",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "농림축산식품해양수산위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "농림축산식품해양수산위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -146779,36 +145695,10 @@
       "processingResult": "",
       "summary": "현행법상 사법경찰관이 임시조치 및 그 연장ㆍ변경ㆍ취소를 청구하려면 검사를 거쳐야 하고, 응급조치ㆍ긴급임시조치 후에도 검사에게 임시조치 청구를 신청하도록 되어 있어 아동학대 현장에서 신속한 피해아동등 보호조치에 한계가 있음(안 제15조). 현행 임시조치 제1항제2호는 접근 금지 대상을 ‘주거, 학교 또는 보호시설 등’으로만 한정하고 있어 피해아동등이나 가정구성원 자체에 대한 접근을 직접 차단하기 어렵고, 위치추적 전자장치 부착 조치도 부재한 실정임.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_12A3F023C99443099C367E670ECA0B",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "법제사법위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "법제사법위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -147421,36 +146311,10 @@
       "processingResult": "",
       "summary": "현행법은 어린이제품 판매중개업자 및 구매ㆍ수입대행업자가 안전인증ㆍ안전확인ㆍ공급자적합성확인(이하 “안전인증등”이라 함)의 표시가 없는 안전관리대상어린이제품의 판매를 중개하거나 구매 또는 수입을 대행하는 것을 금지하면서도, 「전자상거래 등에서의 소비자보호에 관한 법률」에 따른 통신판매중개자가 자신이 운영하는 사이버몰에서 발견된 안전인증등의 표시가 없는 제품을 즉시 삭제하고, 통신판매중개의뢰자가 상품등록 시 안전인증등의 정보를 입력하도록 하며, 소비자가 이러한 정보를 확인할 수 있도록 “기술적 조치”를 취한 경우에는 금지되는 중개에서 제외하고 있음. 한국제품안전관리원 자료에 따르면 2021년부터 2026년 9월까지 현행법 제30조 위반으로 과태료 부과가 의뢰된 799건 가운데 판매중개업자는 9건에 불과한 것으로 나타남.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_978E962E682D4BE38687ECC44ACD13",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "산업통상자원중소벤처기업위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "산업통상자원중소벤처기업위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -147755,42 +146619,10 @@
       "processingResult": "",
       "summary": "국가 균형발전과 국민의 복리 증진에 기여하기 위하여 종전의 전라남도와 광주광역시를 각각 폐지하고, 전남광주통합특별시를 설치하는 등의 내용으로 「전남광주통합특별시 설치를 위한 특별법」이 제정ㆍ시행(2026. 시행)됨에 따라, 지방자치단체 및 지방자치단체의 장의 범위에 각각 ‘통합특별시’ 및 ‘통합특별시장’을 명시하는 등 통합특별시의 출범에 따른 지방행정체제 개편 사항을 「역사문화권 정비 등에 관한 특별법」에 반영하려는 것임(안 제9조제1항).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_EA82D25C7FC248BB8B2DD07AC26C04",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용",
-        "주요내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "문화체육관광위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "문화체육관광위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        },
-        {
-          "label": "주요내용",
-          "before": "해당 의안 정보를 찾을 수 없습니다.",
-          "after": "국가 균형발전과 국민의 복리 증진에 기여하기 위하여 종전의 전라남도와 광주광역시를 각각 폐지하고, 전남광주통합특별시를 설치하는 등의 내용으로 「전남광주통합특별시 설치를 위한 특별법」이 제정ㆍ시행(2026. 시행)됨에 따라, 지방자치단체 및 지방자치단체의 장의 범위에 각각 ‘통합특별시’ 및 ‘통합특별시장’을 명시하는 등 통합특별시의 출범에 따른 지방행정체제 개편 사항을 「역사문화권 정비 등에 관한 특별법」에 반영하려는 것임(안 제9조제1항)."
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -148095,36 +146927,10 @@
       "processingResult": "",
       "summary": "현행법은 예술인권리침해행위 또는 예술 활동 관련 성희롱ㆍ성폭력행위가 신고된 경우 문화체육관광부장관이 예술인보호관으로 하여금 신고 사실을 조사하도록 하고, 조사 결과 예술인 권리보장 및 성희롱ㆍ성폭력 피해구제 위원회의 심의ㆍ의결을 거쳐 구제조치 또는 시정권고를 할 수 있음. 아울러 신고 건수가 증가하면서 조사업무 및 관련 행정업무 부담이 가중되고 있어 위원회의 업무를 보조하는 전담 조직의 필요성이 높아지고 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_E2F6D0C9C0A4B1J0K2I9I5H8F0G7C9",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "문화체육관광위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "문화체육관광위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -149185,36 +147991,10 @@
       "processingResult": "",
       "summary": "현행법에 따른 특별검사의 수사대상에는 특별검사를 임명하는 대통령 본인이 피고인인 형사사건의 수사ㆍ기소 과정에 관한 의혹이 포함되어 있어 임명권자가 수사 결과에 직접적인 이해관계를 가지는 구조임에도 불구하고, 특별검사가 제기한 공소사실 전부에 대하여 무죄판결이 확정되더라도 그 수사ㆍ기소에 투입된 국가 재정에 대하여 책임을 물을 수 있는 장치가 마련되어 있지 아니함. 대통령 본인이 피고인인 형사사건과 관련된 의혹에 대하여 특별검사가 공소를 제기한 모든 피고인(공소기각 또는 면소의 재판이 확정된 피고인은 제외함)의 공소사실 전부에 대하여 무죄판결이 확정된 경우에는 그 의혹의 수사ㆍ기소 및 공소유지에 지출된 비용 전액을 특별검사를 임명한 대통령이 부담하도록 하고, 이를 위하여 특별검사가 수사대상 사건별로 비용을 구분ㆍ기록하여 대통령과 국회에 보고하도록 하는 한편, 감사원의 비용 검증, 당사자의 의견제출 및 소송을 통한 청구 절차를 마련함으로써 국가 재정 집행의 책임성을 확보하려는 것임(안 제18조, 제18조의2 및 법률 제22136호 윤석열 정권 검찰청, 국가정보원, 감사원 등 국가기관의 조작수사ㆍ조작기소 등 의혹의 진상규명을 위한 특별검사 임명 등에 관한 법률 부칙 제3조).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_CFE6E4D9F30E4B0989337406B4A6E8",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "법제사법위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "법제사법위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -150079,30 +148859,10 @@
       "processingResult": "",
       "summary": "최근 경영권 분쟁 상황에서 주권상장법인이 주주배정이 아닌 방식의 과도한 저가 유상증자를 하여 일반주주의 주식가치가 희석되는 피해가 지속적으로 발생하고 있음. 경영권 분쟁 기간에 제3자 배정증자 방식의 유상증자를 금지하고, 일반공모방식 및 제3자 배정증자 방식의 유상증자 시 신주 발행가액의 할인율 상한을 10%로 상향하여 법률로 명확히 규정함으로써 최대주주 등이 지배력을 확대하는 과정에서 일반주주에게 발생하는 피해를 줄이고(안 제165조의6제5항 및 제6항 신설 등), 주권상장법인은 최대주주 및 그 특수관계인이 보유한 전환사채 및 신주인수권부사채에 대하여 시가의 변동에 따른 전환가액 또는 행사가액을 하향조정할 수 없도록 법률에 명시해 경영권 분쟁 기간동안 전환권이나 신주인수권의 행사를 할 수 없도록 규정하여 일반 투자자를 보호하려는 것임(안 제165조의10제3항 및 제4항 신설).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_I2J6H0I8H0F5F1B1C1A4B0Z7Z4Y3G6",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "정무위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -153375,42 +152135,10 @@
       "processingResult": "",
       "summary": "국가 균형발전과 국민의 복리 증진에 기여하기 위하여 종전의 전라남도와 광주광역시를 각각 폐지하고, 전남광주통합특별시를 설치하는 등의 내용으로 「전남광주통합특별시 설치를 위한 특별법」이 제정ㆍ시행(2026. 시행)됨에 따라, 지방자치단체 및 지방자치단체의 장의 범위에 각각 ‘통합특별시’ 및 ‘통합특별시장’을 명시하는 등 통합특별시의 출범에 따른 지방행정체제 개편 사항을 「자연유산의 보존 및 활용에 관한 법률」에 반영하려는 것임(안 제2조제4호 등).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_B40F7D39FE36487BA444478597673D",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용",
-        "주요내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "문화체육관광위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "문화체육관광위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        },
-        {
-          "label": "주요내용",
-          "before": "해당 의안 정보를 찾을 수 없습니다.",
-          "after": "국가 균형발전과 국민의 복리 증진에 기여하기 위하여 종전의 전라남도와 광주광역시를 각각 폐지하고, 전남광주통합특별시를 설치하는 등의 내용으로 「전남광주통합특별시 설치를 위한 특별법」이 제정ㆍ시행(2026. 시행)됨에 따라, 지방자치단체 및 지방자치단체의 장의 범위에 각각 ‘통합특별시’ 및 ‘통합특별시장’을 명시하는 등 통합특별시의 출범에 따른 지방행정체제 개편 사항을 「자연유산의 보존 및 활용에 관한 법률」에 반영하려는 것임(안 제2조제4호 등)."
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -154863,36 +153591,10 @@
       "processingResult": "",
       "summary": "현행법은 적합성평가기관이 발급하는 교정성적서ㆍ인증서ㆍ시험성적서ㆍ검사성적서(이하 “성적서”라 한다)를 교정ㆍ인증ㆍ시험ㆍ검사의 결과를 “기록한 문서”로 정의하고, 적합성평가 의뢰자 등이 성적서를 위조ㆍ변조하거나 부정하게 발급된 성적서임을 알고도 사용하는 행위를 금지하며 이를 위반한 자를 처벌하고 있음. 선고 2019도8443 판결 등 참조), 성적서를 편집ㆍ변조한 이미지 파일을 인터넷에 게시하는 행위를 현행법상 성적서의 위조ㆍ변조로 처벌하기 어렵다는 문제가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_8DE07D476EA547EDAC4025F75563AF",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "산업통상자원중소벤처기업위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "산업통상자원중소벤처기업위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -155449,36 +154151,10 @@
       "processingResult": "",
       "summary": "국가 균형발전과 국민의 복리 증진에 기여하기 위하여 종전의 전라남도와 광주광역시를 각각 폐지하고, 전남광주통합특별시를 설치하는 등의 내용으로 「전남광주통합특별시 설치를 위한 특별법」이 제정ㆍ시행(2026. 시행)됨에 따라, 지방자치단체 및 지방자치단체의 장의 범위에 각각 ‘통합특별시’ 및 ‘통합특별시장’을 명시하는 등 통합특별시의 출범에 따른 지방행정체제 개편 사항을 체계적으로 반영하려는 내용으로 「민방위기본법」 등 행정안전부 소관 18개 법률을 개정하려는 것임.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_A239F144BFC94DCE85177B0EE9E52B",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "행정안전위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "행정안전위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -155503,36 +154179,10 @@
       "processingResult": "",
       "summary": "국가 균형발전과 국민의 복리 증진에 기여하기 위하여 종전의 전라남도와 광주광역시를 각각 폐지하고, 전남광주통합특별시를 설치하는 등의 내용으로 「전남광주통합특별시 설치를 위한 특별법」이 제정ㆍ시행(2026. 시행)됨에 따라, 지방자치단체 및 지방자치단체의 장의 범위에 각각 ‘통합특별시’ 및 ‘통합특별시장’을 명시하는 등 통합특별시의 출범에 따른 지방행정체제 개편 사항을 체계적으로 반영하려는 내용으로 「공무원직장협의회의 설립ㆍ운영에 관한 법률」 등 행정안전부 소관 31개 법률을 개정하려는 것임.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_20A1BFA8A50B40379B62187B276E60",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "행정안전위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "행정안전위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -156733,36 +155383,10 @@
       "processingResult": "",
       "summary": "현행 「형사소송법」은 보석조건으로 피해자 등에 대한 위해행위 및 주거·직장 등 주변에 대한 접근금지를 규정하고 있으며, 「전자장치 부착 등에 관한 법률」은 피고인의 출석을 담보하기 위하여 보석조건으로 위치추적 전자장치 부착을 명할 수 있도록 하고 있음. 특히 전자장치 부착을 통해 피고인의 보석조건 위반 사실을 확인하더라도 그 통지 대상이 법원과 검사에 한정되어 있어, 긴급한 피해자 보호가 필요한 상황에서 경찰의 신속한 현장 출동 및 대응으로 이어지기 어려운 문제가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_7C345F28676E483092F5537BDF887B",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "법제사법위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "법제사법위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -176891,36 +175515,10 @@
       "processingResult": "",
       "summary": "지속가능발전지표와 국가통계를 연계할 수 있는 근거가 없어 평가 결과의 객관성ㆍ신뢰성에 한계가 있고, 숙의공론화장의 마련이 임의규정에 머물러 국민 참여가 형식화되고 있다는 지적이 있음. 관계 중앙행정기관의 장이 추진상황 점검 결과와 국가지속가능성 평가 결과를 「정부업무평가 기본법」에 따른 자체평가에 반영하도록 함(안 제15조의2 신설).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_C4BE90BE637B4033BCEE0BE8835AD0",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "정무위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "정무위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -178429,36 +177027,10 @@
       "processingResult": "",
       "summary": "「교과용 도서에 관한 규정」에 근거하여 교과용 도서의 편찬ㆍ수정이 이루어지고 있으나 현행 「초ㆍ중등교육법」에는 교과용 도서의 저작ㆍ검정ㆍ인정ㆍ발행ㆍ공급ㆍ선정 및 가격 사정에 대해서만 규정하고 있을 뿐 편찬 및 수정에 관한 법적 근거가 명확히 마련되어 있지 않으므로 위임입법의 한계 및 법적 안정성 측면에서 이를 보완할 필요가 있음. 교과용 도서의 편찬 및 수정에 관한 법적 근거를 법률에 명확히 규정하고, 교과용 도서의 편찬ㆍ검정ㆍ인정ㆍ수정 등에 대한 교육부장관의 소관 업무 중 일부를 관련 전문기관 또는 법인ㆍ단체에 위탁할 수 있는 근거를 마련함으로써, 교과용 도서의 질적 수준을 제고하고 관련 행정을 효율적으로 추진할 수 있도록 하려는 것임(안 제29조제6항, 제29조제7항 및 제8항 신설).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_A2B6Z0Z9Y2U3U1S8T0S0S2Q9R2Z5X9",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "교육위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "교육위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -178483,36 +177055,10 @@
       "processingResult": "",
       "summary": "적발이 감독교사의 육안 확인과 제보에 의존하고 있어 드러나지 않은 사례는 더 많을 것으로 우려됨. 학교시험에서 전자기기를 이용한 부정행위, 시험문제 유출, 외부에서의 답안 전송 등을 금지하고, 학교의 장의 예방 조치 의무, 부정행위 학생에 대한 성적 처리 및 징계 근거, 학생의 기본권 보호와 의견제출ㆍ이의신청 절차, 교육부장관ㆍ교육감의 실태조사 및 예방 대책 수립 의무를 법률에 규정하며(안 제25조의3 신설), 학생은 교육적 조치로 다루되 해당 학교시험에 응시하는 학생이 아닌 사람으로서 시험문제를 유출하거나 답안을 전송한 자, 부정행위에 사용될 것을 알면서 전자기기를 판매ㆍ대여ㆍ제공한 자는 형사처벌함으로써(안 제67조의2 신설) 학교시험의 공정성을 확보하려는 것임.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_2AF7545D9B9F42219E1B46793D46E1",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "교육위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "교육위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -178929,36 +177475,10 @@
       "processingResult": "",
       "summary": "이 때문에 형 집행 대상자가 통지를 통하여 소재 추적 사실을 알게 되어 휴대전화를 교체하거나 도주하는 등 형의 집행이 곤란해질 우려가 있음. 한편 「전기통신사업법」은 형의 집행을 위하여 통신이용자정보 제공을 받은 경우에도 도주 우려 등 일정한 사유가 있으면 통지를 유예할 수 있도록 하고 있어, 제도 간 정합성 측면에서도 개선이 필요함.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_56A852EA232A46B3B0EDB27837382C",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "법제사법위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "법제사법위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -179543,36 +178063,10 @@
       "processingResult": "",
       "summary": "현행법은 교육감이 일정 기준 이상의 요건을 갖춘 학교형태의 평생교육시설을 고등학교 졸업 이하의 학력이 인정되는 시설로 지정할 수 있도록 하면서, 학력인정 평생교육시설의 설립 주체를 학교법인 또는 재단법인으로 한정하고 있음. 2007년 설립 주체가 법인으로 한정되기 전에 개인이 설치하여 종전의 규정에 따라 운영되어 온 시설은 설치자가 사망하면 법인으로 전환하여야 운영을 계속할 수 있으나, 재산 출연 등의 부담으로 폐쇄되는 경우가 발생하고 있어 재학생과 그 시설의 과정을 마친 학습자가 학업을 이어 갈 곳을 잃는 실정임.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_C4ADA5C0433A4E9B97D1818E854E12",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "교육위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "교육위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -181893,18 +180387,10 @@
       "processingResult": "대안반영폐기",
       "summary": "한편, 「공공기관의 운영에 관한 법률」의 개정으로 공공기관 결산서 제출기한이 다음 해 3월 15일까지로 연장되었으나 현행법에는 2월 말일까지 제출하도록 되어 있어 상충되는 문제가 있음. 재단은 기한의 이익이 상실된 학자금대출 채권 및 구상채권을 한국자산관리공사에 매각할 수 있도록 함으로써 청년의 신용회복과 경제적 자립을 도모하는 한편, 결산서 제출 시기를 공공기관 운영 관련 법령에 따르도록 함으로써 법령 간 정합성을 확보하려는 것임(안 제22조, 제49조의8 삭제 및 제49조의9 신설).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_ED58F84717A64423B91914B7BED8E3",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "처리결과"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "처리결과",
-          "before": "",
-          "after": "대안반영폐기"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -182797,36 +181283,10 @@
       "processingResult": "",
       "summary": "현행 「형사소송법」은 보석조건으로 피해자 등에 대한 위해행위 및 주거ㆍ직장 등 주변에 대한 접근금지를 규정하고 있으며, 「전자장치 부착 등에 관한 법률」은 피고인의 출석을 담보하기 위하여 보석조건으로 위치추적 전자장치 부착을 명할 수 있도록 하고 있음. 보석조건에 피고인의 출석 보증뿐만 아니라, 증거인멸 및 재범 방지와 피해자 보호의 목적을 명확히 반영함으로써 보석제도의 실효성을 높이고, 피해자의 생명과 신체를 보다 두텁게 보호하려는 것임.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_BD6B3A6FE819461890643164D202C2",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "법제사법위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "법제사법위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -183411,36 +181871,10 @@
       "processingResult": "",
       "summary": "현행법은 환자안전사고의 보고의무 주체를 일정 규모 이상의 병원급 의료기관으로 한정하고 있음. 모든 의료기관에 대하여 수면마취 또는 전신마취 하의 처치ㆍ시술 또는 수술 중 환자가 사망한 환자안전사고가 발생한 경우 이를 보고하도록 의무화하여 의료기관의 환자안전 관리 사각지대를 해소하고 안전한 의료환경을 조성하려는 것임(안 제30조제2항 신설 등).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_21BFE1EA07D14ED8807DD548F8C0DB",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "소관기관",
-        "진행단계",
-        "소관위원회",
-        "처리내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "소관기관",
-          "before": "위원회 배정 전",
-          "after": "보건복지위원회"
-        },
-        {
-          "label": "진행단계",
-          "before": "접수",
-          "after": "소관위"
-        },
-        {
-          "label": "소관위원회",
-          "before": "위원회 배정 전",
-          "after": "보건복지위원회"
-        },
-        {
-          "label": "처리내용",
-          "before": "이번 달 신규 확인",
-          "after": "접수 → 소관위"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -183577,18 +182011,10 @@
       "processingResult": "",
       "summary": "특수경비업자는 미리 특수경비원 신임교육을 받은 특수경비원을 특수경비원 신임교육 대상에서 제외할 수 있도록 함(안 제13조제3항 단서 신설). 경비협회의 공제사업에 제1호부터 제4호까지의 공제사업에 부수된 사업으로서 행정안전부령으로 정하는 사업을 추가함(안 제23조제1항제5호 신설).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_CEBBE9B3CABB42C1BB528EBD3034B1",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2223319"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -183613,18 +182039,10 @@
       "processingResult": "",
       "summary": "현행법은 경찰관의 직무 중 하나로 주요 인사 경호를 규정하고 있으나, 경호가 필요한 주요 인사의 범위나 경호를 수행하는 경찰관의 직무집행에 관한 사항을 구체적으로 규정하고 있지 않음. 국회의장, 대법원장, 헌법재판소장, 국무총리와 함께 대통령선거 후보(예비후보를 포함)로 등록한 사람 및 주요 정당의 대통령선거 후보자로 선출된 사람 등을 경찰관이 경호를 담당하는 주요 인사의 범위로 구체적으로 명시하고, 경찰관이 경호대상자의 안전에 대한 위험을 제거하거나 경호대상자에 대한 위해 방지를 위하여 필요한 조치를 할 수 있도록 함으로써 경찰관의 경호 수행에 대한 명확한 법적 근거를 마련하려는 것임(안 제4조의2 신설).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_C2J5K0I6J0H5G1G8O1P7N5N0L7M1L3",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2223342"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -183649,18 +182067,10 @@
       "processingResult": "",
       "summary": "한편 고엽제후유의증환자의 경우 고엽제 관련 질병으로 가정을 제대로 돌보지 못했으며 그 배우자가 기본적인 경제생활을 유지하는데 막대한 희생과 공헌이 있었다고 볼 수 있는데도 불구하고 고엽제후유의증환자 사망 이후 남겨진 배우자에 대한 보상 제도가 충분히 마련되어 있지 않다는 지적이 있음. 수당지급 대상인 고엽제후유의증환자가 사망한 경우 배우자에게 수당을 지급하여 배우자의 희생과 공헌에 대한 보상을 강화하려는 것임(안 제7조의11 신설 등).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_8B044C5C70A741BF9FA8EE56A94F2C",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2223347"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -183685,18 +182095,10 @@
       "processingResult": "",
       "summary": "현행법은 고엽제후유증환자로 결정ㆍ등록된 사람 중 그 장애정도가 1급∼6급의 상이등급에 해당하는 사람은 「국가유공자 등 예우 및 지원에 관한 법률」에 따른 전상군경 또는 공상군경으로 보아 보상금, 사망일시금 등을 지급하고 있으나, 고엽제후유의증환자와 고엽제후유증 2세환자의 경우 장애등급에 따른 수당의 지급 외에 그 유족에 대한 별다른 지원이 없음. 그로 인해 고엽제후유의증환자 또는 고엽제후유증 2세환자가 사망한 경우 생계가 어려운 배우자 등 유족은 어렵게 생활할 수 밖에 없어 문제가 있고, 고엽제후유의증환자와 고엽제후유증 2세환자 역시 월남전 참전 등을 통해 질병을 얻은 만큼 이들에 대한 지원을 강화할 필요가 있다는 지적이 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_442AECDFB76040668DF3A4C4E54FA9",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2223326"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -183721,18 +182123,10 @@
       "processingResult": "",
       "summary": "쪽방 밀집지역을 포함하는 공공주택지구는 노후ㆍ불량 주거지를 정비하기 위한 기반시설 확충에 상당한 비용이 소요됨에도, 현행법에는 이러한 공공주택지구를 우선하여 지원하는 규정이 없음. 쪽방 밀집지역에 거주하는 주거취약계층의 이주를 돕기 위한 임시거주시설의 설치비용을 지원할 근거도 없어, 원활한 사업 추진에 제약이 되고 있다는 지적이 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_7BBC7455B0104D899DE61A2A3ADD18",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2223327"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -183757,18 +182151,10 @@
       "processingResult": "",
       "summary": "따라 온라인 플랫폼별 숙박상품의 판매가격과 예약ㆍ취소 현황 등을 지속적으로 확보하기 어려워, 숙박시장의 가격 변동과 거래 현황을 종합적으로 파악하는 데 한계가 있음. 특히 이례적인 요금 인상이나 일방적인 예약 취소 등으로 인한 관광객 피해를 사전에 예방하기 위한 상시모니터링 체계가 미흡한 실정임.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_CB43900BDB1149B0A8CD258E9A4AF5",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2223324"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -183793,18 +182179,10 @@
       "processingResult": "",
       "summary": "규정이 상관의 위법 또는 부당한 업무 지시에 대하여 이의를 제기할 수 있는 범위를 구체적 사건수사로 국한하고 있으며, 상관에 대한 이의 제기 후 이에 대한 상관의 대응 의무 및 책임에 대한 내용이 없어 실효성이 떨어진다는 비판이 있음. 상관의 지휘ㆍ감독의 적법성 또는 정당성에 대하여 이견이 있는 경우 이의 제기 범위를 구체적 사건수사에서 전반적인 직무수행으로 넓히고, 이의 제기를 받은 상관은 서면이나 이에 상당한 방법으로 경찰공무원에게 지체 없이 답변하도록 하며, 이의 제기에도 불구하고 상관이 그 경찰공무원에게 직무수행과 관련하여 지휘ㆍ감독의 적법성 또는 정당성에 대하여 이견이 있는 행위를 지시하거나 요구한 경우 그로 인한 행위 책임은 그 상관이 지도록 함으로써 경찰의 직무수행에서 상관의 위법ㆍ부당한 지휘ㆍ감독에 따른 이의 제기 절차와 그 책임 소재를 명확히 하려는 것임(안 제6조제2항 후단 및 제3항 신설 등).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_L2L5K0I6J0R5P1Q8O1P8N3O9W9U3V0",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "주요내용"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "주요내용",
-          "before": "이러한 규정이 상관의 위법 또는 부당한 업무 지시에 대하여 이의를 제기할 수 있는 범위를 구체적 사건수사로 국한하고 있으며, 상관에 대한 이의 제기 후 이에 대한 상관의 대응 의무 및 책임에 대한 내용이 없어 실효성이 떨어진다는 비판이 있음. 상관의 지휘ㆍ감독의 적법성 또는 정당성에 대하여 이견이 있는 경우 이의 제기 범위를 구체적 사건수사에서 전반적인 직무수행으로 넓히고, 이의 제기를 받은 상관은 서면이나 이에 상당한 방법으로 경찰공무원에게 지체 없이 답변하도록 하며, 이의 제기에도 불구하고 상관이 그 경찰공무원에게 직무수행과 관련하여 지휘ㆍ감독의 적법성 또는 정당성에 대하여 이견이 있는 행위를 지시하거나 요구한 경우 그로 인한 행위 책임은 그 상관이 지도록 함으로써 경찰의 직무수행에서 상관의 위법ㆍ부당한 지휘ㆍ감독에 따른 이의 제기 절차와 그 책임 소재를 명확히 하려는 것임(안 제6조제2항 후단 및 제3항 신설 등).",
-          "after": "규정이 상관의 위법 또는 부당한 업무 지시에 대하여 이의를 제기할 수 있는 범위를 구체적 사건수사로 국한하고 있으며, 상관에 대한 이의 제기 후 이에 대한 상관의 대응 의무 및 책임에 대한 내용이 없어 실효성이 떨어진다는 비판이 있음. 상관의 지휘ㆍ감독의 적법성 또는 정당성에 대하여 이견이 있는 경우 이의 제기 범위를 구체적 사건수사에서 전반적인 직무수행으로 넓히고, 이의 제기를 받은 상관은 서면이나 이에 상당한 방법으로 경찰공무원에게 지체 없이 답변하도록 하며, 이의 제기에도 불구하고 상관이 그 경찰공무원에게 직무수행과 관련하여 지휘ㆍ감독의 적법성 또는 정당성에 대하여 이견이 있는 행위를 지시하거나 요구한 경우 그로 인한 행위 책임은 그 상관이 지도록 함으로써 경찰의 직무수행에서 상관의 위법ㆍ부당한 지휘ㆍ감독에 따른 이의 제기 절차와 그 책임 소재를 명확히 하려는 것임(안 제6조제2항 후단 및 제3항 신설 등)."
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -183857,18 +182235,10 @@
       "processingResult": "",
       "summary": "현행법에 따르면 국내에 체류하는 외국인이 지역가입자가 되기 위하여서는 일정 기간 동안 국내에 거주하였거나 해당 기간 동안 국내에 지속적으로 거주할 것으로 예상할 수 있는 사유가 있어야 하고, 이에 더하여 보건복지부령으로 정하는 체류자격을 가진 채로 주민등록, 국내거소신고 또는 외국인등록을 하여야 함. 외국인과 대한민국 국민 사이에서 혼인 외로 출생하여 「국적법」 제3조에 따른 국적 취득 절차 진행 중인 외국인 미성년자의 경우, 주민등록증, 국내거소신고증이나 외국인등록증을 발급받기 전까지는 건강보험에 가입하거나 피부양자가 되지 못하여 의료 접근 공백이 발생하고 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_D2E6C0D9Y2Z1Y1Y0W1V3V3D1E5C9D9",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2223318"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -183893,18 +182263,10 @@
       "processingResult": "",
       "summary": "현행법은 탄소중립 사회로의 이행과 녹색성장에 관한 교육ㆍ홍보를 확대 의무를 정하고 있음에도, 구체적인 교육주체나 대상, 보고 의무 등에 대한 규정이 미흡하다는 지적이 지속적으로 제기되어 왔음. 탄소중립 정책의 효과적 이행을 위하여 정책을 입안하고 집행하는 공무원과 공공기관 직원 등에 대하여 탄소중립 교육을 실시하도록 함으로써 기후위기 대응의 정책 일관성과 전문성을 담보하는 토대를 강화하고자 함(안 제67조제4항 후단 신설).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_9B244F1C0CED45BFB9B17FDBE637E0",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2223334"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -183929,18 +182291,10 @@
       "processingResult": "",
       "summary": "국방연구개발사업에는 중소기업자를 우선 선정할 수 있는 근거가 마련되어 있으나, 국내구매에는 직접생산 능력을 갖춘 중소기업자를 우선 선정할 수 있는 별도의 근거가 없어 중소기업의 방위 산업 참여 확대에 한계가 있음. 방위사업청장이 대통령령으로 정하는 기준에 따라 지정ㆍ고시하는 품목의 구매계약에서 직접생산 능력을 갖춘 중소기업자를 낙찰자로 우선 선정할 수 있도록 하되, 기존 중소기업자간 경쟁제품은 적용대상에서 제외하고, 대상 품목의 지정, 직접생산 확인 및 낙찰자 우선선정에 필요한 기준ㆍ절차 등은 대통령령으로 정하도록 하여 국내구매 시 직접생산 중소기업자에 대한 우선선정 근거를 마련함(안 제19조제2항 및 제3항 신설).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_253DD3B690FB495FBADED01FE44A23",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2223325"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -183965,18 +182319,10 @@
       "processingResult": "",
       "summary": "경찰청장과 관계 중앙행정기관의 장 및 지방자치단체의 장 간 범죄피해자 보호ㆍ지원 업무의 책임과 협력체계를 명확히 함(안 제2조의3). 최초 접촉기관의 피해자 권리 안내, 지원신청 접수 및 기관 간 연계ㆍ사례관리 의무를 강화함(안 제7조의2 및 제7조의5).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_6A06E1DEA8BD48138EBD64A4A2C051",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2223352"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -184001,18 +182347,10 @@
       "processingResult": "",
       "summary": "제안이유 현행 「범죄피해자보호기금법」은 검사가 수사의 중심 역할을 하던 시기에 제정된 법률로, 법무부장관에게 기금의 관리ㆍ운용 권한을 집중시키고 있어 변화된 형사사법체계에 맞지 않음. 기금의 관리ㆍ운용을 범정부 공동 조정체계로 전환하고, 기금 사용의 우선순위를 법률에 명확히 하며, 긴급지원 재원을 별도로 확보하고, 기금 집행 실적을 공개ㆍ평가하도록 하여 기금 운영의 투명성과 책임성을 높이고 범죄피해자에 대한 신속한 피해 회복을 도모하려는 것임.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_4C7574294C9342BA87131867FE7B6B",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2223350"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -184065,18 +182403,10 @@
       "processingResult": "",
       "summary": "“대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다.”는 헌법 제1조제2항의 정신에 따르면 법률의 주인은 국민이며, 누구나 이해하기 쉬운 법률을 만드는 것은 국민을 대표하는 입법기관인 국회의 의무라 할 수 있음. 개정안은 훈민정음 반포 580주년이자 한글날 기념 100주년을 맞아, 어려운 한자어, 외래어ㆍ외국어, 지나치게 축약된 표현 등 어렵거나 불명확한 법률용어를 알기 쉬운 우리말로 정비함으로써 법률에 대한 국민의 가독성과 접근성을 높이려는 것임(안 제2조제1호 및 제14조의7제1항).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_0D492525B23042538CDDCDA7286379",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2223344"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -184101,18 +182431,10 @@
       "processingResult": "",
       "summary": "“대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다.”는 헌법 제1조제2항의 정신에 따르면 법률의 주인은 국민이며, 누구나 이해하기 쉬운 법률을 만드는 것은 국민을 대표하는 입법기관인 국회의 의무라 할 수 있음. 개정안은 훈민정음 반포 580주년이자 한글날 기념 100주년을 맞아, 어려운 한자어, 외래어ㆍ외국어, 지나치게 축약된 표현 등 어렵거나 불명확한 법률용어를 알기 쉬운 우리말로 정비함으로써 법률에 대한 국민의 가독성과 접근성을 높이려는 것임(안 제2조제1호 및 제21호, 제42조제1항제1호).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_543E627C87F142968FFAC5560963D5",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2223346"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -184137,18 +182459,10 @@
       "processingResult": "",
       "summary": "“대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다”는 헌법 제1조제2항의 정신에 따르면 법률의 주인은 국민이며, 누구나 이해하기 쉬운 법률을 만드는 것은 국민을 대표하는 입법기관인 국회의 의무라 할 수 있음. 개정안은 훈민정음 반포 580주년이자 한글날 기념 100주년을 맞아, 어려운 한자어, 외래어ㆍ외국어, 지나치게 축약된 표현 등 어렵거나 불명확한 법률용어를 알기 쉬운 우리말로 정비함으로써 법률에 대한 국민의 가독성과 접근성을 높이려는 것임(안 제32조의4제4항).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_EF05451D62794EC7BC0636C4495233",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2223348"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -184173,18 +182487,10 @@
       "processingResult": "",
       "summary": "“대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다.”는 헌법 제1조제2항의 정신에 따르면 법률의 주인은 국민이며, 누구나 이해하기 쉬운 법률을 만드는 것은 국민을 대표하는 입법기관인 국회의 의무라 할 수 있음. 개정안은 훈민정음 반포 580주년이자 한글날 기념 100주년을 맞아, 어려운 한자어, 외래어ㆍ외국어, 지나치게 축약된 표현 등 어렵거나 불명확한 법률용어를 알기 쉬운 우리말로 정비함으로써 법률에 대한 국민의 가독성과 접근성을 높이려는 것임(안 제20조제3항).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_ABBDB203F4D4430985B1A9F0234067",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2223340"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -184209,18 +182515,10 @@
       "processingResult": "",
       "summary": "“대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다”는 헌법 제1조제2항의 정신에 따르면 법률의 주인은 국민이며, 누구나 이해하기 쉬운 법률을 만드는 것은 국민을 대표하는 입법기관인 국회의 의무라 할 수 있음. 개정안은 훈민정음 반포 580주년이자 한글날 기념 100주년을 맞아, 어려운 한자어, 외래어ㆍ외국어, 지나치게 축약된 표현 등 어렵거나 불명확한 법률용어를 알기 쉬운 우리말로 정비함으로써 법률에 대한 국민의 가독성과 접근성을 높이려는 것임(안 제13조제2항 전단).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_C39199F18F3F411587D6AFEA06301A",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2223339"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -184245,18 +182543,10 @@
       "processingResult": "",
       "summary": "“대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다.”는 헌법 제1조제2항의 정신에 따르면 법률의 주인은 국민이며, 누구나 이해하기 쉬운 법률을 만드는 것은 국민을 대표하는 입법기관인 국회의 의무라 할 수 있음. 개정안은 훈민정음 반포 580주년이자 한글날 기념 100주년을 맞아, 어려운 한자어, 외래어ㆍ외국어, 지나치게 축약된 표현 등 어렵거나 불명확한 법률용어를 알기 쉬운 우리말로 정비함으로써 법률에 대한 국민의 가독성과 접근성을 높이려는 것임(안 제20조).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_3A0883C112484D9C906AC4F392EFF9",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2223337"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -184281,18 +182571,10 @@
       "processingResult": "",
       "summary": "현행법은 수상레저사업의 등록 및 안전관리 등에 관한 사항을 규정하고 있으나, 사업자와 종사자의 정기적인 안전교육 이수 의무는 규정하지 않아 사업장 안전관리 역량을 지속적으로 확보하는 데 한계가 있음. 유사 분야와 달리 정기적인 법정 안전교육 의무가 없어 체계적인 교육에 어려움이 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_1A24A3E7E10A442B9BD02DAF92FEA7",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2223332"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -184317,18 +182599,10 @@
       "processingResult": "",
       "summary": "제안이유 기후위기와 환경오염이 날로 심화하면서, 자연환경과 공존하고 환경문제를 극복하기 위하여 탄소중립과 순환경제 등 지속가능한 녹색전환의 필요성이 대두되고 있음. 적합성평가 등의 업무를 수행하기 위해 평가기관을 지정하고, 시정명령ㆍ업무정지 및 지정취소의 요건을 규정함(안 제18조의2 및 제18조의3 신설).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_009B3185FF034C23ADA1C607F97B4D",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2223351"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -184353,18 +182627,10 @@
       "processingResult": "",
       "summary": "현행법상 사법경찰관이 긴급응급조치 승인 및 잠정조치를 신청할 때 반드시 검사를 경유하도록 규정되어 있어, 스토킹 범죄 현장에서 즉각적이고 신속한 피해자 보호조치가 지연될 우려가 있음(스토킹처벌법 제5조, 제8조). 아울러 상습적인 조치 불이행자에 대해 5년 이하의 징역 또는 5천만원 이하의 벌금으로 가중처벌하는 규정을 신설하여 잠정조치 등의 이행력을 확보하려는 것임(안 제5조 등).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_BD1337EDE625404CAC74936BA1CAB0",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2223329"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -184417,18 +182683,10 @@
       "processingResult": "",
       "summary": "현행법은 양성평등을 국가 책무로만 규정할 뿐, 기업별 남녀 근로자의 고용 및 임금 현황을 공개할 제도적 장치는 미흡한 실정임. 차별적 고용관행 개선을 위한 적극적 고용개선조치의 근거를 일원화하고, 적극적 고용개선조치 이행실적이 우수한 기업 및 성별 임금격차 개선 기업 등 고용평등 우수기업에 대한 행정적ㆍ재정적 지원을 명시하여 사업주의 적극적 참여를 지원하기 위한 인센티브를 강화하려는 것임(안 제24조의2부터 제24조의6까지 및 제55조 신설).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_AA9C9456B33647F29DA65042D22594",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2223333"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -184453,18 +182711,10 @@
       "processingResult": "",
       "summary": "“대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다.”는 헌법 제1조제2항의 정신에 따르면 법률의 주인은 국민이며, 누구나 이해하기 쉬운 법률을 만드는 것은 국민을 대표하는 입법기관인 국회의 의무라 할 수 있음. 개정안은 훈민정음 반포 580주년이자 한글날 기념 100주년을 맞아, 어려운 한자어, 외래어ㆍ외국어, 지나치게 축약된 표현 등 어렵거나 불명확한 법률용어를 알기 쉬운 우리말로 정비함으로써 법률에 대한 국민의 가독성과 접근성을 높이려는 것임(안 제2조제4호 및 제11조제1항).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_A46FE5F9F2104F0DA5C98279442DAD",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2223338"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -184489,18 +182739,10 @@
       "processingResult": "",
       "summary": "현행법은 보건복지부장관이 시ㆍ도지사, 시장ㆍ군수ㆍ구청장에게 통합지원 시책 추진에 필요한 비용을 지원할 때 추진성과의 평가결과를 반영하여 차등 지원할 수 있도록 하고 있음. 통합지원이 지역 간 최대 28.5%p의 격차가 발생하고 있으며, 치매 전문관리 서비스의 연계 비중은 3.8배, 장기요양 분야는 3배 이상 지역 간 격차가 나타나고 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_FF5EE0A348B048F888647D7EA86458",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2223331"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -184525,18 +182767,10 @@
       "processingResult": "",
       "summary": "특히 화재진압, 구조ㆍ구급 및 재난 발생 시 대피ㆍ구호 등의 임무는 대원의 신체와 생명에 상당한 위험을 수반할 수 있음에도 일반적인 화재예방ㆍ지원 활동과 동일한 기준에 따라 수당이 지급되고 있어, 임무의 위험성과 강도에 상응하는 합리적인 보상체계를 마련할 필요가 있음. 아울러 의용소방대원이 화재의 경계와 진압, 구조ㆍ구급 및 재난 발생 시 대피ㆍ구호 등의 임무를 수행하는 경우에는 소방위에게 적용되는 시간외근무수당 단가의 100분의 50에 해당하는 금액을 추가로 지급하도록 하고, 국가가 수당 지급에 필요한 비용의 일부를 의무적으로 지원하도록 함으로써 지방자치단체의 재정부담을 완화하고 의용소방대원의 봉사와 희생에 합당한 보상체계를 마련하려는 것임(안 제15조).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_Y2X6X0F9G0E1E1D3B2C4K2L4J4J1H6",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2223320"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -184561,18 +182795,10 @@
       "processingResult": "",
       "summary": "현행 인감증명제도는 1914년 도입된 이래 부동산ㆍ금융 거래 등 국민생활 밀접 분야에서 본인 의사를 확인하는 공적 증명 수단으로 기능하고 있으며, 인감도장의 분실ㆍ마멸 등에 따른 ‘인감변경신고’는 인감대장을 관리하는 증명청에 하도록 규정하고 있음. 관련하여 2026년 7월 국민권익위원회는 인감변경신고 접수처를 전국으로 확대하도록 관련 제도개선을 행정안전부에 권고한 바 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_72F22401BA194EC89A1FCDECEDEC0F",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2223335"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -184597,18 +182823,10 @@
       "processingResult": "",
       "summary": "반면 주요국은 공개매수 단계에서 대상회사 이사회의 의견표명을 법적 의무로 규정하고 있음. 공개매수신고서가 제출된 주식등의 발행인이 그 공개매수에 관한 의견과 이유를 기재한 의견표명보고서를 제출하도록 의무화하고자 함.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_BD689149A5EE402888FDBDD9DAD786",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2223317"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -184633,18 +182851,10 @@
       "processingResult": "",
       "summary": "특히 LG화학의 사례와 같이 미래 유망성장산업인 2차 전지사업이 자회사로 이전된 후 상장되면서 모회사 주식가치가 떨어져 일반주주의 권익이 침해되었다는 지적이 제기되고 있음. 주권상장법인의 자회사를 별도 상장하는 경우, 해당 자회사의 상장 주식총수의 100분의 30 이상을 모회사의 주주에게 우선적으로 배정하도록 함으로써 사회사 상장에 따른 이익을 모회사 주주가 공유할 수 있도록 하여 모회사 일반주주의 권익을 보호하고자 함(안 제165조의7제4항 등).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_H2F6G0E8M0N5L1M1K1L4J4F3F6E1E4",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2223315"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -184669,18 +182879,10 @@
       "processingResult": "",
       "summary": "실질적인 재해영향평가 협의 내용 이행을 위해 사업시행자에게 협의 내용을 실시설계에 반영하고 그 결과를 관계 행정기관의 장과 행정안전부 장관에게 제출하도록 함(안 제6조). 재해영향평가에 따라 설치한 영구저류지 등 재해저감시설이 사업 준공 후에도 정상적으로 운영될 수 있도록 사업시행자 등에게 시설 유지관리 계획 수립 및 관리 의무를 부과함(안 제6조의4).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_588842C706B04C88BA91FA496445D8",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2223328"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -184705,18 +182907,10 @@
       "processingResult": "",
       "summary": "현행법은 해저케이블의 보호를 위하여 과학기술정보통신부장관이 해저케이블 경계구역의 지정 신청을 받은 경우 지정 필요성 등을 검토하고 관계 중앙행정기관의 장과의 협의를 거쳐 해저케이블 경계구역을 지정ㆍ고시할 수 있도록 규정하고 있음. 해저케이블은 국가안전보장 및 전기통신역무의 안정적인 제공을 위한 핵심 기반시설로서 그 중요성이 커지고 있으나, 현행법은 해저케이블 경계구역의 지정을 신청에 의존하도록 하고 있어 국가안전보장 등을 위하여 해저케이블을 보호할 필요가 있는 경우에도 과학기술정보통신부장관이 직권으로 해저케이블 경계구역을 지정할 수 없는 한계가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_DF7F1BE58E3F4C0588C533653820C3",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2223323"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -184741,18 +182935,10 @@
       "processingResult": "",
       "summary": "국가 균형발전과 국민의 복리 증진에 기여하기 위하여 종전의 전라남도와 광주광역시를 각각 폐지하고, 전남광주통합특별시를 설치하는 등의 내용으로 「전남광주통합특별시 설치를 위한 특별법」이 제정ㆍ시행(2026. 시행)됨에 따라, 지방자치단체 및 지방자치단체의 장의 범위에 각각 ‘통합특별시’ 및 ‘통합특별시장’을 명시하는 등 통합특별시의 출범에 따른 지방행정체제 개편 사항을 체계적으로 반영하려는 내용으로 「1인 창조기업 육성에 관한 법률」 등 중소벤처기업부 소관 16개 법률을 개정하려는 것임.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_06B25679E375490DAF4C1A885EFB64",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2223349"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -184777,18 +182963,10 @@
       "processingResult": "",
       "summary": "현행법은 정보통신망을 통한 불법정보의 유통을 금지하고 있으나, 사람 간의 폭행 또는 상해 행위를 촬영ㆍ중계ㆍ유포하는 콘텐츠는 규율 대상에 포함되어 있지 아니함. 영리를 목적으로 사람 간의 폭행 또는 상해 행위를 촬영ㆍ중계ㆍ유포하는 정보를 불법정보의 유형에 추가하고, 이를 방송미디어통신위원회의 취급 거부ㆍ정지 및 제한 명령의 대상에 포함하려는 것임(안 제44조의7제1항제5호의2 신설 및 같은 조 제3항).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_S2Q6Q0M8L1L3J1K6I4J2R5P4Q7O3P8",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2223321"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -184813,18 +182991,10 @@
       "processingResult": "",
       "summary": "현행법은 지방자치단체의 장이 조례나 규칙으로 정하는 바에 따라 주민의 권리ㆍ의무와 직접 관련되지 아니하는 사무를 법인ㆍ단체 또는 그 기관이나 개인에게 위탁할 수 있도록 하고 있으며, 위탁사무 수행에 드는 비용은 지방자치단체의 예산으로 지원되고 있음. 반면, 동일하게 지방재정이 투입되는 지방보조사업 또는 지방자치단체 공공위탁사업의 경우에는 관련 법률에 따라 외부 회계감사 및 공시 의무를 두는 등 예산이 투명하고 공정하게 집행되도록 엄격히 규율하고 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_A61A57274C3F497D995543D2ECD44E",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2223336"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -184905,18 +183075,10 @@
       "processingResult": "",
       "summary": "현행 지역사랑상품권법은 국내 거주 내국인의 역외 유출 방지 및 소비 진작을 중심으로 지역 공동체의 강화 및 지역경제 활성활 방안을 규정하고 있음. ‘관광형 지역사랑상품권’의 법적 근거를 신설하여 외국인 관광객 대상 지역사랑상품권이 활성화할 수 있는 기반을 마련하고, 지역의 관광 인프라와 연계하여 각 지역적 특성을 살린 관광 산업을 육성하고자 함(안 제4조제5항 신설 등).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_314DBFDDC6764F0C9FBDF5D0ED5701",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2223353"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -184941,18 +183103,10 @@
       "processingResult": "",
       "summary": "콘텐츠는 대중으로 하여금 폭력행위를 오락이나 흥행의 대상으로 소비하도록 조장하고, 특히 청소년의 폭력심리 및 모방범죄를 유발할 우려가 있으며, 최근 학교폭력이 증가하는 원인 중에 하나라는 지적이 제기되고 있음. 현행법에 따른 청소년유해매체물의 심의 기준에 ‘폭행 또는 상해 행위를 촬영ㆍ중계를 통하여 오락 또는 흥행의 수단으로 이용하거나 미화 또는 조장하는 것’을 명시적으로 추가함으로써 폭력을 미화하는 매체물이 청소년에게 노출되는 것을 차단하고 청소년의 건전한 성장 환경이 조성될 수 있도록 하려는 것임(안 제9조제1항제3호의2 신설).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_O2P6X0X8W1U3M1M6U4U3T5U0S1S8Q6",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2223322"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -184977,18 +183131,10 @@
       "processingResult": "",
       "summary": "학습지 교사, 가정방문 점검원 등 다른 사람의 사업을 위하여 직접 노무를 제공하고 그 대가를 지급받는 노무제공자의 경우 근로자와 유사하게 노무를 제공하면서도 「근로기준법」에 따른 근로자에 해당하지 않음에 따라 최저임금을 적용받지 못하고 있으므로 개선이 필요하다는 지적이 있음. 최저임금위원회의 심의를 거쳐 고용노동부장관이 정하는 직종의 노무제공자에게도 이 법을 적용하도록 함으로써 노무제공자의 생활안정에 기여하려는 것임(안 제7조의2 신설 등).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_1089AB3B40ED46FB93A113FC473E5A",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2223343"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -185013,18 +183159,10 @@
       "processingResult": "",
       "summary": "현행법은 통일교육 활동을 통하여 평화통일 기반조성에 기여하기 위하여 통일부장관이 통일교육위원을 위촉하도록 규정하고 있음. 통일부는 최근 통일교육위원을 교사ㆍ교수 등 교육 현장 전문가 중심으로 개편하여 그 규모를 확대하면서 ‘평화통일민주교육위원’이라는 명칭을 사용하고 있으나, 현행법은 ‘통일교육위원’을 법률상 명칭으로 규정하고 있어 법률과 실제 운영 명칭이 일치하지 아니하는 문제가 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_C6E2AAD56D87461390C4FDBA950E4B",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2223341"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -185049,18 +183187,10 @@
       "processingResult": "",
       "summary": "실내에서 초경량비행장치를 비행하는 경우 공간의 제약으로 인해 안전사고의 위험이 크고, 기차역ㆍ버스터미널 등 다중이 밀집하는 시설인 경우에는 대형사고로 이어질 우려가 있으므로 시설물의 실내에 대하여도 별도의 비행 제한 근거를 마련할 필요가 있다는 지적이 있음. 다중이 밀집하는 시설로서 국토교통부령으로 정하는 시설의 실내에서 초경량비행장치를 비행하려는 경우 국토교통부장관의 비행승인을 받도록 하려는 것임(안 제127조제3항제3호 신설).",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_834F4C7BBC2D4191B202F6FF3A8E0A",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2223316"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     },
     {
       "month": "2026-11",
@@ -185085,18 +183215,10 @@
       "processingResult": "",
       "summary": "구속과 불구속의 경계에 있는 사건에서 법원의 판단에 따라 결과가 크게 달라질 수 있어 사법적 판단의 예측 가능성과 형평성에 대한 우려도 제기되고 있음. 반면 미국, 독일, 영국, 프랑스 등 주요 국가에서는 구속을 대신하여 일정한 조건을 부과하고 석방하는 제도를 운영하고 있으며, 이를 통해 피의자의 방어권과 무죄추정의 원칙을 보장하면서도 도주 및 증거인멸 방지, 피해자 보호 등 형사사법의 목적을 조화롭게 달성하고 있음.",
       "sourceUrl": "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_B439466AEF3A4DE0AD781ED77A63D2",
-      "dailyChanged": true,
-      "dailyChangedDate": "2026-11-28",
-      "dailyChangeFields": [
-        "신규 확인"
-      ],
-      "dailyChangeDetails": [
-        {
-          "label": "신규 확인",
-          "before": "",
-          "after": "의안번호 2223330"
-        }
-      ]
+      "dailyChanged": false,
+      "dailyChangedDate": "",
+      "dailyChangeFields": [],
+      "dailyChangeDetails": []
     }
   ]
 }
